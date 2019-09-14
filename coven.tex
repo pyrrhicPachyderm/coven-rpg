@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,twocolumn]{book}
 \usepackage[all]{nowidow}
 \usepackage{siunitx}
 \usepackage{enumerate}
@@ -8,16 +8,25 @@
 \usepackage{titling}
 %\setlength{\droptitle}{-0.5in} %Adjust margin above title
 
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} %Chapter number and name on same line
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{} %Remove section numbers
+\makeatother
+
+\usepackage{tocloft}
+\makeatletter
+\renewcommand{\cftsecpresnum}{\begin{lrbox}{\@tempboxa}} %Removes section numbers from the table of contents.
+\renewcommand{\cftsecaftersnum}{\end{lrbox}} %Latter half of the above.
+\makeatother
+\setlength{\cftsecnumwidth}{0pt} %Removes the space reserved for the section numbers in the table of contents.
+
 \usepackage{hyperref}
 
 \usepackage{graphicx}
-\usepackage[font=small,margin=0.45in]{caption}
-\usepackage[labelformat=simple]{subcaption}
-\renewcommand\thesubfigure{(\alph{subfigure})}
-%\usepackage{tikz}
-%\usepackage{pgfplots}
 \usepackage{float} %Provides the float option [H] for a non-floating float.
-\graphicspath{{./figures/}}
+\graphicspath{{./imgs/}}
 
 \newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
 
