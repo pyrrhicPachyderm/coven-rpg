@@ -10,6 +10,7 @@
 
 \usepackage{titlesec}
 \titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} %Chapter number and name on same line
+%TODO: This justifies split lines awfully, fix it.
 
 \makeatletter
 \renewcommand{\@seccntformat}[1]{} %Remove section numbers
@@ -42,5 +43,19 @@
 \tableofcontents
 
 \include{introduction}
+
+\part{Character Creation}
+
+\include{character-creation-guide}
+
+\include{attributes-and-skills}
+
+\include{familiars}
+
+\include{tools-of-the-craft}
+
+\part{Playing the Game}
+
+\part{Disciplines of Witchcraft}
 
 \end{document}
