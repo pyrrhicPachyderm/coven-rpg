@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[all]{nowidow}
+\usepackage{siunitx}
+\usepackage{enumerate}
+
+%\usepackage[margin=0.9in]{geometry}
+
+\usepackage{titling}
+%\setlength{\droptitle}{-0.5in} %Adjust margin above title
+
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage[font=small,margin=0.45in]{caption}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+%\usepackage{tikz}
+%\usepackage{pgfplots}
+\usepackage{float} %Provides the float option [H] for a non-floating float.
+\graphicspath{{./figures/}}
+
+\newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
+
+\title{Coven: An RPG of Witches}
+\author{Christopher Brown}
+\date{}
+
+\begin{document}
+\pagestyle{plain} %Fixes page numbers appearing in the top left on empty pages.
+
+\maketitle
+
+\tableofcontents
+
+\include{introduction}
+
+\end{document}
