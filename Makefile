@@ -3,7 +3,7 @@ LATEXMK_FLAGS = --pdf --cd
 maindoc := coven
 RM := rm -f
 
-chapters := introduction character-creation-guide attributes-and-skills familiars tools-of-the-craft
+chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules
 chapter_files := $(shell echo $(chapters) | sed "s/[^ ]*/&.tex/g")
 
 all: $(maindoc).pdf
