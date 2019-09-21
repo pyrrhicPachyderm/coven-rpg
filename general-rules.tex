@@ -113,6 +113,69 @@ One of a witch's duties is to tend to the injuries of her neighbours, nursing th
 Or, when they are beyond her help, easing their moments.
 
 A character's resistance to injury is determined by two statistics: Resilience and Shock Threshold.
+A character's Resilience is equal to their Might plus 5, all halved.
+For example, a character with $0$ Might has $(0 + 5)/2 = 2$ Resilience, and a character with $3$ Might has $(3+5)/2 = 4$ Resilience.
+A character's Shock Threshold is equal to 12 plus their Will.
+
+\subsection{Damage Tests}
+
+A Damage Test is a special type of Test used to determine how much an effect hurts a character.
+It is made like a normal Test, by rolling some number of dice and adding the highest 3 together, with a flat bonus.
+In the case of an attack by one character upon another, the number of dice are determined by the weapon used and the flat bonus by the wielder's strength.
+In other cases, the GM or the rules of the damaging effect assign the number of dice and the bonus.
+For small effects, this can often be fewer than 3 dice.
+
+The following table provides examples of the number of dice and the bonus for Damage Tests.
+
+\begin{simpletable}{X[5]XX}
+	\toprule
+	Effect & Dice & Bonus\\
+	\midrule
+	Touching a hot cauldron & 1 & 0\\
+	Crawling through brambles & 2 & 0\\
+	Wave-tossed against a boulder & 3 & 0\\
+	Hit by a falling brick & 4 & 0\\
+	Falling on a sword & 5 & 0\\ %TODO: Evaluate and expand.
+	Hit by a falling tree & 5 & 4\\
+	\bottomrule
+\end{simpletable}
+
+Additionally, a Damage Test is not made against a particular TN like most Tests.
+Instead, it applies two effects to the target, Shock and Damage.
+Shock is always tested for before Damage is applied.
+
+Critical failure on a Damage Test means no effect is applied at all; the blow was glancing and won't do more than bruise slightly.
+Critical success on a Damage Test may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies Shock.
+
+\subsection{Shock}
+
+If a Damage Test meets of exceeds the target's Shock Threshold, or critically succeeds, the target goes into Shock.
+A character in Shock falls unconscious.
+If a character in Shock would go into Shock again due to another Damage Test, they die.
+
+Additionally, at the start of every turn (roughly every ten seconds outside of combat), roll a special Test against the Shocked character.
+This Test uses 3 dice with no bonus, and is not considered to be a Test made by any character.
+If it meets or exceeds the Shocked character's Shock Threshold, they die.
+
+\subsection{Damage}
+
+After Shock has been tested for, whether or not it occurs, the Damage Test causes damage.
+To calculate damage, divide the result of the Damage Test by the target's Resilience.
+For example, if the result of the Damage Test is 13 and the damaged creature has 4 Resilience, they suffer 3 damage.
+Damage accumulates: a character who has previously suffered 3 damage and suffers an additional 2 is now suffering from 5 damage.
+
+Damage has several effects.
+Firstly, a character subtracts their current damage from their Shock Threshold.
+Secondly, if a character's current damage ever equals or exceeds their original Shock Threshold (unmodified by damage), they die immediately.
+This applies even if they are ignoring the effect of some of their damage, such as through painkillers.
+
+Lastly, increasing damage can cause pain, having an adverse effect upon a character's actions.
+For every 3 points by which a character's damage exceeds their Will, they suffer 1 pain.
+For example, if a character with 1 Will is suffering 7 damage, their damage exceeds their Will by 6 and they suffer 2 pain.
+However, if the character had 5 Will, their damage would exceed their Will by only 2 and they would not suffer any pain.
+
+The amount of pain a character is suffering is subtracted from all Tests they make, except Damage Tests.
+It is also subtracted from their Dodge Rating. %TODO: Check the name of this.
 
 \section{Combat}
 
