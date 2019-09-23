@@ -173,15 +173,17 @@ Damage accumulates: a character who has previously suffered 3 damage and suffers
 
 Damage has several effects.
 Firstly, a character subtracts their current damage from their Shock Threshold.
-Secondly, if a character's current damage ever equals or exceeds their original Shock Threshold (unmodified by damage), they die immediately.
+
+Secondly, increasing damage can cause pain, having an adverse effect upon a character's actions.
+For every 3 points by which a character's damage exceeds their Will, they suffer a $-1$ penalty to all Tests except Damage Tests.
+For example, if a character with 1 Will is suffering 7 damage, their damage exceeds their Will by 6 and they suffer a $-2$ penalty.
+However, if the character had 5 Will, their damage would exceed their Will by only 2 and they would not suffer any penalty.
+
+Lastly, if a character's current damage ever equals or exceeds their original Shock Threshold (unmodified by damage), they die immediately.
 This applies even if they are ignoring the effect of some of their damage, such as through painkillers.
-
-Lastly, increasing damage can cause pain, having an adverse effect upon a character's actions.
-For every 3 points by which a character's damage exceeds their Will, they suffer 1 pain.
-For example, if a character with 1 Will is suffering 7 damage, their damage exceeds their Will by 6 and they suffer 2 pain.
-However, if the character had 5 Will, their damage would exceed their Will by only 2 and they would not suffer any pain.
-
-The amount of pain a character is suffering is subtracted from all Tests they make, except Damage Tests.
+As effects that allow a character to ignore damage are so common, it can be helpful to track a character's actual damage and the damage they are considred to be suffering from separately.
+The former represents injury: scrapes, bruises and cuts.
+The latter represents the pain suffered as a result of these.
 
 \section{Combat}
 
