@@ -52,6 +52,14 @@
 \newcommand\chapref[1]{Chapter \ref{chap:#1}}
 \newcommand\secref[1]{the \nameref{sec:#1} section}
 
+\newcommand\feat[4]{ %Arguments: title, label, prerequisites, text.
+	\subsection{#1}\label{feat:#2}
+	\textbf{Prerequisites:} {#3}
+	
+	{#4}
+} %TODO: XP cost, tags such as 'first circle'?
+\newcommand\featref[1]{\nameref{feat:#1}}
+
 \newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
 
 \newcommand\storybreak{\bigskip}
