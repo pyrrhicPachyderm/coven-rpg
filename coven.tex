@@ -50,6 +50,7 @@
 \newcommand\seclabel[1]{\label{sec:#1}}
 \newcommand\partref[1]{Part \ref{part:#1}}
 \newcommand\chapref[1]{Chapter \ref{chap:#1}}
+\newcommand\chapnameref[1]{\nameref{chap:#1}}
 \newcommand\secref[1]{the \nameref{sec:#1} section}
 
 \newcommand\feat[4]{ %Arguments: title, label, prerequisites, text.
@@ -59,6 +60,7 @@
 	{#4}
 } %TODO: XP cost, tags such as 'first circle'?
 \newcommand\featref[1]{\nameref{feat:#1}}
+%TODO: Make feat references add the chapter in brackets afterwards, if the feat is in a different chapter.
 
 \newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
 
