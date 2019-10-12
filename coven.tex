@@ -31,6 +31,13 @@
 \usepackage{float} %Provides the float option [H] for a non-floating float.
 \graphicspath{{./imgs/}}
 
+\usepackage{hyperxmp} %Recommended for doclicense
+\usepackage[
+	type={CC},
+	modifier={by-nc-sa},
+	version={4.0},
+]{doclicense}
+
 \usepackage{booktabs}
 \usepackage{tabu}
 \tabulinesep=1.2mm %Space tables more nicely.
@@ -74,6 +81,8 @@
 \pagestyle{plain} %Fixes page numbers appearing in the top left on empty pages.
 
 \maketitle
+
+\include{edition-notice}
 
 \setcounter{tocdepth}{1} %No subsections or deeper.
 \tableofcontents
