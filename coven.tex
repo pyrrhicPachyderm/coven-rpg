@@ -61,6 +61,8 @@
 \newcommand\secref[1]{the \nameref{sec:#1} section}
 \newcommand\seclink[2]{\hyperref[sec:#2]{#1}}
 
+\newcommand\discref[1]{\chapnameref{#1}}
+
 \newcommand\feat[4]{ %Arguments: title, label, prerequisites, text.
 	\subsection{#1}\label{feat:#2}
 	\textbf{Prerequisites:} {#3}
@@ -78,7 +80,7 @@
 	\ifx\govdisc\@nnil%
 		%
 	\else%
-		Governing discipline: \chapnameref{\govdisc}%TODO: This does really nasty things to the paragraphing.
+		Governing discipline: \discref{\govdisc}%TODO: This does really nasty things to the paragraphing.
 	\fi%
 }
 \makeatother
