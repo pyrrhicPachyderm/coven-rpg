@@ -69,9 +69,10 @@
 \newcommand\featref[1]{\nameref{feat:#1}}
 %TODO: Make feat references add the chapter in brackets afterwards, if the feat is in a different chapter.
 
-\usepackage{xstring} %Gives \StrDel
 \usepackage{amsfonts} %Gives the stuff we use to build \shortminus
 \DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+
+\usepackage{xstring} %Gives \StrDel
 \newcommand\dice[2][0]{%Takes two arguments, the first of which is optional and defaults to zero.
 	#2d%
 	\ifnum #1=0%
@@ -85,6 +86,8 @@
 		\StrDel{#1}{-}%Strips the minus from it, essentially giving absolute value.
 	\fi%
 }
+
+\newcommand\negative[1]{$\shortminus$#1}
 
 \newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
 
