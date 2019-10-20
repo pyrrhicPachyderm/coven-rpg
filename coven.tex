@@ -79,6 +79,14 @@
 		~#1%
 	\fi%
 }
+\newcommand\skillrefspecialty[3][0]{%Takes three arguments, the first of which is optional and defaults to zero.
+	\nameref{skill:#2} (#3)%
+	\ifnum #1=0%
+		%
+	\else%
+		~#1%
+	\fi%
+}
 
 \usepackage{amsfonts} %Gives the stuff we use to build \shortminus
 \DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
