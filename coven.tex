@@ -106,8 +106,12 @@
 	\label{attribute:#2}
 }
 
+\newcommand\attref[1]{%
+	\nameref{attribute:#1}%
+}
+
 \newcommand\testtype[2]{%
-	$\text{\nameref{attribute:#1}} + \text{\nameref{skill:#2}}$%
+	$\text{\attref{#1}} + \text{\skillref{#2}}$%
 }
 
 \usepackage{amsfonts} %Gives the stuff we use to build \shortminus
