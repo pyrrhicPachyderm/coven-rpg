@@ -45,10 +45,10 @@ For example, \dice{4} indicates a 4 die Test with no bonus, and \dice[2]{3} indi
 As an example, suppose Mistress Talbot is peering out of her window and attempting to identify which manner of undead dog has just shambled into her garden.
 The GM declares this to be a \testtype{wit}{necromancy} Test, as she is attempting to recall information about the undead.
 Mistress Talbot dabbled in Necromancy as a youth, and has one rank in the skill, so she rolls 4 dice.
-However, she is not the sharpest knife in the drawer, and her memory has begun to fade with age, so she has only 1 Wit.
+However, she is not the sharpest knife in the drawer, and her memory has begun to fade with age, so she has only 1 \attref{wit}.
 The four dice show 4, 6, 2 and 3.
 Her player totals the three highest dice, the 6, 4 and 3, for 13.
-Then she adds Mistress Talbot's Wit, 1, for a grand total of 14.
+Then she adds Mistress Talbot's \attref{wit}, 1, for a grand total of 14.
 Her player announces the total to the table.
 
 The GM knows that the dog is a simple zombie, the most common variety of undead, but it was killed and raised only yesterday so the characteristic rot hasn't properly set in yet.
@@ -163,9 +163,9 @@ One of a witch's duties is to tend to the injuries of her neighbours, nursing th
 Or, when they are beyond her help, easing their moments.
 
 A character's resistance to injury is determined by two statistics: Resilience and Shock Threshold.
-A character's Resilience is equal to their Might plus 5, all halved.
-For example, a character with $0$ Might has $(0 + 5)/2 = 2$ Resilience, and a character with $3$ Might has $(3+5)/2 = 4$ Resilience.
-A character's Shock Threshold is equal to 12 plus their Will.
+A character's Resilience is equal to their \attref{might} plus 5, all halved.
+For example, a character with $0$ \attref{might} has $(0 + 5)/2 = 2$ Resilience, and a character with $3$ \attref{might} has $(3+5)/2 = 4$ Resilience.
+A character's Shock Threshold is equal to 12 plus their \attref{will}.
 
 \subsection{Damage Tests}
 
@@ -225,9 +225,9 @@ Damage has several effects.
 Firstly, a character subtracts their current damage from their Shock Threshold.
 
 Secondly, increasing damage can cause pain, having an adverse effect upon a character's actions.
-For every 3 points by which a character's damage exceeds their Will, they suffer a $-1$ penalty to all Tests except Damage Tests.
-For example, if a character with 1 Will is suffering 7 damage, their damage exceeds their Will by 6 and they suffer a $-2$ penalty.
-However, if the character had 5 Will, their damage would exceed their Will by only 2 and they would not suffer any penalty.
+For every 3 points by which a character's damage exceeds their \attref{will}, they suffer a $-1$ penalty to all Tests except Damage Tests.
+For example, if a character with 1 \attref{will} is suffering 7 damage, their damage exceeds their \attref{will} by 6 and they suffer a $-2$ penalty.
+However, if the character had 5 \attref{will}, their damage would exceed their \attref{will} by only 2 and they would not suffer any penalty.
 
 Lastly, if a character's Shock Threshold ever reaches zero, they die immediately.
 This is very unlikely to happen through repeated damage, as an earlier blow would send them into Shock, but can occur if a lot of painkillers wear off all at once.
@@ -253,8 +253,8 @@ However, a few general guidelines apply.
 It is generally assumed that any witch who knows a spell, rite or technique has the knowledge and practice to pull it off consistently; doing so does not require a Test unless specified otherwise.
 However, this practice only applies under normal conditions, with adequate time and materials.
 A witch may attempt to rush her magic, perform it using whatever she has to hand, or to perform it in difficult conditions, and each of these requires a Test.
-Such Tests typically use Wit and the relevant skill for the discipline of magic, but not always.
-For example, drawing a chalk circle hurriedly might use Grace, and grinding a poultice while on a broomstick might use \skillref{flying}.
+Such Tests typically use \attref{attref} and the relevant skill for the discipline of magic, but not always.
+For example, drawing a chalk circle hurriedly might use \attref{grace}, and grinding a poultice while on a broomstick might use \skillref{flying}.
 
 TNs for rushing or improvising magic are ultimately left up the GM, but some guidelines are provided below.
 
