@@ -70,7 +70,20 @@
 \newcommand\featref[1]{\nameref{feat:#1}}
 %TODO: Make feat references add the chapter in brackets afterwards, if the feat is in a different chapter.
 
-\newcommand\skilllabel[1]{\label{skill:#1}}
+\makeatletter
+\newcommand\skill[3][\@nil]{%Takes three arguments, the first of which is optional and defaults to nothing.
+	\def\govdisc{#1}
+	\subsection{#2}%
+	\label{skill:#3}%
+	\ifx\govdisc\@nnil%
+		%
+	\else%
+		Governing discipline: \chapnameref{\govdisc}%TODO: This does really nasty things to the paragraphing.
+	\fi%
+}
+\makeatother
+
+
 \newcommand\skillref[2][0]{%Takes two arguments, the first of which is optional and defaults to zero.
 	\nameref{skill:#2}%
 	\ifnum #1=0%
