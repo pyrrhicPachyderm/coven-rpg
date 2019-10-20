@@ -70,6 +70,16 @@
 \newcommand\featref[1]{\nameref{feat:#1}}
 %TODO: Make feat references add the chapter in brackets afterwards, if the feat is in a different chapter.
 
+\newcommand\skilllabel[1]{\label{skill:#1}}
+\newcommand\skillref[2][0]{%Takes two arguments, the first of which is optional and defaults to zero.
+	\nameref{skill:#2}%
+	\ifnum #1=0%
+		%
+	\else%
+		~#1%
+	\fi%
+}
+
 \usepackage{amsfonts} %Gives the stuff we use to build \shortminus
 \DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
 
