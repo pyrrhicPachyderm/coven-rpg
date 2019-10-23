@@ -1,0 +1,8 @@
+Per McIlveen (2002), drag force for an upright person at a windspeed V and surface area A is approximately given by 0.36*A*V^2.
+
+
+
+
+
+References:
+McIlveen, J. F. R. (2002). The everyday effects of wind drag on people. Weather, 57(11), 410-413.
