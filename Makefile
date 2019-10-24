@@ -3,11 +3,12 @@ LATEXMK_FLAGS = --pdf --cd
 maindoc := coven
 RM := rm -f
 
+misc_files := common/edition-notice.tex common/commands.tex
+
 chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules brewing willing headology broomcraft sympathetic-magic golemancy necromancy divination
 stories := weather-story flying-story
 chapter_files := $(shell echo $(chapters) | sed "s/[^ ]*/&.tex/g")
 story_files := $(shell echo $(stories) | sed "s/[^ ]*/&.tex/g")
-misc_files := edition-notice.tex
 
 all: $(maindoc).pdf
 

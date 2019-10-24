@@ -24,9 +24,6 @@
 \makeatother
 \setlength{\cftsecnumwidth}{0pt} %Removes the space reserved for the section numbers in the table of contents.
 
-\usepackage{hyperref}
-\usepackage{nameref}
-
 \usepackage{graphicx}
 \usepackage{float} %Provides the float option [H] for a non-floating float.
 \graphicspath{{./imgs/}}
@@ -38,112 +35,7 @@
 	version={4.0},
 ]{doclicense}
 
-\usepackage{booktabs}
-\usepackage{tabu}
-\tabulinesep=1.2mm %Space tables more nicely.
-\usepackage[table]{xcolor}
-\newenvironment{simpletable}[1]{
-	\begin{center}
-	\taburowcolors 2{white .. gray!20}
-	\begin{tabu}{#1}
-}{
-	\end{tabu}
-	\end{center}
-}
-
-\makeatletter
-\newcommand{\labelname}[1]{\def\@currentlabelname{#1}}%Changes the name used by nameref on the next label.
-\makeatother
-
-\newcommand\partlabel[1]{\label{part:#1}}
-\newcommand\chaplabel[1]{\label{chap:#1}}
-\newcommand\seclabel[1]{\label{sec:#1}}
-\newcommand\partref[1]{Part~\ref{part:#1}}
-\newcommand\chapref[1]{Chapter~\ref{chap:#1}}
-\newcommand\chapnameref[1]{\nameref{chap:#1}}
-\newcommand\secref[1]{the \nameref{sec:#1} section}
-\newcommand\seclink[2]{\hyperref[sec:#2]{#1}}
-
-\newcommand\discref[1]{\chapnameref{#1}}
-
-\newcommand\feat[5]{ %Arguments: title, label, XP cost, prerequisites, text.
-	\subsection{#1 [#3 XP]}
-	\labelname{#1}
-	\label{feat:#2}
-	\textbf{Prerequisites:} {#4}
-	
-	{#5}
-} %TODO: XP cost, tags such as 'first circle'?
-\newcommand\featref[1]{\nameref{feat:#1}}
-%TODO: Make feat references add the chapter in brackets afterwards, if the feat is in a different chapter.
-
-\makeatletter
-\newcommand\skill[3][\@nil]{%Takes three arguments, the first of which is optional and defaults to nothing.
-	\def\govdisc{#1}
-	\subsubsection{#2}%
-	\label{skill:#3}%
-	\ifx\govdisc\@nnil%
-		%
-	\else%
-		Governing discipline: \discref{\govdisc}%TODO: This does really nasty things to the paragraphing.
-	\fi%
-}
-\makeatother
-
-
-\newcommand\skillref[2][0]{%Takes two arguments, the first of which is optional and defaults to zero.
-	\nameref{skill:#2}%
-	\ifnum #1=0%
-		%
-	\else%
-		~#1%
-	\fi%
-}
-\newcommand\skillrefspeciality[3][0]{%Takes three arguments, the first of which is optional and defaults to zero.
-	\nameref{skill:#2} (#3)%
-	\ifnum #1=0%
-		%
-	\else%
-		~#1%
-	\fi%
-}
-
-\newcommand\attribute[2]{%
-	\subsection{#1}
-	\label{attribute:#2}
-}
-
-\newcommand\attref[1]{%
-	\nameref{attribute:#1}%
-}
-
-\newcommand\testtype[2]{%
-	$\text{\attref{#1}} + \text{\skillref{#2}}$%
-}
-
-\usepackage{amsfonts} %Gives the stuff we use to build \shortminus
-\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
-
-\usepackage{xstring} %Gives \StrDel
-\newcommand\dice[2][0]{%Takes two arguments, the first of which is optional and defaults to zero.
-	#2d%
-	\ifnum #1=0%
-		%
-	\else%
-		\ifnum #1>0%
-			$+$%
-		\else%
-			$\shortminus$%
-		\fi%
-		\StrDel{#1}{-}%Strips the minus from it, essentially giving absolute value.
-	\fi%
-}
-
-\newcommand\negative[1]{$\shortminus$#1}
-
-\newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
-
-\newcommand\storybreak{\bigskip}
+\input{common/commands}
 
 \title{Coven: An RPG of Witches}
 \author{Christopher Brown}
@@ -154,7 +46,7 @@
 
 \maketitle
 
-\include{edition-notice}
+\include{common/edition-notice}
 
 \setcounter{tocdepth}{1} %No subsections or deeper.
 \tableofcontents
