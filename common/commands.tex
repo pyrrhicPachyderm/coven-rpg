@@ -108,21 +108,34 @@
 
 \newcommand\storybreak{\bigskip}
 
-\newcommand\familiar[12]{%Arguments: title, label, XP cost, attributes * 6, skills, text, options
+\newcommand\atttable[6]{
+	\begin{center}
+		\begin{tabu}{cccccc}
+			\toprule
+			
+			\attref{might} &
+			\attref{grace} &
+			\attref{wit} &
+			\attref{will} &
+			\attref{charm} &
+			\attref{presence} \\
+			
+			#1 & #2 & #3 & #4 & #5 & #6 \\
+			
+			\bottomrule
+		\end{tabu}
+	\end{center}
+}
+
+\newcommand\familiar[7]{%Arguments: title, label, XP cost, atttable, skills, text, options
 	\subsection{#1 [#3 XP]}
 	\labelname{#1}
 	\label{familiar:#2}
-	\textbf{Attributes:}
-	\attref{might} {#4},
-	\attref{grace} {#5},
-	\attref{wit} {#6},
-	\attref{will} {#7},
-	\attref{charm} {#8},
-	\attref{presence} {#9}
+	{#4}
 	
-	\textbf{Skills:} {#10}
+	\textbf{Skills:} {#5}
 	
-	{#11}
+	{#6}
 	
-	{#12}
+	{#7}
 }
