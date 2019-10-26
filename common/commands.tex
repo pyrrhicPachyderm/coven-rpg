@@ -167,3 +167,12 @@
 }
 \newcommand\circleref[1]{\nameref{circle:#1}}
 \newcommand\circlerefplural[1]{\nameref{circles:#1}}
+
+\newcommand\materiallabel[3]{%Arguments: title, plural title, label
+	\labelname{#1}%
+	\label{material:#3}%
+	\labelname{#2}%
+	\label{materials:#3}%
+}
+\newcommand\materialref[1]{\nameref{material:#1}}
+\newcommand\materialrefplural[1]{\nameref{materials:#1}}
