@@ -145,3 +145,16 @@
 \newcommand\familiarability[2]{%Arguments: title, text
 	\textbf{#1:} {#2}
 }
+
+\newcommand\materials[1]{%
+	\textbf{Materials:} {#1}%
+}
+
+\newcommand\herblabel[2]{%Arguments: title, label
+	\labelname{#1 Herb}%
+	\label{herb:#2}%
+	\labelname{#1 Herbs}%
+	\label{herbs:#2}%
+}
+\newcommand\herbref[1]{\nameref{herb:#1}}
+\newcommand\herbrefplural[1]{\nameref{herbs:#1}}
