@@ -158,3 +158,12 @@
 }
 \newcommand\herbref[1]{\nameref{herb:#1}}
 \newcommand\herbrefplural[1]{\nameref{herbs:#1}}
+
+\newcommand\circlelabel[2]{%Arguments: title, label
+	\labelname{#1 Ritual Circle}%
+	\label{circle:#2}%
+	\labelname{#1 Ritual Circles}%
+	\label{circles:#2}%
+}
+\newcommand\circleref[1]{\nameref{circle:#1}}
+\newcommand\circlerefplural[1]{\nameref{circles:#1}}
