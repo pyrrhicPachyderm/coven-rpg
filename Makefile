@@ -5,7 +5,7 @@ RM := rm -f
 
 misc_files := common/edition-notice.tex common/commands.tex
 
-chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules brewing willing headology broomcraft sympathetic-magic golemancy necromancy divination
+chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules brewing willing headology broomcraft sympathetic-magic golemancy necromancy divination druidcraft
 stories := weather-story flying-story
 chapter_files := $(shell echo $(chapters) | sed "s/[^ ]*/&.tex/g")
 story_files := $(shell echo $(stories) | sed "s/[^ ]*/&.tex/g")
