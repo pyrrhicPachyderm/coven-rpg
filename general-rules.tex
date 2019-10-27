@@ -168,6 +168,7 @@ For example, a character with $0$ \attref{might} has $(0 + 5)/2 = 2$ Resilience,
 A character's Shock Threshold is equal to 12 plus their \attref{will}.
 
 \subsection{Damage Tests}
+\seclabel{damage-tests}
 
 A Damage Test is a special type of Test used to determine how much an effect hurts a character.
 It is made like a normal Test, by rolling some number of dice and adding the highest 3 together, with a flat bonus.
@@ -237,11 +238,24 @@ This is very unlikely to happen through repeated damage, as an earlier blow woul
 %The former represents injury: scrapes, bruises and cuts.
 %The latter represents the pain suffered as a result of these.
 
-\section{Combat}\seclabel{combat}
+\section{Combat}
+\seclabel{combat}
 
-\subsection{Making an Attack}
+\subsection{Actions in Combat}
 
+\subsection{Attack}
 
+You attack a creature or object, with a \seclink{weapon}{weapons} or unarmed.
+You must be adjacent to the target to attack with a melee weapon, or within the listed range of a ranged weapon.
+Make a Test using a number of dice determined, as normal, by your \skillref{weaponry} skill, and a flat bonus determined by your weapon's accuracy.
+The Test is made against a TN equal to the target's Dodge Rating: 8 plus twice their \attref{grace}.
+
+If you succeed in your Test, you hit.
+Make a \seclink{Damage Test}{damage-tests} against the Target, rolling dice as determined by your weapon and adding you \attref{might}.
+
+\subsubsection{Dash}
+
+You may move an additional number of metres equal to your speed this turn.
 
 \section{Movement}
 
