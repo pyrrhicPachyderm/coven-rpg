@@ -184,3 +184,12 @@
 
 \newcommand\actionlabel[1]{\label{action:#1}}
 \newcommand\actionref[1]{\nameref{action:#1}}
+
+\newcommand\undeadlabel[3]{%Arguments: title, plural title, label
+	\labelname{#1}%
+	\label{undead:#3}%
+	\labelname{#2}%
+	\label{undeads:#3}%
+}
+\newcommand\undeadref[1]{\nameref{undead:#1}}
+\newcommand\undeadrefplural[1]{\nameref{undeads:#1}}
