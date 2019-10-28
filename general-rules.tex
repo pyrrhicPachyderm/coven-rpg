@@ -170,13 +170,13 @@ A character's Shock Threshold is equal to 12 plus their \attref{will}.
 \subsection{Damage Tests}
 \seclabel{damage-tests}
 
-A Damage Test is a special type of Test used to determine how much an effect hurts a character.
+A \seclink{Damage Test}{damage-tests} is a special type of Test used to determine how much an effect hurts a character.
 It is made like a normal Test, by rolling some number of dice and adding the highest 3 together, with a flat bonus.
 In the case of an attack by one character upon another, the number of dice are determined by the weapon used and the flat bonus by the wielder's strength.
 In other cases, the GM or the rules of the damaging effect assign the number of dice and the bonus.
 For small effects, this can often be fewer than 3 dice.
 
-The following table provides examples of the number of dice and the bonus for Damage Tests.
+The following table provides examples of the number of dice and the bonus for \seclink{Damage Tests}{damage-tests}.
 
 \begin{simpletable}{Xl}
 	\toprule
@@ -191,56 +191,56 @@ The following table provides examples of the number of dice and the bonus for Da
 	\bottomrule
 \end{simpletable}
 
-Additionally, a Damage Test is not made against a particular TN like most Tests.
-Instead, it applies two effects to the target, Shock and Damage.
-Shock is always tested for before Damage is applied.
+Additionally, a \seclink{Damage Test}{damage-tests} is not made against a particular TN like most Tests.
+Instead, it applies two effects to the target, \secrefraw{shock} and \secrefraw{damage}.
+\secrefraw{shock} is always tested for before \secrefraw{damage} is applied.
 
-Critical failure on a Damage Test means no effect is applied at all; the blow was glancing and won't do more than bruise slightly.
-Critical success on a Damage Test may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies Shock.
+Critical failure on a \seclink{Damage Test}{damage-tests} means no effect is applied at all; the blow was glancing and won't do more than bruise slightly.
+Critical success on a \seclink{Damage Test}{damage-tests} may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies \secrefraw{shock}.
 
 \subsection{Shock}
 \seclabel{shock}
 
-If a Damage Test meets or exceeds the target's Shock Threshold, or critically succeeds, the target goes into Shock.
-A character in Shock falls unconscious and cannot be roused while they remain in Shock.
-If a character in Shock would go into Shock again due to another Damage Test, they die.
+If a \seclink{Damage Test}{damage-tests} meets or exceeds the target's Shock Threshold, or critically succeeds, the target goes into \secrefraw{shock}.
+A character in \secrefraw{shock} falls unconscious and cannot be roused while they remain in \secrefraw{shock}.
+If a character in \secrefraw{shock} would go into \secrefraw{shock} again due to another \seclink{Damage Test}{damage-tests}, they die.
 
-Additionally, at the start of each of the Shocked character's Turns, roll a special Test against them.
-This Test applies no flat bonus, and uses the same number of dice as the Damage Test that sent the character into Shock: a character is more likely to bleed out from a sword wound than a punch.
-If it meets or exceeds the Shocked character's Shock Threshold, they die.
+Additionally, at the start of each of the \seclink{Shocked}{shock} character's Turns, roll a special Test against them.
+This Test applies no flat bonus, and uses the same number of dice as the \seclink{Damage Test}{damage-tests} that sent the character into \secrefraw{shock}: a character is more likely to bleed out from a sword wound than a punch.
+If it meets or exceeds the \seclink{Shocked}{shock} character's Shock Threshold, they die.
 This Test is not considered to be a Test made by any character.
 
-If the Test made every Turn ever totals 9 or less, unless it also meets or exceed their Shock Threshold, the character is no longer in Shock.
+If the Test made every Turn ever totals 9 or less, unless it also meets or exceed their Shock Threshold, the character is no longer in \secrefraw{shock}.
 However, the character remains unconscious and cannot be naturally roused before the end of the Scene.
-A character can also be brought out of Shock by another character tending to them.
+A character can also be brought out of \secrefraw{shock} by another character tending to them.
 This requires an Action and a successful \testtype{wit}{healing} Test.
-The TN for this Test is 3 times the number of dice that would be rolled against the Shocked character each round.
+The TN for this Test is 3 times the number of dice that would be rolled against the \seclink{Shocked}{shock} character each round.
 
 \subsection{Damage}
 \seclabel{damage}
 
-After Shock has been tested for, whether or not it occurs, the Damage Test causes damage.
-To calculate damage, divide the result of the Damage Test by the target's Resilience.
-For example, if the result of the Damage Test is 13 and the damaged creature has 4 Resilience, they suffer 3 damage.
-Damage accumulates: a character who has previously suffered 3 damage and suffers an additional 2 is now suffering from 5 damage.
+After \secrefraw{shock} has been tested for, whether or not it occurs, the \seclink{Damage Test}{damage-tests} causes \secrefraw{damage}.
+To calculate \secrefraw{damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's Resilience.
+For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 4 Resilience, they suffer 3 \secrefraw{damage}.
+\secrefraw{damage} accumulates: a character who has previously suffered 3 \secrefraw{damage} and suffers an additional 2 is now suffering from 5 \secrefraw{damage}.
 
-Damage has several effects.
-Firstly, a character subtracts their current damage from their Shock Threshold.
+\secrefraw{damage} has several effects.
+Firstly, a character subtracts their current \secrefraw{damage} from their Shock Threshold.
 
-Secondly, increasing damage can cause pain, having an adverse effect upon a character's actions.
-For every 3 points by which a character's damage exceeds their \attref{will}, they suffer a \negative{1} penalty to all Tests except Damage Tests.
-For example, if a character with 1 \attref{will} is suffering 7 damage, their damage exceeds their \attref{will} by 6 and they suffer a \negative{2} penalty.
-However, if the character had 5 \attref{will}, their damage would exceed their \attref{will} by only 2 and they would not suffer any penalty.
+Secondly, increasing \secrefraw{damage} can cause pain, having an adverse effect upon a character's actions.
+For every 3 points by which a character's \secrefraw{damage} exceeds their \attref{will}, they suffer a \negative{1} penalty to all Tests except \seclink{Damage Tests}{damage-tests}.
+For example, if a character with 1 \attref{will} is suffering 7 \secrefraw{damage}, their \secrefraw{damage} exceeds their \attref{will} by 6 and they suffer a \negative{2} penalty.
+However, if the character had 5 \attref{will}, their \secrefraw{damage} would exceed their \attref{will} by only 2 and they would not suffer any penalty.
 
 Lastly, if a character's Shock Threshold ever reaches zero, they die immediately.
-This is very unlikely to happen through repeated damage, as an earlier blow would send them into Shock, but can occur if a lot of painkillers wear off all at once.
-%Lastly, if a character's current damage ever equals or exceeds their original Shock Threshold (unmodified by damage), they die immediately.
-%This applies even if they are ignoring the effect of some of their damage, such as through painkillers.
-%As effects that allow a character to ignore damage are so common, it can be helpful to track a character's actual damage and the damage they are considered to be suffering from separately.
+This is very unlikely to happen through repeated \secrefraw{damage}, as an earlier blow would send them into \secrefraw{shock}, but can occur if a lot of painkillers wear off all at once.
+%Lastly, if a character's current \secrefraw{damage} ever equals or exceeds their original Shock Threshold (unmodified by \secrefraw{damage}), they die immediately.
+%This applies even if they are ignoring the effect of some of their \secrefraw{damage}, such as through painkillers.
+%As effects that allow a character to ignore \secrefraw{damage} are so common, it can be helpful to track a character's actual \secrefraw{damage} and the \secrefraw{damage} they are considered to be suffering from separately.
 %The former represents injury: scrapes, bruises and cuts.
 %The latter represents the pain suffered as a result of these.
 
-If a creature somehow has a Resilience of 0 or less, any Damage Test deals damage sufficient to drop its Shock Threshold to 0 and kills it.
+If a creature somehow has a Resilience of 0 or less, any \seclink{Damage Test}{damage-tests} deals \secrefraw{damage} sufficient to drop its Shock Threshold to 0 and kills it.
 
 \section{Combat}
 \seclabel{combat}
