@@ -165,13 +165,29 @@ This is the Initiative Order, and remains the same on subsequent Rounds.
 The character with the highest result takes their Turn first, and subsequent Turns proceed down the Initiative Order.
 Once all characters have taken a Turn, return to the top of the Initiative Order for the next Round.
 
-\section{Distances and Ranges}
+\section{Movement}
 
-Each Turn in Structured Time, a character can move a number of metres equal to their Speed, as well as taking an Action.
+Each Turn in Structured Time, a character can move a number of metres equal to her Speed, as well as taking an Action.
+If she takes the \actionref{dash} Action, she may move a total number equal to twice her Speed.
+This assumes that she is moving on foot over smooth ground.
+This speed represents urgent movement over a short period.
+A character trying to maintain this pace for more than a couple of minutes typically requires a \testtype{might}{athletics} Test to avoid tiring.
+%TODO: Reference exhaustion rules here?
 
 %TODO: Long-range travel times.
 
-%TODO: Define close, medium, long range, etc.
+%TODO: Climbing and swimming.
+
+\subsection{Difficult Terrain}
+\seclabel{difficult-terrain}
+
+\secrefraw{difficult-terrain}, such as dense forest or a bog, slows characters trying to move through it.
+As a simple default, movement through it is halved; it costs 2 metres from a character's Speed to move through 1 metre of \secrefraw{difficult-terrain}.
+The GM is free to impose a lesser or greater penalty for more or less severe terrain.
+
+For some kinds of \secrefraw{difficult-terrain}, the GM may offer players the option to ignore the movement penalty at an alternative cost.
+For example, a character pushing through brambles may move at full speed, but be subjected to a \seclink{Damage Test}{damage-tests} for doing so.
+A character moving on slick ice or along a narrow ledge may move at full speed, but must succeed on a \testtype{grace}{athletics} Test to avoid falling over, or off the edge\dots
 
 \section{Injury}
 
@@ -291,8 +307,6 @@ Decide what Action you will take, and which circumstances trigger it.
 When those circumstances come around, you may choose to take the readied Action or not.
 If your next turn comes around without you taking the readied Action, you lose the benefits of readying.
 You must \actionref{ready} again if you want to continue to wait.
-
-\section{Movement}
 
 \section{Magic}
 
