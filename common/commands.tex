@@ -162,8 +162,26 @@
 	\labelname{#1 Herbs}%
 	\label{herbs:#2}%
 }
-\newcommand\herbref[1]{\nameref{herb:#1}}
-\newcommand\herbrefplural[1]{\nameref{herbs:#1}}
+\makeatletter
+\newcommand\herbref[2][\@nil]{%Takes two arguments, the first of which is optional and defaults to nothing.
+	\def\herbname{#1}
+	\nameref{herb:#2}%
+	\ifx\herbname\@nnil%
+		%
+	\else%
+		\ (\herbname)%
+	\fi%
+}
+\newcommand\herbrefplural[2][\@nil]{%Takes two arguments, the first of which is optional and defaults to nothing.
+	\def\herbname{#1}
+	\nameref{herbs:#2}%
+	\ifx\herbname\@nnil%
+		%
+	\else%
+		\ (\herbname)%
+	\fi%
+}
+\makeatother
 
 \newcommand\circlelabel[2]{%Arguments: title, label
 	\labelname{#1 Ritual Circle}%
