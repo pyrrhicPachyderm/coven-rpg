@@ -186,6 +186,26 @@ Additionally, modifications to statistics due to withdrawal effects do not count
 	You cannot be roused for several minutes.
 }
 
+\feat{Hysterical Strength}{physical-stimulant}{15}{
+	None
+}{
+	A person's muscles are stronger than they normally get to use, strong enough to break their own bones.
+	There's a good reason you don't get to use the full strength, you see.
+	But you've figured out how to unlock that extra potential, and damn the consequences!
+	
+	\mix{cauldron}{drink}{\herbref[joint pine]{3}}
+	%Joint pine is Ephedra, which contains ephedrine.
+	%Ephedrine is similar in structure and function to epinephrine (adrenaline).
+	%Adrenaline is oft-blamed for hysterical strength.
+	
+	The drinker gains 1 \attref{might} and 1 \attref{grace} for a few minutes.
+	For the duration, any strenuous activity causes the drinker to suffer a \dice{2} \seclink{Damage Test}{damage-tests}.
+	Strenuous activity includes the \actionref{dash} and \actionref{attack} Actions, any Test using \attref{might} or \attref{grace} (excluding \seclink{Damage Tests}{damage-tests} as part of the \actionref{attack} Action), and other things at the GM's discretion.
+	
+	Being under the effect of two doses simultaneously does increase \attref{might} and \attref{grace} further, but causes \seclink{Damage Tests}{damage-tests} as a result of any movement at all; only lying still is safe.
+	Further doses cause seizures, triggering the \seclink{Damage Tests}{damage-tests} themselves.
+}
+
 \feat{Healing Salves}{brewing-healing}{15}{
 	\skillref[1]{brewing}
 }{
