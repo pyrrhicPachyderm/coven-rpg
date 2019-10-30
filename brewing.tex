@@ -63,7 +63,7 @@ It takes effect immediately, unless specified otherwise.
 \feat{Numbing Painkiller}{painkiller-grace}{15}{
 	None
 }{
-	\materials{\herbref[willow bark]{2}}
+	\mix{cauldron}{drink}{\herbref[willow bark]{2}}
 	
 	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses one point of \attref{grace} for the same duration.
 	Two doses may be effective simultaneously.
@@ -73,7 +73,7 @@ It takes effect immediately, unless specified otherwise.
 \feat{Dimming Painkiller}{painkiller-wit}{15}{
 	None
 }{
-	\materials{\herbref[poppy seed]{2}}
+	\mix{cauldron}{drink}{\herbref[poppy seed]{2}}
 	
 	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses one point of \attref{wit} for the same duration.
 	Two doses may be effective simultaneously.
@@ -85,9 +85,8 @@ It takes effect immediately, unless specified otherwise.
 }{
 	You know how to make a drink that'll really put hairs on a man's chest.
 	Or a woman's, at that.
-	This potion is made in a still, instead of a cauldron.
 	
-	\materials{Alcohol, \herbref[apple]{2}}
+	\mix{still}{drink}{Alcohol, \herbref[apple]{2}}
 	
 	The drinker gains 1 \attref{might} for a few hours, and loses 2 \attref{wit} for the same duration.
 	A second dose will render the drinker unconscious, and further doses are dangerously poisonous.

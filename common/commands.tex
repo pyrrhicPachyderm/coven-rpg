@@ -221,3 +221,7 @@
 	\subsubsection{#1}%
 	\label{mixdelivery:#2}%
 }
+
+\newcommand\mix[3]{%Arguments: creation, delivery, ingedients
+	\textbf{\nameref{mixcreation:#1}}, \textbf{\nameref{mixdelivery:#2}}, \materials{#3}
+}
