@@ -115,10 +115,11 @@ It's used to draw people's attention, boss them around, and make them wet themse
 
 %TODO: Recap how skills affect dice rolled for Tests, and how not every Test has an applicable skill.
 
-A witch's skills can be divided into two categories.
+A witch's skills can be divided into three categories.
 The first consists of general skills, pertaining to things any witch might find herself doing.
 The second consists of a witch's skills in her particular disciplines of magic.
 These skills are normally of little use to a witch who does not practice such a discipline, although they can often be used to identify, and sometimes to counteract, the effects from it.
+The third consists of speciality skills, pertaining to a particular craft or occupation.
 
 A list of the skills available to a witch, and examples of their use, is provided below.
 
@@ -138,20 +139,15 @@ A character must have the previous rank in a skill before purchasing the next ra
 	Discipline & 1 & 40\\
 	Discipline & 2 & 80\\
 	Discipline & 3 & 120\\
+	Speciality & 1 & 10\\
+	Speciality & 2 & 20\\
+	Speciality & 3 & 30\\
 	\bottomrule
 \end{simpletable}
 
-The XP cost for increasing a general skill is fixed, while progression in discipline skills is closely tied to progression in the discipline itself.
+The XP cost for increasing a general or speciality skill is fixed, while progression in discipline skills is closely tied to progression in the discipline itself.
 While it is possible to learn a lot about a discipline of magic without ever practicing it, it is far easier to learn simply by setting out and using the magic.
 As such, increasing a discipline skill costs 5 XP less for each feat a witch has purchased from its governing discipline, to a minimum cost of 0 XP.
-
-\subsection{Specialities}
-
-Some skills have specialities.
-For these skills, a character does not gain ranks in the skill itself, but in one of its specialities.
-Ranks for each speciality are tracked independently.
-For example, a witch might have \skillrefspeciality[1]{crafting}{Carpenter}, \skillrefspeciality[2]{crafting}{Cook} and \skillrefspeciality[2]{crafting}{Smith}.
-Each skill with specialities provides a list of recommended options, but the GM may approve others.
 
 \subsection{General Skills}
 \seclabel{general-skills}
@@ -167,24 +163,6 @@ Used to run, jump, swim, climb, somersault and generally get about the place mor
 \skill{Botany}{botany}
 
 Used to raise crops and herbs in a witch's garden, find them out in the forest, or identify a fishy-looking leaf.
-
-\skill{Crafting}{crafting}
-
-Used to make things, quite broadly.
-This covers the creation of most kinds of objects, although some kinds of crafting are still covered by other skills, such as \skillref{brewing}.
-Available specialities include the following:
-
-\begin{itemize}
-	\item Carpenter
-	\item Cook
-	\item Jeweller
-	\item Mason
-	\item Potter
-	\item Seamstress
-	\item Smith
-	\item Woodcarver
-	%TODO: Evaluate and maybe expand.
-\end{itemize}
 
 \skill{Deception}{deception}
 
@@ -222,23 +200,6 @@ Used to see, hear or smell things.
 This includes noticing things that are out of place, such as hearing someone sneaking up behind you or spotting that your hat is missing from its peg.
 It also covers active attempts to discern things, such as picking out details on someone at the other end of a street, eavesdropping, or identifying a faint smell.
 Lastly, this is the skill used when trying to follow the trail of an animal or person.
-
-\skill{Performance}{performance}
-
-Used to entertain, amuse or impress people, or perhaps just to distract them.
-Not everything that entertains people must use this skill; people can easily be entertained by a show of a magic or a swordfight, which might use another skill.
-\skillref{performance} covers things done primarily for entertainment.
-Available specialities include the following:
-
-\begin{itemize}
-	\item Dancer
-	\item Drummer
-	\item Harper
-	\item Joke-teller
-	\item Piper
-	\item Storyteller
-	%TODO: Evaluate and maybe expand.
-\end{itemize}
 
 \skill{Persuasion}{persuasion}
 
@@ -312,3 +273,46 @@ The idea of \discref{sympathetic-magic} is that one can't affect the imitation o
 
 Used to force the universe to fall into line with what you know is true.
 There is a real knack to convincing yourself of something well enough to make this work, and this skill governs how good you are at it.
+
+\subsection{Speciality Skills}
+
+Speciality skills behave a little differently to other skills.
+A character does not gain ranks in the skills themselves, but in one of their specialities.
+Ranks for each speciality are tracked independently.
+For example, a witch might have \skillrefspeciality[1]{crafting}{Carpenter}, \skillrefspeciality[2]{crafting}{Cook} and \skillrefspeciality[2]{crafting}{Smith}.
+Each speciality skill provides a list of recommended options, but the GM may approve others.
+
+\skill{Crafting}{crafting}
+
+Used to make things, quite broadly.
+This covers the creation of most kinds of objects, although some kinds of crafting are still covered by other skills, such as \skillref{brewing}.
+Available specialities include the following:
+
+\begin{itemize}
+	\item Carpenter
+	\item Cook
+	\item Jeweller
+	\item Mason
+	\item Potter
+	\item Seamstress
+	\item Smith
+	\item Woodcarver
+	%TODO: Evaluate and maybe expand.
+\end{itemize}
+
+\skill{Performance}{performance}
+
+Used to entertain, amuse or impress people, or perhaps just to distract them.
+Not everything that entertains people must use this skill; people can easily be entertained by a show of a magic or a swordfight, which might use another skill.
+\skillref{performance} covers things done primarily for entertainment.
+Available specialities include the following:
+
+\begin{itemize}
+	\item Dancer
+	\item Drummer
+	\item Harper
+	\item Joke-teller
+	\item Piper
+	\item Storyteller
+	%TODO: Evaluate and maybe expand.
+\end{itemize}
