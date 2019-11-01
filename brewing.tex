@@ -110,20 +110,32 @@ Additionally, modifications to statistics due to withdrawal effects do not count
 	\mix{cauldron}{drink}{\herbref[willow bark]{2}}
 	%Willow bark contains natural NSAIDs.
 	
-	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses one point of \attref{grace} for the same duration.
+	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses 1 \attref{grace} for the same duration.
 	Two doses may be effective simultaneously.
 	Further doses cause paralysis, and possibly organ failure.
 }
 
-\feat{Dimming Painkiller}{painkiller-wit}{15}{
+\feat{Dimming Painkiller}{painkiller-mental}{10}{
 	None
 }{
 	\mix{cauldron}{drink}{\herbref[poppy seed]{2}}
 	%Poppies contain natural opioids.
 	
-	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses one point of \attref{wit} for the same duration.
+	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses 1 \attref{ken} and \attref{wit} for the same duration.
 	Two doses may be effective simultaneously.
 	Further doses cause unconsciousness, and possibly cessation of breathing.
+}
+
+\feat{Blurring Painkiller}{painkiller-heed}{15}{
+	None
+}{
+	\mix{cauldron}{drink}{\herbref[barley]{2}}
+	%Barley contains a lot of phenols, which are used in the synthesis of a lot of pharmaceuticals.
+	%Malt barley is also used in producing alcohol, which can justify the blindness.
+	
+	The drinker may ignore 1 point of \secrefraw{damage} for a few hours, but loses 1 \attref{heed} for the same duration.
+	Two doses may be effective simultaneously.
+	Further doses cause blindness, which can become permanent.
 }
 
 \feat{The Hard Stuff}{brewing-booze}{20}{
@@ -135,7 +147,7 @@ Additionally, modifications to statistics due to withdrawal effects do not count
 	\mix{still}{drink}{Alcohol, \herbref[apple]{2}}
 	%Scumble is 'mostly apples'.
 	
-	The drinker gains 1 \attref{might} for a few hours, and loses 2 \attref{wit} for the same duration.
+	The drinker gains 1 \attref{might} for a few hours, and loses 2 \attref{wit} and \attref{heed} for the same duration.
 	A second dose will render the drinker unconscious.
 	Further doses are dangerously poisonous, causing vomiting, seizures and oxygen deprivation.
 }
@@ -163,7 +175,7 @@ Additionally, modifications to statistics due to withdrawal effects do not count
 	%Phenylacetone can be converted to amphetamine using the Leuckart reaction and formic acid (also from ants).
 	%Amphetamine is a widely-known nootropic (cognitive enhancer).
 	
-	The drinker gains 1 \attref{wit} and 1 \attref{will} for about an hour.
+	The drinker gains 1 \attref{wit}, \attref{will} and \attref{heed} for about an hour.
 	The potion also staves off tiredness for the duration. %TODO: A mechanical effect for this?
 	After the potion wears off, you pay the price of your temporarily enhanced performance.
 	You lose 1 from all \secrefraw{attributes} for the next 24 hours.
