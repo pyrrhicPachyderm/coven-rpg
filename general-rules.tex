@@ -183,11 +183,11 @@ A character trying to maintain this pace for more than a couple of minutes typic
 \subsection{Difficult Terrain}
 \seclabel{difficult-terrain}
 
-\secrefraw{difficult-terrain}, such as dense forest or a bog, slows characters trying to move through it.
-As a simple default, movement through it is halved; it costs 2 metres from a character's Speed to move through 1 metre of \secrefraw{difficult-terrain}.
+{\diffterrain}, such as dense forest or a bog, slows characters trying to move through it.
+As a simple default, movement through it is halved; it costs 2 metres from a character's Speed to move through 1 metre of {\diffterrain}.
 The GM is free to impose a lesser or greater penalty for more or less severe terrain.
 
-For some kinds of \secrefraw{difficult-terrain}, the GM may offer players the option to ignore the movement penalty at an alternative cost.
+For some kinds of {\diffterrain}, the GM may offer players the option to ignore the movement penalty at an alternative cost.
 For example, a character pushing through brambles may move at full speed, but be subjected to a \seclink{Damage Test}{damage-tests} for doing so.
 A character moving on slick ice or along a narrow ledge may move at full speed, but must succeed on a \testtype{grace}{athletics} Test to avoid falling over, or off the edge{\dots}
 
@@ -229,82 +229,82 @@ The following table provides examples of the number of dice and the bonus for \s
 \end{simpletable}
 
 Additionally, a \seclink{Damage Test}{damage-tests} is not made against a particular TN like most Tests.
-Instead, it applies two effects to the target, \secrefraw{shock} and \secrefraw{damage}.
-\secrefraw{shock} is always tested for before \secrefraw{damage} is applied.
+Instead, it applies two effects to the target, {\shock} and {\damage}.
+{\shock} is always tested for before {\damage} is applied.
 
 Critical failure on a \seclink{Damage Test}{damage-tests} means no effect is applied at all; the blow was glancing and won't do more than bruise slightly.
-Critical success on a \seclink{Damage Test}{damage-tests} may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies \secrefraw{shock}.
+Critical success on a \seclink{Damage Test}{damage-tests} may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies {\shock}.
 
 \subsection{Shock}
 \seclabel{shock}
 
-If a \seclink{Damage Test}{damage-tests} meets or exceeds the target's Shock Threshold, or critically succeeds, the target goes into \secrefraw{shock}.
-A character in \secrefraw{shock} falls unconscious and cannot be roused while they remain in \secrefraw{shock}.
-If a character in \secrefraw{shock} would go into \secrefraw{shock} again due to another \seclink{Damage Test}{damage-tests}, they die.
+If a \seclink{Damage Test}{damage-tests} meets or exceeds the target's Shock Threshold, or critically succeeds, the target goes into {\shock}.
+A character in {\shock} falls unconscious and cannot be roused while they remain in {\shock}.
+If a character in {\shock} would go into {\shock} again due to another \seclink{Damage Test}{damage-tests}, they die.
 
 Additionally, at the start of each of the \seclink{Shocked}{shock} character's Turns, roll a special Test against them.
-This Test applies no flat bonus, and uses the same number of dice as the \seclink{Damage Test}{damage-tests} that sent the character into \secrefraw{shock}: a character is more likely to bleed out from a sword wound than a punch.
+This Test applies no flat bonus, and uses the same number of dice as the \seclink{Damage Test}{damage-tests} that sent the character into {\shock}: a character is more likely to bleed out from a sword wound than a punch.
 If it meets or exceeds the \seclink{Shocked}{shock} character's Shock Threshold, they die.
 This Test is not considered to be a Test made by any character.
 
-If the Test made every Turn ever totals 9 or less, unless it also meets or exceed their Shock Threshold, the character is no longer in \secrefraw{shock}.
+If the Test made every Turn ever totals 9 or less, unless it also meets or exceed their Shock Threshold, the character is no longer in {\shock}.
 However, the character remains unconscious and cannot be naturally roused before the end of the Scene.
-A character can also be brought out of \secrefraw{shock} by another character tending to them.
+A character can also be brought out of {\shock} by another character tending to them.
 This requires an Action and a successful \testtype{ken}{healing} Test.
 The TN for this Test is 3 times the number of dice that would be rolled against the \seclink{Shocked}{shock} character each round.
 
 \subsection{Damage}
 \seclabel{damage}
 
-After \secrefraw{shock} has been tested for, whether or not it occurs, the \seclink{Damage Test}{damage-tests} causes \secrefraw{damage}.
-To calculate \secrefraw{damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's Resilience.
-For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 3 Resilience, they suffer 4 \secrefraw{damage}.
-\secrefraw{damage} accumulates: a character who has previously suffered 3 \secrefraw{damage} and suffers an additional 2 is now suffering from 5 \secrefraw{damage}.
+After {\shock} has been tested for, whether or not it occurs, the \seclink{Damage Test}{damage-tests} causes {\damage}.
+To calculate {\damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's Resilience.
+For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 3 Resilience, they suffer 4 {\damage}.
+{\damage} accumulates: a character who has previously suffered 3 {\damage} and suffers an additional 2 is now suffering from 5 {\damage}.
 
-\secrefraw{damage} has two effects.
-Firstly, a character subtracts their current \secrefraw{damage} from their Shock Threshold.
+{\damage} has two effects.
+Firstly, a character subtracts their current {\damage} from their Shock Threshold.
 
 Secondly, if a character's Shock Threshold ever reaches zero, they die immediately.
-This is very unlikely to happen through repeated \secrefraw{damage}, as an earlier blow would send them into \secrefraw{shock}, but can occur if a lot of painkillers wear off all at once.
-%Secondly, if a character's current \secrefraw{damage} ever equals or exceeds their original Shock Threshold (unmodified by \secrefraw{damage}), they die immediately.
-%This applies even if they are ignoring the effect of some of their \secrefraw{damage}, such as through painkillers.
-%As effects that allow a character to ignore \secrefraw{damage} are so common, it can be helpful to track a character's actual \secrefraw{damage} and the \secrefraw{damage} they are considered to be suffering from separately.
+This is very unlikely to happen through repeated {\damage}, as an earlier blow would send them into {\shock}, but can occur if a lot of painkillers wear off all at once.
+%Secondly, if a character's current {\damage} ever equals or exceeds their original Shock Threshold (unmodified by {\damage}), they die immediately.
+%This applies even if they are ignoring the effect of some of their {\damage}, such as through painkillers.
+%As effects that allow a character to ignore {\damage} are so common, it can be helpful to track a character's actual {\damage} and the {\damage} they are considered to be suffering from separately.
 %The former represents injury: scrapes, bruises and cuts.
 %The latter represents the pain suffered as a result of these.
 
 \subsection{Healing \& Recovery}
 
-\secrefraw{damage} heals naturally over time, but it's a slow process.
-Once per day, with a decent meal and at least about six hours of sleep, a character may recover from 1 point of \secrefraw{damage}.
-If the character spends the entire day resting, they may heal 1 additional point of \secrefraw{damage}.
+{\damage} heals naturally over time, but it's a slow process.
+Once per day, with a decent meal and at least about six hours of sleep, a character may recover from 1 point of {\damage}.
+If the character spends the entire day resting, they may heal 1 additional point of {\damage}.
 For a lightly wounded character, taking a stroll would be acceptable without disturbing a day of rest.
 For a character with more serious wounds, they shouldn't move around too much, and may even require complete bed rest.
-The GM should adjudicate this, taking into account how the \secrefraw{damage} was sustained, but in general a character who is not suffering any penalty to rolls due to \secrefraw{damage} doesn't need to be too careful.
+The GM should adjudicate this, taking into account how the {\damage} was sustained, but in general a character who is not suffering any penalty to rolls due to {\damage} doesn't need to be too careful.
 
 Tending by a healer can hasten the natural recovery process, but only provides any benefit if the character is taking an entire day of rest.
-For each rank their physician has in the \skillref{healing} skill, a character taking a day of rest may heal 1 additional point of \secrefraw{damage}.
+For each rank their physician has in the \skillref{healing} skill, a character taking a day of rest may heal 1 additional point of {\damage}.
 A single healer can tend many patients in a day, up to about a dozen.
 They may tend themselves, but only if their activities tending others do not prevent them from taking a day of rest themselves.
 
 \subsection{Exhaustion}
 \seclabel{exhaustion}
 
-Besides injury, an active witch runs the risk of \secrefraw{exhaustion}.
+Besides injury, an active witch runs the risk of {\exhaustion}.
 From late night vigils to running after tricksy spirits, many things can leave a witch tired and longing for her bed.
 
-When a character performs something exhausting, or goes a day without at least 6 hours of sleep, the GM may apply a level of \secrefraw{exhaustion}, or call for a Test (typically \attref{might} or \attref{will}) to avoid one.
-Each level of \secrefraw{exhaustion} reduces two of a character's attributes by 1.
-The GM selects appropriate attributes depending on the type of \secrefraw{exhaustion}.
-For example, \secrefraw{exhaustion} as a result of a long foot chase might decrease \attref{might} and \attref{grace}.
+When a character performs something exhausting, or goes a day without at least 6 hours of sleep, the GM may apply a level of {\exhaustion}, or call for a Test (typically \attref{might} or \attref{will}) to avoid one.
+Each level of {\exhaustion} reduces two of a character's attributes by 1.
+The GM selects appropriate attributes depending on the type of {\exhaustion}.
+For example, {\exhaustion} as a result of a long foot chase might decrease \attref{might} and \attref{grace}.
 Sleep deprivation might decrease \attref{wit} and \attref{heed}.
 A long day of socialising, rushing from meeting to meeting, might even reduce \attref{charm} and \attref{presence}.
 
-Multiple levels of \secrefraw{exhaustion} may reduce the same attribute, leading to a total reduction of 2 or more.
-Whenever a character suffers a second level of \secrefraw{exhaustion} affecting the same attribute, the GM may call for a Test to avoid passing out until they can sleep it off.
+Multiple levels of {\exhaustion} may reduce the same attribute, leading to a total reduction of 2 or more.
+Whenever a character suffers a second level of {\exhaustion} affecting the same attribute, the GM may call for a Test to avoid passing out until they can sleep it off.
 
-A character may reduce their \secrefraw{exhaustion} by 1 level when they get a good night's sleep: about eight hours.
-An entire day of rest reduces \secrefraw{exhaustion} by another level.
-The player my choose which to attributes to recover when they reduce their \secrefraw{exhaustion}.
+A character may reduce their {\exhaustion} by 1 level when they get a good night's sleep: about eight hours.
+An entire day of rest reduces {\exhaustion} by another level.
+The player my choose which to attributes to recover when they reduce their {\exhaustion}.
 
 \section{Combat}
 \seclabel{combat}
