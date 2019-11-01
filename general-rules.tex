@@ -200,8 +200,8 @@ One of a witch's duties is to tend to the injuries of her neighbours, nursing th
 Or, when they are beyond her help, easing their final moments.
 
 A character's resistance to injury is determined by two statistics: Resilience and Shock Threshold.
-A character's Resilience is equal to their \attref{might} plus 5, all halved.
-For example, a character with $0$ \attref{might} has $(0 + 5)/2 = 2$ Resilience, and a character with $3$ \attref{might} has $(3+5)/2 = 4$ Resilience.
+Most creatures of flesh and blood, including humans and familiars, have $3$ Resilience.
+Other creatures, such as golems, may be more or less resilient.
 A character's Shock Threshold is equal to 12, plus their \attref{might}, plus their \attref{will}.
 
 \subsection{Damage Tests}
@@ -258,7 +258,7 @@ The TN for this Test is 3 times the number of dice that would be rolled against 
 
 After \secrefraw{shock} has been tested for, whether or not it occurs, the \seclink{Damage Test}{damage-tests} causes \secrefraw{damage}.
 To calculate \secrefraw{damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's Resilience.
-For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 4 Resilience, they suffer 3 \secrefraw{damage}.
+For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 3 Resilience, they suffer 4 \secrefraw{damage}.
 \secrefraw{damage} accumulates: a character who has previously suffered 3 \secrefraw{damage} and suffers an additional 2 is now suffering from 5 \secrefraw{damage}.
 
 \secrefraw{damage} has several effects.
@@ -276,8 +276,6 @@ This is very unlikely to happen through repeated \secrefraw{damage}, as an earli
 %As effects that allow a character to ignore \secrefraw{damage} are so common, it can be helpful to track a character's actual \secrefraw{damage} and the \secrefraw{damage} they are considered to be suffering from separately.
 %The former represents injury: scrapes, bruises and cuts.
 %The latter represents the pain suffered as a result of these.
-
-If a creature somehow has a Resilience of 0 or less, any \seclink{Damage Test}{damage-tests} deals \secrefraw{damage} sufficient to drop its Shock Threshold to 0 and kills it.
 
 \subsection{Healing \& Recovery}
 
