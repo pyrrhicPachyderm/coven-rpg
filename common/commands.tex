@@ -110,19 +110,26 @@
 
 \newcommand\storybreak{\bigskip}
 
-\newcommand\atttable[6]{
+\newcommand\atttable[8]{%Arguments: might, grace, ken, wit, will, heed, charm, presence
 	\begin{center}
-		\begin{tabu}{cccccc}
+		\begin{tabu}{X[c]X[c]X[c]X[c]}
 			\toprule
 			
 			\attref{might} &
+			\attref{ken} &
+			\attref{will} &
+			\attref{charm} \\
+			
+			#1 & #3 & #5 & #7 \\
+			
+			\midrule
+			
 			\attref{grace} &
 			\attref{wit} &
-			\attref{will} &
-			\attref{charm} &
+			\attref{heed} &
 			\attref{presence} \\
 			
-			#1 & #2 & #3 & #4 & #5 & #6 \\
+			#2 & #4 & #6 & #8 \\
 			
 			\bottomrule
 		\end{tabu}
