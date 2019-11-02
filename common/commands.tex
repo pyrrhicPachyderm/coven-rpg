@@ -169,22 +169,24 @@
 	\labelname{#1 Herbs}%
 	\label{herbs:#2}%
 }
-\newcommand\herbtype[1]{%A herb type with a herb identity
+
+\newcommand\herbtype[1]{%A herb type (just rarity)
 	\nameref{herb:#1}%
 }
-\newcommand\herbtypeplural[1]{%A herb type with a herb identity
+\newcommand\herbtypeplural[1]{%
 	\nameref{herbs:#1}%
 }
+
 \newcommand\herb[2]{%A herb, with identity and type
 	#1 (\herbtype{#2})%
 }
-\newcommand\herbs[2]{%A herb, with identity and type
+\newcommand\herbs[2]{%
 	#1 (\herbtypeplural{#2})%
 }
-\newcommand\Herb[2]{%A herb, with identity and type
+\newcommand\Herb[2]{%
 	\expandafter\MakeUppercase #1 (\herbtype{#2})%
 }
-\newcommand\Herbs[2]{%A herb, with identity and type
+\newcommand\Herbs[2]{%
 	\expandafter\MakeUppercase #1 (\herbtypeplural{#2})%
 }
 
