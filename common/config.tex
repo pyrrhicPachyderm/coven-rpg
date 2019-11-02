@@ -7,6 +7,15 @@
 \sisetup{per-mode=symbol} %Use a slash for negative exponents, instead of an actual negative exponent.
 
 \usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+		\begin{center}%
+			\large#1%
+		\end{center}%
+		\vskip0.5em%
+	}%
+}
 
 \usepackage{titlesec}
 \titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} %Chapter number and name on same line
