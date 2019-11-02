@@ -3,7 +3,7 @@ LATEXMK_FLAGS = --pdf --cd
 RM := rm -f
 
 books := omnibus core big-book-of-familiars
-book_pdfs := $(shell echo $(books) | sed -r "s|[^ ]+|&.pdf|g")
+book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
 
 common_files := common/config.tex common/commands.tex common/edition-notice.tex
 
@@ -32,7 +32,7 @@ Clean: clean
 
 .SECONDEXPANSION:
 
-%.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files) $$(wildcard $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -r "s|[^ ]*|&/+.tex|g")) $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -r "s|[^ ]+|&.pdf|g")
+%.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files) $$(wildcard $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]*|&/+.tex|g")) $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]+|&.pdf|g")
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 	@ #Outdir is relative to cd directory
 	mv "$*/$@" "$@"
