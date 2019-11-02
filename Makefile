@@ -1,29 +1,31 @@
 SHELL := /bin/bash
 LATEXMK_FLAGS = --pdf --cd
-maindoc := coven
 RM := rm -f
 
-misc_files := common/config.tex common/commands.tex common/edition-notice.tex
+books := core
+book_texs := $(shell echo $(books) | sed "s|[^ ]*|&/&.tex|g")
+book_pdfs := $(shell echo $(books) | sed "s|[^ ]*|&.pdf|g")
 
-chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules brewing willing headology ritual-magic broomcraft sympathetic-magic golemancy necromancy divination druidcraft
-stories := weather-story flying-story
-chapter_files := $(shell echo $(chapters) | sed "s/[^ ]*/&.tex/g")
-story_files := $(shell echo $(stories) | sed "s/[^ ]*/&.tex/g")
+common_files := common/config.tex common/commands.tex common/edition-notice.tex
 
-all: $(maindoc).pdf
+all: $(book_pdfs)
 
-$(maindoc).pdf: $(maindoc).tex $(chapter_files) $(story_files) $(misc_files)
-	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
-pvc: $(maindoc).pdf
-	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $<)" $< --pvc
 clean:
-	@latexmk $(LATEXMK_FLAGS) -c -silent
 	@(\
 		shopt -s globstar;\
+		$(RM) **/*.aux **/*.log **/*.out **/*.toc **/*.fls;\
+		$(RM) **/*.fdb_latexmk;\
 		$(RM) **/*.bbl **/*.run.xml **/*.auxlock;\
-		$(RM) **/*.dep **/*.dpth **/*.log **/*.md5 **/*-figure*.pdf;\
+		$(RM) **/*.dep **/*.dpth **/*.md5 **/*-figure*.pdf;\
 	)
 Clean: clean
-	@$(RM) $(maindoc).pdf
+	@$(RM) *.pdf
 
-.PHONY: all pvc clean Clean
+.PHONY: all clean Clean
+
+
+.SECONDEXPANSION:
+
+%.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files)
+	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" --outdir=".." $<
+	@ #Outdir is relative to cd directory
