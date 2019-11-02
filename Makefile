@@ -19,7 +19,10 @@ clean:
 		$(RM) **/*.dep **/*.dpth **/*.md5 **/*-figure*.pdf;\
 	)
 Clean: clean
-	@$(RM) *.pdf
+	@(\
+		shopt -s globstar;\
+		$(RM) **/*.pdf **/*.dvi;\
+	)
 
 .PHONY: all clean Clean
 
