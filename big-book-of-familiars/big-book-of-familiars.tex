@@ -1,0 +1,24 @@
+\documentclass[a4paper,10pt,twocolumn]{book}
+
+\input{../common/config}
+\input{../common/commands}
+
+\zexternaldocument*{../core/core}[core.pdf]
+
+\title{The Big Book of Familiars}
+\subtitle{A Coven Expansion}
+\author{Christopher Brown}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\input{../common/edition-notice}
+
+\setcounter{tocdepth}{2} %No subsections or deeper.
+\tableofcontents
+
+\input{chapter-list}
+
+\end{document}

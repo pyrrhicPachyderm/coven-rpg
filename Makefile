@@ -1,29 +1,47 @@
 SHELL := /bin/bash
 LATEXMK_FLAGS = --pdf --cd
-maindoc := coven
 RM := rm -f
 
-misc_files := common/edition-notice.tex common/commands.tex
+books := omnibus core big-book-of-familiars
+book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
 
-chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules brewing willing headology ritual-magic broomcraft sympathetic-magic golemancy necromancy divination druidcraft
-stories := weather-story flying-story
-chapter_files := $(shell echo $(chapters) | sed "s/[^ ]*/&.tex/g")
-story_files := $(shell echo $(stories) | sed "s/[^ ]*/&.tex/g")
+common_files := common/config.tex common/commands.tex common/edition-notice.tex
 
-all: $(maindoc).pdf
+core_deps := #Core has no dependencies
+big_book_of_familiars_deps := core
+omnibus_deps := $(books)
 
-$(maindoc).pdf: $(maindoc).tex $(chapter_files) $(story_files) $(misc_files)
-	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
-pvc: $(maindoc).pdf
-	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $<)" $< --pvc
+all: $(book_pdfs)
+
 clean:
-	@latexmk $(LATEXMK_FLAGS) -c -silent
 	@(\
 		shopt -s globstar;\
+		$(RM) **/*.aux **/*.log **/*.out **/*.toc **/*.fls;\
+		$(RM) **/*.fdb_latexmk;\
 		$(RM) **/*.bbl **/*.run.xml **/*.auxlock;\
-		$(RM) **/*.dep **/*.dpth **/*.log **/*.md5 **/*-figure*.pdf;\
+		$(RM) **/*.dep **/*.dpth **/*.md5 **/*-figure*.pdf;\
 	)
 Clean: clean
-	@$(RM) $(maindoc).pdf
+	@(\
+		shopt -s globstar;\
+		$(RM) **/*.pdf **/*.dvi;\
+	)
 
-.PHONY: all pvc clean Clean
+.PHONY: all clean Clean
+
+
+.SECONDEXPANSION:
+
+%.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files) $$(wildcard $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]*|&/+.tex|g")) $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]+|&.pdf|g")
+	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
+	@ #Outdir is relative to cd directory
+	mv "$*/$@" "$@"
+#The two monstrous prerequsites for this rule are respectively:
+#All the tex files in the books this book depends on
+#The PDF files of the books this depends on, to make sure those are compiled first
+#This latter one should ensure that the external references exist and work properly.
+#However, it will probably break if the book that's depended upon is compiled, then the aux files removed.
+#I might need to ensure make is aware of the aux files in order to fix this.
+#The simplest way would be to depend on the aux file for every tex file.
+#Rules for the aux files would just invoke latexmk on the main file in their directory.
+#However, not every tex file has a corresponding aux file (e.g. chapter-list.tex).
