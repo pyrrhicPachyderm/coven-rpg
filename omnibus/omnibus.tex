@@ -1,0 +1,25 @@
+\documentclass[a4paper,10pt,twocolumn]{book}
+
+\input{../common/config}
+\input{../common/commands}
+
+\title{Coven: Omnibus Edition}
+\subtitle{An RPG of Witches}
+\author{Christopher Brown}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\input{../common/edition-notice}
+
+\setcounter{tocdepth}{1} %No subsections or deeper.
+\tableofcontents
+
+\import{../core/}{chapter-list}
+
+\part{The Big Book of Familiars}
+\import{../big-book-of-familiars/}{chapter-list}
+
+\end{document}
