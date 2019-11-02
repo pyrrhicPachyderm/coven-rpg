@@ -1,0 +1,43 @@
+\usepackage{hyperref}
+\usepackage{nameref}
+
+\usepackage[all]{nowidow}
+
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\usepackage{siunitx}
+\sisetup{per-mode=symbol} %Use a slash for negative exponents, instead of an actual negative exponent.
+
+\usepackage{titling}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} %Chapter number and name on same line
+%TODO: This justifies split lines awfully, fix it.
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{} %Remove section numbers
+\makeatother
+
+\usepackage{tocloft}
+\makeatletter
+\renewcommand{\cftsecpresnum}{\begin{lrbox}{\@tempboxa}} %Removes section numbers from the table of contents.
+\renewcommand{\cftsecaftersnum}{\end{lrbox}} %Latter half of the above.
+\makeatother
+\setlength{\cftsecnumwidth}{0pt} %Removes the space reserved for the section numbers in the table of contents.
+
+\usepackage{graphicx}
+\usepackage{float} %Provides the float option [H] for a non-floating float.
+\graphicspath{{./imgs/}}
+
+\usepackage{hyperxmp} %Recommended for doclicense
+\usepackage[
+	type={CC},
+	modifier={by-nc-sa},
+	version={4.0},
+]{doclicense}
+
+\usepackage{booktabs}
+\usepackage{tabu}
+\tabulinesep=1.2mm %Space tables more nicely.
+\usepackage[table]{xcolor}

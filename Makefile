@@ -3,7 +3,7 @@ LATEXMK_FLAGS = --pdf --cd
 maindoc := coven
 RM := rm -f
 
-misc_files := common/edition-notice.tex common/commands.tex
+misc_files := common/config.tex common/commands.tex common/edition-notice.tex
 
 chapters := introduction character-creation-guide attributes-and-skills familiars equipment general-rules brewing willing headology ritual-magic broomcraft sympathetic-magic golemancy necromancy divination druidcraft
 stories := weather-story flying-story
