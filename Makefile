@@ -27,5 +27,5 @@ Clean: clean
 .SECONDEXPANSION:
 
 %.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files)
-	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" --outdir=".." $<
+	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 	@ #Outdir is relative to cd directory
