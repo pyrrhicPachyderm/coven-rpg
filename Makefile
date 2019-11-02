@@ -2,7 +2,7 @@ SHELL := /bin/bash
 LATEXMK_FLAGS = --pdf --cd
 RM := rm -f
 
-books := core
+books := core big-book-of-familiars
 book_texs := $(shell echo $(books) | sed "s|[^ ]*|&/&.tex|g")
 book_pdfs := $(shell echo $(books) | sed "s|[^ ]*|&.pdf|g")
 
