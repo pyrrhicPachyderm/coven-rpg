@@ -177,18 +177,34 @@
 	\nameref{herbs:#1}%
 }
 
-\newcommand\herb[2]{%A herb, with identity and type
-	#1 (\herbtype{#2})%
+\makeatletter
+\newcommand\herb[3][\@nil]{%A herb, with identity and type
+	\def\akaname{#1}%Optional argument is an alternative name for the herb.
+	#2 (%
+	\ifx\akaname\@nnil%
+		%
+	\else%
+		a.k.a.\ \akaname,\ 
+	\fi%
+	\herbtype{#3})%
 }
 \newcommand\herbs[2]{%
 	#1 (\herbtypeplural{#2})%
 }
-\newcommand\Herb[2]{%
-	\expandafter\MakeUppercase #1 (\herbtype{#2})%
+\newcommand\Herb[3][\@nil]{%
+	\def\akaname{#1}%
+	\expandafter\MakeUppercase #2 (%
+	\ifx\akaname\@nnil%
+		%
+	\else%
+		a.k.a.\ \akaname,\ 
+	\fi%
+	\herbtype{#3})%
 }
 \newcommand\Herbs[2]{%
 	\expandafter\MakeUppercase #1 (\herbtypeplural{#2})%
 }
+\makeatother
 
 
 \newcommand\circlelabel[2]{%Arguments: title, label
