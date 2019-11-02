@@ -3,7 +3,7 @@ LATEXMK_FLAGS = --pdf --cd
 RM := rm -f
 
 books := omnibus core big-book-of-familiars
-book_pdfs := $(shell echo $(books) | sed "s|[^ ]*|&.pdf|g")
+book_pdfs := $(shell echo $(books) | sed -r "s|[^ ]+|&.pdf|g")
 
 common_files := common/config.tex common/commands.tex common/edition-notice.tex
 
