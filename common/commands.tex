@@ -181,6 +181,12 @@
 \newcommand\herbs[2]{%A herb, with identity and type
 	#1 (\herbtypeplural{#2})%
 }
+\newcommand\Herb[2]{%A herb, with identity and type
+	\expandafter\MakeUppercase #1 (\herbtype{#2})%
+}
+\newcommand\Herbs[2]{%A herb, with identity and type
+	\expandafter\MakeUppercase #1 (\herbtypeplural{#2})%
+}
 
 
 \newcommand\circlelabel[2]{%Arguments: title, label
