@@ -46,9 +46,10 @@
 \tabulinesep=1.2mm %Space tables more nicely.
 \usepackage[table]{xcolor}
 
-\usepackage{xr-hyper}
 \usepackage{hyperref}
 \usepackage{nameref}
+\usepackage{zref-xr}
+\zxrsetup{toltxlabel} %Because we're using standard labels, not zref ones.
 
 \usepackage{geometry} %Supposedly should be after hyperref
 
