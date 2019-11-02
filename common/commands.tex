@@ -169,26 +169,19 @@
 	\labelname{#1 Herbs}%
 	\label{herbs:#2}%
 }
-\makeatletter
-\newcommand\herbref[2][\@nil]{%Takes two arguments, the first of which is optional and defaults to nothing.
-	\def\herbname{#1}
-	\nameref{herb:#2}%
-	\ifx\herbname\@nnil%
-		%
-	\else%
-		\ (\herbname)%
-	\fi%
+\newcommand\herbtype[1]{%A herb type with a herb identity
+	\nameref{herb:#1}%
 }
-\newcommand\herbrefplural[2][\@nil]{%Takes two arguments, the first of which is optional and defaults to nothing.
-	\def\herbname{#1}
-	\nameref{herbs:#2}%
-	\ifx\herbname\@nnil%
-		%
-	\else%
-		\ (\herbname)%
-	\fi%
+\newcommand\herbtypeplural[1]{%A herb type with a herb identity
+	\nameref{herbs:#1}%
 }
-\makeatother
+\newcommand\herb[2]{%A herb, with identity and type
+	#1 (\herbtype{#2})%
+}
+\newcommand\herbs[2]{%A herb, with identity and type
+	#1 (\herbtypeplural{#2})%
+}
+
 
 \newcommand\circlelabel[2]{%Arguments: title, label
 	\labelname{#1 Ritual Circle}%
