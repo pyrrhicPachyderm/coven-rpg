@@ -136,7 +136,7 @@ Every character participating in the Scene gets one {\turn} each {\round}.
 Although the {\turns} are resolved in some order, all characters are assumed to be acting simultaneously and continuously.
 If it becomes particularly relevant for some reason, assume each {\round} takes approximately 10 seconds.
 
-On each {\turn}, a character may move a number of metres equal to their Speed and take one {\action}.
+On each {\turn}, a character may move a number of metres equal to their \statref{speed} and take one {\action}.
 An {\action} is something that requires most of the character's effort during their {\turn}, such as attacking someone, performing a brief bit of magic, knocking a hole in a wall or quaffing a potion.
 They may also take a reasonable number of minor actions that shouldn't require their full concentration, such as opening or slamming a door, drawing a sword, pointing at something or speaking a short sentence.
 Not everything can be accomplished in one {\action}.
@@ -170,8 +170,8 @@ Similarly, a witch's familiar and all other creatures associated with her (such 
 
 \section{Movement}
 
-Each {\turn} in Structured Time, a character can move a number of metres equal to her Speed, as well as taking an {\action}.
-If she takes the \actionref{dash} {\action}, she may move a total number equal to twice her Speed.
+Each {\turn} in Structured Time, a character can move a number of metres equal to her \statref{speed}, as well as taking an {\action}.
+If she takes the \actionref{dash} {\action}, she may move a total number equal to twice her \statref{speed}.
 This assumes that she is moving on foot over smooth ground.
 This speed represents urgent movement over a short period.
 A character trying to maintain this pace for more than a couple of minutes typically requires a \testtype{might}{athletics} Test to avoid tiring.
@@ -185,7 +185,7 @@ A character trying to maintain this pace for more than a couple of minutes typic
 \seclabel{difficult-terrain}
 
 {\diffterrain}, such as dense forest or a bog, slows characters trying to move through it.
-As a simple default, movement through it is halved; it costs 2 metres from a character's Speed to move through 1 metre of {\diffterrain}.
+As a simple default, movement through it is halved; it costs 2 metres from a character's \statref{speed} to move through 1 metre of {\diffterrain}.
 The GM is free to impose a lesser or greater penalty for more or less severe terrain.
 
 For some kinds of {\diffterrain}, the GM may offer players the option to ignore the movement penalty at an alternative cost.
@@ -200,10 +200,10 @@ And it's not only her own injuries that a witch has to deal with.
 One of a witch's duties is to tend to the injuries of her neighbours, nursing them back to health after an accident or disease has laid them low.
 Or, when they are beyond her help, easing their final moments.
 
-A character's resistance to injury is determined by two statistics: Resilience and Shock Threshold.
-Most creatures of flesh and blood, including humans and familiars, have $3$ Resilience.
+A character's resistance to injury is determined by two statistics: \statref{res} and \statref{st}.
+Most creatures of flesh and blood, including humans and familiars, have $3$ \statref{res}.
 Other creatures, such as golems, may be more or less resilient.
-A character's Shock Threshold is equal to 12, plus their \attref{might}, plus their \attref{will}.
+A character's \statref{st} is equal to 12, plus their \attref{might}, plus their \attref{will}.
 
 \subsection{Damage Tests}
 \seclabel{damage-tests}
@@ -239,16 +239,16 @@ Critical success on a \seclink{Damage Test}{damage-tests} may immediately kill t
 \subsection{Shock}
 \seclabel{shock}
 
-If a \seclink{Damage Test}{damage-tests} meets or exceeds the target's Shock Threshold, or critically succeeds, the target goes into {\shock}.
+If a \seclink{Damage Test}{damage-tests} meets or exceeds the target's \statref{st}, or critically succeeds, the target goes into {\shock}.
 A character in {\shock} falls unconscious and cannot be roused while they remain in {\shock}.
 If a character in {\shock} would go into {\shock} again due to another \seclink{Damage Test}{damage-tests}, they die.
 
 Additionally, at the start of each of the {\shocked} character's {\turns}, roll a special Test against them.
 This Test applies no flat bonus, and uses the same number of dice as the \seclink{Damage Test}{damage-tests} that sent the character into {\shock}: a character is more likely to bleed out from a sword wound than a punch.
-If it meets or exceeds the {\shocked} character's Shock Threshold, they die.
+If it meets or exceeds the {\shocked} character's \statref{st}, they die.
 This Test is not considered to be a Test made by any character.
 
-If the Test made every {\turn} ever totals 9 or less, unless it also meets or exceed their Shock Threshold, the character is no longer in {\shock}.
+If the Test made every {\turn} ever totals 9 or less, unless it also meets or exceed their \statref{st}, the character is no longer in {\shock}.
 However, the character remains unconscious and cannot be naturally roused before the end of the Scene.
 A character can also be brought out of {\shock} by another character tending to them.
 This requires an {\action} and a successful \testtype{ken}{healing} Test.
@@ -258,16 +258,16 @@ The TN for this Test is 3 times the number of dice that would be rolled against 
 \seclabel{damage}
 
 After {\shock} has been tested for, whether or not it occurs, the \seclink{Damage Test}{damage-tests} causes {\damage}.
-To calculate {\damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's Resilience.
-For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 3 Resilience, they suffer 4 {\damage}.
+To calculate {\damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's \statref{res}.
+For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 3 \statref{res}, they suffer 4 {\damage}.
 {\damage} accumulates: a character who has previously suffered 3 {\damage} and suffers an additional 2 is now suffering from 5 {\damage}.
 
 {\damage} has two effects.
-Firstly, a character subtracts their current {\damage} from their Shock Threshold.
+Firstly, a character subtracts their current {\damage} from their \statref{st}.
 
-Secondly, if a character's Shock Threshold ever reaches zero, they die immediately.
+Secondly, if a character's \statref{st} ever reaches zero, they die immediately.
 This is very unlikely to happen through repeated {\damage}, as an earlier blow would send them into {\shock}, but can occur if a lot of painkillers wear off all at once.
-%Secondly, if a character's current {\damage} ever equals or exceeds their original Shock Threshold (unmodified by {\damage}), they die immediately.
+%Secondly, if a character's current {\damage} ever equals or exceeds their original \statref{st} (unmodified by {\damage}), they die immediately.
 %This applies even if they are ignoring the effect of some of their {\damage}, such as through painkillers.
 %As effects that allow a character to ignore {\damage} are so common, it can be helpful to track a character's actual {\damage} and the {\damage} they are considered to be suffering from separately.
 %The former represents injury: scrapes, bruises and cuts.
@@ -319,7 +319,7 @@ The player my choose which to attributes to recover when they reduce their {\exh
 You attack a creature or object, with a \seclink{weapon}{weapons} or unarmed.
 You must be adjacent to the target to attack with a melee weapon, or within the listed range of a ranged weapon.
 Make a Test using a number of dice determined, as normal, by your \skillref{weaponry} skill, and a flat bonus determined by your weapon's accuracy.
-The Test is made against a TN equal to the target's Dodge Rating: 8, plus their \attref{grace}, plus their \attref{heed}.
+The Test is made against a TN equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
 
 If you succeed in your Test, you hit.
 Make a \seclink{Damage Test}{damage-tests} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
@@ -327,7 +327,7 @@ Make a \seclink{Damage Test}{damage-tests} against the target, rolling dice as d
 \subsubsection{Dash}
 \actionlabel{dash}
 
-You may move an additional number of metres equal to your Speed this {\turn}.
+You may move an additional number of metres equal to your \statref{speed} this {\turn}.
 
 \subsubsection{Ready}
 \actionlabel{ready}

@@ -59,12 +59,12 @@ A zombie is the simplest reanimation possible; the corpse, fully clothed in its 
 Is it a clumsy creature, with most of the mind rotted away as well, and it only grows worse as the corpse rots further.
 
 A corpse reanimated as a zombie loses 2 points from all attributes except \attref{might} and \attref{will}.
-It loses 4 Speed in addition to the loss from the reduced \attref{grace}.
-Its Shock Threshold increases by 2, however.
+It loses 4 \statref{speed} in addition to the loss from the reduced \attref{grace}.
+Its \statref{st} increases by 2, however.
 If it could fly, it is now too clumsy to do so.
 
 A corpse reanimated as a zombie is not healed of any {\damage}.
-If this reduces its Shock Threshold to 0 or below, the corpse is too mangled to successfully reanimate.
+If this reduces its \statref{st} to 0 or below, the corpse is too mangled to successfully reanimate.
 
 Reanimating a corpse as a zombie requires that it is unrotted.
 Furthermore, it does nothing to slow the rot.
@@ -78,7 +78,7 @@ The bones arrange themselves in the air, supported by nothing but the will of th
 The result is a creature far less clumsy than a zombie, but not so resilient.
 
 A corpse reanimated as a skeleton loses 2 points from all attributes except \attref{grace} and \attref{will}.
-Its Shock Threshold is also reduced by 2, in addition to the loss from the reduced \attref{might}.
+Its \statref{st} is also reduced by 2, in addition to the loss from the reduced \attref{might}.
 The mere bones of wings are not sufficient to allow it to fly, if it previously could.
 It also sinks in water, but may move along the bottom.
 
@@ -153,7 +153,7 @@ A skeleton lasts a long time without decomposing; at least a decade and even lon
 	This usually involves stitching the missing bits back on, or gluing some bones.
 	
 	The repair and reanimation requires a Test, with the TN determined by how badly damaged the corpse is, using your choice of \skillref{necromancy} or \skillref{healing}.
-	A successful Test repairs at least enough {\damage} to restore the creature's Shock Threshold to 1, and a high result may repair even more.
+	A successful Test repairs at least enough {\damage} to restore the creature's \statref{st} to 1, and a high result may repair even more.
 }
 
 \feat{Scraps}{undead-repair-2}{10}{
