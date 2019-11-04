@@ -113,10 +113,6 @@
 \newcommand\negative[1]{$\shortminus$#1}
 \newcommand\positive[1]{$+$#1}
 
-\newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
-
-\newcommand\storybreak{\bigskip}
-
 \newcommand\atttable[8]{%Arguments: might, grace, ken, wit, will, heed, charm, presence
 	\begin{center}
 		\begin{tabu}{X[c]X[c]X[c]X[c]}
@@ -292,3 +288,17 @@
 \newcommand\possessed{\seclink{Possessed}{possession}}
 \newcommand\possessing{\seclink{Possessing}{possession}}
 \newcommand\possess{\seclink{Possess}{possession}}
+
+%%%%%%%%%%%%%%%%%%%%
+%Aesthetic commands.
+%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
+
+\newcommand\storybreak{\bigskip}
+
+\newcommand\storybreakword[1]{%
+	\begin{center}%
+		#1%
+	\end{center}%
+}
