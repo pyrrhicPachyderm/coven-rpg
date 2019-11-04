@@ -189,7 +189,7 @@ As a simple default, movement through it is halved; it costs 2 metres from a cha
 The GM is free to impose a lesser or greater penalty for more or less severe terrain.
 
 For some kinds of {\diffterrain}, the GM may offer players the option to ignore the movement penalty at an alternative cost.
-For example, a character pushing through brambles may move at full speed, but be subjected to a \seclink{Damage Test}{damage-tests} for doing so.
+For example, a character pushing through brambles may move at full speed, but be subjected to a {\damagetest} for doing so.
 A character moving on slick ice or along a narrow ledge may move at full speed, but must succeed on a \testtype{grace}{athletics} Test to avoid falling over, or off the edge{\dots}
 
 \section{Injury}
@@ -208,13 +208,13 @@ A character's \statref{st} is equal to 12, plus their \attref{might}, plus their
 \subsection{Damage Tests}
 \seclabel{damage-tests}
 
-A \seclink{Damage Test}{damage-tests} is a special type of Test used to determine how much an effect hurts a character.
+A {\damagetest} is a special type of Test used to determine how much an effect hurts a character.
 It is made like a normal Test, by rolling some number of dice and adding the highest 3 together, with a flat bonus.
 In the case of an attack by one character upon another, the number of dice are determined by the weapon used and the flat bonus by the wielder's strength.
 In other cases, the GM or the rules of the damaging effect assign the number of dice and the bonus.
 For small effects, this can often be fewer than 3 dice.
 
-The following table provides examples of the number of dice and the bonus for \seclink{Damage Tests}{damage-tests}.
+The following table provides examples of the number of dice and the bonus for {\damagetests}.
 
 \begin{simpletable}{Xl}
 	\toprule
@@ -229,22 +229,22 @@ The following table provides examples of the number of dice and the bonus for \s
 	\bottomrule
 \end{simpletable}
 
-Additionally, a \seclink{Damage Test}{damage-tests} is not made against a particular TN like most Tests.
+Additionally, a {\damagetest} is not made against a particular TN like most Tests.
 Instead, it applies two effects to the target, {\shock} and {\damage}.
 {\shock} is always tested for before {\damage} is applied.
 
-Critical failure on a \seclink{Damage Test}{damage-tests} means no effect is applied at all; the blow was glancing and won't do more than bruise slightly.
-Critical success on a \seclink{Damage Test}{damage-tests} may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies {\shock}.
+Critical failure on a {\damagetest} means no effect is applied at all; the blow was glancing and won't do more than bruise slightly.
+Critical success on a {\damagetest} may immediately kill the target or leave them with a lasting injury, at the GM's option, and always applies {\shock}.
 
 \subsection{Shock}
 \seclabel{shock}
 
-If a \seclink{Damage Test}{damage-tests} meets or exceeds the target's \statref{st}, or critically succeeds, the target goes into {\shock}.
+If a {\damagetest} meets or exceeds the target's \statref{st}, or critically succeeds, the target goes into {\shock}.
 A character in {\shock} falls unconscious and cannot be roused while they remain in {\shock}.
-If a character in {\shock} would go into {\shock} again due to another \seclink{Damage Test}{damage-tests}, they die.
+If a character in {\shock} would go into {\shock} again due to another {\damagetest}, they die.
 
 Additionally, at the start of each of the {\shocked} character's {\turns}, roll a special Test against them.
-This Test applies no flat bonus, and uses the same number of dice as the \seclink{Damage Test}{damage-tests} that sent the character into {\shock}: a character is more likely to bleed out from a sword wound than a punch.
+This Test applies no flat bonus, and uses the same number of dice as the {\damagetest} that sent the character into {\shock}: a character is more likely to bleed out from a sword wound than a punch.
 If it meets or exceeds the {\shocked} character's \statref{st}, they die.
 This Test is not considered to be a Test made by any character.
 
@@ -257,9 +257,9 @@ The TN for this Test is 3 times the number of dice that would be rolled against 
 \subsection{Damage}
 \seclabel{damage}
 
-After {\shock} has been tested for, whether or not it occurs, the \seclink{Damage Test}{damage-tests} causes {\damage}.
-To calculate {\damage}, divide the result of the \seclink{Damage Test}{damage-tests} by the target's \statref{res}.
-For example, if the result of the \seclink{Damage Test}{damage-tests} is 13 and the damaged creature has 3 \statref{res}, they suffer 4 {\damage}.
+After {\shock} has been tested for, whether or not it occurs, the {\damagetest} causes {\damage}.
+To calculate {\damage}, divide the result of the {\damagetest} by the target's \statref{res}.
+For example, if the result of the {\damagetest} is 13 and the damaged creature has 3 \statref{res}, they suffer 4 {\damage}.
 {\damage} accumulates: a character who has previously suffered 3 {\damage} and suffers an additional 2 is now suffering from 5 {\damage}.
 
 {\damage} has two effects.
@@ -322,7 +322,7 @@ Make a Test using a number of dice determined, as normal, by your \skillref{weap
 The Test is made against a TN equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
 
 If you succeed in your Test, you hit.
-Make a \seclink{Damage Test}{damage-tests} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
+Make a {\damagetest} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
 
 \subsubsection{Dash}
 \actionlabel{dash}
