@@ -316,3 +316,15 @@
 		#1%
 	\end{center}%
 }
+
+%Basing upon https://tex.stackexchange.com/a/199989
+%Except using starred \chapter
+%Starred chapter uses \@makeschapterhead instead of \makechapterhead
+\makeatletter
+\newcommand\storychapter[1]{%
+	\begingroup
+	\let\@makeschapterhead\@gobble
+	\chapter*{#1}
+	\endgroup
+}
+\makeatother
