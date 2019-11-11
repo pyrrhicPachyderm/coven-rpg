@@ -154,11 +154,18 @@
 	
 	{#8}
 }
-
+\newcommand\speed[1]{
+	#1
+}
+\newcommand\flyspeed[1]{
+	#1 flying
+}
+\newcommand\swimspeed[1]{
+	#1 swimming
+}
 \newcommand\familiarability[2]{%Arguments: title, text
 	\textbf{#1:} {#2}
 }
-
 \newcommand\familiaroption[3]{%Arguments: title, XP cost, text
 	\familiarability{{#1} [#2 XP]}{#3}
 }
