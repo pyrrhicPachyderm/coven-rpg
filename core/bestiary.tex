@@ -74,3 +74,51 @@ Simply reduce its \attref{ken}, \attref{wit}, and possibly \attref{charm}, and r
 Many \herbtypeplural{5} possess some level of mobility or the ability to defend themselves; enough to qualify them as a creature.
 A witch with \skillref[3]{botany} is assumed to have enough tricks and experience to keep these herbs under control, but someone else wandering into her garden might be less lucky.
 The GM can also use these as inspiration for an adventure, or perhaps a short scene when a witch leaves her garden untended for too long, and has to bring it back into shape.
+
+\creature{Grand Wormwood}{grand-wormwood}{
+	\atttable{4}{\negative 5}{0}{0}{4}{\negative 2}{2}{5}
+}{
+	\speed{0}
+}{
+	\skillref[1]{botany}, \skillref[2]{intimidation}, \skillref[3]{persuasion}
+}{
+	Regular wormwood is a mere \herbtype{3}.
+	However, in the right conditions it can be encouraged to grow stronger, fuller, and smarter, becoming the lordly and demanding \creatureref{grand-wormwood}.
+	
+	To cultivate \creatureref{grand-wormwood}, one must plant a ring of small wormwood plants around a previously established wormwood bush.
+	These are to become its subjects.
+	Then, one must honour the central bush, treating it like a king, ensuring it knows it is the grandest wormwood of all.
+	It must receive the finest fertiliser, and regular watering.
+	Bowing to the bush on every interaction with it certainly helps, and some gardners even go so far as to sacrifice other plants or small animals to it, and lay them upon its roots.
+	The wormwood's subject bushes suffer stunted growth as their energy goes to feed their king, and they need occasional replacement as they wither and die.
+	
+	A \creatureref{grand-wormwood} bush is distinguishable by the fact that it grows far taller, just over the height of a man, and develops a clear crown of leaves at its peak.
+	Such distinguishing features are not particularly necessary, however, due to the sheer \attref{presence} of the plant---anyone who passes near it can simply feel that it is nearby, and can't help but find their eye drawn to admiring it.
+	The weak-willed feel themselves compelled to serve the bush, humbled by its magnificence.
+	A gardener must be very careful when cultivating the \creatureref{grand-wormwood}.
+	Give it too little attention, and it shall wither away, regressing to regular wormwood.
+	But a gardener who gives it too much soon finds herself a willing slave to the bush, spending every day bringing it more fertiliser, more sacrifices, and grovelling before it.
+	
+	The greatest threat of all comes from the interaction of two \creatureref{grand-wormwood} bushes.
+	Each has been raised to know that it is the king of the wormwoods, the grandest in all the lands.
+	Sensing another \creatureref{grand-wormwood}---and it might sense one from several gardens away---crushes this notion.
+	In a lucky case, the weaker-willed bush simply dies of shame.
+	Normally, however, everything ends in blood, sap and tears.
+	Great swathes of countryside have been known to burn in the ensuing battles.
+}{
+	\ability{Lord's Servants}{
+		A creature encountering the \creatureref{grand-wormwood} for the first time, or serving it in some fashion, must succeed on a TN 12 \testtype{will}{botany} Test or become the bush's servant.
+		The creature serves the bush willingly and utterly, even to the complete neglect of its own wellbeing.
+		It may repeat the Test the first time it grows thirsty, the first time it grows hungry and first suffers sleep deprivation, breaking free on a success.
+		It it fails each of these, it serves the bush until the neglect of its own health kills it.
+		Others may attempt to talk or smack it out of its servitude, and isolation from the bush can help.
+	}
+	
+	\ability{One Lord}{
+		A \creatureref{grand-wormwood} bush can sense the existence of other \creatureref{grand-wormwood} bushes within about a kilometre.
+		If it detects one, and both survive the initial shame, it enters a homicidal rage.
+		The TN to resist its Lord's Servants ability increases to 18, it it turns all its servants to eliminating the opposing \creatureref{grand-wormwood}.
+		It cannot survive in this state for more than a few days.
+		If both opposing bushes still stand at this time, they spontaneously combust.
+	}
+}
