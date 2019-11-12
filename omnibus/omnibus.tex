@@ -10,6 +10,8 @@
 
 \begin{document}
 
+\frontmatter
+
 \maketitle
 
 \input{../common/edition-notice}
@@ -17,10 +19,14 @@
 \setcounter{tocdepth}{1} %No subsections or deeper.
 \tableofcontents
 
+\mainmatter
+
 \import{../core/}{chapter-list}
 
 \part{The Big Book of Familiars}
 \import{../big-book-of-familiars/}{chapter-list}
+
+\backmatter
 
 \printindex
 
