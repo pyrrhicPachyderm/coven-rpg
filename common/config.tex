@@ -27,6 +27,10 @@
 
 \setsecnumdepth{chapter} %Don't number anything below chapters.
 
+%Add a couple of spaces before the part titles in the ToC.
+%This gives 'III  Disciplines' instead of 'IIIDisciplines'
+\renewcommand\cftpartaftersnumb{\ \ }
+
 \usepackage{graphicx}
 \usepackage{float} %Provides the float option [H] for a non-floating float.
 \graphicspath{{./imgs/}}
