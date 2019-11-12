@@ -140,6 +140,7 @@
 	\end{center}
 }
 
+\makeatletter
 \newcommand\creature[8][\@nil]{%Arguments: displaytitle (optional), title, label, atttable, speed, skills, text, abilities
 	\def\displaytitle{#1}
 	\ifx\displaytitle\@nnil%
@@ -158,6 +159,7 @@
 	
 	{#8}
 }
+\makeatother
 \newcommand\speed[1]{
 	#1
 }
