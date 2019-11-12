@@ -49,7 +49,15 @@
 \usepackage[table]{xcolor}
 
 \usepackage{imakeidx}
-\makeindex[columns=2, intoc]
+\makeindex[columns=2]
+
+\let\printinnerindex\printindex
+\renewcommand\printindex{
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{part}{Index}
+	\printinnerindex
+}
 
 \usepackage{hyperref}
 \usepackage{nameref}
