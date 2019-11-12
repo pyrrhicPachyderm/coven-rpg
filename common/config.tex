@@ -25,12 +25,7 @@
 
 \setcounter{secnumdepth}{0}
 
-\usepackage{tocloft}
-\makeatletter
-\renewcommand{\cftsecpresnum}{\begin{lrbox}{\@tempboxa}} %Removes section numbers from the table of contents.
-\renewcommand{\cftsecaftersnum}{\end{lrbox}} %Latter half of the above.
-\makeatother
-\setlength{\cftsecnumwidth}{0pt} %Removes the space reserved for the section numbers in the table of contents.
+\setsecnumdepth{chapter} %Don't number anything below chapters.
 
 \usepackage{graphicx}
 \usepackage{float} %Provides the float option [H] for a non-floating float.
@@ -48,27 +43,14 @@
 \tabulinesep=1.2mm %Space tables more nicely.
 \usepackage[table]{xcolor}
 
-\usepackage{imakeidx}
-\makeindex[columns=2]
-
-\let\printinnerindex\printindex
-\renewcommand\printindex{
-	\cleardoublepage
-	\phantomsection
-	\addcontentsline{toc}{part}{Index}
-	%Setting this as 'part' might be weird for books other than the core and omnibus, that don't actually have parts.
-	%Keep an eye on this, and maybe detect whether it out to be chapter or part.
-	\printinnerindex
-}
+%\usepackage{imakeidx}
+\makeindex
 
 \usepackage{hyperref}
 \usepackage{nameref}
 \usepackage{zref-xr}
 \zxrsetup{toltxlabel} %Because we're using standard labels, not zref ones.
 
-
 %\usepackage{geometry} %Supposedly should be after hyperref
-
-\addtocontents{toc}{\protect{\pdfbookmark[0]{\contentsname}{toc}}} %Add the Table of Contents PDF bookmark
 
 \pagestyle{plain} %Fixes page numbers appearing in the top left on empty pages.
