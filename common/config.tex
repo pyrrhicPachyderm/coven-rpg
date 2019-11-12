@@ -46,6 +46,16 @@
 %\usepackage{imakeidx}
 \makeindex
 
+\usepackage{bookmark}
+\let\oldbackmatter\backmatter
+\renewcommand\backmatter{
+	\bookmarksetup{startatroot}
+	%End any ongoing parts/section etc.
+	%TODO: Perhaps a skip in the ToC too?
+	%https://stackoverflow.com/questions/1483396/how-to-explicitly-end-a-part-in-latex-with-hyperref
+	\oldbackmatter
+}
+
 \usepackage{hyperref}
 \usepackage{nameref}
 \usepackage{zref-xr}
