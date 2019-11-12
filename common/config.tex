@@ -27,11 +27,12 @@
 
 \setsecnumdepth{chapter} %Don't number anything below chapters.
 
-%Add a couple of spaces before the part titles in the ToC.
-%This gives 'III  Disciplines' instead of 'IIIDisciplines'
-\renewcommand\cftpartaftersnumb{\ \ }
-%TODO: Consider \renewcommand\partnumberlinebox[2]{#2\hspace{1em}}
-%https://tex.stackexchange.com/a/210456
+%Move all the titles to the right in the ToC.
+%This gives 'III Disciplines' instead of 'IIIDisciplines'
+%Moving everything keeps the titles for the various layers aligned.
+\renewcommand*{\cftpartnumwidth}{2.5em}
+\renewcommand*{\cftchapternumwidth}{2.5em}
+\renewcommand*{\cftsectionindent}{2.5em}
 
 \usepackage{graphicx}
 \usepackage{float} %Provides the float option [H] for a non-floating float.
