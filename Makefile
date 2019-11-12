@@ -19,6 +19,7 @@ clean:
 		$(RM) **/*.aux **/*.log **/*.out **/*.toc **/*.fls;\
 		$(RM) **/*.fdb_latexmk;\
 		$(RM) **/*.bbl **/*.run.xml **/*.auxlock;\
+		$(RM) **/*.idx **/*.ind **/*.ilg;\
 		$(RM) **/*.dep **/*.dpth **/*.md5 **/*-figure*.pdf;\
 	)
 Clean: clean
