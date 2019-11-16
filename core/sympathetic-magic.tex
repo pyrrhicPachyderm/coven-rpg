@@ -10,7 +10,7 @@ Not every \materialref{poppet} or \materialref{effigy} is automatically a {\symb
 It must by magically bound to the target by a {\symlink}.
 
 A novice witch can only maintain one {\symlink} at a time.
-It's not that maintaining one is particularly arduous; once established, a {\symlink} remains in place indefinitely, even when the witch sleeps.
+It's not that maintaining one is particularly arduous; once established, a {\symlink} remains in place indefinitely, as long as the target is not resisting it.
 Rather, two {\symlinks} tend to tangle themselves up, like pieces of string left together in a drawer.
 Soon enough, both are totally useless and it takes a pair of shears to separate them.
 A witch can sever any {\symlink} she has established as an {\action}, or as part of establishing any new {\symlink}.
@@ -23,10 +23,22 @@ As such, leaving {\symbols} lying around is a slightly dangerous proposition.
 
 \subsection{Establishing a Sympathetic Link}
 
-Initially, establishing a {\symlink} is a rather involved process.
-A novice witch can only establish {\symlinks} to creatures (people or animals), and requires an appropriate \materialref{poppet} or \materialref{effigy} as the {\symbol}.
-The ritual that establishes the link requires tying the target and the {\symbol} together with a piece of thread.
-It takes five minutes, and must occur in a \circleref{small}.
+The simplest method for establishing a {\symlink} actually relies upon a trick of \discref{headology}.
+The target must be \emph{expecting} the link, allowing the witch the opportunity to fasten it in place.
+As such, at first, the witch can only establish {\symlinks} with people as the target, using a \materialref{poppet} or \materialref{effigy} as the {\symbol}.
+
+Establishing the link requires an {\action}.
+The target must see the {\symbol}, and the witch must declare to the target that she is binding them together.
+Many witches adopt a standard incantation for this, often some piece of mumbo jumbo that suits the mystique they wish to cultivate.
+The important thing is that the target understands the intent---that they are \emph{convinced} by it is not so important as in ``true'' \discref{headology}.
+
+The target's expectation provides a hook that the witch may fasten the {\symlink} to.
+If the target welcomes the {\symlink}, this is easy---it is established automatically and remains in place indefinitely.
+Otherwise, establishing the link requires a \testtype{wit}{sympathetic-magic} {\opposed} by the target's \testtype{will}{sympathetic-magic}.
+
+Furthermore, resistance can dislodge even an established {\symlink}.
+A target who is aware they are bonded by a {\symlink}, and does not wish to be, automatically breaks the link after about a minute.
+This applies even if they previously accepted the link, but now wish to shake it off.
 
 \section{Feats}
 
@@ -41,15 +53,15 @@ It takes five minutes, and must occur in a \circleref{small}.
 	You can't get any information about their location, or even whether they are still alive.
 }
 
-\feat{Taglock Binding}{symlink-taglock}{20}{
-	None
-}{
-	You can't always get someone co-operative (or unconscious) enough to sit still while you establish a {\symlink}.
-	You've finally got the hang of using a \materialref{taglock} instead.
-	
-	You can establish a {\symlink} through the usual ritual by tying the {\symbol} to a \materialref{taglock} from the target, instead of the target themselves.
-	However, you must use an \materialref{effigy} instead of a \materialref{poppet} as the {\symbol}, in order to make up the lost strength of the link.
-}
+%\feat{Taglock Binding}{symlink-taglock}{20}{
+%	None
+%}{
+%	You can't always get someone co-operative (or unconscious) enough to sit still while you establish a {\symlink}.
+%	You've finally got the hang of using a \materialref{taglock} instead.
+%	
+%	You can establish a {\symlink} through the usual ritual by tying the {\symbol} to a \materialref{taglock} from the target, instead of the target themselves.
+%	However, you must use an \materialref{effigy} instead of a \materialref{poppet} as the {\symbol}, in order to make up the lost strength of the link.
+%}
 
 \feat{Twin Links}{symlink-extra}{20}{
 	\skillref[1]{sympathetic-magic}
@@ -79,15 +91,15 @@ It takes five minutes, and must occur in a \circleref{small}.
 	However, the target does not recover from {\damage} and {\exhaustion} as a result of this rest.
 }
 
-\feat{Sympathetic Insomnia}{sympathic-sleep-deprive}{20}{
-	\skillref[1]{sympathetic-magic},
-	\featref{sympathetic-sleep}
-}{
-	By keeping a {\symbol} awake, you can deprive its target of restful sleep.
-	If the {\symbol} is subjected to loud noises, bright lights, stony bedding, or other significant discomforts while the target sleeps, the sleep will be fitful and restless.
-	The sleep does not help them recover from {\damage} or {\exhaustion} (although they may still benefit from a day of rest).
-	If this goes on for several nights, they may begin suffering {\exhaustion} due to sleep deprivation.
-}
+%\feat{Sympathetic Insomnia}{sympathic-sleep-deprive}{20}{
+%	\skillref[1]{sympathetic-magic},
+%	\featref{sympathetic-sleep}
+%}{
+%	By keeping a {\symbol} awake, you can deprive its target of restful sleep.
+%	If the {\symbol} is subjected to loud noises, bright lights, stony bedding, or other significant discomforts while the target sleeps, the sleep will be fitful and restless.
+%	The sleep does not help them recover from {\damage} or {\exhaustion} (although they may still benefit from a day of rest).
+%	If this goes on for several nights, they may begin suffering {\exhaustion} due to sleep deprivation.
+%}
 
 \feat{Sympathetic Warmth}{sympathetic-heat}{10}{
 	None
@@ -116,15 +128,15 @@ It takes five minutes, and must occur in a \circleref{small}.
 	The {\symbol} has a very short range of hearing; speaking through it essentially requires picking it up and holding it near the mouth.
 }
 
-\feat{Sympathetic Pestering}{sympathetic-speak-2}{15}{
-	\skillref[1]{sympathetic-magic},
-	\featref{sympathetic-speak},
-	\featref{sympathic-sleep-deprive}
-}{
-	When sending sounds along a {\symlink} using \featref{sympathetic-speak}, you may send them directly into the target's mind, bypassing its ears.
-	The target hears them even if it is deaf, or has its ears plugged.
-	You may even be able to wake the target up with loud enough sounds, if it is asleep.
-}
+%\feat{Sympathetic Pestering}{sympathetic-speak-2}{15}{
+%	\skillref[1]{sympathetic-magic},
+%	\featref{sympathetic-speak},
+%	\featref{sympathic-sleep-deprive}
+%}{
+%	When sending sounds along a {\symlink} using \featref{sympathetic-speak}, you may send them directly into the target's mind, bypassing its ears.
+%	The target hears them even if it is deaf, or has its ears plugged.
+%	You may even be able to wake the target up with loud enough sounds, if it is asleep.
+%}
 
 \feat{Sympathetic Knot}{sympathetic-knot}{15}{
 	\skillref[1]{sympathetic-magic},
