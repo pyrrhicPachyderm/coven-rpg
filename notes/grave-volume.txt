@@ -1,0 +1,21 @@
+I'm going to use the dimensions for the casket from this picture:
+https://images.squarespace-cdn.com/content/v1/542053a8e4b0c6a70bc09cfb/1507858820367-WB0HCB6T71T7646XSUD6/ke17ZwdGBToddI8pDm48kBsYbNEZRI5CDvMUeTcQ88ZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PILFWZuX_A1dHZ35GlQ_HiacAMuo1PXldNPmORhVvwrMMKMshLAGzx4R3EDFOm1kBS/Coffin-Plans.jpg?format=750w
+
+I'm going to work in inches all the way along, then convert at the end, 'cause that's what everything comes in for graves.
+
+We begin by calculating the area of the casket.
+It consists of two trapezia.
+The upper trapezium has area:
+	(18+26)/2 * 24 = 528
+The lower trapezium has area:
+	(14+26)/2 * (80-24) = 1120
+This gives the coffin a total area of:
+	1120 + 528 = 1648
+
+The grave is 6 feet deep, by tradition, 72 inches.
+This gives the volume of the grave:
+	1648 * 72 = 118656
+
+Converting 118656 cubic inches to cubic metres:
+	1.94442347
+Nearly precisely 2, quite conveniently.
