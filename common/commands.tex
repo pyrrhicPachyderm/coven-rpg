@@ -259,6 +259,15 @@
 \newcommand\materialref[1]{\nameref{material:#1}}
 \newcommand\materialrefplural[1]{\nameref{materials:#1}}
 
+\newcommand\weaponlabel[3]{%Arguments: title, plural title, label
+	\labelname{#1}%
+	\label{weapon:#3}%
+	\labelname{#2}%
+	\label{weapons:#3}%
+}
+\newcommand\weaponref[1]{\nameref{weapon:#1}}
+\newcommand\weaponrefplural[1]{\nameref{weapons:#1}}
+
 \newcommand\actionlabel[1]{\label{action:#1}}
 \newcommand\actionref[1]{\nameref{action:#1}}
 
