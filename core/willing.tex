@@ -249,25 +249,15 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 	This doesn't, however, grant you any extra ability to multitask, so this is about as practical as trying to use two whips at once.
 }
 
-\feat{Puff}{willing-wind}{15}{
+\feat{Gust}{willing-wind}{20}{
 	\featref{willing-basic}
 }{
 	Your mind can stir the air around you.
-	You can create small air movements within a dozen metres.
-	Very minor and imprecise effects, like blowing hair, don't require much effort.
-	Moving something more substantial, such as an empty sack, or moving something with precision, requires the concentration of an {\action}.
-	Anything that wouldn't obviously catch the wind is too heavy to move with this effect, although you might still be able to disturb it with a Test.
-}
-
-\feat{Gust}{willing-wind-2}{15}{
-	\skillref[1]{willing},
-	\featref{willing-wind}
-}{
-	You can evoke larger gusts about you.
-	When you use \featref{willing-wind} as an {\action}, you may produce strong enough to wind to affect heavier objects.
-	You can produce enough wind to send dishes flying, or to set a rock slowly rolling.
-	With a Test, you might even produce enough of a gust to knock a person down, and certainly enough to slow their movement in a particular direction.
-	The effect still remains fairly localised; you can't shift enough air to blow at anything larger than a person.
+	You can create gusts of air within a dozen metres.
+	Very minor and imprecise effects, like blowing hair or a cloak, don't require much effort, and can be done without an {\action}.
+	If you concentrate as an {\action}, you can produce enough wind to send dishes flying, or to set a rock slowly rolling.
+	With a Test, you might even produce enough of a gust to knock a person down.
+	The gust must fairly localised; you can't shift enough air to blow at anything larger than a person.
 }
 
 \feat{Breath}{willing-breathing}{20}{
@@ -290,8 +280,7 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 
 \feat{Cushion of Air}{willing-wind-self-2}{20}{
 	\skillref[2]{willing},
-	\featref{willing-wind-self},
-	\featref{willing-wind-2}
+	\featref{willing-wind-self}
 }{
 	You can cushion your fall with the wind.
 	As long as you are conscious, you do not suffer any {\damage} from falling.
@@ -308,9 +297,10 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 
 \feat{Breeze}{willing-wind-aoe}{15}{
 	\skillref[1]{willing},
-	\featref{willing-wind-2}
+	\featref{willing-wind}
 }{
-	You can alter the direction and strength of the wind within a dozen metres of you.
+	\featref{willing-wind} produces only small gusts, to blow at one person or object.
+	You can affect a larger area, altering the direction and strength of the wind everywhere within a dozen metres of you.
 	You can't create more than a moderate wind with this effect; enough to pick up light objects and roll them away, and enough to be uncomfortable, but not enough to knock people down.
 	You can also counteract a wind of up to the same strength, creating a region of dead calm.
 	
@@ -327,7 +317,7 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 	The wind does not stop short after a few metres!
 	There is no reason your wind should be so limited, either!
 	
-	You may ignore the range limitation for \featref{willing-wind}, \featref{willing-wind-2} and \featref{willing-wind-others}.
+	You may ignore the range limitation for \featref{willing-wind} and \featref{willing-wind-others}.
 	You may use these feats, if you have them, on anything you can see.
 }
 
@@ -345,7 +335,6 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 
 \feat{Cloud}{willing-weather}{10}{
 	\skillref[1]{willing},
-	\featref{willing-wind-2},
 	\featref{willing-wind-range},
 	\featref{willing-water-vapour}
 }{
