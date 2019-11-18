@@ -1,6 +1,7 @@
 SHELL := /bin/bash
 LATEXMK_FLAGS = --pdf --cd
 RM := rm -f
+RMDIR := rm -rf
 
 books := omnibus core big-book-of-familiars
 book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
@@ -22,6 +23,8 @@ clean:
 		$(RM) **/*.idx **/*.ind **/*.ilg;\
 		$(RM) **/*.dep **/*.dpth **/*.md5 **/*-figure*.pdf;\
 	)
+	@$(RM) Gemfile.lock
+	@$(RMDIR) _site
 Clean: clean
 	@(\
 		shopt -s globstar;\
