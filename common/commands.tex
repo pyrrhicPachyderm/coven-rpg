@@ -198,6 +198,8 @@
 	\label{herb:#2}%
 	\labelname{#1 Herbs}%
 	\label{herbs:#2}%
+	\labelname{#1}%
+	\label{herbbare:#2}%
 }
 
 \newcommand\herbtype[1]{%A herb type (just rarity)
@@ -205,6 +207,9 @@
 }
 \newcommand\herbtypeplural[1]{%
 	\nameref{herbs:#1}%
+}
+\newcommand\herbtypebare[1]{%
+	\nameref{herbbare:#1}%
 }
 
 \makeatletter
