@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Jekyll Action
-        uses: helaili/jekyll-action@v1
+        uses: helaili/jekyll-action@master
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
