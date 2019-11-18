@@ -28,7 +28,7 @@ The character's skill determines how many dice she rolls for a Test.
 If there is no skill applicable to the test, or if the character has no ranks in the applicable skill, she rolls 3 dice.
 Each rank in the skill gives an additional rolled die, to a maximum of 6 with all three ranks.
 Total together the highest 3 of the rolled dice and add the character's relevant attribute to this total.
-The final total is compared against a Target Number (TN) set by the GM: if it meets or exceeds the TN the Test succeeds; otherwise it fails.
+The final total is compared against a {\targetnumber} ({\tn}) set by the GM: if it meets or exceeds the {\tn} the Test succeeds; otherwise it fails.
 
 A Test where every die shows a 1 or 2 is a critical failure, and a Test where all 3 kept dice show a 6 is a critical success.
 In addition to the Test automatically succeeding or failing, the GM is encouraged to apply an additional drawback or benefit to the result of the Test.
@@ -52,8 +52,8 @@ Then she adds Mistress Talbot's \attref{ken}, 1, for a grand total of 14.
 Her player announces the total to the table.
 
 The GM knows that the dog is a simple zombie, the most common variety of undead, but it was killed and raised only yesterday so the characteristic rot hasn't properly set in yet.
-In light of this, she assigns a Target Number of 12: not too easy, but not particularly difficult either.
-Hearing Mistress Talbot's total of 14, the GM knows that she has met the TN of 12: the Test has succeeded.
+In light of this, she assigns a {\targetnumber} of 12: not too easy, but not particularly difficult either.
+Hearing Mistress Talbot's total of 14, the GM knows that she has met the {\tn} of 12: the Test has succeeded.
 She announces that Mistress Talbot, by the creature's glassy eyes and stumbling gait, realises the midnight intruder is merely a zombie.
 Reassured---she'd been fearing a ghoul or a hellhound---Mistress Talbot heads outside to see what the beast wants.
 Though not without grabbing the poker from beside the fireplace, just in case.
@@ -61,19 +61,19 @@ Though not without grabbing the poker from beside the fireplace, just in case.
 \subsection{Target Numbers}
 \seclabel{target-numbers}
 
-A Target Number (TN) represents the difficulty of the action that requires a Test.
-The more difficult the action, the higher the Target Number, and the less likely the Test is to succeed.
-In some situations, the same rule that requires a Test will specify its TN.
-In other situations, the GM should select a TN she feels is appropriate.
+A {\targetnumber} ({\tn}) represents the difficulty of the action that requires a Test.
+The more difficult the action, the higher the {\targetnumber}, and the less likely the Test is to succeed.
+In some situations, the same rule that requires a Test will specify its {\tn}.
+In other situations, the GM should select a {\tn} she feels is appropriate.
 
-Typical TNs range from approximately 9 to 21.
-A Test with a TN lower than 9 is not normally worth it: a character with no skill and an average score in the relevant attribute will succeed more than \SI{95}{\percent} of the time.
-Similarly, a Test with a TN higher than 21 is not normally worth it: a character needs a 5 in the relevant attribute to succeed without a critical success.
-The following table shows a brief summary of the sorts of task particular TNs are suited to.
+Typical {\tns} range from approximately 9 to 21.
+A Test with a {\tn} lower than 9 is not normally worth it: a character with no skill and an average score in the relevant attribute will succeed more than \SI{95}{\percent} of the time.
+Similarly, a Test with a {\tn} higher than 21 is not normally worth it: a character needs a 5 in the relevant attribute to succeed without a critical success.
+The following table shows a brief summary of the sorts of task particular {\tns} are suited to.
 
 \begin{simpletable}{rX}
 	\toprule
-	TN & Task Difficulty\\
+	{\tn} & Task Difficulty\\
 	\midrule
 	9 & Easy: An average, unskilled person would normally manage this.\\
 	12 & Moderate: An average, unskilled person would manage this about half the time.\\
@@ -83,7 +83,7 @@ The following table shows a brief summary of the sorts of task particular TNs ar
 	\bottomrule
 \end{simpletable}
 
-Instead of assigning a simple pass-or-fail TN, the GM may also employ graded success.
+Instead of assigning a simple pass-or-fail {\tn}, the GM may also employ graded success.
 This is when a higher roll gives a higher level of success.
 For instance, a higher roll on a Test to recall knowledge might mean that the character recalls more knowledge about the situation, while a higher roll on a check to influence a crowd might influence a greater proportion of the crowd.
 This can also be used to apply success at a cost, where an intermediate roll, neither particularly high nor particualarly low, means that the character succeeds at their task but incurs some drawback in doing so.
@@ -95,14 +95,14 @@ an intermediate result might mean that he allows the coven to pass, but sneaks o
 \seclabel{opposed-tests}
 
 When two characters---be it two player characters or a player and a non-player character---act in direct opposition to one another, the GM may request an {\opposedtest}.
-Such Tests have no fixed TN.
+Such Tests have no fixed {\tn}.
 Instead, roll for both characters, and whichever has the higher total suceeds.
 If both have the same totals, the situation remains as it was before the Test, so far as possible.
 
 {\opposedtests} need not use the same attribute and skill for both characters.
 For example, a character trying to hide might roll \testtype{grace}{stealth}, while the character searching for them rolls \testtype{heed}{perception}.
 
-For a normal Test, the GM may alter the difficult by adjusting the TN.
+For a normal Test, the GM may alter the difficult by adjusting the {\tn}.
 This is not possible in the event of an {\opposedtest}, so the GM may grant a bonus or penalty to a character at an advantage or disadvantage.
 As a guideline, grant a \positive{3} bonus for a clear but not overwhelming advantage, or a \positive{6} bonus for a very major advantage.
 If an even greater bonus would be appropriate, it is typically fair to simply award win to the advantaged character without a Test.
@@ -178,7 +178,7 @@ The bandits roll \testtype{grace}{stealth} to spring from hiding, with a \positi
 The travellers roll \testtype{heed}{perception} to notice the bandits attacking.
 The GM may assign a greater or lesser bonus to a better-laid ambush, or one staged in a suboptimal location.
 
-{\initiative} Tests are not made against a particular TN.
+{\initiative} Tests are not made against a particular {\tn}.
 Rather, all characters are ranked in order.
 This is the {\initiative} Order, and remains the same on subsequent {\rounds}.
 The character with the highest result takes their {\turn} first, and subsequent {\turns} proceed down the {\initiative} Order.
@@ -217,7 +217,7 @@ As part of moving, you may make a jump.
 Clearing a wide gap or a tall obstacle as part of this jump may require a Test.
 This Test usually uses \testtype{might}{athletics}, though the GM might request \testtype{grace}{athletics} if finesse is more important than pure height or length.
 
-As a guideline, the TN to clear a horizontal obstacle is 3 times its length in metres, and the TN to clear a vertical obstacle is 9 times its height in metres.
+As a guideline, the {\tn} to clear a horizontal obstacle is 3 times its length in metres, and the {\tn} to clear a vertical obstacle is 9 times its height in metres.
 
 \section{Injury}
 
@@ -256,7 +256,7 @@ The following table provides examples of the number of dice and the bonus for {\
 	\bottomrule
 \end{simpletable}
 
-Additionally, a {\damagetest} is not made against a particular TN like most Tests.
+Additionally, a {\damagetest} is not made against a particular {\tn} like most Tests.
 Instead, it applies two effects to the target, {\shock} and {\damage}.
 {\shock} is always tested for before {\damage} is applied.
 
@@ -279,7 +279,7 @@ If the Test made every {\turn} ever totals 9 or less, unless it also meets or ex
 However, the character remains unconscious and cannot be naturally roused before the end of the Scene.
 A character can also be brought out of {\shock} by another character tending to them.
 This requires an {\action} and a successful \testtype{ken}{healing} Test.
-The TN for this Test is 3 times the number of dice that would be rolled against the {\shocked} character each round.
+The {\tn} for this Test is 3 times the number of dice that would be rolled against the {\shocked} character each round.
 
 \subsection{Damage}
 \seclabel{damage}
@@ -371,7 +371,7 @@ The player may choose which attributes to recover when they reduce their {\exhau
 You attack a creature or object, with a \seclink{weapon}{weapons} or unarmed.
 You must be adjacent to the target to attack with a melee weapon, or within the listed range of a ranged weapon.
 Make a Test using a number of dice determined, as normal, by your \skillref{weaponry} skill, and a flat bonus determined by your weapon's accuracy.
-The Test is made against a TN equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
+The Test is made against a {\tn} equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
 
 If you succeed in your Test, you hit.
 Make a {\damagetest} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
@@ -392,8 +392,8 @@ You must \actionref{ready} again if you want to continue to wait.
 
 \subsection{Combat Modifiers}
 
-Some Tests in combat are made against fixed TNs, such as a \skillref{weaponry} Test against the target's \statref{dr}.
-Instead of modifying these TNs, the GM may make such Tests easier or harder using the same modifiers as would be applied to {\opposedtests}.
+Some Tests in combat are made against fixed {\tns}, such as a \skillref{weaponry} Test against the target's \statref{dr}.
+Instead of modifying these {\tns}, the GM may make such Tests easier or harder using the same modifiers as would be applied to {\opposedtests}.
 
 For example, attacking a character who has fallen on the ground may grant a \positive{3} bonus.
 Attacking after falling on the ground yourself, or with your feet stuck in thick mud, might imposed a \negative{3} penalty.
@@ -411,7 +411,7 @@ Such Tests typically use \attref{wit} and the relevant skill for the discipline 
 More formulaic disciplines such as \discref{brewing} and \discref{ritual-magic} often use \attref{ken}, while other disciplines, such as \discref{willing} and \discref{golemancy}, rely primarily upon a witch's pure force of \attref{will}.
 Furthermore, drawing a chalk circle hurriedly might use \attref{grace}, and grinding a poultice while riding a broomstick might use \skillref{flying}.
 
-TNs for rushing or improvising magic are ultimately left up the GM, but some guidelines are provided below.
+{\tns} for rushing or improvising magic are ultimately left up the GM, but some guidelines are provided below.
 
 \subsection{Rushing Magic}
 
@@ -420,11 +420,11 @@ Exceptions may be made where the magic is used as part of the {\action} already 
 Otherwise, common sense may apply a limit to the minimum time magic can be performed in.
 For example, if a potion requires boiling water, a witch needs some way to bring water to the boil in the time they want to brew their potion.
 
-Where magic can be rushed, guideline TNs for doing so are given in the following table.
+Where magic can be rushed, guideline {\tns} for doing so are given in the following table.
 
 \begin{simpletable}{rX}
 	\toprule
-	TN & Example Task\\
+	{\tn} & Example Task\\
 	\midrule
 	9 & Performing a simple rite in half the normal time.\\
 	12 & Performing a complex rite in half the normal time.\\
@@ -443,7 +443,7 @@ This can be as simple as using a pool of water in place of a mirror, because bot
 
 \begin{simpletable}{rX}
 	\toprule
-	TN & Example Task\\
+	{\tn} & Example Task\\
 	\midrule
 	9 & An unusual component that still meets the specifications, e.g.\ a ritual circle scratched in the dirt instead of drawn in chalk.\\
 	12 & A component that retains the fundamental property, e.g.\ scrying through a pool of still water instead of a mirror.\\
