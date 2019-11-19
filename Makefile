@@ -31,6 +31,23 @@ Clean: clean
 .PHONY: all clean Clean
 
 
+
+#Website stuff
+
+website_dir := website
+website_pdfs := $(shell echo $(book_pdfs) | sed -E "s|[^ ]+|$(website_dir)/&|g")
+
+$(website_dir)/%.pdf: %.pdf
+	@cp $< $@
+
+website: $(website_pdfs)
+
+.PHONY: website
+
+
+
+#The books themselves
+
 .SECONDEXPANSION:
 
 %.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files) $$(wildcard $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]*|&/+.tex|g")) $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]+|&.pdf|g")
