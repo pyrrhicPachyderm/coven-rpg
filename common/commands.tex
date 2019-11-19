@@ -21,19 +21,19 @@
 \newcommand\secrefraw[1]{\nameref{sec:#1}}
 \newcommand\seclink[2]{\hyperref[sec:#2]{#1}}
 
-\newcommand\disclabel[3]{%Arguments: label, practioner noun, practioner plural
+\newcommand\disclabel[3]{%Arguments: label, practitioner noun, practitioner plural
 	\chaplabel{#1}%
 	\labelname{#2}%
-	\label{practioner:#1}%
+	\label{practitioner:#1}%
 	\labelname{#3}%
-	\label{practioners:#1}%
+	\label{practitioners:#1}%
 	\labelname{#2's}%
-	\label{practionerpossessive:#1}%
+	\label{practitionerpossessive:#1}%
 }
 \newcommand\discref[1]{\chapnameref{#1}}
-\newcommand\practioner[1]{\nameref{practioner:#1}}
-\newcommand\practitioners[1]{\nameref{practioners:#1}}
-\newcommand\practionerpossessive[1]{\nameref{practionerpossessive:#1}}
+\newcommand\practitioner[1]{\nameref{practitioner:#1}}
+\newcommand\practitioners[1]{\nameref{practitioners:#1}}
+\newcommand\practitionerpossessive[1]{\nameref{practitionerpossessive:#1}}
 
 \newcommand\feat[5]{%Arguments: title, label, XP cost, prerequisites, text.
 	\subsection[#1]{#1 [#3 XP]}
