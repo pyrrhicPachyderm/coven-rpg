@@ -37,7 +37,7 @@ Clean: clean
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 	@ #Outdir is relative to cd directory
 	mv "$*/$@" "$@"
-#The two monstrous prerequsites for this rule are respectively:
+#The two monstrous prerequisites for this rule are respectively:
 #All the tex files in the books this book depends on
 #The PDF files of the books this depends on, to make sure those are compiled first
 #This latter one should ensure that the external references exist and work properly.
