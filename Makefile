@@ -29,17 +29,12 @@ Clean: clean
 		shopt -s globstar;\
 		$(RM) **/*.pdf **/*.dvi;\
 	)
-cleanbak: #For removing .bak files created by aspell
-	@(\
-		shopt -s globstar;\
-		$(RM) **/*.bak;\
-	)
 spellcheck:
 	@for file in $$(find -name "*.tex" -not -path "./common/*"); do \
 		aspell check --mode=tex --tex-check-comments --dont-backup --personal=$(aspell_personal_dict) $$file;\
 	done
 
-.PHONY: all clean Clean cleanbak spellcheck
+.PHONY: all clean Clean spellcheck
 
 
 
