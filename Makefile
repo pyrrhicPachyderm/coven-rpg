@@ -27,8 +27,13 @@ Clean: clean
 		shopt -s globstar;\
 		$(RM) **/*.pdf **/*.dvi;\
 	)
+cleanbak: #For removing .bak files created by aspell
+	@(\
+		shopt -s globstar;\
+		$(RM) **/*.bak;\
+	)
 
-.PHONY: all clean Clean
+.PHONY: all clean Clean cleanbak
 
 
 
