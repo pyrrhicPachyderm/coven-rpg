@@ -2,6 +2,8 @@ SHELL := /bin/bash
 LATEXMK_FLAGS = --pdf --cd
 RM := rm -f
 
+aspell_personal_dict := ./.aspell.en.personal
+
 books := omnibus core big-book-of-familiars
 book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
 
@@ -32,8 +34,12 @@ cleanbak: #For removing .bak files created by aspell
 		shopt -s globstar;\
 		$(RM) **/*.bak;\
 	)
+spellcheck:
+	@for file in $$(find -name "*.tex" -not -path "./common/*"); do \
+		aspell check --mode=tex --tex-check-comments --dont-backup --personal=$(aspell_personal_dict) $$file;\
+	done
 
-.PHONY: all clean Clean cleanbak
+.PHONY: all clean Clean cleanbak spellcheck
 
 
 
