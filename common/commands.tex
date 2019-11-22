@@ -91,17 +91,12 @@
 	$\text{\skillref{#2}} + \text{\attref{#1}}$%
 }
 
-\newcommand\statlabel[3]{%For derived statistics. Arguments: title, plural title, label
+\newcommand\statlabel[2]{%For derived statistics. Arguments: title, label
 	\labelname{#1}%
-	\label{stat:#3}%
-	\labelname{#2}%
-	\label{stats:#3}%
+	\label{stat:#2}%
 }
 \newcommand\statref[1]{%
 	\nameref{stat:#1}%
-}
-\newcommand\statrefplural[1]{%
-	\nameref{stats:#1}%
 }
 
 
