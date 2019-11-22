@@ -172,10 +172,6 @@
 
 \makeatletter
 \newcommand\creature[8][\@nil]{%Arguments: displaytitle (optional), title, label, atttable, speed, skills, text, abilities
-	\def\displaytitle{#1}
-	\ifx\displaytitle\@nnil%
-		\def\displaytitle{#2}%
-	\fi%
 	\statblock[#1]{#2}{creature:#3}{#4}{#5}{#6}{#7}{#8}
 }
 \makeatother
