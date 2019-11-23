@@ -150,8 +150,19 @@ A character must have the previous rank in a skill before purchasing the next ra
 
 The XP cost for increasing a general or speciality skill is fixed, while progression in discipline skills is closely tied to progression in the discipline itself.
 While it is possible to learn a lot about a discipline of magic without ever practicing it, it is far easier to learn simply by setting out and using the magic.
+As such, increasing a discipline skill costs less XP if a witch has already purchased feats from its governing discipline.
 
-As such, increasing a discipline skill costs 5 XP less for each feat a witch has purchased from its governing discipline, to a minimum cost of 0 XP.
+Many feats from a discipline require a certain rank of the skill that governs the discipline, while some do not require any ranks in the skill at all.
+Increasing a discipline skill costs 5 XP less for each feat that requires exactly the rank below, to a minimum cost of 0 XP.
+This applies only to feats from the governing discipline, even feats from other disciplines require the same discipline skill.
+
+For example, a witch buying \skillref[3]{brewing} gets a 5 XP discount for every feat she has from the \discref{brewing} discipline that lists exactly \skillref[2]{brewing} as a prerequiste.
+A witch buying \skillref[1]{brewing} gets a 5 XP discount for every feat she has from the \discref{brewing} discipline, because all of the feats she has from that discipline require \skillref[0]{brewing}.
+
+Similarly, a witch gets a 5 XP discountwhen buying a feat from a discipline if she has a higher rank in that discipline's skill than she requires.
+For example, a witch with \skillref[3]{brewing} who buys a \discref{brewing} feat that requires only \skillref[2]{brewing} gets a 5 XP discount.
+A witch with \skillref[1]{brewing} gets a 5 XP discount when buying a \discref{brewing} feat that does not requite the \skillref{brewing} skill at all.
+This ensures that it does not matter whether a witch buys feats feats or skills first; her total XP expenditure should be the same either way.
 
 \subsection{General Skills}
 \seclabel{general-skills}
