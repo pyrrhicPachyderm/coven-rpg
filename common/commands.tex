@@ -1,9 +1,28 @@
-\newenvironment{simpletable}[1]{
-	\begin{center}
+\newenvironment{simpletableinner}[1]{
 	\taburowcolors 2{white .. gray!20}
 	\begin{tabu}{#1}
 }{
 	\end{tabu}
+}
+
+\newenvironment{simpletable}[1]{
+	\begin{center}
+	\begin{simpletableinner}{#1}
+}{
+	\end{simpletableinner}
+	\end{center}
+}
+
+\newcommand*\notedtable[3]{%Arguments: alignment, table, notes
+	\begin{center}
+		\begin{threeparttable}
+			\begin{simpletableinner}{#1}
+				#2
+			\end{simpletableinner}
+			\begin{tablenotes}
+				#3
+			\end{tablenotes}
+		\end{threeparttable}
 	\end{center}
 }
 

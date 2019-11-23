@@ -49,6 +49,20 @@
 \usepackage{tabu}
 \tabulinesep=1.2mm %Space tables more nicely.
 \usepackage[table]{xcolor}
+\usepackage{threeparttable}
+
+%Patch threeparttabel to work with tabu.
+%Per https://tex.stackexchange.com/a/56524/161697
+\usepackage{xpatch}
+\makeatletter
+\chardef\TPT@@@asteriskcatcode=\catcode`*
+\catcode`*=11
+\xpatchcmd{\threeparttable}
+	{\TPT@hookin{tabular}}
+	{\TPT@hookin{tabular}\TPT@hookin{tabu}}
+	{}{}
+\catcode`*=\TPT@@@asteriskcatcode
+\makeatother
 
 %\usepackage{imakeidx}
 \makeindex
