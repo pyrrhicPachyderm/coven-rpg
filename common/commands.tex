@@ -79,23 +79,23 @@
 }
 \makeatother
 
-
-\newcommand\skillref[2][0]{%Takes two arguments, the first of which is optional and defaults to zero.
-	\nameref{skill:#2}%
-	\ifnum #1=0%
+\makeatletter
+\newcommand\skillrefinner[2][\@nil]{%Takes two arguments, the first of which is optional and defaults to nothing.
+	\def\numrank{#1}%
+	#2%
+	\ifx\numrank\@nnil%
 		%
 	\else%
 		~#1%
 	\fi%
 }
-\newcommand\skillrefspeciality[3][0]{%Takes three arguments, the first of which is optional and defaults to zero.
-	\nameref{skill:#2} (#3)%
-	\ifnum #1=0%
-		%
-	\else%
-		~#1%
-	\fi%
+\newcommand\skillref[2][\@nil]{%
+	\skillrefinner[#1]{\nameref{skill:#2}}%
 }
+\newcommand\skillrefspeciality[3][\@nil]{%
+	\skillrefinner[#1]{\nameref{skill:#2} (#3)}%
+}
+\makeatother
 
 \newcommand\attribute[2]{%
 	\subsection{#1}
