@@ -41,4 +41,5 @@ a.button {
 table {
 	margin-left: auto;
 	margin-right: auto; /* auto on both margins aligns to the centre. */
+	table-layout: fixed;
 }
