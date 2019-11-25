@@ -40,7 +40,24 @@
 		</header>
 		
 		<header class="subheader experience">
-			
+			<div>
+				<label for="experience-total">Total XP:</label>
+				<output id="experience-total" form="character-sheet">100</output>
+			</div>
+			<div>
+				<label for="experience-remaining">Remaining XP:</label>
+				<output id="experience-remaining" form="character-sheet">100</output>
+			</div>
+			<form id="add-experience">
+				<input type="number" id="add-experience-number"
+					min="0" value="0"
+				></input>
+				<input type="button" id="add-experience-submit"
+					value="Add Experience"
+					onclick="experience.add(Number(document.getElementById('add-experience-number').value));
+						document.getElementById('add-experience').reset()"
+				></input>
+			</form>
 		</header>
 		
 		<section>
