@@ -17,3 +17,30 @@ header {
 h1 {
 	margin: 0px;
 }
+
+section {
+	padding: 20px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start; /*Horizontal.*/
+	align-items: baseline; /*Vertical.*/
+}
+.flex.vertical {
+	flex-direction: column;
+}
+/*Add space between flexbox elements, but not at start and end.*/
+.flex > * {margin: 0 10px;}
+.flex > :first-child{margin-left: 0;}
+.flex > :last-child{margin-right: 0;}
+.flex.vertical > *{ margin: 10px 0; }
+.flex.vertical > :first-child{ margin-top: 0; }
+.flex.vertical > :last-child{ margin-bottom: 0; }
+
+input[type=text] {
+	border: none;
+	border-bottom: 1px solid black;
+}
