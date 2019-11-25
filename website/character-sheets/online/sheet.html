@@ -48,37 +48,35 @@
 				<label for="experience-remaining">Remaining XP:</label>
 				<output id="experience-remaining" form="character-sheet">100</output>
 			</div>
-			<form id="add-experience">
+			<div>
 				<input type="number" id="add-experience-number"
 					min="0" value="0"
 				></input>
 				<input type="button" id="add-experience-submit"
 					value="Add Experience"
 					onclick="experience.add(Number(document.getElementById('add-experience-number').value));
-						document.getElementById('add-experience').reset()"
+						document.getElementById('add-experience-number').value = 0"
 				></input>
-			</form>
+			</div>
 		</header>
 		
 		<section>
-			<form id="character-sheet">
-				<div class="flex vertical">
-					<div class="flex">
-						<div>
-							<label for="character-name">Witch's name:</label>
-							<input type="text" id="character-name">
-						</div>
-						<div>
-							<label for="age">Age:</label>
-							<input type="text" id="age">
-						</div>
-						<div>
-							<label for="player-name">Player:</label>
-							<input type="text" id="player-name">
-						</div>
+			<div class="flex vertical">
+				<div class="flex">
+					<div>
+						<label for="character-name">Witch's name:</label>
+						<input type="text" id="character-name">
+					</div>
+					<div>
+						<label for="age">Age:</label>
+						<input type="text" id="age">
+					</div>
+					<div>
+						<label for="player-name">Player:</label>
+						<input type="text" id="player-name">
 					</div>
 				</div>
-			</form>
+			</div>
 		</section>
 	</body>
 </html>
