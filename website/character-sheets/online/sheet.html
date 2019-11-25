@@ -23,6 +23,8 @@
 		<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 		
 		<link rel="stylesheet" href="css/styles.css">
+		
+		<script src="js/toggle-experience.js"></script>
 	</head>
 	
 	<body>
@@ -30,8 +32,15 @@
 			<h1>Coven</h1>
 			<div>
 				<label for="is-track-experience">Experience:</label>
-				<input type="checkbox" id="is-track-experience" data-toggle="toggle" data-on="Track" data-off="Ignore" checked>
+				<input type="checkbox" data-toggle="toggle" checked
+					data-on="Track" data-off="Ignore"
+					onchange="toggleExperience(this)"
+				>
 			</div>
+		</header>
+		
+		<header class="subheader experience">
+			
 		</header>
 		
 		<section>
