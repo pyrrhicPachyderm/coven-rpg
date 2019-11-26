@@ -19,6 +19,7 @@
 	}%
 }
 
+%Put the chapter title on the same line as the chapter number.
 \makechapterstyle{oneline}{%
 	\renewcommand*{\chapnamefont}{\chaptitlefont}
 	\renewcommand*{\chapnumfont}{\chaptitlefont}
@@ -26,7 +27,8 @@
 }
 \chapterstyle{oneline}
 
-\setsecnumdepth{chapter} %Don't number anything below chapters.
+%Don't number anything below chapters.
+\setsecnumdepth{chapter}
 
 %Move all the titles to the right in the ToC.
 %This gives 'III Disciplines' instead of 'IIIDisciplines'
