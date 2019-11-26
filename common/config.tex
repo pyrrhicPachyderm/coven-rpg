@@ -85,9 +85,9 @@
 %This is to fix the following error:
 %pdfTeX error (ext4): \pdfendlink ended up in different nesting level than \pdfstartlink.
 %From the end of this answer: https://tex.stackexchange.com/a/249743
-\usepackage{etoolbox}
+%Using xpatch instead of etoolbox.
 \makeatletter
-\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+\xpatchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
 	\errmessage{\noexpand\@combinedblfloats could not be patched}%
 }%
 \makeatother
