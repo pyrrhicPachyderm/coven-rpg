@@ -19,9 +19,12 @@
 	}%
 }
 
-\usepackage{titlesec}
-\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} %Chapter number and name on same line
-%TODO: This justifies split lines awfully, fix it.
+\makechapterstyle{oneline}{%
+	\renewcommand*{\chapnamefont}{\chaptitlefont}
+	\renewcommand*{\chapnumfont}{\chaptitlefont}
+	\renewcommand*{\afterchapternum}{\chaptitlefont :\ }%
+}
+\chapterstyle{oneline}
 
 \setcounter{secnumdepth}{0}
 
