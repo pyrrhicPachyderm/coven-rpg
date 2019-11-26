@@ -90,9 +90,7 @@
 %From the end of this answer: https://tex.stackexchange.com/a/249743
 %Using xpatch instead of etoolbox.
 \makeatletter
-\xpatchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
-	\errmessage{\noexpand\@combinedblfloats could not be patched}%
-}%
+\xpatchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{}
 \makeatother
 
 %\usepackage{geometry} %Supposedly should be after hyperref
