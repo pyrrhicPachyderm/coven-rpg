@@ -1,30 +1,32 @@
-let experience = {
-	totalExperience:100,
-	
-	toggle:function(checkboxElement) {
-		if(checkboxElement.checked) {
-			$(".experience").show();
-			this.updatePage();
-		} else {
-			$(".experience").hide();
-		}
-	},
-	
-	getTotal:function() {
-		return this.totalExperience;
-	},
-	
-	getRemaining:function() {
-		return this.getTotal();
-	},
-	
-	updatePage:function() {
-		document.getElementById('experience-total').value = this.getTotal();
-		document.getElementById('experience-remaining').value = this.getRemaining();
-	},
-	
-	add:function(amount) {
-		this.totalExperience += amount;
-		this.updatePage();
-	},
+function toggleExperienceTracking() {
+	character.experience.isTracking = document.getElementById('is-tracking-experience').checked;
+	updatePageExperience();
+}
+
+function setExperienceTrackingToggle() {
+	document.getElementById('is-tracking-experience').checked = character.experience.isTracking;
+	updatePageExperience();
+}
+
+function getTotalExperience() {
+	return character.experience.total;
+}
+
+function getRemainingExperience() {
+	return getTotalExperience();
+}
+
+function updatePageExperience() {
+	if(character.experience.isTracking) {
+		$(".experience").show();
+	} else {
+		$(".experience").hide();
+	}
+	document.getElementById('experience-total').value = getTotalExperience();
+	document.getElementById('experience-remaining').value = getRemainingExperience();
+}
+
+function addExperience(amount) {
+	character.experience.total += amount;
+	updatePageExperience();
 }

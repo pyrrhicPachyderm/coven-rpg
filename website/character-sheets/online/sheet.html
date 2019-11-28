@@ -24,6 +24,7 @@
 		
 		<link rel="stylesheet" href="css/styles.css">
 		
+		<script src="js/character.js"></script>
 		<script src="js/experience.js"></script>
 	</head>
 	
@@ -31,10 +32,11 @@
 		<header>
 			<h1>Coven</h1>
 			<div>
-				<label for="is-track-experience">Experience:</label>
-				<input type="checkbox" data-toggle="toggle" checked
+				<label for="is-tracking-experience">Experience:</label>
+				<input id="is-tracking-experience"
+					type="checkbox" data-toggle="toggle" checked
 					data-on="Track" data-off="Ignore"
-					onchange="experience.toggle(this)"
+					onchange="toggleExperienceTracking()"
 				>
 			</div>
 		</header>
@@ -54,7 +56,7 @@
 				></input>
 				<input type="button" id="add-experience-submit"
 					value="Add Experience"
-					onclick="experience.add(Number(document.getElementById('add-experience-number').value));
+					onclick="addExperience(Number(document.getElementById('add-experience-number').value));
 						document.getElementById('add-experience-number').value = 0"
 				></input>
 			</div>
