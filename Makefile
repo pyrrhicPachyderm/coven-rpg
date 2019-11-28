@@ -33,8 +33,13 @@ spellcheck:
 	@for file in $$(find -name "*.tex" -not -path "./common/*"); do \
 		aspell check --mode=tex --tex-check-comments --dont-backup --personal=$(aspell_personal_dict) $$file;\
 	done
+featcount:
+	@(\
+		shopt -s globstar;\
+		grep -c "\feat{" **/*.tex | grep -v :0;\
+	)
 
-.PHONY: all clean Clean spellcheck
+.PHONY: all clean Clean spellcheck featcount
 
 
 
