@@ -58,7 +58,6 @@ website: $(website_pdfs)
 
 %.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files) $$(wildcard $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]*|&/+.tex|g")) $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]+|&.pdf|g")
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
-	@ #Outdir is relative to cd directory
 	mv "$*/$@" "$@"
 #The two monstrous prerequisites for this rule are respectively:
 # - All the tex files in the books this book depends on.
