@@ -1,11 +1,13 @@
 var CharacterModel = Backbone.Model.extend({
-	defaults: {
-		name: "",
-		age: "",
-		playerName: "",
-		isTrackingExperience: true,
-		totalExperience: 100,
-		attributes: Array(8).fill(0),
+	defaults: function () {
+		return {
+			name: "",
+			age: "",
+			playerName: "",
+			isTrackingExperience: true,
+			totalExperience: 100,
+			attributes: Array(8).fill(0),
+		}
 	},
 	
 	attributeIDs: [
@@ -24,7 +26,7 @@ var CharacterModel = Backbone.Model.extend({
 	},
 	
 	reset: function() {
-		this.set(this.defaults);
+		this.set(this.defaults());
 	},
 	
 	setArrayElement: function(array, index, value) {
