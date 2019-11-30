@@ -28,7 +28,6 @@ var CharacterModel = Backbone.Model.extend({
 	},
 	
 	readJSON: function(str) {
-		console.log(str);
 		this.set(JSON.parse(str));
 	},
 });
