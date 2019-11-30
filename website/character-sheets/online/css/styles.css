@@ -77,7 +77,7 @@ These must consist of two immediately adjacent parts:
 <input type="checkbox" class="toggle" id=""></input>
 <label class="toggle-button" for=""></label>
 
-The 'id' and 'for' must match.
+The "id" and "for" must match.
 */
 input.toggle {
 	display: none;
