@@ -52,7 +52,7 @@ $(document).ready(function() {
 				func = _.bind(func, this);
 				func(ev);
 			}
-		}
+		},
 	});
 	
 	
