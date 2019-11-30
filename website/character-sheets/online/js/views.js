@@ -2,7 +2,9 @@ $(document).ready(function() {
 	var SheetView = Backbone.View.extend({
 		initialize: function () {
 			//Do the initial render.
-			this.render();
+			//This must be done asynchronously for the jQuery in the function to work.
+			//I'm not quite sure why.
+			setTimeout(_.bind(this.render,this), 0);
 			//Set up binding in the first direction: whenever the model changes, change the view.
 			this.listenTo(this.model, "change", this.render);
 		},
