@@ -56,7 +56,7 @@ $(document).ready(function() {
 			}
 			fileName+= ".json";
 			
-			let blob = new Blob([this.model.saveJSON()], {type: "application/json;charset=utf-8"});
+			let blob = new Blob([this.model.writeJSON()], {type: "application/json;charset=utf-8"});
 			saveAs(blob, fileName);
 		},
 		

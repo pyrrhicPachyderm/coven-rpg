@@ -23,7 +23,7 @@ var CharacterModel = Backbone.Model.extend({
 		this.calculateRemainingExperience();
 	},
 	
-	saveJSON: function() {
+	writeJSON: function() {
 		return JSON.stringify(this.toJSON());
 	},
 });
