@@ -28,12 +28,13 @@
 		<script type="text/template" id="sheet-template">
 			<header>
 				<h1>Coven</h1>
-				<div>
-					<label for="is-tracking-experience">Experience:</label>
-					<input id="is-tracking-experience"
-						type="checkbox"
+				<div class="flex thinspaced center-vertically">
+					<label for="is-tracking-experience">Track Experience:</label>
+					<input id="is-tracking-experience" type="checkbox"
+						class="toggle"
 						<%= isTrackingExperience ? "checked": "" %>
-					>
+					></input>
+					<label class="toggle-button" for="is-tracking-experience"></label>
 				</div>
 			</header>
 			

@@ -33,15 +33,76 @@ section {
 .flex.vertical {
 	flex-direction: column;
 }
+.flex.center-vertically {
+	align-items: center;
+}
 /*Add space between flexbox elements, but not at start and end.*/
 .flex > * {margin: 0 10px;}
+.flex.thinspaced > * {margin: 0 4px;}
 .flex > :first-child{margin-left: 0;}
 .flex > :last-child{margin-right: 0;}
 .flex.vertical > *{ margin: 10px 0; }
+.flex.thinspaced.vertical > *{ margin: 4px 0; }
 .flex.vertical > :first-child{ margin-top: 0; }
 .flex.vertical > :last-child{ margin-bottom: 0; }
 
 input[type=text] {
 	border: none;
 	border-bottom: 1px solid black;
+}
+
+
+
+/*Slider-toggle checkboxes.
+These must consist of two immediately adjacent parts:
+
+<input type="checkbox" class="toggle" id=""></input>
+<label class="toggle-button" for=""></label>
+
+The 'id' and 'for' must match.
+*/
+input.toggle {
+	display: none;
+	box-sizing: border-box;
+}
+
+input.toggle + label.toggle-button {
+	outline: 0;
+	display: inline-block;
+	width: 4em;
+	height: 2em;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	background: lightgrey;
+	border-radius: 2em;
+	padding: 2px;
+	transition: all 0.4s ease;
+}
+
+input.toggle + label.toggle-button:after, input.toggle + label.toggle-button:before {
+	position: relative;
+	display: inline-block;
+	content: "";
+	width: 50%;
+	height: 100%;
+}
+
+input.toggle + label.toggle-button:after {
+	left: 0;
+	border-radius: 50%;
+	background: white;
+	transition: all 0.2s ease;
+}
+
+input.toggle + label.toggle-button:before {
+	display: none;
+}
+
+input.toggle:checked + label.toggle-button {
+	background: lightgreen;
+}
+
+input.toggle:checked + label.toggle-button:after {
+	left: 50%;
 }
