@@ -105,10 +105,14 @@ $(document).ready(function() {
 			return $(ev.currentTarget).index() + 1;
 		},
 		
+		getDotsID: function(ev, type) {
+			let dotsElement = $(ev.currentTarget).parent();
+			return attributeID = dotsElement.attr("id").replace(type + "-", "");
+		},
+		
 		changeAttribute: function(ev) {
 			let clickedDot = this.getDotLevel(ev);
-			let dotsElement = $(ev.currentTarget).parent();
-			let attributeID = dotsElement.attr("id").replace("attribute-", "");
+			let attributeID = this.getDotsID(ev, "attribute");
 			
 			let newValue = clickedDot == this.model.getAttribute(attributeID) ? 0 : clickedDot;
 			this.model.setAttribute(attributeID, newValue);
