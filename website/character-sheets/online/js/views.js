@@ -49,7 +49,7 @@ $(document).ready(function() {
 			this.model.addExperience(amount);
 		},
 		
-		saveSheet: function(ev) {
+		saveSheet: function() {
 			let fileName = this.model.get("name");
 			if(fileName == "") {
 				fileName = "coven-sheet";
