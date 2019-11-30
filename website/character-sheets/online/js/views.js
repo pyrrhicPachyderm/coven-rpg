@@ -22,6 +22,8 @@ $(document).ready(function() {
 		},
 		
 		events: {
+			"click #save-sheet": "saveSheet",
+			
 			"click #is-tracking-experience": "updateIsTrackingExperience",
 			"click #add-experience-submit": "addExperience",
 			"keyup #add-experience-number": function(ev) {this.callOnEnter(ev, this.addExperience);},
@@ -45,6 +47,17 @@ $(document).ready(function() {
 			let amount = parseInt(amountField.val());
 			amountField.val(0);
 			this.model.addExperience(amount);
+		},
+		
+		saveSheet: function(ev) {
+			let fileName = this.model.get("name");
+			if(fileName == "") {
+				fileName = "coven-sheet";
+			}
+			fileName+= ".json";
+			
+			let blob = new Blob([JSON.stringify(this.model.toJSON())], {type: "application/json;charset=utf-8"});
+			saveAs(blob, fileName);
 		},
 		
 		callOnEnter: function(ev, func) {
