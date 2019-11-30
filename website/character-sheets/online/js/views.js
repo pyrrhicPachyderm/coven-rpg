@@ -66,10 +66,7 @@ $(document).ready(function() {
 			let file = $(ev.currentTarget)[0].files[0];
 			let reader = new FileReader();
 			reader.onload = _.bind(function(ev) {
-				//Make a new character to ensure we have no holdovers from the old one.
-				this.model = new CharacterModel();
 				this.model.readJSON(ev.target.result);
-				this.render();
 			}, this);
 			reader.readAsText(file);
 		},

@@ -11,6 +11,10 @@ var CharacterModel = Backbone.Model.extend({
 		this.remainingExperience = this.calculateRemainingExperience();
 	},
 	
+	reset: function() {
+		this.set(this.defaults);
+	},
+	
 	calculateRemainingExperience: function() {
 		let remainingExperience = this.get("totalExperience");
 		this.set("remainingExperience", remainingExperience);
@@ -28,6 +32,7 @@ var CharacterModel = Backbone.Model.extend({
 	},
 	
 	readJSON: function(str) {
+		this.reset();
 		this.set(JSON.parse(str));
 	},
 });
