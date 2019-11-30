@@ -30,12 +30,10 @@
 				<h1>Coven</h1>
 				
 				<div>
-					<input type="button" id="load-sheet"
-						value="Load"
-					></input>
-					<input type="button" id="save-sheet"
-						value="Save"
-					></input>
+					<!--The "file"-type input is just a dummy for JavaScript to use.-->
+					<input type="file" id="load-sheet-file" accept="application/json" hidden></input>
+					<input type="button" id="load-sheet" value="Load"></input>
+					<input type="button" id="save-sheet" value="Save"></input>
 				</div>
 				
 				<div class="flex thinspaced center-vertically">

@@ -23,6 +23,8 @@ $(document).ready(function() {
 		
 		events: {
 			"click #save-sheet": "saveSheet",
+			"click #load-sheet": function() {$("#load-sheet-file").click();},
+			"change #load-sheet-file": "loadSheet",
 			
 			"click #is-tracking-experience": "updateIsTrackingExperience",
 			"click #add-experience-submit": "addExperience",
@@ -58,6 +60,15 @@ $(document).ready(function() {
 			
 			let blob = new Blob([this.model.writeJSON()], {type: "application/json;charset=utf-8"});
 			saveAs(blob, fileName);
+		},
+		
+		loadSheet: function(ev) {
+			let file = $(ev.currentTarget)[0].files[0];
+			let reader = new FileReader();
+			reader.onload = _.bind(function(ev) {
+				this.model.readJSON(ev.target.result);
+			}, this);
+			reader.readAsText(file);
 		},
 		
 		callOnEnter: function(ev, func) {
