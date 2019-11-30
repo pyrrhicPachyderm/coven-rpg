@@ -24,6 +24,7 @@ $(document).ready(function() {
 		events: {
 			"click #is-tracking-experience": "updateIsTrackingExperience",
 			"click #add-experience-submit": "addExperience",
+			"keyup #add-experience-number": function(ev) {this.callOnEnter(ev, this.addExperience);},
 			
 			"change #character-name": function(ev) {this.readTextField(ev, "name");},
 			"change #age": function(ev) {this.readTextField(ev, "age");},
@@ -45,6 +46,13 @@ $(document).ready(function() {
 			amountField.val(0);
 			this.model.addExperience(amount);
 		},
+		
+		callOnEnter: function(ev, func) {
+			if(ev.keyCode == 13) { //13 is the Enter key.
+				func = _.bind(func, this);
+				func(ev);
+			}
+		}
 	});
 	
 	
