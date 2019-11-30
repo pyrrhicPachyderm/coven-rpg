@@ -30,7 +30,7 @@ h3 {
 
 a.button {
 	background-color: darkred;
-	color: white !important;
+	color: white;
 	
 	font-weight: bold;
 	font-size: 20px;
