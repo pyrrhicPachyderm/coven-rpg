@@ -22,4 +22,8 @@ var CharacterModel = Backbone.Model.extend({
 		this.set("totalExperience", currentExperience);
 		this.calculateRemainingExperience();
 	},
+	
+	saveJSON: function() {
+		return JSON.stringify(this.toJSON());
+	},
 });
