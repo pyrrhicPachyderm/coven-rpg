@@ -21,6 +21,12 @@ $(document).ready(function() {
 			} else {
 				$(".experience").hide();
 			}
+			
+			let attributes = this.model.get("attributes");
+			for(let i = 0; i < attributes.length; i++) {
+				let attributeID = this.model.attributeIDs[i];
+				this.createDots($("#attribute-" + attributeID), 5, attributes[i]);
+			}
 		},
 		
 		events: {
@@ -35,6 +41,8 @@ $(document).ready(function() {
 			"change #character-name": function(ev) {this.readTextField(ev, "name");},
 			"change #age": function(ev) {this.readTextField(ev, "age");},
 			"change #player-name": function(ev) {this.readTextField(ev, "playerName");},
+			
+			"click .attribute.dot": "changeAttribute",
 		},
 		
 		readTextField: function(ev, field) {
@@ -78,6 +86,32 @@ $(document).ready(function() {
 				func = _.bind(func, this);
 				func(ev);
 			}
+		},
+		
+		createDots: function(parent, numDots, filledDots) {
+			for(let i = 0; i < numDots; i++) {
+				let checkbox = document.createElement("input");
+				checkbox.type = "checkbox";
+				checkbox.classList.add("attribute");
+				checkbox.classList.add("dot");
+				if(i < filledDots) {
+					checkbox.checked = true;
+				}
+				parent.append(checkbox);
+			}
+		},
+		
+		getDotLevel: function(ev) {
+			return $(ev.currentTarget).index() + 1;
+		},
+		
+		changeAttribute: function(ev) {
+			let clickedDot = this.getDotLevel(ev);
+			let dotsElement = $(ev.currentTarget).parent();
+			let attributeID = dotsElement.attr("id").replace("attribute-", "");
+			
+			let newValue = clickedDot == this.model.getAttribute(attributeID) ? 0 : clickedDot;
+			this.model.setAttribute(attributeID, newValue);
 		},
 	});
 	

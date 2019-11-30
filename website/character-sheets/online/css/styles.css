@@ -57,8 +57,10 @@ section {
 /*Add space between flexbox elements, but not at start and end.*/
 .flex > * {margin: 0 10px;}
 .flex.thinspaced > * {margin: 0 4px;}
+.flex.attribute > * {margin: 0 55px;}
 .flex > :first-child{margin-left: 0;}
 .flex > :last-child{margin-right: 0;}
+
 .flex.vertical > *{ margin: 10px 0; }
 .flex.thinspaced.vertical > *{ margin: 4px 0; }
 .flex.vertical > :first-child{ margin-top: 0; }
@@ -69,7 +71,9 @@ input[type=text] {
 	border-bottom: 1px solid black;
 }
 
-
+input[type=checkbox].dot {
+	
+}
 
 /*Slider-toggle checkboxes.
 These must consist of two immediately adjacent parts:
