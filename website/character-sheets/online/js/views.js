@@ -101,7 +101,7 @@ $(document).ready(function() {
 			}
 		},
 		
-		getDotLevel: function(ev) {
+		getDotsLevel: function(ev) {
 			return $(ev.currentTarget).index() + 1;
 		},
 		
@@ -111,7 +111,7 @@ $(document).ready(function() {
 		},
 		
 		changeAttribute: function(ev) {
-			let clickedDot = this.getDotLevel(ev);
+			let clickedDot = this.getDotsLevel(ev);
 			let attributeID = this.getDotsID(ev, "attribute");
 			
 			let newValue = clickedDot == this.model.getAttribute(attributeID) ? 0 : clickedDot;
