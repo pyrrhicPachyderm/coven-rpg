@@ -256,9 +256,10 @@ Anything a character might find at hand and hit people with can also be placed i
 A weapon's accuracy is added a flat bonus to rolls to hit, in place of an attribute.
 A weapon's damage determines the number of dice rolled upon hitting.
 The highest 3 dice are kept, as always, but the number of dice rolled are determined by the weapon instead of the wielder's skill.
-The wielder's \attref{might} is added to the damage roll for melee or thrown weapons, but not for bows.
+The wielder's \attref{might} is added to the damage roll for melee or thrown weapons, but not for \weaponrefplural{bow}.
+The bonus to the damage roll for \weaponrefplural{bow} is determined by their draw weight, as explained in their section.
 
-\begin{simpletable}{X[2.4]XXX[1.3]}
+\notedtable{X[2.4]XXX[1.3]}{
 	\toprule
 	Weapon & Accuracy & Damage & Range (metres)\\
 	\midrule
@@ -268,9 +269,11 @@ The wielder's \attref{might} is added to the damage roll for melee or thrown wea
 	Hand Weapon & +4 & \dice{5} & Melee\\
 	Thrown Rock & +0 & \dice{2} & $5\times\text{\attref{might}}$\\
 	Thrown Weapon & +0 & \dice{4} & $5\times\text{\attref{might}}$\\
-	Bow & +2 & \dice{5} & 100\\
+	Bow & +2 & \dice{5}\tnote{*} & 100\\
 	\bottomrule
-\end{simpletable}
+}{
+	\item[*] Add the \weaponrefpossessive{bow} draw weight, instead of your \attref{might}.
+}
 
 \subsubsection{Fist}
 \weaponlabel{Fist}{Fists}{unarmed}
@@ -311,3 +314,9 @@ Rocks from slingshots fall in this category too.
 \weaponlabel{Bow}{Bows}{bow}
 A bow and arrow.
 Also covers crossbows, if you include them in your setting.
+
+Each \weaponref{bow} has a draw weight, typically 1 for a shortbow, or 3 for a longbow.
+Bows can be custom-made with any draw weight from 0 to 5, however.
+
+When using a \weaponref{bow}, add the draw weight, not your \attref{might}, to the damage roll.
+However, your \attref{might} must equal or exceed the draw weight for you to be able to use the \weaponref{bow}.
