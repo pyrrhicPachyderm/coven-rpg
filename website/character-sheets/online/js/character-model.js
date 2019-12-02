@@ -10,25 +10,25 @@ var CharacterModel = Backbone.Model.extend({
 		}
 	},
 	
-	initialize: function() {
-		this.remainingExperience = this.calculateRemainingExperience();
-	},
-	
 	reset: function() {
 		this.set(this.defaults());
 		this.initialize();
 	},
 	
-	calculateRemainingExperience: function() {
-		let remainingExperience = this.get("totalExperience");
-		this.set("remainingExperience", remainingExperience);
+	getTemplateInput: function() {
+		let obj = this.toJSON();
+		obj.remainingExperience = this.getRemainingExperience();
+		return obj;
+	},
+	
+	getRemainingExperience: function() {
+		return this.get("totalExperience");
 	},
 	
 	addExperience: function(amount) {
 		let currentExperience = this.get("totalExperience");
 		currentExperience += amount;
 		this.set("totalExperience", currentExperience);
-		this.calculateRemainingExperience();
 	},
 	
 	writeJSON: function() {

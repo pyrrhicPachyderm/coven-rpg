@@ -14,7 +14,7 @@ $(document).ready(function() {
 		),
 		
 		render: function () {
-			this.$el.html(this.template(this.model.toJSON()));
+			this.$el.html(this.template(this.model.getTemplateInput()));
 			
 			if(this.model.get("isTrackingExperience")) {
 				$(".experience").show();
