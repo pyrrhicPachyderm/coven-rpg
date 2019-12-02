@@ -13,3 +13,9 @@ var triggerChange = function(object, attribute) {
 	object.trigger("change");
 	object.trigger("change:" + attribute);
 }
+
+var resetModel = function(model) {
+	model.clear()
+	model.set(model.defaults());
+	model.initialise();
+}

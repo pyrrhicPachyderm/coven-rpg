@@ -10,11 +10,6 @@ var CharacterModel = Backbone.Model.extend({
 		}
 	},
 	
-	reset: function() {
-		this.set(this.defaults());
-		this.initialize();
-	},
-	
 	getTemplateInput: function() {
 		let obj = this.toJSON();
 		obj.remainingExperience = this.getRemainingExperience();
@@ -36,7 +31,7 @@ var CharacterModel = Backbone.Model.extend({
 	},
 	
 	readJSON: function(str) {
-		this.reset();
+		resetModel(this);
 		this.set(JSON.parse(str));
 	},
 	
