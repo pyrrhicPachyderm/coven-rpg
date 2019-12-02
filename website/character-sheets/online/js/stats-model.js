@@ -11,8 +11,7 @@ var Stats = {
 	],
 	attributeMax: 5,
 }
-Object.freeze(Stats.attributeIDs);
-Object.freeze(Stats);
+deepFreeze(Stats);
 
 var AttributesModel = Backbone.Model.extend({
 	defaults: function () {
