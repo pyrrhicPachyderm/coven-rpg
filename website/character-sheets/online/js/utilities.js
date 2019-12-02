@@ -15,7 +15,11 @@ var triggerChange = function(object, attribute) {
 }
 
 var resetModel = function(model) {
-	model.clear()
+	//Must pass silent so that it does not trigger changes.
+	//If it does trigger changes, the view tries to re-render.
+	//But everything is undefined and it breaks.
+	model.clear({silent: true});
+	//Everything gets redefined here, so this triggers the re-render.
 	model.set(model.defaults());
 	model.initialise();
 }
