@@ -22,10 +22,9 @@ $(document).ready(function() {
 				$(".experience").hide();
 			}
 			
-			let attributes = this.model.get("attributes");
-			for(let i = 0; i < attributes.length; i++) {
-				let attributeID = this.model.attributeIDs[i];
-				this.createDots($("#attribute-" + attributeID), 5, attributes[i]);
+			for(attributeID of Stats.attributeIDs) {
+				let attributeScore = this.model.getAttribute(attributeID);
+				this.createDots($("#attribute-" + attributeID), Stats.attributeMax, attributeScore);
 			}
 		},
 		

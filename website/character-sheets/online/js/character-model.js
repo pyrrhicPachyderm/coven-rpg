@@ -6,20 +6,9 @@ var CharacterModel = Backbone.Model.extend({
 			playerName: "",
 			isTrackingExperience: true,
 			totalExperience: 100,
-			attributes: Array(8).fill(0),
+			stats: new StatsModel(),
 		}
 	},
-	
-	attributeIDs: [
-		"might",
-		"grace",
-		"ken",
-		"wit",
-		"will",
-		"heed",
-		"charm",
-		"presence",
-	],
 	
 	initialize: function() {
 		this.remainingExperience = this.calculateRemainingExperience();
@@ -28,12 +17,6 @@ var CharacterModel = Backbone.Model.extend({
 	reset: function() {
 		this.set(this.defaults());
 		this.initialize();
-	},
-	
-	setArrayElement: function(array, index, value) {
-		this.get(array)[index] = value;
-		this.trigger("change");
-		this.trigger("change:" + array);
 	},
 	
 	calculateRemainingExperience: function() {
@@ -57,13 +40,12 @@ var CharacterModel = Backbone.Model.extend({
 		this.set(JSON.parse(str));
 	},
 	
-	getAttribute: function(attributeID) {
-		let index = this.attributeIDs.indexOf(attributeID);
-		return this.get("attributes")[index];
+	getAttribute: function(attribute) {
+		return this.get("stats").getAttribute(attribute);
 	},
 	
-	setAttribute: function(attributeID, value) {
-		let index = this.attributeIDs.indexOf(attributeID);
-		this.setArrayElement("attributes", index, value);
+	setAttribute: function(attribute, value) {
+		this.get("stats").setAttribute(attribute, value);
+		triggerChange(this, "stats");
 	},
 });
