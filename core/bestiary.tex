@@ -152,3 +152,32 @@ The GM can also use these as inspiration for an adventure, or perhaps a short sc
 		If both opposing bushes still stand at this time, they spontaneously combust.
 	}
 }
+
+\creature{Ironwood}{ironwood}{
+	\atttable{8}{\nostat}{\nostat}{\nostat}{\nostat}{\nostat}{\nostat}{\nostat}
+}{
+	\speed{0}
+}{
+	None
+}{
+	The \creatureref{ironwood} is a mighty tree.
+	A fully grown specimen is over 100 metres tall, with a crown just as far across.
+	It grows only in soils rich in iron ores, absorbing the metal to strengthen its wood and support its tremendous bulk.
+	The wood is as hard as iron; it must be forged, not carved.
+	
+	Many doubt that the \creatureref{ironwood} is any more than a mindless plant, but such people have never tried to fell one.
+	Anyone who takes an axe to its trunk suffers immediate retaliation.
+	A single acorn---the size and weight of an anvil---falls from the canopy to land unerringly where they were standing.
+	A fully grown tree has hundreds of these acorns, enough to crush even a large crew of loggers.
+}{
+	\ability{Iron}{
+		The \creatureref{ironwood} is immune to mundane weapons, and to fire.
+		Extraordinary methods are required to fell it.
+		It cannot move---not even a limb---or speak.
+	}
+	
+	\ability{Acorns Like Anvils}{
+		Any attack against the \creatureref{ironwood} made by a creature under its broad canopy provokes an automatic and immediate response; an acorn dropped from its high branches.
+		The \creatureref{ironwood} rolls \dice{3} to hit, and \dice[8]{6} for the {\damagetest}.
+	}
+}
