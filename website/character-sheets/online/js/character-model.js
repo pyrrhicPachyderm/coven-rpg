@@ -27,6 +27,7 @@ var CharacterModel = Backbone.Model.extend({
 	
 	reset: function() {
 		this.set(this.defaults());
+		this.initialize();
 	},
 	
 	setArrayElement: function(array, index, value) {
