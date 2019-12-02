@@ -9,9 +9,9 @@ var deepFreeze = function(obj) {
 	Object.freeze(obj);
 }
 
-var triggerChange = function(object, attribute) {
-	object.trigger("change");
-	object.trigger("change:" + attribute);
+var triggerChange = function(model, attribute) {
+	model.trigger("change");
+	model.trigger("change:" + attribute);
 }
 
 var resetModel = function(model) {
