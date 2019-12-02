@@ -21,5 +21,5 @@ var resetModel = function(model) {
 	model.clear({silent: true});
 	//Everything gets redefined here, so this triggers the re-render.
 	model.set(model.defaults());
-	model.initialise();
+	model.initialize();
 }
