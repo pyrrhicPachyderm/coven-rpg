@@ -82,8 +82,7 @@ $(document).ready(function() {
 		
 		callOnEnterKey: function(ev, func) {
 			if(ev.keyCode == 13) { //13 is the Enter key.
-				func = _.bind(func, this);
-				func(ev);
+				func.call(this, ev);
 			}
 		},
 		
