@@ -32,7 +32,7 @@ var CharacterModel = Backbone.Model.extend({
 	
 	readJSON: function(str) {
 		resetModel(this);
-		this.set(JSON.parse(str));
+		loadModelFromJSON(this, JSON.parse(str));
 	},
 	
 	getAttribute: function(attribute) {
