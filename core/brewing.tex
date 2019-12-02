@@ -293,6 +293,19 @@ Additionally, modifications to statistics due to withdrawal effects (such as \fe
 	The energy expended in growing and shedding these patches takes a couple of extra meals to recoup---someone using this potion more than once a day for an extended period simply can't keep up, and will starve.
 }
 
+\feat{Stonehide Brew}{resilience-potion-2}{15}{
+	\skillref[1]{brewing},
+	\featref{resilience-potion}
+}{
+	You've found a rare succulent plant which disguises itself as a pebble.
+	Boiling their tough skin, you can create a potion that lends the hardness of stone to those who drink it.
+	
+	\mix{cauldron}{drink}{\Herb{parsnip}{2}, \herb{pebble plant}{4}}
+	%Pebble plants are the genus Lithops.
+	
+	This potion functions as \featref{resilience-potion}, except it increases \statref{res} by 2.
+}
+
 \feat{Supple Hide}{resilience-potion-supple}{15}{
 	\skillref[1]{brewing},
 	\featref{resilience-potion}
