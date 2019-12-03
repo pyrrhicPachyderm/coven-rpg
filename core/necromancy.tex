@@ -50,6 +50,7 @@ Each comes with its own associated changes to the statistics of a creature, list
 Many changes, however, are shared between all reanimated creatures and are listed here.
 
 Most reanimations do nothing to heal {\damage} to the corpse: both {\damage} suffered before and during death, and any further {\damage} done to the corpse since then.
+If this reduces its \statref{st} to 0 or below, the corpse is too mangled to successfully reanimate.
 Some reanimations also require an unrotted corpse.
 It usually takes a little over a week before a corpse becomes too rotted for such a reanimation, although temperature and moisture can alter this.
 Corpses can be preserved by {\embalming}.
@@ -84,7 +85,6 @@ Its \statref{st} increases by 2, however.
 If it could fly, it is now too clumsy to do so.
 
 A corpse reanimated as a \undeadref{zombie} is not healed of any {\damage}.
-If this reduces its \statref{st} to 0 or below, the corpse is too mangled to successfully reanimate.
 
 Reanimating a corpse as a \undeadref{zombie} requires that it is unrotted.
 Furthermore, it does nothing to slow the rot.
@@ -101,7 +101,6 @@ A corpse reanimated as a \undeadref{ghoul} loses 2 points from its \attref{ken},
 It retains the ability to fly, if it could in life.
 
 A corpse reanimated as a \undeadref{ghoul} is not healed of any {\damage}.
-If this reduces its \statref{st} to 0 or below, the corpse is too mangled to successfully reanimate.
 However, an animated \undeadref{ghoul} may heal {\damage} by consuming the flesh of its own kind.
 An entire corpse is sufficient to restore {\damage} equal to its maximum \statref{st}, with smaller portions restoring proportionally smaller amounts.
 A ghoul can consume an entire corpse in less than a minute, and there is no end to its hunger: it could consume corpses for hours on end without being sated.
