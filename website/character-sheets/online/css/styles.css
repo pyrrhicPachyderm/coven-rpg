@@ -1,3 +1,7 @@
+:root {
+	--skill-name-width: 10em;
+}
+
 body {
 	margin: 0;
 	font-family: "Times New Roman", Times, serif;
@@ -11,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 40px;
+}
+
+h3 {
+	font-size: 22px;
 }
 
 input, button, textarea {
@@ -73,6 +81,20 @@ input[type=text] {
 
 input[type=checkbox].dot {
 	
+}
+
+div.dots-container {
+	display: inline-block;
+}
+
+input[type=text].speciality-skill-name {
+	display: inline-block;
+	width: var(--skill-name-width);
+}
+
+label.skill {
+	display: inline-block;
+	width: var(--skill-name-width);
 }
 
 /*Slider-toggle checkboxes.
