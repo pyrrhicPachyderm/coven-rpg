@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v1
       
       - name: Build
         run: |
           make website
       
       - name: Upload Artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v1
         with:
           name: website-directory
           path: website/
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dowload Artifact
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v1
         with:
           name: website-directory
           path: website/
