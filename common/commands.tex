@@ -170,31 +170,33 @@
 }
 
 \makeatletter
-\newcommand\statblock[8][\@nil]{%Arguments: displaytitle (optional), title, label, atttable, speed, skills, text, abilities
+\newcommand\statblock[9][\@nil]{%Arguments: displaytitle (optional), title, labelprefix, label, atttable, speed, skills, text, abilities
 	\def\displaytitle{#1}
 	\ifx\displaytitle\@nnil%
 		\def\displaytitle{#2}%
 	\fi%
 	\subsection[#2]{\displaytitle}
 	\labelname{#2}
-	\label{#3}
-	{#4}
+	\label{#3:#4}
+	\labelname{#2's}
+	\label{#3possessive:#4}
+	{#5}
 	
-	\textbf{Speed:} {#5}
+	\textbf{Speed:} {#6}
 	
 	\nopagebreak
-	\textbf{Skills:} {#6}
+	\textbf{Skills:} {#7}
 	
 	\nopagebreak
-	{#7}
-	
 	{#8}
+	
+	{#9}
 }
 \makeatother
 
 \makeatletter
 \newcommand\creature[8][\@nil]{%Arguments: displaytitle (optional), title, label, atttable, speed, skills, text, abilities
-	\statblock[#1]{#2}{creature:#3}{#4}{#5}{#6}{#7}{#8}
+	\statblock[#1]{#2}{creature}{#3}{#4}{#5}{#6}{#7}{#8}
 }
 \makeatother
 \newcommand\speed[1]{%
@@ -218,7 +220,7 @@
 	\ifx\displaytitleA\@nnil%
 		\def\displaytitleA{#2}%
 	\fi%
-	\statblock[{\displaytitleA} {[#4 XP]}]{#2}{familiar:#3}{#5}{#6}{#7}{#8}{#9}
+	\statblock[{\displaytitleA} {[#4 XP]}]{#2}{familiar}{#3}{#5}{#6}{#7}{#8}{#9}
 }
 \makeatother
 \newcommand\familiaroption[3]{%Arguments: title, XP cost, text
@@ -226,7 +228,9 @@
 }
 
 \newcommand\creatureref[1]{\nameref{creature:#1}}
+\newcommand\creaturerefpossessive[1]{\nameref{creaturepossessive:#1}}
 \newcommand\familiarref[1]{\nameref{familiar:#1}}
+\newcommand\familiarrefpossessive[1]{\nameref{familiarpossessive:#1}}
 
 \newcommand\materials[1]{%
 	\textbf{Materials:} {#1}.%
