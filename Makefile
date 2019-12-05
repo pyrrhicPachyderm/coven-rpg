@@ -56,18 +56,33 @@ website: $(website_pdfs)
 .PHONY: website
 
 
+######################
+#The books themselves.
+######################
 
-#The books themselves
+#First, define a bunch of prerequisites for the books.
+#Use = instead of := to ensure they are recursively expanded.
+#That is, they are expanded in the context of the make rule where they are used, not now, where they are defined.
+
+#The .tex for the main file for the book.
+prereq_main_tex = $$*/$$*.tex
+#All the other .tex files in the same folder.
+prereq_extra_tex = $$(wildcard $$*/*.tex)
+#The folder names for the books this book depends on, to be used in defining subsequent prerequisites.
+#NB: This one should not be used as a prerequisite itself.
+prereq_dependency = $$($$(shell echo $$* | sed "s|-|_|g")_deps)
+#All the .tex files in the books this book depends on.
+prereq_dependency_tex = $$(wildcard $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&/*.tex|g"))
+#The .pdf files of the books this depends on, to make sure those are compiled first.
+prereq_dependency_pdf = $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&.pdf|g")
 
 .SECONDEXPANSION:
 
-%.pdf: $$*/$$*.tex $$(wildcard $$*/*.tex) $(common_files) $$(wildcard $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]+|&/*.tex|g")) $$(shell echo $$($$(shell echo $$* | sed "s|-|_|g")_deps) | sed -E "s|[^ ]+|&.pdf|g")
+%.pdf: $(prereq_main_tex) $(prereq_extra_tex) $(prereq_dependency_tex) $(prereq_dependency_pdf)
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 	mv "$*/$@" "$@"
-#The two monstrous prerequisites for this rule are respectively:
-# - All the tex files in the books this book depends on.
-# - The PDF files of the books this depends on, to make sure those are compiled first.
-#This latter one should ensure that the external references exist and work properly.
+#prereq_dependency_pdf should ensure that all books this book depends on are compiled first.
+#This should ensure that the external references exist and work properly.
 #However, it will probably break if the book that's depended upon is compiled, then the aux files removed.
 #I might need to ensure make is aware of the aux files in order to fix this.
 #The simplest way would be to depend on the aux file for every tex file.
