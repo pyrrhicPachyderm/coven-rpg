@@ -241,6 +241,5 @@ TSWLatexianTemp*
 # generated if using elsarticle.cls
 *.
 
-# Include all the contents of the imgs/ directory, unless cropped
-!imgs/*
-imgs/*-cropped.pdf
+# Images are .tif raw, converted to .png
+*.png

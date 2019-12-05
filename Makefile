@@ -24,6 +24,8 @@ clean:
 		$(RM) **/*.bbl **/*.run.xml **/*.auxlock;\
 		$(RM) **/*.idx **/*.ind **/*.ilg;\
 		$(RM) **/*.dep **/*.dpth **/*.md5 **/*-figure*.pdf;\
+		\
+		$(RM) **/*.png;\
 	)
 Clean: clean
 	@(\
@@ -41,6 +43,14 @@ featcount:
 	)
 
 .PHONY: all clean Clean spellcheck featcount
+
+
+########
+#Images.
+########
+
+%.png: %.tif
+	convert $< $@
 
 
 ###############
