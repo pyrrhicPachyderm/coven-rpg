@@ -78,7 +78,7 @@ prereq_dependency_pdf = $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&.p
 
 .SECONDEXPANSION:
 
-%.pdf: $(prereq_main_tex) $(prereq_extra_tex) $(prereq_dependency_tex) $(prereq_dependency_pdf)
+%.pdf: $(prereq_main_tex) $(prereq_extra_tex) $(common_files) $(prereq_dependency_tex) $(prereq_dependency_pdf)
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 	mv "$*/$@" "$@"
 #prereq_dependency_pdf should ensure that all books this book depends on are compiled first.
