@@ -54,6 +54,7 @@ featcount:
 %.png: %.tif
 	convert $< $@
 
+.PRECIOUS: %.png
 
 ###############
 #Website stuff.
