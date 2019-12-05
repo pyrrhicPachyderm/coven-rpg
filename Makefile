@@ -42,8 +42,9 @@ featcount:
 .PHONY: all clean Clean spellcheck featcount
 
 
-
-#Website stuff
+###############
+#Website stuff.
+###############
 
 website_dir := website
 website_pdfs := $(shell echo $(book_pdfs) | sed -E "s|[^ ]+|$(website_dir)/&|g")
