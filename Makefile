@@ -4,14 +4,15 @@ RM := rm -f
 
 aspell_personal_dict := ./.aspell.en.personal
 
-books := omnibus core big-book-of-familiars
+volumes := core big-book-of-familiars
+books := omnibus $(volumes)
 book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
 
 common_files := common/config.tex common/commands.tex common/edition-notice.tex
 
 core_deps := #Core has no dependencies
 big_book_of_familiars_deps := core
-omnibus_deps := $(books)
+omnibus_deps := $(volumes)
 
 all: $(book_pdfs)
 
