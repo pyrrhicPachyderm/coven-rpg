@@ -2,6 +2,8 @@ SHELL := /bin/bash
 LATEXMK_FLAGS = --pdf --cd
 RM := rm -f
 
+images_dir := imgs
+
 aspell_personal_dict := ./.aspell.en.personal
 
 volumes := core big-book-of-familiars
@@ -80,6 +82,8 @@ website: $(website_pdfs)
 prereq_main_tex = $$*/$$*.tex
 #All the other .tex files in the same folder.
 prereq_extra_tex = $$(wildcard $$*/*.tex)
+#All the image files for the book.
+prereq_images = $$(addsuffix .png,$$(basename $$(wildcard $$*/imgs/*)))
 #The folder names for the books this book depends on, to be used in defining subsequent prerequisites.
 #NB: This one should not be used as a prerequisite itself.
 prereq_dependency = $$($$(shell echo $$* | sed "s|-|_|g")_deps)
@@ -87,10 +91,12 @@ prereq_dependency = $$($$(shell echo $$* | sed "s|-|_|g")_deps)
 prereq_dependency_tex = $$(wildcard $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&/*.tex|g"))
 #The .pdf files of the books this depends on, to make sure those are compiled first.
 prereq_dependency_pdf = $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&.pdf|g")
+#All the image files for the books this depends on.
+prereq_dependency_images = $$(addsuffix .png,$$(basename $$(wildcard $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&/$(images_dir)/*|g"))))
 
 .SECONDEXPANSION:
 
-%.pdf: $(prereq_main_tex) $(prereq_extra_tex) $(common_files) $(prereq_dependency_tex) $(prereq_dependency_pdf)
+%.pdf: $(prereq_main_tex) $(prereq_extra_tex) $(prereq_images) $(common_files) $(prereq_dependency_tex) $(prereq_dependency_pdf) $(prereq_dependency_images)
 	latexmk $(LATEXMK_FLAGS) --jobname="$(basename $@)" $<
 	mv "$*/$@" "$@"
 #prereq_dependency_pdf should ensure that all books this book depends on are compiled first.
