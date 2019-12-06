@@ -46,6 +46,9 @@ featcount:
 
 .PHONY: all clean Clean spellcheck featcount
 
+#.SECONDARY with no prerequisites means that intermiedate files are not deleted on completion.
+.SECONDARY:
+
 
 ########
 #Images.
@@ -53,8 +56,6 @@ featcount:
 
 %.png: %.tif
 	convert $< $@
-
-.PRECIOUS: %.png
 
 ###############
 #Website stuff.
