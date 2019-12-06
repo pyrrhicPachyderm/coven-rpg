@@ -4,6 +4,9 @@
 \newcommand{\subtitle}[1]{%
 	\gdef\thesubtitle{#1}%
 }
+\newcommand{\editiontitle}[1]{%
+	\gdef\theeditiontitle{#1}%
+}
 \renewcommand{\author}[1]{%
 	\gdef\theauthor{#1}%
 }
@@ -22,7 +25,11 @@
 		\centering
 		\vspace*{0.15\textheight}
 		{\HUGE \thetitle}\\[\baselineskip]
-		{\huge \thesubtitle}\par
+		{\huge \thesubtitle}\\[\baselineskip]
+		\ifdefined\theeditiontitle
+			{\huge \theeditiontitle}\\[\baselineskip]
+		\fi
+		\par
 		\vfill
 		{\Large \theauthor}\\[\baselineskip]
 		\ifdefined\theillustrator
