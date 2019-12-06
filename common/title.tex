@@ -7,6 +7,9 @@
 \newcommand{\subtitle}[1]{%
 	\gdef\thesubtitle{#1}%
 }
+\newcommand{\illustrator}[1]{%
+	\gdef\theillustrator{#1}%
+}
 
 %http://mirror.aut.ac.nz/CTAN/info/latex-samples/TitlePages/titlepages.pdf
 %This provides many example title pages, built manually.
@@ -21,7 +24,11 @@
 		{\HUGE \thetitle}\\[\baselineskip]
 		{\huge \thesubtitle}\par
 		\vfill
-		{\Large \theauthor}\par
+		{\Large \theauthor}\\[\baselineskip]
+		\ifdefined\theillustrator
+			{\Large Illustrated by \theillustrator}
+		\fi
+		\par
 		\vfill
 	\endgroup
 	\twocolumn
