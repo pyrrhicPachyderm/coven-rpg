@@ -1,9 +1,28 @@
+\renewcommand{\title}[1]{%
+	\gdef\thetitle{#1}%
+}
+\renewcommand{\author}[1]{%
+	\gdef\theauthor{#1}%
+}
 \newcommand{\subtitle}[1]{%
-	\posttitle{%
-		\par\end{center}
-		\begin{center}%
-			\large#1%
-		\end{center}%
-		\vskip0.5em%
-	}%
+	\gdef\thesubtitle{#1}%
+}
+
+%http://mirror.aut.ac.nz/CTAN/info/latex-samples/TitlePages/titlepages.pdf
+%This provides many example title pages, built manually.
+%They are used to inspire the titlepage built here.
+%In particular, titleDB.
+\newcommand*\titlepage{%
+	\onecolumn
+	\thispagestyle{empty}
+	\begingroup%
+		\centering
+		\vspace*{0.15\textheight}
+		{\HUGE \thetitle}\\[\baselineskip]
+		{\huge \thesubtitle}\par
+		\vfill
+		{\Large \theauthor}\par
+		\vfill
+	\endgroup
+	\twocolumn
 }
