@@ -21,14 +21,29 @@ Dozens of witches and hundreds of charlatans have all claimed to.
 Many have even come incredibly close, but there has always been some slight snag.
 The search, of course, continues, but many have given up all hope that it is possible.
 
-\section{The Lurching Dead}
+\section{Reanimation Rituals \& the Undead}
+\seclabel{reanimation-rituals}
 
-The reanimation of dead creatures, as practiced by so many \practitioners{necromancy}, is a process filled with limitations and drawbacks.
-Many of these can be overcome by an experienced \practitioner{necromancy}, but, for the beginner, the rules of such creatures are presented here.
+Undead, the products of reanimation, come in many different forms: \undeadrefplural{zombie}, \undeadrefplural{skeleton}, \undeadrefplural{ghoul}, and more.
+The rituals to reanimate these creatures are just as numerous, but they all share mark{\'e}d similarities.
+And many \practitioners{necromancy}, who consider these rituals to form the heart and soul of the discipline, learn a lot of techniques for improving them.
 
-Reanimation comes in many forms: \undeadrefplural{zombie}, \undeadrefplural{skeleton}, and more.
-Each comes with its own associated changes to the statistics of a creature, listed in the following sections.
-Many changes, however, are shared between all reanimated creatures and are listed here.
+For convenience, the feats which modify these rituals refer to them collectively as the {\reanimationrituals}, and the feats which provide them are listed here.
+\begin{itemize}
+	\item \featref{animate-zombie}
+	\item \featref{animate-skeleton}
+	\item \featref{animate-ghoul}
+	\item \featref{animate-draugr}
+	\item \featref{animate-sea-draugr}
+	\item \featref{animate-fossil}
+\end{itemize}
+Obviously, you cannot perform any variant of a ritual unless you have the feat to perform that ritual in the first place.
+
+\subsection{The Lurching Dead}
+
+The statistics and capacbilities of an undead creature are based upon the statistics and capabilities of the creature whose corpse it is raised from.
+Each variety of undead comes with its own associated changes to these statistics, listed in the following sections.
+Many changes, however, are shared between all reanimated creatures, and are listed here.
 
 Most reanimations do nothing to heal {\damage} to the corpse: both {\damage} suffered before and during death, and any further {\damage} done to the corpse since then.
 If this reduces its \statref{st} to 0 or below, the corpse is too mangled to successfully reanimate.
@@ -365,7 +380,7 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	\featref{animate-zombie}
 }{
 	Larger bodies need more force to reanimate, but it's force you've learned to provide.
-	When you perform a ritual to reanimate a creature, you may use a \circleref{medium} instead of a \circleref{small}, in order to ignore the upper size limit on the creature.
+	When you perform a {\reanimationritual}, you may use a \circleref{medium} instead of a \circleref{small}, in order to ignore the upper size limit on the creature.
 	You still cannot reanimate a creature with a soul, such as a human; you need \featref{undead-human} to do so.
 }
 
@@ -375,7 +390,7 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	Rather than bothering to reanimate larger creatures, you can just reanimate parts of them.
 	The head, specifically, the seat of consciousness.
 	
-	You may reanimate a creature's severed head using any of the reanimation rituals provided by {\reanimationrituals}, provided you know them.
+	You may reanimate a creature's severed head using a {\reanimationritual}.
 	The usual restrictions apply; for example, you cannot reanimate a human unless you also have \featref{undead-human}.
 	However, when evaluating whether you need \featref{undead-larger} and a \circleref{medium}, consider only the size of the creature's head, not the whole creature.
 	As such, any head short of an elephant's only needs a \circleref{small}.
@@ -393,7 +408,7 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	Reanimating a creature that once possessed a soul has previously proven impossible, due to interference from the residual link.
 	You've learned to sever these links, and hence reanimate these creatures.
 	
-	You may reanimate a human, or an animal that was once a familiar, using any of the reanimation rituals provided by {\reanimationrituals}, provided you know them.
+	You may reanimate a human, or an animal that was once a familiar, using a {\reanimationritual}.
 	You must use an iron blade as part of the ritual, to sever the link.
 	
 	Reanimating an entire human requires a \circleref{medium}, and \featref{undead-larger}.
@@ -411,8 +426,7 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	Not to worry, though, for you have quite ready access to one soul in particular: your familiar's, so inextricably bound to your own.
 	
 	If your familiar dies and you can recover the corpse, you can reanimate it, paying no XP cost beside that required to purchase this feat in the first place.
-	You may use any of the reanimation rituals provided by {\reanimationrituals}, provided you know them.
-	It becomes a kind of \undeadref{souled} appropriate to the reanimation ritual used.
+	You may use any {\reanimationritual}, and it becomes the appropriate kind of \undeadref{souled}.
 	
 	Reanimating a familiar in this way does not prevent recovering it through the usual repetition of the binding ritual later (see \secref{familiar-injury-death}), although the normal XP cost must still be paid each time that method used.
 }
@@ -436,9 +450,8 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	Secondly, you have learned to use a {\phylactery} in a reanimation ritual.
 	This must be the {\phylactery} containing the soul of the person whose body is being reanimated, but you may do this with anybody's {\phylactery}, not just your own.
 	
-	You may use any of the reanimation rituals provided by {\reanimationrituals}, provided you know them.
+	You may use any {\reanimationritual}, reanimating the person as the appropriate kind of \undeadref{souled}.
 	The {\phylactery} takes the place of the candle in the ritual, which typically requires a \circleref{medium}, as per \featref{undead-larger}.
-	The person is reanimated as a kind of \undeadref{souled} appropriate to the reanimation ritual used.
 }
 
 \feat{Familiar Resurrection}{phylactery-familiar}{10}{
@@ -448,7 +461,7 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	Reanimating yourself is hard, what with being dead and all.
 	So you've taught your familiar to do it for you.
 	
-	Your familiar can perform the reanimation ritual granted by \featref{phylactery}.
+	Your familiar can perform the {\reanimationritual} variant granted by \featref{phylactery}.
 	It is only the link between the soul in your {\phylactery} and the sliver of the same soul in your familiar that affords it the magical intuition to do this, so it can only perform the ritual in order to reanimate \emph{you}.
 }
 
