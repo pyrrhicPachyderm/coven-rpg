@@ -341,13 +341,17 @@
 \newcommand\undeadrefplural[1]{\nameref{undeads:#1}}
 \newcommand\undeadrefpossessive[1]{\nameref{undeadpossessive:#1}}
 
-\newcommand\mixcreation[2]{%Arguments: name, label
+\newcommand\mixcreation[3]{%Arguments: name, label, text
 	\subsubsection{#1}
 	\label{mixcreation:#2}
+	
+	{#3}
 }
-\newcommand\mixdelivery[2]{%Arguments: name, label
+\newcommand\mixdelivery[3]{%Arguments: name, label, text
 	\subsubsection{#1}
 	\label{mixdelivery:#2}
+	
+	{#3}
 }
 
 \newcommand\mix[3]{%Arguments: creation, delivery, ingredients
