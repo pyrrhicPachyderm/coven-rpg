@@ -10,7 +10,7 @@ volumes := core big-book-of-familiars
 books := omnibus $(volumes)
 book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
 
-common_files := common/config.tex common/commands.tex common/edition-notice.tex
+common_files := $(wildcard common/*.tex)
 
 core_deps := #Core has no dependencies
 big_book_of_familiars_deps := core
