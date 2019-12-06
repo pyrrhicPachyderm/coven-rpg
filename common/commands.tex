@@ -319,7 +319,12 @@
 \newcommand\weaponrefplural[1]{\nameref{weapons:#1}}
 \newcommand\weaponrefpossessive[1]{\nameref{weaponpossessive:#1}}
 
-\newcommand\actionlabel[1]{\label{action:#1}}
+\newcommand\actiontype[3]{%Arguments: title, label, text
+	\subsubsection{#1}
+	\label{action:#2}
+	
+	{#3}
+}
 \newcommand\actionref[1]{\nameref{action:#1}}
 
 \newcommand\undead[4]{%Arguments: title, plural title, label, text

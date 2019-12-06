@@ -360,30 +360,27 @@ The player may choose which attributes to recover when they reduce their {\exhau
 \subsection{Actions in Combat}
 \seclabel{combat-actions}
 
-\subsubsection{Attack}
-\actionlabel{attack}
+\actiontype{Attack}{attack}{
+	You attack a creature or object, with a \seclink{weapon}{weapons} or unarmed.
+	You must be adjacent to the target to attack with a melee weapon, or within the listed range of a ranged weapon.
+	Make a Test using a number of dice determined, as normal, by your \skillref{weaponry} skill, and a flat bonus determined by your weapon's accuracy.
+	The Test is made against a {\tn} equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
+	
+	If you succeed in your Test, you hit.
+	Make a {\damagetest} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
+}
 
-You attack a creature or object, with a \seclink{weapon}{weapons} or unarmed.
-You must be adjacent to the target to attack with a melee weapon, or within the listed range of a ranged weapon.
-Make a Test using a number of dice determined, as normal, by your \skillref{weaponry} skill, and a flat bonus determined by your weapon's accuracy.
-The Test is made against a {\tn} equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
+\actiontype{Dash}{dash}{
+	You may move an additional number of metres equal to your \statref{speed} this {\turn}.
+}
 
-If you succeed in your Test, you hit.
-Make a {\damagetest} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
-
-\subsubsection{Dash}
-\actionlabel{dash}
-
-You may move an additional number of metres equal to your \statref{speed} this {\turn}.
-
-\subsubsection{Ready}
-\actionlabel{ready}
-
-You don't act immediately, but prepare to take an {\action} later.
-Decide what {\action} you will take, and which circumstances trigger it.
-When those circumstances come around, you may choose to take the readied {\action} or not.
-If your next {\turn} comes around without you taking the readied {\action}, you lose the benefits of readying.
-You must \actionref{ready} again if you want to continue to wait.
+\actiontype{Ready}{ready}{
+	You don't act immediately, but prepare to take an {\action} later.
+	Decide what {\action} you will take, and which circumstances trigger it.
+	When those circumstances come around, you may choose to take the readied {\action} or not.
+	If your next {\turn} comes around without you taking the readied {\action}, you lose the benefits of readying.
+	You must \actionref{ready} again if you want to continue to wait.
+}
 
 \subsection{Combat Modifiers}
 
