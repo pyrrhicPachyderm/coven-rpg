@@ -63,12 +63,12 @@
 
 \newcommand\familiar[4][\@nil]{%Arguments: displaytitle, title, label, XP cost
 	%TeX complains if we use \displaytitle for this, and then pass it to \statblock's \displaytitle.
-	%So we use \displaytitleA here.
-	\def\displaytitleA{#1}
-	\ifx\displaytitleA\@nnil%
-		\def\displaytitleA{#2}%
+	%So we use \familiardisplaytitle here.
+	\def\familiardisplaytitle{#1}
+	\ifx\familiardisplaytitle\@nnil%
+		\def\familiardisplaytitle{#2}%
 	\fi%
-	\statblock[{\displaytitleA} {[#4 XP]}]{#2}{familiar}{#3}
+	\statblock[{\familiardisplaytitle} {[#4 XP]}]{#2}{familiar}{#3}
 }
 \makeatother
 
