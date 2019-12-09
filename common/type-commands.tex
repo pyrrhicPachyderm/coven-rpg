@@ -1,0 +1,31 @@
+%%%%%%%%%
+%Actions.
+%%%%%%%%%
+
+\newcommand\actiontype[3]{%Arguments: title, label, text
+	\subsubsection{#1}
+	\label{action:#2}
+	
+	{#3}
+}
+\newcommand\actionref[1]{\nameref{action:#1}}
+
+
+
+%%%%%%%%
+%Undead.
+%%%%%%%%
+
+\newcommand\undead[4]{%Arguments: title, plural title, label, text
+	\subsubsection{#1}%
+	\label{undead:#3}%
+	\labelname{#2}%
+	\label{undeads:#3}%
+	\labelname{#1's}%
+	\label{undeadpossessive:#3}%
+	
+	{#4}
+}
+\newcommand\undeadref[1]{\nameref{undead:#1}}
+\newcommand\undeadrefplural[1]{\nameref{undeads:#1}}
+\newcommand\undeadrefpossessive[1]{\nameref{undeadpossessive:#1}}

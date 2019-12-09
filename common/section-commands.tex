@@ -1,0 +1,116 @@
+\makeatletter
+\newcommand{\labelname}[1]{\def\@currentlabelname{#1}}%Changes the name used by nameref on the next label.
+\makeatother
+
+\newcommand\partlabel[1]{\label{part:#1}}
+\newcommand\chaplabel[1]{\label{chap:#1}}
+\newcommand\seclabel[1]{\label{sec:#1}}
+\newcommand\partref[1]{Part~\ref{part:#1}}
+\newcommand\chapref[1]{Chapter~\ref{chap:#1}}
+\newcommand\chapnameref[1]{\nameref{chap:#1}}
+\newcommand\secref[1]{the \nameref{sec:#1} section}
+\newcommand\secrefraw[1]{\nameref{sec:#1}}
+\newcommand\seclink[2]{\hyperref[sec:#2]{#1}}
+
+
+
+%%%%%%%%%%%%%
+%Disciplines.
+%%%%%%%%%%%%%
+
+\newcommand\disclabel[3]{%Arguments: label, practitioner noun, practitioner plural
+	\chaplabel{#1}%
+	\labelname{#2}%
+	\label{practitioner:#1}%
+	\labelname{#3}%
+	\label{practitioners:#1}%
+	\labelname{#2's}%
+	\label{practitionerpossessive:#1}%
+}
+\newcommand\discref[1]{\chapnameref{#1}}
+\newcommand\practitioner[1]{\nameref{practitioner:#1}}
+\newcommand\practitioners[1]{\nameref{practitioners:#1}}
+\newcommand\practitionerpossessive[1]{\nameref{practitionerpossessive:#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Argument-less seclink macros.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\hat{\seclink{Hat}{the-hat}}
+\newcommand\hats{\seclink{Hats}{the-hat}}
+
+\newcommand\targetnumber{\seclink{Target Number}{target-numbers}}
+\newcommand\targetnumbers{\seclink{Target Numbers}{target-numbers}}
+\newcommand\tn{\seclink{TN}{target-numbers}}
+\newcommand\tns{\seclink{TNs}{target-numbers}}
+
+\newcommand\round{\seclink{Round}{structured-time}}
+\newcommand\rounds{\seclink{Rounds}{structured-time}}
+\newcommand\turn{\seclink{Turn}{structured-time}}
+\newcommand\turns{\seclink{Turns}{structured-time}}
+\newcommand\action{\seclink{Action}{structured-time}}
+\newcommand\actions{\seclink{Actions}{structured-time}}
+
+\newcommand\initiative{\seclink{Initiative}{initiative}}
+
+\newcommand\damage{\seclink{Damage}{damage}}
+\newcommand\shock{\seclink{Shock}{shock}}
+\newcommand\shocked{\seclink{Shocked}{shock}}
+\newcommand\exhaustion{\seclink{Exhaustion}{exhaustion}}
+
+\newcommand\damagetest{\seclink{Damage Test}{damage-tests}}
+\newcommand\damagetests{\seclink{Damage Tests}{damage-tests}}
+
+\newcommand\fire{\seclink{Fire}{fire}}
+\newcommand\ignite{\seclink{Ignite}{fire}}
+\newcommand\ignited{\seclink{Ignited}{fire}}
+
+\newcommand\opposedtest{\seclink{Opposed Test}{opposed-tests}}
+\newcommand\opposedtests{\seclink{Opposed Tests}{opposed-tests}}
+\newcommand\opposed{\seclink{opposed}{opposed-tests}}
+\newcommand\Opposed{\seclink{Opposed}{opposed-tests}}
+
+\newcommand\difficultterrain{\seclink{Difficult Terrain}{difficult-terrain}}
+
+\newcommand\antidote{\seclink{Antidote}{antidotes}}
+\newcommand\antidotes{\seclink{Antidotes}{antidotes}}
+
+\renewcommand\symbol{\seclink{Symbol}{sympathetic-links}}
+\renewcommand\symbols{\seclink{Symbols}{sympathetic-links}}
+\newcommand\symbolpossessive{\seclink{Symbol's}{sympathetic-links}}
+\newcommand\symlink{\seclink{Sympathetic Link}{sympathetic-links}}
+\newcommand\symlinks{\seclink{Sympathetic Links}{sympathetic-links}}
+\newcommand\stress{\seclink{Stress}{break-sympathetic-link}}
+\newcommand\stressed{\seclink{Stressed}{break-sympathetic-link}}
+\newcommand\stresses{\seclink{Stresses}{break-sympathetic-link}}
+\newcommand\stressing{\seclink{Stressing}{break-sympathetic-link}}
+
+\newcommand\mentalrealm{\seclink{Mental Realm}{the-mental-realm}}
+\newcommand\lifeline{\seclink{Lifeline}{mental-lifeline}}
+\newcommand\lifelines{\seclink{Lifelines}{mental-lifeline}}
+\newcommand\possession{\seclink{Possession}{possession}}
+\newcommand\possessed{\seclink{Possessed}{possession}}
+\newcommand\possessing{\seclink{Possessing}{possession}}
+\newcommand\possess{\seclink{Possess}{possession}}
+\newcommand\possesses{\seclink{Possesses}{possession}}
+
+\newcommand\phylactery{\seclink{Phylactery}{phylacteries}}
+\newcommand\phylacteries{\seclink{Phylacteries}{phylacteries}}
+\newcommand\phylacterypossessive{\seclink{Phylactery's}{phylacteries}}
+\newcommand\embalm{\seclink{Embalm}{embalming}}
+\newcommand\embalming{\seclink{Embalming}{embalming}}
+\newcommand\embalmed{\seclink{Embalmed}{embalming}}
+\newcommand\reanimationritual{\seclink{Reanimation Ritual}{reanimation-rituals}}
+\newcommand\reanimationrituals{\seclink{Reanimation Rituals}{reanimation-rituals}}
+
+\newcommand\augment{\seclink{Augment}{ritual-circle-augmentation}}
+\newcommand\augmentation{\seclink{Augmentation}{ritual-circle-augmentation}}
+\newcommand\augmentations{\seclink{Augmentations}{ritual-circle-augmentation}}
+\newcommand\augmenting{\seclink{Augmenting}{ritual-circle-augmentation}}
+\newcommand\augmented{\seclink{Augmented}{ritual-circle-augmentation}}
+
+\newcommand\foretell{\seclink{Foretell}{foretelling}}
+\newcommand\foretelling{\seclink{Foretelling}{foretelling}}
+\newcommand\foretold{\seclink{Foretold}{foretelling}}

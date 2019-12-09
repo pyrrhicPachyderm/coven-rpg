@@ -1,0 +1,67 @@
+\newcommand\titleemph[1]{\emph{#1}} %For the titles of books and such, including Coven itself.
+
+
+
+%%%%%%%%
+%Tables.
+%%%%%%%%
+
+\newenvironment{simpletableinner}[1]{
+	\taburowcolors 2{white .. gray!20}
+	\begin{tabu}{#1}
+}{
+	\end{tabu}
+}
+
+\newenvironment{simpletable}[1]{
+	\begin{center}
+	\begin{simpletableinner}{#1}
+}{
+	\end{simpletableinner}
+	\end{center}
+}
+
+\newcommand\notedtable[3]{%Arguments: alignment, table, notes
+	\begin{center}
+		\begin{threeparttable}
+			\begin{simpletableinner}{#1}
+				#2
+			\end{simpletableinner}
+			\begin{tablenotes}
+				#3
+			\end{tablenotes}
+		\end{threeparttable}
+	\end{center}
+}
+
+
+
+%%%%%%%%%
+%Stories.
+%%%%%%%%%
+
+\newcommand\storybreak{\bigskip}
+
+\newcommand\storybreakword[1]{%
+	\begin{center}%
+		#1%
+	\end{center}%
+}
+
+\newcommand\storyimage[1]{%
+	\begin{figure*}%
+		\includegraphics[width=\textwidth]{imgs/#1}%
+	\end{figure*}%
+}
+
+%Basing upon https://tex.stackexchange.com/a/199989
+%Except using starred \chapter
+%Starred chapter uses \@makeschapterhead instead of \@makechapterhead
+\makeatletter
+\newcommand\storychapter[1]{%
+	\begingroup
+	\let\@makeschapterhead\@gobble
+	\chapter*{#1}
+	\endgroup
+}
+\makeatother

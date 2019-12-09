@@ -1,0 +1,129 @@
+\newcommand\materials[1]{%
+	\textbf{Materials:} {#1}.%
+}
+
+\newcommand\materiallabel[3]{%Arguments: title, plural title, label
+	\labelname{#1}%
+	\label{material:#3}%
+	\labelname{#2}%
+	\label{materials:#3}%
+}
+\newcommand\materialref[1]{\nameref{material:#1}}
+\newcommand\materialrefplural[1]{\nameref{materials:#1}}
+
+
+
+%%%%%%%
+%Herbs.
+%%%%%%%
+
+\newcommand\herblabel[2]{%Arguments: title, label
+	\labelname{#1 Herb}%
+	\label{herb:#2}%
+	\labelname{#1 Herbs}%
+	\label{herbs:#2}%
+	\labelname{#1}%
+	\label{herbbare:#2}%
+}
+
+\newcommand\herbtype[1]{%A herb type (just rarity)
+	\nameref{herb:#1}%
+}
+\newcommand\herbtypeplural[1]{%
+	\nameref{herbs:#1}%
+}
+\newcommand\herbtypebare[1]{%
+	\nameref{herbbare:#1}%
+}
+
+\makeatletter
+\newcommand\herb[3][\@nil]{%A herb, with identity and type
+	\def\akaname{#1}%Optional argument is an alternative name for the herb.
+	#2 (%
+	\ifx\akaname\@nnil%
+		%
+	\else%
+		a.k.a.\ \akaname,\ %
+	\fi%
+	\herbtype{#3})%
+}
+\newcommand\herbs[2]{%
+	#1 (\herbtypeplural{#2})%
+}
+\newcommand\Herb[3][\@nil]{%
+	\def\akaname{#1}%
+	\expandafter\MakeUppercase #2 (%
+	\ifx\akaname\@nnil%
+		%
+	\else%
+		a.k.a.\ \akaname,\ %
+	\fi%
+	\herbtype{#3})%
+}
+\newcommand\Herbs[2]{%
+	\expandafter\MakeUppercase #1 (\herbtypeplural{#2})%
+}
+\makeatother
+
+\newcommand\herbcreature[2]{%
+	\herb{\creatureref{#1}}{#2}%
+}
+
+
+
+%%%%%%%%%
+%Circles.
+%%%%%%%%%
+
+\newcommand\circlelabel[2]{%Arguments: title, label
+	\labelname{#1 Ritual Circle}%
+	\label{circle:#2}%
+	\labelname{#1 Ritual Circles}%
+	\label{circles:#2}%
+}
+\newcommand\circleref[1]{\nameref{circle:#1}}
+\newcommand\circlerefplural[1]{\nameref{circles:#1}}
+
+
+
+%%%%%%%%%
+%Weapons.
+%%%%%%%%%
+
+\newcommand\weaponlabel[3]{%Arguments: title, plural title, label
+	\labelname{#1}%
+	\label{weapon:#3}%
+	\labelname{#2}%
+	\label{weapons:#3}%
+	\labelname{#1's}%
+	\label{weaponpossessive:#3}%
+}
+
+\newcommand\weaponref[1]{\nameref{weapon:#1}}
+\newcommand\weaponrefplural[1]{\nameref{weapons:#1}}
+\newcommand\weaponrefpossessive[1]{\nameref{weaponpossessive:#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%
+%Brewing mixtures.
+%%%%%%%%%%%%%%%%%%
+
+\newcommand\mixcreation[3]{%Arguments: name, label, text
+	\subsubsection{#1}
+	\label{mixcreation:#2}
+	
+	{#3}
+}
+\newcommand\mixdelivery[3]{%Arguments: name, label, text
+	\subsubsection{#1}
+	\label{mixdelivery:#2}
+	
+	{#3}
+}
+
+\newcommand\mix[3]{%Arguments: creation, delivery, ingredients
+	\textbf{\nameref{mixdelivery:#2}}, \textbf{\nameref{mixcreation:#1}}, \materials{#3}
+}
+\newcommand\mixdeliveryref[1]{\nameref{mixdelivery:#1}}
+\newcommand\mixcreationref[1]{\nameref{mixcreation:#1}}
