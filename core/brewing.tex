@@ -565,6 +565,20 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	Similarly, you may use your \skillref{brewing} rank in place of your \skillref{healing} rank when determining the {\damage} healed by a patient during a day of rest.
 }
 
+\feat{Hair of the Dog}{brewing-healing-taglock}{20}{
+	\skillref[2]{brewing},
+	\featref{brewing-healing}
+}{
+	Folk medicine claims that, when bitten by a dog, you should apply a few hairs of the dog that bit you to the wound.
+	It never worked with the raw hairs, but you've discovered a quick preparation that fixes that.
+	
+	\mix{poultice}{topical}{A \materialref{taglock} from the creature that attacked you, \herb{dock leaves}{1}, alcohol}
+	
+	Applied to a wound, this mixture will completely heal the wound over the course of a few minutes.
+	This allows you to heal all the {\damage} dealt by the creature whose \materialref{taglock} is used in creatuing the poultice.
+	However, it can only heal {\damage} dealt by unarmed attacks---punches, bites, claws, and the like---not any {\damage} dealt with a weapon.
+}
+
 \feat{Exposure}{poison-resistance}{15}{
 	\skillref[1]{brewing}
 }{
