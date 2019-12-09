@@ -28,20 +28,23 @@
 %Use the relay method to get more than 9 arguments.
 %As described at https://texfaq.org/FAQ-moren9
 %All statblock commands use the same latter half of the relay.
-\newcommand\statblock[4][\@nil]{%Arguments: displaytitle (optional), title, labelprefix, labelsuffix
+\newcommand\statblock[5][\@nil]{%Arguments: displaytitle (optional), title, pluraltitle, labelprefix, labelsuffix
 	\def\displaytitle{#1}
 	\ifx\displaytitle\@nnil
 		\def\displaytitle{#2}
 	\fi
 	\def\title{#2}
-	\def\labelprefix{#3}
-	\def\labelsuffix{#4}
+	\def\pluraltitle{#3}
+	\def\labelprefix{#4}
+	\def\labelsuffix{#5}
 	\statblockrelay
 }
 \newcommand\statblockrelay[5]{%Arguments: atttable, speed, skills, text, abilities
 	\subsection[{\title}]{\displaytitle}
 	\expandafter\labelname\expandafter{\title}
 	\label{\labelprefix:\labelsuffix}
+	\expandafter\labelname\expandafter{\pluraltitle}
+	\label{\labelprefix plural:\labelsuffix}
 	\expandafter\labelname\expandafter{\title's}
 	\label{\labelprefix possessive:\labelsuffix}
 	{#1}
@@ -57,18 +60,18 @@
 	{#5}
 }
 
-\newcommand\creature[3][\@nil]{%Arguments: displaytitle (optional), title, label
-	\statblock[#1]{#2}{creature}{#3}
+\newcommand\creature[4][\@nil]{%Arguments: displaytitle (optional), title, pluraltitle, label
+	\statblock[#1]{#2}{#3}{creature}{#4}
 }
 
-\newcommand\familiar[4][\@nil]{%Arguments: displaytitle, title, label, XP cost
+\newcommand\familiar[5][\@nil]{%Arguments: displaytitle, title, pluraltitle, label, XP cost
 	%TeX complains if we use \displaytitle for this, and then pass it to \statblock's \displaytitle.
 	%So we use \familiardisplaytitle here.
 	\def\familiardisplaytitle{#1}
 	\ifx\familiardisplaytitle\@nnil%
 		\def\familiardisplaytitle{#2}%
 	\fi%
-	\statblock[{\familiardisplaytitle} {[#4 XP]}]{#2}{familiar}{#3}
+	\statblock[{\familiardisplaytitle} {[#5 XP]}]{#2}{#3}{familiar}{#4}
 }
 \makeatother
 
@@ -89,6 +92,8 @@
 }
 
 \newcommand\creatureref[1]{\nameref{creature:#1}}
+\newcommand\creaturerefplural[1]{\nameref{creatureplural:#1}}
 \newcommand\creaturerefpossessive[1]{\nameref{creaturepossessive:#1}}
 \newcommand\familiarref[1]{\nameref{familiar:#1}}
+\newcommand\familiarrefplural[1]{\nameref{familiarplural:#1}}
 \newcommand\familiarrefpossessive[1]{\nameref{familiarpossessive:#1}}
