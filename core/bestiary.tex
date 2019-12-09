@@ -182,3 +182,45 @@ The GM can also use these as inspiration for an adventure, or perhaps a short sc
 		The \creatureref{ironwood} rolls \dice{3} to hit, and \dice[8]{6} for the {\damagetest}.
 	}
 }
+
+\creature{Moly}{moly}{
+	\atttable{\nostat}{\nostat}{3}{5}{5}{3}{3}{3}
+}{
+	\speed{0}
+}{
+	\skillref[3]{botany}, \skillref[3]{projection}
+}{
+	The \creatureref{moly} (rhymes with holy, not holly) is a fairly small herb, much like a daffodil in size and appearance.
+	Each plant grows a single stalk, with a few leaves and a single flower on top.
+	However, its flowers are purest white, and its roots are deepest black.
+	For most of its life, the \creatureref{moly} is a mundane plant.
+	In dispersing its seeds, however, it shows great and terrifying magic.
+	
+	A \creatureref{moly} has a mind.
+	This mind doesn't get up to much; the plant cannot move or see, so it has very little to think about.
+	The mind is only detectable by \discref{projection}, a subtle presence in the {\mentalrealm}.
+	It is not until the plant dies that the mind comes into its own.
+	
+	The \creatureref{moly} is naturally skilled in \discref{projection}.
+	At the moment of the plant's death---when it is eaten, uprooted, or cut---the mind cuts free into the {\mentalrealm}.
+	There, it {\possesses} the body of the creature that killed it.
+	Using the {\possessed} creature, the \creatureref{moly} eats its old body, if it hasn't already.
+	It then seeks out a suitable fertile location, and kills itself.
+	The seeds within its belly soon germinate, and the next generation of Molies flourish, using the creature's rotting corpse as compost.
+	
+	With the \creaturerefpossessive{moly} overwhelming ability in \discref{projection}, the only reliable way to harvest the plant and survive is to use another creature.
+	Most witches will use a rat, or some sort of insect.
+	The creature kills the plant and becomes {\possessed}, and the witch must snatch away the \creatureref{moly} before it is eaten.
+	With no seeds to disperse, the {\possessed} creature is aimless, and soon dies.
+}{
+	\ability{Plant}{
+		The \creatureref{moly} cannot move---not even a limb---or speak.
+	}
+	
+	\ability{Projection}{
+		The \creatureref{moly}'s mind automatically enters the {\mentalrealm} when its plant body dies.
+		It cannot otherwise enter the {\mentalrealm} in any way.
+		It needs no {\lifeline}, but can only survive a few minutes in the {\mentalrealm}.
+		The \creatureref{moly} can, and will, \featref{projection-start-other-3} and {\possess} the creature that killed its plant body.
+	}
+}
