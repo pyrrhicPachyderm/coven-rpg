@@ -25,31 +25,37 @@
 }
 
 \makeatletter
-\newcommand\statblock[9][\@nil]{%Arguments: displaytitle (optional), title, labelprefix, label, atttable, speed, skills, text, abilities
+%Use the relay method to get more than 9 arguments.
+%As described at https://texfaq.org/FAQ-moren9
+\newcommand\statblock[4][\@nil]{%Arguments: displaytitle (optional), title, labelprefix, labelsuffix
 	\def\displaytitle{#1}
-	\ifx\displaytitle\@nnil%
-		\def\displaytitle{#2}%
-	\fi%
-	\subsection[#2]{\displaytitle}
-	\labelname{#2}
-	\label{#3:#4}
-	\labelname{#2's}
-	\label{#3possessive:#4}
-	{#5}
-	
-	\textbf{Speed:} {#6}
-	
-	\nopagebreak
-	\textbf{Skills:} {#7}
-	
-	\nopagebreak
-	{#8}
-	
-	{#9}
+	\ifx\displaytitle\@nnil
+		\def\displaytitle{#2}
+	\fi
+	\def\title{#2}
+	\def\labelprefix{#3}
+	\def\labelsuffix{#4}
+	\statblockrelay
 }
-\makeatother
+\newcommand\statblockrelay[5]{%Arguments: atttable, speed, skills, text, abilities
+	\subsection[{\title}]{\displaytitle}
+	\labelname{\displaytitle}
+	\label{\labelprefix:\labelsuffix}
+	\labelname{\displaytitle's}
+	\label{\labelprefix possessive:\labelsuffix}
+	{#1}
+	
+	\textbf{Speed:} {#2}
+	
+	\nopagebreak
+	\textbf{Skills:} {#3}
+	
+	\nopagebreak
+	{#4}
+	
+	{#5}
+}
 
-\makeatletter
 \newcommand\creature[8][\@nil]{%Arguments: displaytitle (optional), title, label, atttable, speed, skills, text, abilities
 	\statblock[#1]{#2}{creature}{#3}{#4}{#5}{#6}{#7}{#8}
 }
