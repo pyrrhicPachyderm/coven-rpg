@@ -155,6 +155,24 @@ As such, a character may safely be under the effects of multiple painkillers as 
 Additionally, withdrawal effects (such as those of \featref{mental-stimulant}) do not count for mixing.
 %TODO: Use a better example when I have a withdrawal effect that modifies statistics.
 
+\section{Antidotes}
+
+While vomiting can help to avoid the effects of a potion \emph{before} they kick in, ending the effects once they are ongoing requires an {\antidote}.
+{\antidotes} exist not just for poisons, but for any potion or other mixture with an ongoing effect.
+Each {\antidote} will only work on potions it is designed to counteract, however.
+It will specify in its description what sorts of potion it is effective against.
+
+{\antidotes} can be delivered through different methods, just like potions themselves, and take the usual lenght of time to kick in.
+Once it kicks in, the {\antidote} ends all ongoing effects of any potions it is designed to counteract.
+One dose of {\antidote} can end the effect of several different potions, or several doses of the same potion.
+
+When an {\antidote} takes effect, treat it as though the duration of the potion has expired.
+An {\antidote} ends both beneficial and detrimental effects, but can only end \emph{ongoing} effects.
+Any {\damage} that has been dealt stays dealt.
+Overdose effects are ended, but organs that have failed are not repaired, and so on.
+Withdrawal effects (such as \featref{mental-stimulant}), are not ended by an {\antidote}.
+In fact, taking an {\antidote} causes the withdrawal effects to kick in, as it ends the effect of the potion.
+
 \section{Feats}
 
 \feat{Numbing Painkiller}{painkiller-grace}{15}{
