@@ -27,6 +27,7 @@
 \makeatletter
 %Use the relay method to get more than 9 arguments.
 %As described at https://texfaq.org/FAQ-moren9
+%All statblock commands use the same latter half of the relay.
 \newcommand\statblock[4][\@nil]{%Arguments: displaytitle (optional), title, labelprefix, labelsuffix
 	\def\displaytitle{#1}
 	\ifx\displaytitle\@nnil
@@ -56,18 +57,18 @@
 	{#5}
 }
 
-\newcommand\creature[8][\@nil]{%Arguments: displaytitle (optional), title, label, atttable, speed, skills, text, abilities
-	\statblock[#1]{#2}{creature}{#3}{#4}{#5}{#6}{#7}{#8}
+\newcommand\creature[3][\@nil]{%Arguments: displaytitle (optional), title, label
+	\statblock[#1]{#2}{creature}{#3}
 }
 
-\newcommand\familiar[9][\@nil]{%Arguments: displaytitle, title, label, XP cost, atttable, speed, skills, text, abilities
+\newcommand\familiar[4][\@nil]{%Arguments: displaytitle, title, label, XP cost
 	%TeX complains if we use \displaytitle for this, and then pass it to \statblock's \displaytitle.
 	%So we use \displaytitleA here.
 	\def\displaytitleA{#1}
 	\ifx\displaytitleA\@nnil%
 		\def\displaytitleA{#2}%
 	\fi%
-	\statblock[{\displaytitleA} {[#4 XP]}]{#2}{familiar}{#3}{#5}{#6}{#7}{#8}{#9}
+	\statblock[{\displaytitleA} {[#4 XP]}]{#2}{familiar}{#3}
 }
 \makeatother
 
