@@ -40,9 +40,9 @@
 }
 \newcommand\statblockrelay[5]{%Arguments: atttable, speed, skills, text, abilities
 	\subsection[{\title}]{\displaytitle}
-	\labelname{\title}
+	\expandafter\labelname\expandafter{\title}
 	\label{\labelprefix:\labelsuffix}
-	\labelname{\title's}
+	\expandafter\labelname\expandafter{\title's}
 	\label{\labelprefix possessive:\labelsuffix}
 	{#1}
 	
