@@ -74,6 +74,6 @@
 
 %Using https://tex.stackexchange.com/a/224746
 \usepackage{lettrine}
-\newcommand\dropcap[1]{%
-	\lettrine{\StrLeft{#1}{1}}{\StrGobbleLeft{#1}{1}}%
+\newcommand\dropcap[2][]{%
+	\lettrine[ante=#1]{\StrLeft{#2}{1}}{\StrGobbleLeft{#2}{1}}%
 }
