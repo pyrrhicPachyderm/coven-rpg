@@ -43,6 +43,14 @@ featcount:
 		shopt -s globstar;\
 		grep -c "\feat{" **/*.tex | grep -v :0;\
 	)
+dropcap:
+	@for book in $(books); do \
+		for file in $$(find "$$book" -name "*.tex" | grep -vF "$$book.tex" | grep -vF "chapter-list.tex"); do \
+			if ! grep -q "\dropcap" "$$file" ; then \
+				echo "$$file does not contain \dropcap" ;\
+			fi \
+		done \
+	done
 
 .PHONY: all clean Clean spellcheck featcount
 
