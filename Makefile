@@ -52,7 +52,7 @@ dropcap:
 		done \
 	done
 
-.PHONY: all clean Clean spellcheck featcount
+.PHONY: all clean Clean spellcheck featcount dropcap
 
 #.SECONDARY with no prerequisites means that intermiedate files are not deleted on completion.
 .SECONDARY:
