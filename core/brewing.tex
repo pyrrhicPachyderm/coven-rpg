@@ -389,18 +389,29 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	They take effect in only 1 round.
 }
 
-\feat{Eye Drops}{sight-potion}{15}{
+\feat{Eyebright Drops}{sight-light-potion}{15}{
 	None
 }{
 	\mix{cauldron}{topical}{\Herb{eyebright}{2}}
 	
 	Dripped into the eyes, this concoction enhances the eyesight.
-	Too much so, it could be argued, as bright lights are rendered blinding.
+	However, the user's night vision is utterly shot.
 	
-	For the next hour, the user rolls an extra die on \skillref{perception} Tests relying on sight.
+	For the next hour, the user rolls an extra die on \skillref{perception} Tests relying on sight in well-lit places.
 	This replaces any existing bonus dice from an ability such as a \familiarrefpossessive{raptor}, but applies on top of the normal dice granted by the \skillref{perception} skill.
-	However, in light as bright as sunlight, the user instead \emph{loses} 1 die from these rolls.
-	A bright flash of light, or looking into the sky on a sunny day, blinds the user for several minutes.
+	
+	However, the user is almost utterly blind in dimly lit locations.
+	Most inside locations will be dimly lit, unless they have large or numerous windows, or an abundance of lamps.
+}
+
+\feat{Eyedark Drops}{sight-dark-potion}{10}{
+	\mix{cauldron}{topical}{\Herb{carrot}{2}}
+	
+	The opposite of the \featref{sight-light-potion}, this potion grants excellent night vision, at the cost of an oversensitivity to light.
+	For an hour after application, the user suffers no penalties in low-light conditions, though they are as blind as anyone in complete darkness.
+	
+	For the same duration, bright lights---such as sunlight, or a lantern flame---are blinding.
+	Looking into such light blinds the user for about a minute.
 }
 
 \feat{Molenose Powder}{smell-potion}{10}{
