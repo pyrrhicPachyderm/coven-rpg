@@ -108,7 +108,7 @@ This might extend the time to effect by two or three times, but should not allow
 For ingested mixtures (a \mixdeliveryref{drink} or \mixdeliveryref{spike}), vomiting before it takes effect can massively ease this \attref{might} Test, and even allow avoiding the effect entirely.
 Ingesting an emetic herb, such as \herb{veratrum or the toadstool ``emetic russula''}{2}, serves to induce vomiting.
 However, these herbs do not act quickly enough to help with a mixture that takes effect in just 1 {\round}.
-To prevent these, a witch might look into \featref{vomit-spike}.
+To prevent these, a witch might look into \featref{vomit-potion}.
 
 \section{Side-Effects}
 
@@ -447,7 +447,7 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	However, this increases the duration only of its effect on smell; vision still recovers to normal after only a few minutes.
 }
 
-\feat{Vomiting Drops}{vomit-spike}{15}{
+\feat{Vomiting Drops}{vomit-potion}{15}{
 	None
 }{
 	\mix{cauldron}{spike}{\Herb{mistletoe}{2}}
@@ -457,7 +457,7 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	The drinker loses at least one {\action}, and usually several, while they heave and retch.
 }
 
-\feat{Sleeping Solution}{sleep-spike}{10}{
+\feat{Sleeping Solution}{sleep-potion}{10}{
 	None
 }{
 	\mix{cauldron}{spike}{\Herb{camomile}{2}}
@@ -466,7 +466,7 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	A few doses are quite safe, and will accelerate the effect a little, but too many can put the victim into a coma.
 }
 
-\feat{Garlic Solution}{garlic-spike}{15}{
+\feat{Garlic Solution}{garlic-potion}{15}{
 	\skillref[1]{brewing}
 }{
 	\mix{still}{spike}{\Herb{garlic}{2}}
@@ -481,9 +481,9 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	Vampires suffer far worse, of course.
 }
 
-\feat{Kick From the Head}{projection-spike}{15}{
+\feat{Kick From the Head}{projection-potion}{15}{
 	\skillref[1]{brewing},
-	\featref{garlic-spike},
+	\featref{garlic-potion},
 	\featref{projection-start}
 }{
 	You can make a concoction with enough kick to knock the mind right out of the body.
@@ -494,9 +494,9 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	This concoction takes effect immediately, ejecting the drinker's mind from their body and into the {\mentalrealm}.
 }
 
-\feat{Medium's Potion}{medium-spike}{10}{
+\feat{Medium's Potion}{medium-potion}{10}{
 	\skillref[1]{brewing},
-	\featref{projection-spike},
+	\featref{projection-potion},
 	\featref{medium}
 }{
 	By brewing the herb used to enter a \featref{medium} trance into the right concoction, you can skip the tedious meditating.
