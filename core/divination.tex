@@ -65,12 +65,20 @@ Just remember that witches are notorious cheats---even predestined events are on
 
 \section{Feats}
 
-\feat{Darkvision}{darkvision}{15}{
+\feat{Dimvision}{darkvision}{15}{
 	None
 }{
-	You no longer need light, so fickle and often absent, to see.
-	You can see perfectly in darkness, as though everything were lit by full daylight.
+	You eyes, magically assisted, can pick up the barest traces of light.
+	You suffer no penalties in low-light conditions, though you are as blind as anyone in complete darkness.
 	This works even if you are standing in light and looking into darkness.
+}
+
+\feat{Darkvision}{darkvision-2}{10}{
+	\skillref[1]{divination},
+	\featref{darkvision}
+}{
+	You no longer need light, so fickle and often absent, to see.
+	This works as \featref{darkvision}, except it also works in complete darkness.
 }
 
 \feat{Unclouded Vision}{xray-vision}{10}{
