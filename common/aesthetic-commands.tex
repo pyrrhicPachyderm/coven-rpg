@@ -65,3 +65,15 @@
 	\endgroup
 }
 \makeatother
+
+
+
+%%%%%%%%%%%
+%Drop caps.
+%%%%%%%%%%%
+
+%Using https://tex.stackexchange.com/a/224746
+\usepackage{lettrine}
+\newcommand\dropcap[1]{%
+	\lettrine{\StrLeft{#1}{1}}{\StrGobbleLeft{#1}{1}}%
+}
