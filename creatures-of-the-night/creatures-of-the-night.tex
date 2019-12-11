@@ -3,11 +3,11 @@
 \usepackage{import}
 \import{../common/}{preamble}
 
-\title{Coven}
-\subtitle{An RPG of Witches}
-\editiontitle{Omnibus Edition}
+\zexternaldocument*{../core/core}[core.pdf]
+
+\title{Creatures of the Night}
+\subtitle{A Coven Expansion}
 \author{Christopher Brown}
-\illustrator{Nicola Jones}
 
 \begin{document}
 
@@ -22,13 +22,7 @@
 
 \mainmatter
 
-\import{../core/}{chapter-list}
-
-\part{The Big Book of Familiars}
-\import{../big-book-of-familiars/}{chapter-list}
-
-\part{Creatures of the Night}
-\import{../creatures-of-the-night/}{chapter-list}
+\input{chapter-list}
 
 \backmatter
 
