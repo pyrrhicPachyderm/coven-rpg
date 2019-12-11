@@ -41,6 +41,8 @@
 	\chaplabel{#2}%
 	\labelname{#1}%
 	\label{discipline:#2}%
+	\labelname{#1's}%
+	\label{disciplinepossessive:#2}%
 	\labelname{#3}%
 	\label{practitioner:#2}%
 	\labelname{#4}%
@@ -49,6 +51,7 @@
 	\label{practitionerpossessive:#2}%
 }
 \newcommand\discref[1]{\nameref{discipline:#1}}
+\newcommand\discrefpossessive[1]{\nameref{disciplinepossessive:#1}}
 \newcommand\dropcapdiscref[1]{\dropcapnameref{discipline:#1}}
 \newcommand\practitioner[1]{\nameref{practitioner:#1}}
 \newcommand\practitioners[1]{\nameref{practitioners:#1}}
