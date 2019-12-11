@@ -46,7 +46,7 @@ featcount:
 	)
 dropcap:
 	@for book in $(books); do \
-		for file in $$(find "$$book" -name "*.tex" | grep -vF "$$book.tex" | grep -vF "chapter-list.tex"); do \
+		for file in $$(find "$$book" -name "*.tex" | grep -vF "/$$book.tex" | grep -vF "/chapter-list.tex"); do \
 			if ! grep -q "\dropcap" "$$file" ; then \
 				echo "$$file does not contain \dropcap" ;\
 			fi \
