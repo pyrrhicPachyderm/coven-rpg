@@ -25,7 +25,6 @@
 \newcommand\chaplabel[1]{\label{chap:#1}}
 \newcommand\chapref[1]{Chapter~\ref{chap:#1}}
 \newcommand\chapnameref[1]{\nameref{chap:#1}}
-\newcommand\dropcapchapnameref[1]{\dropcapnameref{chap:#1}}
 
 \newcommand\seclabel[1]{\label{sec:#1}}
 \newcommand\secref[1]{the \nameref{sec:#1} section}
@@ -37,17 +36,20 @@
 %Disciplines.
 %%%%%%%%%%%%%
 
-\newcommand\disclabel[3]{%Arguments: label, practitioner noun, practitioner plural
-	\chaplabel{#1}%
-	\labelname{#2}%
-	\label{practitioner:#1}%
+\newcommand\discipline[4]{%Arguments: name, label, practitioner noun, practitioner plural
+	\chapter{#1}%
+	\chaplabel{#2}%
+	\labelname{#1}%
+	\label{discipline:#2}%
 	\labelname{#3}%
-	\label{practitioners:#1}%
-	\labelname{#2's}%
-	\label{practitionerpossessive:#1}%
+	\label{practitioner:#2}%
+	\labelname{#4}%
+	\label{practitioners:#2}%
+	\labelname{#3's}%
+	\label{practitionerpossessive:#2}%
 }
-\newcommand\discref[1]{\chapnameref{#1}}
-\newcommand\dropcapdiscref[1]{\dropcapchapnameref{#1}}
+\newcommand\discref[1]{\nameref{discipline:#1}}
+\newcommand\dropcapdiscref[1]{\dropcapnameref{discipline:#1}}
 \newcommand\practitioner[1]{\nameref{practitioner:#1}}
 \newcommand\practitioners[1]{\nameref{practitioners:#1}}
 \newcommand\practitionerpossessive[1]{\nameref{practitionerpossessive:#1}}
