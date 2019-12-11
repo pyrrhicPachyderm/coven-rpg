@@ -90,13 +90,16 @@
 %Weapons.
 %%%%%%%%%
 
-\newcommand\weaponlabel[3]{%Arguments: title, plural title, label
+\newcommand\weapontype[4]{%Arguments: title, plural title, label, text
+	\subsubsection{#1}%
 	\labelname{#1}%
 	\label{weapon:#3}%
 	\labelname{#2}%
 	\label{weapons:#3}%
 	\labelname{#1's}%
 	\label{weaponpossessive:#3}%
+	
+	{#4}
 }
 
 \newcommand\weaponref[1]{\nameref{weapon:#1}}
