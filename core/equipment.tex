@@ -272,8 +272,9 @@ Anything a character might find at hand and hit people with can also be placed i
 A weapon's accuracy is added a flat bonus to rolls to hit, in place of an attribute.
 A weapon's damage determines the number of dice rolled upon hitting.
 The highest 3 dice are kept, as always, but the number of dice rolled are determined by the weapon instead of the wielder's skill.
-The wielder's \attref{might} is added to the damage roll for melee or thrown weapons, but not for \weaponrefplural{bow}.
+The wielder's \attref{might} is added to the damage roll for melee or thrown weapons, but not for \weaponrefplural{bow} or \weaponref{blowguns}.
 The bonus to the damage roll for \weaponrefplural{bow} is determined by their draw weight, as explained in their section.
+\weaponref{blowguns} receive no bonus to the damage roll at all.
 
 \notedtable{XllX[1.5]}{
 	\toprule
@@ -286,9 +287,11 @@ The bonus to the damage roll for \weaponrefplural{bow} is determined by their dr
 	Thrown Rock & +0 & \dice{2} & $5 + 5\times\text{\attref{might}}$\\
 	Thrown Weapon & +0 & \dice{4} & $5 + 5\times\text{\attref{might}}$\\
 	Bow & +2 & \dice{5}\tnote{*} & $25 + 25 \times {}$ $\text{Draw Weight}$\\
+	Blowgun & +2 & \dice{3}\tnote{\dag} & 15\\
 	\bottomrule
 }{
 	\item[*] Add the \weaponrefpossessive{bow} draw weight, instead of your \attref{might}.
+	\item[\dag] Do not add your \attref{might}.
 }
 
 \weapontype{Fist}{Fists}{unarmed}{
@@ -335,4 +338,9 @@ The bonus to the damage roll for \weaponrefplural{bow} is determined by their dr
 	
 	When using a \weaponref{bow}, add the draw weight, not your \attref{might}, to the damage roll.
 	However, your \attref{might} must equal or exceed the draw weight for you to be able to use the \weaponref{bow}.
+}
+
+\weapontype{Blowgun}{Blowguns}{blowgun}{
+	A tube and dart, with the dart propelled by the power of your breath.
+	Easier to conceal than a \weaponref{bow}, a \weaponref{blowgun} is often used to subtly deliver an \mixdeliveryref{injury} poison.
 }
