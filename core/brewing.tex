@@ -608,26 +608,33 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	Similarly, you may use your \skillref{brewing} rank in place of your \skillref{healing} rank when determining the {\damage} healed by a patient during a {\dayofrest}.
 }
 
-\feat{Regrowth Potion}{brewing-healing-regrow}{15}{
-	\skillref[2]{brewing},
+\feat{Healing Stimulant}{brewing-healing-2}{10}{
+	\skillref[1]{brewing},
 	\featref{brewing-healing}
 }{
-	\mix{cauldron}{drink}{\Herb{goldenrod}{2}, a salamander's leg}
-	%Salamanders can regrow limbs.
+	\mix{cauldron}{drink}{\Herb{goldenrod}{2}}
 	%Goldenrod is used as traditional medicine to heal wounds.
 	
-	This potion stimulates growth and repair, even allowing the regeneration of missing body parts.
+	This potion stimulates the body's natural growth and repair.
 	However, it only works as long as the target rests.
 	With one dose of the potion, the target heals twice as much damage during a {\dayofrest}.
 	That is, they heal 4 points of {\damage}, plus any healed by their physician; the physician's healing is not doubled.
 	The target needs to eat at least twice as much as normal, to fuel the regrowth.
 	
-	The target can also regrow missing body parts, albeit slowly.
-	Fingers and ears will grow back in a day, while a limb or eye takes a week.
-	This regeneration \emph{can} occur without complete rest, but takes at least twice as long.
-	
-	Taking more than one dose in a day causes overgrowth; ear-, nose-, or finger-like growths develop in inconvenient places, and the target becomes rather deformed.
+	Taking more than one dose in a day causes overgrowth; scabs and scars develop even where the target is unwounded, and they can become deformed.
 	Healing is no faster, but they need to eat even more.
+}
+
+\feat{Regrowth Potion}{brewing-healing-regrow}{10}{
+	\skillref[2]{brewing},
+	\featref{brewing-healing-2}
+}{
+	Salamanders have the incredible ability to regrow lost limbs.
+	By adding a salamander's leg to the recipe for your \featref{brewing-healing-2} or \featref{brewing-healing-3}, you can grant the same ability to the drinker.
+	
+	The drinker can regrow missing body parts.
+	Fingers and ears will grow back with a single dose, while a limb or eye takes several doses.
+	A dose of \featref{brewing-healing-2} must be accompanied by a {\dayofrest}, as usual, and multiple doses must be spread across multiple days.
 }
 
 \feat{Hair of the Dog}{brewing-healing-taglock}{20}{
