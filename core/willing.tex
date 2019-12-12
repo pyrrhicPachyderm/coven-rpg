@@ -123,40 +123,6 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 	As an {\action}, you can extinguish all fire within a dozen metres of you.
 }
 
-\feat{A Tool for the Job}{willing-tools-improvise}{20}{
-	\featref{willing-basic}
-}{
-	Sometimes, the easiest way to convince someone of something is the hit them with a big stick until they agree with you.
-	The world itself is no different.
-	You've learned to make \discref{willing} easier using physical tools, even if they aren't the \emph{right} tools.
-	
-	Most simply, this means axes and knives cut just as well as ever in your hands, even if they've lost their edge.
-	But you can take it even further, cutting carrots or trees with nothing more than an appropriately shaped stick.
-	You can make any similarly-shaped object behave as the appropriate tool for a job.
-	For a worse approximation, this may require a Test.
-	A solid branch with a flat, sort of axe head shaped bit on the end will do a fine job of cutting down a tree.
-	A solid branch without such an attachment would require a Test.
-	A limp reed is going to be a real stretch.
-	
-	Such tools still obey the usual rules of \discref{willing}, and are of no additional use as weapons against people and animals.
-	See \featref{headology-weapons-improvise} if you want weapons too.
-}
-
-\feat{A Hefty Tool}{willing-tools-effective}{15}{
-	\featref{willing-basic}
-}{
-	You can make an appropriate tool more effective when you use it.
-	Or an inappropriate tool, with \featref{willing-tools-improvise}.
-	
-	Tools are several times more effective when you use them.
-	For example, when you use a spade it always lifts clumps of dirt several times the size of the spade's head.
-	You can bring down a tree that you can barely wrap your arms around with only 4 or 5 swings of an axe.
-	You can bail out a rowboat with only a few scoops of a bucket.
-	
-	This only works as long as you are still using the tool.
-	For instance, you cannot store any more water than normal in a bucket unless you are carrying it.
-}
-
 \feat{Bubbling Brook}{willing-water}{10}{
 	\featref{willing-basic}
 }{
@@ -222,41 +188,6 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 	Condensing this much water will normally exhaust all the water vapour in a room, in one go.
 	
 	Using this, you can perform \discref{brewing} that would normally require a \mixcreationref{still} as fast as though it only required a \mixcreationref{cauldron}.
-}
-
-\feat{Illuminuous}{willing-light}{10}{
-	\featref{willing-basic}
-}{
-	Your bright or gloomy moods are more literal than most, as you Will your surroundings brighter or darker.
-	This effects a region centered on you and extends up to a few metres, enough to fill a room in a cottage.
-	You can change the light level by about the amount that would be emitted by a few candles, just enough to read by.
-	Light you cast this way has no apparent source; it simply suffuses the area.
-	Maintaining this effect requires a minimum of concentration, and does not impede your other activities.
-}
-
-\feat{Rope Dance}{willing-rope}{15}{
-	\featref{willing-basic}
-}{
-	Anyone can move a whip with their hand, but you can move one with your mind.
-	That said, you still need to hold it{\dots}
-	
-	While holding a whip, rope, string, or thread up to 2 metres long, you can move it with your mind.
-	You can barely lift any weight other than the rope itself; even a small knife tied to the end is a struggle.
-	You can still yank on the rope or reel something in with your hands, of course.
-	You do have very fine control, however---comparable to your manual dexterity.
-	
-	%TODO: Weapon damage? Add whips to the main table?
-}
-
-\feat{Know the Ropes}{willing-rope-2}{15}{
-	\skillref[1]{willing},
-	\featref{willing-rope}
-}{
-	As the finest rope-whipper in the West (or near enough), and you can thread a needle at twenty paces.
-	
-	When using \featref{willing-rope}, you can affect up to 20 metres of rope at a time.
-	Additionally, you may divide this length between as many ropes as you can hold.
-	This doesn't, however, grant you any extra ability to multitask, so this is about as practical as trying to use two whips at once.
 }
 
 \feat{Gust}{willing-wind}{20}{
@@ -533,4 +464,73 @@ She may also use her \skillref{willing} skill in place of \skillref{weaponry} wh
 	You can carve a chunk out of a rock face, but you have very little precision in the shape you destroy.
 	Unless you also have \featref{willing-earth-tunnel}, the shattering has a tendency to collapse large overhangs or roofs, making this useless for tunneling.
 	With \featref{willing-earth-tunnel}, however, this allows you to tunnel through solid rock, at the usual rate of 1 metre per {\action}.
+}
+
+\feat{Illuminuous}{willing-light}{10}{
+	\featref{willing-basic}
+}{
+	Your bright or gloomy moods are more literal than most, as you Will your surroundings brighter or darker.
+	This effects a region centered on you and extends up to a few metres, enough to fill a room in a cottage.
+	You can change the light level by about the amount that would be emitted by a few candles, just enough to read by.
+	Light you cast this way has no apparent source; it simply suffuses the area.
+	Maintaining this effect requires a minimum of concentration, and does not impede your other activities.
+}
+
+\feat{A Tool for the Job}{willing-tools-improvise}{20}{
+	\featref{willing-basic}
+}{
+	Sometimes, the easiest way to convince someone of something is the hit them with a big stick until they agree with you.
+	The world itself is no different.
+	You've learned to make \discref{willing} easier using physical tools, even if they aren't the \emph{right} tools.
+	
+	Most simply, this means axes and knives cut just as well as ever in your hands, even if they've lost their edge.
+	But you can take it even further, cutting carrots or trees with nothing more than an appropriately shaped stick.
+	You can make any similarly-shaped object behave as the appropriate tool for a job.
+	For a worse approximation, this may require a Test.
+	A solid branch with a flat, sort of axe head shaped bit on the end will do a fine job of cutting down a tree.
+	A solid branch without such an attachment would require a Test.
+	A limp reed is going to be a real stretch.
+	
+	Such tools still obey the usual rules of \discref{willing}, and are of no additional use as weapons against people and animals.
+	See \featref{headology-weapons-improvise} if you want weapons too.
+}
+
+\feat{A Hefty Tool}{willing-tools-effective}{15}{
+	\featref{willing-basic}
+}{
+	You can make an appropriate tool more effective when you use it.
+	Or an inappropriate tool, with \featref{willing-tools-improvise}.
+	
+	Tools are several times more effective when you use them.
+	For example, when you use a spade it always lifts clumps of dirt several times the size of the spade's head.
+	You can bring down a tree that you can barely wrap your arms around with only 4 or 5 swings of an axe.
+	You can bail out a rowboat with only a few scoops of a bucket.
+	
+	This only works as long as you are still using the tool.
+	For instance, you cannot store any more water than normal in a bucket unless you are carrying it.
+}
+
+\feat{Rope Dance}{willing-rope}{15}{
+	\featref{willing-basic}
+}{
+	Anyone can move a whip with their hand, but you can move one with your mind.
+	That said, you still need to hold it{\dots}
+	
+	While holding a whip, rope, string, or thread up to 2 metres long, you can move it with your mind.
+	You can barely lift any weight other than the rope itself; even a small knife tied to the end is a struggle.
+	You can still yank on the rope or reel something in with your hands, of course.
+	You do have very fine control, however---comparable to your manual dexterity.
+	
+	%TODO: Weapon damage? Add whips to the main table?
+}
+
+\feat{Know the Ropes}{willing-rope-2}{15}{
+	\skillref[1]{willing},
+	\featref{willing-rope}
+}{
+	As the finest rope-whipper in the West (or near enough), and you can thread a needle at twenty paces.
+	
+	When using \featref{willing-rope}, you can affect up to 20 metres of rope at a time.
+	Additionally, you may divide this length between as many ropes as you can hold.
+	This doesn't, however, grant you any extra ability to multitask, so this is about as practical as trying to use two whips at once.
 }
