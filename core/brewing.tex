@@ -625,6 +625,20 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	Healing is no faster, but they need to eat even more.
 }
 
+\feat{Life Juice}{brewing-healing-regrow-3}{20}{
+	\skillref[2]{brewing},
+	\featref{brewing-healing-2}
+}{
+	\mix{cauldron}{drink}{\Herb{arbor vitae}{5}}
+	
+	This potion acts like \featref{brewing-healing-2}, but much faster, and without the need to rest.
+	The drinker heals up to 4 points of {\damage} over the course of a few minutes.
+	However, they suffer one level of {\exhaustion}, affecting \attref{might} and \attref{grace}.
+	
+	Two simultaneously effective doses cause the same effect as an overdose of \featref{brewing-healing-2}.
+	Additionally, consecutive doses continue to cause more {\exhaustion}, which may cause the drinker to pass out, as usual.
+}
+
 \feat{Regrowth Potion}{brewing-healing-regrow}{10}{
 	\skillref[2]{brewing},
 	\featref{brewing-healing-2}
