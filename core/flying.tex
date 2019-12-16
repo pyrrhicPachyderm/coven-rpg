@@ -107,6 +107,16 @@ It might still be possible to bring it down and land safely, with an appropriate
 	You don't need a Test to start a broom under normal conditions (although you still need the run-up), and the {\tn} of any Test to start the broom under difficult conditions is reduced by 3.
 }
 
+\feat{Crash Starter}{broom-start-2}{15}{
+	\skillref[2]{flying},
+	\featref{broom-astride},
+	\featref{broom-start}
+}{
+	You've had rather a lot of practice restarting a broom in mid-air and, remarkably, you've survived to learn from it.
+	Under nominal conditions, you can recover from a stall at an altitude of at least 500 metres without a Test.
+	You still need a Test under adverse conditions or if stalling at a lower altitude, but your experience makes the Test considerably easier.
+}
+
 \feat{Passengers \& Cargo}{broom-passenger}{15}{
 	None
 }{
@@ -116,34 +126,12 @@ It might still be possible to bring it down and land safely, with an appropriate
 	If you are not carrying a passenger, you can use the additional lift to carry saddlebags, containing no more than the weight of a person.
 }
 
-\feat{Tool Rider}{broom-improvise}{10}{
-	None
-}{
-	Brooms are certainly very traditional, but really, any old tool will do.
-	You can ride any long-handled, man-made, properly crafted tool, such as a rake, spade, scythe or wood-axe.
-	It still needs to be trained as usual, unless you also have \featref{broom-untrained}.
-}
-
 \feat{Bristlebrake Turn}{broom-turning}{20}{
 	\skillref[1]{flying},
 	\featref{broom-astride}
 }{
 	By flicking the back of the broom around, you can reduce your turning radius to just 1 metre.
 	Turning more than \SI{90}{\degree} by this method require a difficult Test, and stalls the broom on a failure.
-}
-
-\feat{Broom Whisperer}{broom-untrained}{15}{
-	\skillref[1]{flying}
-}{
-	You've got the knack of flying for yourself now, and don't need a broom to be trained to fly it.
-	You can even train a broom this way, although without one of its own to learn from the process takes about 24 hours of flight time.
-}
-
-\feat{No Hands!}{broom-no-hands}{15}{
-	\skillref[2]{flying}
-}{
-	You can fly a broomstick with just your legs, leaving both hands free.
-	You ignore any penalties for flying with just one hand, but suffer those penalties when flying with no hands instead.
 }
 
 \feat{Hover}{broom-hover}{15}{
@@ -155,24 +143,11 @@ It might still be possible to bring it down and land safely, with an appropriate
 	You can stay in roughly the same place, but staying still enough to, for example, reach out and touch a particular thing requires a Test.
 }
 
-\feat{Crash Starter}{broom-start-2}{15}{
-	\skillref[2]{flying},
-	\featref{broom-astride},
-	\featref{broom-start}
+\feat{No Hands!}{broom-no-hands}{15}{
+	\skillref[2]{flying}
 }{
-	You've had rather a lot of practice restarting a broom in mid-air and, remarkably, you've survived to learn from it.
-	Under nominal conditions, you can recover from a stall at an altitude of at least 500 metres without a Test.
-	You still need a Test under adverse conditions or if stalling at a lower altitude, but your experience makes the Test considerably easier.
-}
-
-\feat{Nearly a Broom}{broom-improvise-2}{15}{
-	\skillref[2]{flying},
-	\featref{broom-improvise},
-	\featref{broom-untrained}
-}{
-	It's quite surprising quite what you can convince to be a broom, if you put your mind to it.
-	You can ride just about any appropriately-sized piece of wood, as long as it's obvious which end is the back.
-	Just a bit of a fork at one end of the stick will do, or you could just lash a couple of sticks on quickly.
+	You can fly a broomstick with just your legs, leaving both hands free.
+	You ignore any penalties for flying with just one hand, but suffer those penalties when flying with no hands instead.
 }
 
 \feat{Autopilot}{broom-sleep}{15}{
@@ -186,4 +161,29 @@ It might still be possible to bring it down and land safely, with an appropriate
 	However, this is not particularly stable.
 	Strong winds or turbulent conditions may knock you off, and doing this at more than about half your top speed is incredibly dangerous.
 	%TODO: Check this once top speeds are set.
+}
+
+\feat{Broom Whisperer}{broom-untrained}{15}{
+	\skillref[1]{flying}
+}{
+	You've got the knack of flying for yourself now, and don't need a broom to be trained to fly it.
+	You can even train a broom this way, although without one of its own to learn from the process takes about 24 hours of flight time.
+}
+
+\feat{Tool Rider}{broom-improvise}{10}{
+	None
+}{
+	Brooms are certainly very traditional, but really, any old tool will do.
+	You can ride any long-handled, man-made, properly crafted tool, such as a rake, spade, scythe or wood-axe.
+	It still needs to be trained as usual, unless you also have \featref{broom-untrained}.
+}
+
+\feat{Nearly a Broom}{broom-improvise-2}{15}{
+	\skillref[2]{flying},
+	\featref{broom-improvise},
+	\featref{broom-untrained}
+}{
+	It's quite surprising quite what you can convince to be a broom, if you put your mind to it.
+	You can ride just about any appropriately-sized piece of wood, as long as it's obvious which end is the back.
+	Just a bit of a fork at one end of the stick will do, or you could just lash a couple of sticks on quickly.
 }
