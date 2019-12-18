@@ -1,0 +1,173 @@
+\chapter{Extraordinary Herbs}
+\chaplabel{extraordinary-herbs}
+
+\dropcap{Many} \herbtypeplural{5} possess some level of mobility or the ability to defend themselves; enough to qualify them as a creature.
+A witch with \skillref[3]{botany} is assumed to have enough tricks and experience to keep these herbs under control, but someone else wandering into her garden might be less lucky.
+The GM can also use these as inspiration for an adventure, or perhaps a short scene when a witch leaves her garden untended for too long, and has to bring it back into shape.
+
+\creature{Arbor Vitae}{Arbores Vitae}{arbor-vitae}{
+	\atttable{6}{\negative 4}{2}{1}{3}{0}{4}{4}
+}{
+	\speed{1}
+}{
+	\skillref[2]{animals}, \skillref[3]{botany}, \skillref[2]{healing}, \skillref[1]{insight}, \skillref[1]{persuasion}, \skillref[2]{socialising}
+}{
+	The \creatureref{arbor-vitae}, the Tree of Life, is perhaps the most astounding of the \herbtypeplural{5}.
+	Fully grown, it stands two to three times the height of a man.
+	Its bark is vibrant brown, flecked with silver; its leaves are a brilliant green,
+	Its canopy is decorated year-round by coruscating catkins in a kaleidoscope of colours.
+	
+	Most astonishing than its appearance, however, is its \emph{life}.
+	It trundles slowly across the ground, roots caressing the plants around it.
+	In truth, it is quite intelligent, more so than some humans.
+	It understands any spoken language, and, although it cannot speak, the gestures of its branches are quite expressive.
+	
+	For the most part, it's a pretty jolly plant.
+	It wants nothing more than to tend a perfect garden, grooming the location to raise its seedlings.
+	A witch must have an excellent garden to attract an \creatureref{arbor-vitae} in the first place, but once there, it will lend her considerable aid.
+	It can be quite judgemental, however.
+	While it doesn't mind a witch taking the odd clipping for her brews, she may have to convince it of her need before it approves taking any more.
+	If too dissatisfied, it may move on---and it's all but impossible to restrain.
+}{
+	\ability{Vital Wood}{
+		The \creatureref{arbor-vitae} has 4 \statref{res}.
+		It heals 4 {\damage} to itself on each of its turns.
+	}
+	
+	\ability{Natural Linguist}{
+		Although it cannot speak, the \creatureref{arbor-vitae} can understand any spoken language it hears.
+	}
+	
+	\ability{Caregiver}{
+		The \creatureref{arbor-vitae} imbues life in the plants it tends.
+		Surrounding plants grow faster, larger, and more vibrant.
+		Some plants that grow from seed or sapling in the presence of the \creatureref{arbor-vitae}---about a quarter---develop even more life.
+		They develop a hint of intelligence, about as much as some animals, and the ability to move slowly.
+		They typically have a \negative{2} in all attributes, and a \statref{speed} of 1.
+	}
+}
+
+\creature{Grand Wormwood}{Grand Wormwoods}{grand-wormwood}{
+	\atttable{4}{\nostat}{0}{0}{4}{\negative 2}{2}{5}
+}{
+	\speed{0}
+}{
+	\skillref[1]{botany}, \skillref[2]{intimidation}, \skillref[3]{persuasion}
+}{
+	Regular wormwood is a mere \herbtype{3}.
+	However, in the right conditions it can be encouraged to grow stronger, fuller, and smarter, becoming the lordly and demanding \creatureref{grand-wormwood}.
+	
+	To cultivate \creatureref{grand-wormwood}, one must plant a ring of small wormwood plants around a previously established wormwood bush.
+	These are to become its subjects.
+	Then, one must honour the central bush, treating it like a king, ensuring it knows it is the grandest wormwood of all.
+	It must receive the finest fertiliser, and regular watering.
+	Bowing to the bush on every interaction with it certainly helps, and some gardeners even go so far as to sacrifice other plants or small animals to it, and lay them upon its roots.
+	The wormwood's subject bushes suffer stunted growth as their energy goes to feed their king, and they need occasional replacement as they wither and die.
+	
+	A \creatureref{grand-wormwood} bush is distinguishable by the fact that it grows far taller, just over the height of a man, and develops a clear crown of leaves at its peak.
+	Such distinguishing features are not particularly necessary, however, due to the sheer \attref{presence} of the plant---anyone who passes near it can simply feel that it is nearby, and can't help but find their eye drawn to admiring it.
+	The weak-willed feel themselves compelled to serve the bush, humbled by its magnificence.
+	A gardener must be very careful when cultivating the \creatureref{grand-wormwood}.
+	Give it too little attention, and it shall wither away, regressing to regular wormwood.
+	But a gardener who gives it too much soon finds herself a willing slave to the bush, spending every day bringing it more fertiliser, more sacrifices, and grovelling before it.
+	
+	The greatest threat of all comes from the interaction of two \creatureref{grand-wormwood} bushes.
+	Each has been raised to know that it is the king of the wormwoods, the grandest in all the lands.
+	Sensing another \creatureref{grand-wormwood}---and it might sense one from several gardens away---crushes this notion.
+	In a lucky case, the weaker-willed bush simply dies of shame.
+	Normally, however, everything ends in blood, sap and tears.
+	Great swathes of countryside have been known to burn in the ensuing battles.
+}{
+	\ability{Wooden}{
+		The \creatureref{grand-wormwood} has 4 \statref{res}.
+		It cannot move---not even a limb---or speak.
+	}
+	
+	\ability{Lord's Servants}{
+		A creature encountering the \creatureref{grand-wormwood} for the first time, or serving it in some fashion, must succeed on a {\tn} 12 \testtype{will}{botany} Test or become the bush's servant.
+		The creature serves the bush willingly and utterly, even to the complete neglect of its own well-being.
+		It may repeat the Test when it first grows thirsty, when it first grows hungry, and when it first suffers sleep deprivation, breaking free on a success.
+		It it fails each of these, it serves the bush until the neglect of its own health kills it.
+		Others may attempt to talk or smack it out of its servitude, and isolation from the bush can help.
+	}
+	
+	\ability{One Lord}{
+		A \creatureref{grand-wormwood} bush can sense the existence of other \creatureref{grand-wormwood} bushes within about a kilometre.
+		If it detects one, and both survive the initial shame, it enters a homicidal rage.
+		The {\tn} to resist its Lord's Servants ability increases to 18, and it turns all its servants to eliminating the opposing \creatureref{grand-wormwood}.
+		It cannot survive in this state for more than a few days.
+		If both opposing bushes still stand at this time, they spontaneously combust.
+	}
+}
+
+\creature{Ironwood}{Ironwoods}{ironwood}{
+	\atttable{8}{\nostat}{\nostat}{\nostat}{\nostat}{\nostat}{\nostat}{\nostat}
+}{
+	\speed{0}
+}{
+	\noskills
+}{
+	The \creatureref{ironwood} is a mighty tree.
+	A fully grown specimen is over 100 metres tall, with a crown just as far across.
+	It grows only in soils rich in iron ores, absorbing the metal to strengthen its wood and support its tremendous bulk.
+	The wood is as hard as iron; it must be forged, not carved.
+	
+	Many doubt that the \creatureref{ironwood} is any more than a mindless plant, but such people have never tried to fell one.
+	Anyone who takes an axe to its trunk suffers immediate retaliation.
+	A single acorn---the size and weight of an anvil---falls from the canopy to land unerringly where they were standing.
+	A fully grown tree has hundreds of these acorns, enough to crush even a large crew of loggers.
+}{
+	\ability{Iron}{
+		The \creatureref{ironwood} is immune to mundane weapons, and to fire.
+		Extraordinary methods are required to fell it.
+		It cannot move---not even a limb---or speak.
+	}
+	
+	\ability{Acorns Like Anvils}{
+		Any attack against the \creatureref{ironwood} made by a creature under its broad canopy provokes an automatic and immediate response; an acorn dropped from its high branches.
+		The \creatureref{ironwood} rolls \dice{3} to hit, and \dice[8]{6} for the {\damagetest}.
+	}
+}
+
+\creature{Moly}{Molies}{moly}{
+	\atttable{\nostat}{\nostat}{3}{5}{5}{3}{3}{3}
+}{
+	\speed{0}
+}{
+	\skillref[3]{botany}, \skillref[3]{projection}
+}{
+	The \creatureref{moly} (rhymes with holy, not holly) is a fairly small herb, much like a daffodil in size and appearance.
+	Each plant grows a single stalk, with a few leaves and a single flower on top.
+	However, its flowers are purest white, and its roots are deepest black.
+	For most of its life, the \creatureref{moly} is a mundane plant.
+	In dispersing its seeds, however, it shows great and terrifying magic.
+	
+	A \creatureref{moly} has a mind.
+	This mind doesn't get up to much; the plant cannot move or see, so it has very little to think about.
+	The mind is only detectable by \discref{projection}, a subtle presence in the {\mentalrealm}.
+	It is not until the plant dies that the mind comes into its own.
+	
+	The \creatureref{moly} is naturally skilled in \discref{projection}.
+	At the moment of the plant's death---when it is eaten, uprooted, or cut---the mind cuts free into the {\mentalrealm}.
+	There, it {\possesses} the body of the creature that killed it.
+	Using the {\possessed} creature, the \creatureref{moly} eats its old body, if it hasn't already.
+	It then seeks out a suitable fertile location, and kills itself.
+	The seeds within its belly soon germinate, and the next generation of \creaturerefplural{moly} flourish, using the creature's rotting corpse as compost.
+	
+	With the \creaturerefpossessive{moly} overwhelming ability in \discref{projection}, the only reliable way to harvest the plant and survive is to use another creature.
+	Most witches will use a rat, or some sort of insect.
+	The creature kills the plant and becomes {\possessed}, and the witch must snatch away the \creatureref{moly} before it is eaten.
+	With no seeds to disperse, the {\possessed} creature is aimless, and soon dies.
+}{
+	\ability{Plant}{
+		The \creaturerefpossessive{moly} plant body cannot move---not even a limb---or speak.
+		While {\possessing} another creature, it can move, and even speak, just as normal.
+	}
+	
+	\ability{Projection}{
+		The \creaturerefpossessive{moly} mind automatically enters the {\mentalrealm} when its plant body dies.
+		It cannot otherwise enter the {\mentalrealm} in any way.
+		It needs no {\lifeline}, but can only survive a few minutes in the {\mentalrealm}.
+		The \creatureref{moly} can, and will, \featref{projection-start-other-3} and {\possess} the creature that killed its plant body.
+	}
+}
