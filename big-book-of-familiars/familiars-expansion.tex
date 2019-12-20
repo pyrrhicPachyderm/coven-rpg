@@ -121,6 +121,31 @@
 	}
 }
 
+\familiar{Hedgehog}{Hedgehogs}{hedgehog}{0}{
+	\atttable{\negative 3}{0}{1}{1}{3}{1}{1}{1}
+}{
+	\speed{6}
+}{
+	\noskills
+}{
+	\familiarrefplural{hedgehog} have prickly exteriors, but they're softies on the inside.
+	Witches who take \familiarref{hedgehog} familiars are often much the same.
+	A \familiarref{hedgehog} can curl into a ball for defence, stabbing an attacker with its spines.
+}{
+	\ability{Keen Smell}{
+		The \familiarref{hedgehog} rolls an extra die on \skillref{perception} Tests relying on smell.
+	}
+	
+	\ability{Spiny}{
+		Any creature which hits the \familiarref{hedgehog} with an unarmed \actionref{attack} suffers a \dice{2} {\damagetest}.
+	}
+	
+	\ability{Curl}{
+		The \familiarref{hedgehog} may curl into a ball on its {\turn}.
+		It cannot move or take an {\action} that {\turn}, but gains \positive{1} \statref{res} until the start of its next {\turn}.
+	}
+}
+
 \familiar{Serpent}{Serpents}{serpent}{15}{
 	\atttable{\negative 1}{1}{1}{2}{2}{2}{2}{1}
 }{
