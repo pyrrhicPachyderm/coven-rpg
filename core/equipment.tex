@@ -275,25 +275,28 @@ The bonus to the {\damagetest} for \weaponrefplural{bow} is determined by their 
 	\toprule
 	Weapon & Accuracy & Damage & Range \mbox{(metres)}\\
 	\midrule
-	\weaponref{unarmed} & +2 & \dice{2} & Melee\\
+	\weaponref{unarmed} & +2 & \dice{2}\tnote{*} & Melee\\
 	\weaponref{club} & +4 & \dice{4} & Melee\\
 	\weaponref{knife} & +2 & \dice{5} & Melee\\
 	\weaponref{hand-weapon} & +4 & \dice{5} & Melee\\
 	\weaponref{thrown-rock} & +0 & \dice{2} & $5 + 5\times\text{\attref{might}}$\\
 	\weaponref{thrown-weapon} & +0 & \dice{4} & $5 + 5\times\text{\attref{might}}$\\
-	\weaponref{bow} & +2 & \dice{5}\tnote{*} & $25 + 25 \times {}$ $\text{Draw Weight}$\\
-	\weaponref{blowgun} & +2 & \dice{3}\tnote{\dag} & 15\\
+	\weaponref{bow} & +2 & \dice{5}\tnote{\dag} & $25 + 25 \times {}$ $\text{Draw Weight}$\\
+	\weaponref{blowgun} & +2 & \dice{3}\tnote{\ddag} & 15\\
 	\bottomrule
 }{
-	\item[*] Add the \weaponrefpossessive{bow} draw weight, instead of your \attref{might}.
-	\item[\dag] Do not add your \attref{might}.
+	\item[*] For a human; may differ for an animal.
+	\item[\dag] Add the \weaponrefpossessive{bow} draw weight, instead of your \attref{might}.
+	\item[\ddag] Do not add your \attref{might}.
 }
 
 \weapontype{Unarmed}{}{unarmed}{
 	A punch, a kick, or a headbutt.
-	Covers any attack you make without any weapon at all.
+	This is any attack you make without any weapon at all.
 	
-	Some animals and familiars will have a different number of dice for their unarmed attacks, but use the same accuracy bonus unless this is also specified.
+	\dice{2} is for humans.
+	Animals and familiars will list the number of dice for their unarmed {\damagetests}, but use the same accuracy bonus unless this is also specified.
+	If an animal or familiar's statistics do not mention its unarmed attacks, assume that it has no effective attacks.
 }
 
 \weapontype{Club}{Clubs}{club}{
