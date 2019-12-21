@@ -412,11 +412,16 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 }
 
 \feat{Hedgehog Hide}{resilience-potion-spines}{10}{
-	\featref{resilience-potion}
+	\featref{resilience-potion},
+	\featref{weapon-potion}
 }{
 	When you brew a \featref{resilience-potion}, \featref{resilience-potion-2}, or \featref{resilience-potion-3}, you may cause the growths to form spikes.
 	You must add a hedgehog's spine to the potion when you brew it.
-	When a creature under the effect of such a spiny potion is hit by an unarmed \actionref{attack}, the attacker suffers a \dice{2} {\damagetest}.
+	
+	The spines grant the affected creature the same bonuses to \weaponref{unarmed} {\damagetests} as the \featref{weapon-potion}.
+	The does not suffer the penalty to manual dexterity caused by the \featref{weapon-potion}, only the penalty to \attref{grace} caused by the \featref{resilience-potion}.
+	
+	Furthermore, when a creature with these spines is hit by an unarmed \actionref{attack}, the attacker suffers a \dice{2} {\damagetest}.
 }
 
 \feat{Brighteye Drops}{sight-potion-light}{15}{
