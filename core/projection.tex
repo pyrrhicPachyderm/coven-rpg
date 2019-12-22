@@ -350,7 +350,7 @@ Note, however, that the attempt to establish an {\overtinterface} can be used to
 	You may detect your {\lifeline} when within the {\mentalrealm}, and use it return to your own body, as long as you remain within about 100 metres.
 }
 
-\feat{Borrow Sight}{projection-read-sight}{15}{
+\feat{Borrow Sight}{projection-read-sight}{10}{
 	\featref{projection-start}
 }{
 	They say that the eyes are the windows to the soul.
@@ -358,28 +358,35 @@ Note, however, that the attempt to establish an {\overtinterface} can be used to
 	What most people forget is that windows work both ways.
 	By peering into someone's mind, you can see out of their eyes.
 	
-	While you have a {\subtleinterface} with a creature's mind, you can see what it sees.
+	While you have an {\overtinterface} with a creature's mind, you can see what it sees.
 	You don't have any control over where it points it eyes, of course.
 	As such, anything it hasn't noticed or isn't paying attention to is somewhat indistinct.
 	Conversely, this does make it rather easy to tell what the creature is paying attention to.
 }
 
-\feat{Borrow Hearing}{projection-read-hearing}{15}{
+\feat{Borrow Hearing}{projection-read-hearing}{10}{
 	\featref{projection-start}
 }{
 	Much as an attuned witch can hear the words and thoughts issuing from a mind, it is possible to hear the words echoed \emph{through} a mind.
-	While you have a {\subtleinterface} with a creature's mind, you can hear what it hears.
+	While you have an {\overtinterface} with a creature's mind, you can hear what it hears.
 }
 
-\feat{Borrow Senses}{projection-read-senses}{10}{
+\feat{Borrow Senses}{projection-read-senses}{5}{
 	\skillref[1]{projection},
 	\featref{projection-read-sight},
 	\featref{projection-read-hearing}
 }{
 	You've seen the sights, you've heard the sounds, and now you can take it one step further: borrowing a creature's whole sensorium.
-	While you have a {\subtleinterface} with a creature's mind, you gain input from all its senses: sight, hearing, smell, taste and touch, as well as the senses of temperature, balance, pain, and so on.
+	While you have an {\overtinterface} with a creature's mind, you gain input from all its senses: sight, hearing, smell, taste and touch, as well as the senses of temperature, balance, pain, and so on.
 	You can also feel senses foreign to humans, such a pigeon's sense of north, and a python's heat vision.
 	However, you don't gain supernatural senses, such as that granted by \featref{death-detection}.
+}
+
+\feat{Subtle Borrowing}{projection-read-senses-unwilling}{15}{
+	\featref{projection-read-sight} or \featref{projection-read-hearing}
+}{
+	You can borrow a creature's senses without its permission, and without it even noticing.
+	You can use \featref{projection-read-sight}, \featref{projection-read-hearing}, or \featref{projection-read-senses}, if you have them, through a {\subtleinterface}.
 }
 
 \feat{Think Tank}{projection-speak}{10}{
