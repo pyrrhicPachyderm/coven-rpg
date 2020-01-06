@@ -412,8 +412,8 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	This potion causes the drinker's skin to harden in patches, sprouting bark-like growths.
 	It lends a remarkable toughness, at the price of an awful stiffness.
 	
-	It takes effect over the course several minutes, eventually increasing the drinker's \statref{res} by 1, but reducing their \attref{grace} by 2.
-	A second dose further increases \statref{res}, but makes the drinker so stiff that they cannot move at all.
+	It takes effect over the course several minutes, eventually increasing the drinker's \statref{resilience} by 1, but reducing their \attref{grace} by 2.
+	A second dose further increases \statref{resilience}, but makes the drinker so stiff that they cannot move at all.
 	Further doses risk making this immobility permanent.
 	
 	The growths flake off after a few hours, returning the drinker to normal.
@@ -430,7 +430,7 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	\mix{cauldron}{drink}{\Herb{parsnip}{2}, \herb{pebble plant}{4}}
 	%Pebble plants are the genus Lithops.
 	
-	This functions as \featref{resilience-potion}, except it increases \statref{res} by 2.
+	This functions as \featref{resilience-potion}, except it increases \statref{resilience} by 2.
 }
 
 \feat{Ironhide Brew}{resilience-potion-3}{15}{
@@ -441,7 +441,7 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	
 	\mix{cauldron}{drink}{\Herb{parsnip}{2}, \herbcreature{ironwood}{5}}
 	
-	This functions as \featref{resilience-potion}, except it increases \statref{res} by 3.
+	This functions as \featref{resilience-potion}, except it increases \statref{resilience} by 3.
 }
 
 \feat{Supple Hide}{resilience-potion-mitigate}{15}{
@@ -667,7 +667,7 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	
 	\mix{poultice}{injury}{\Herb{nettle}{1}}
 	
-	If this poison is delivered by an \actionref{attack}, the target's \statref{st} is treated as being 1 lower against the {\damagetest}.
+	If this poison is delivered by an \actionref{attack}, the target's \statref{shock-threshold} is treated as being 1 lower against the {\damagetest}.
 	This does not increase the {\damage} dealt, but is more likely to send the target into {\shock}.
 	
 	Preparing this \mixcreationref{poultice} by chewing is incredibly painful, and leaves a swollen tongue that makes speaking difficult for hours---a mortar and pestle are recommended.

@@ -228,10 +228,10 @@ And it's not only her own injuries that a witch has to deal with.
 One of a witch's duties is to tend to the injuries of her neighbours, nursing them back to health after an accident or disease has laid them low.
 Or, when they are beyond her help, easing their final moments.
 
-A character's resistance to injury is determined by two statistics: \statref{res} and \statref{st}.
-Most creatures of flesh and blood, including humans and familiars, have 3 \statref{res}.
+A character's resistance to injury is determined by two statistics: \statref{resilience} and \statref{shock-threshold}.
+Most creatures of flesh and blood, including humans and familiars, have 3 \statref{resilience}.
 Other creatures, such as golems, may be more or less resilient.
-A character's \statref{st} is equal to 12, plus their \attref{might}, plus their \attref{will}.
+A character's \statref{shock-threshold} is equal to 12, plus their \attref{might}, plus their \attref{will}.
 
 \subsection{Damage Tests}
 \seclabel{damage-tests}
@@ -267,16 +267,16 @@ Critical success on a {\damagetest} may immediately kill the target or leave the
 \subsection{Shock}
 \seclabel{shock}
 
-If a {\damagetest} meets or exceeds the target's \statref{st}, or critically succeeds, the target goes into {\shock}.
+If a {\damagetest} meets or exceeds the target's \statref{shock-threshold}, or critically succeeds, the target goes into {\shock}.
 A character in {\shock} falls unconscious and cannot be roused while they remain in {\shock}.
 If a character in {\shock} would go into {\shock} again due to another {\damagetest}, they die.
 
 Additionally, at the start of each of the {\shocked} character's {\turns}, roll a special Test against them.
 This Test applies no flat bonus, and uses the same number of dice as the {\damagetest} that sent the character into {\shock}: a character is more likely to bleed out from a sword wound than a punch.
-If it meets or exceeds the {\shocked} character's \statref{st}, they die.
+If it meets or exceeds the {\shocked} character's \statref{shock-threshold}, they die.
 This Test is not considered to be a Test made by any character.
 
-If the Test made every {\turn} ever totals 9 or less, unless it also meets or exceed their \statref{st}, the character is no longer in {\shock}.
+If the Test made every {\turn} ever totals 9 or less, unless it also meets or exceed their \statref{shock-threshold}, the character is no longer in {\shock}.
 However, the character remains unconscious and cannot be naturally roused before the end of the Scene.
 A character can also be brought out of {\shock} by another character tending to them.
 This requires an {\action} and a successful \testtype{ken}{healing} Test.
@@ -286,14 +286,14 @@ The {\tn} for this Test is 3 times the number of dice that would be rolled again
 \seclabel{damage}
 
 After {\shock} has been tested for, whether or not it occurs, the {\damagetest} causes {\damage}.
-To calculate {\damage}, divide the result of the {\damagetest} by the target's \statref{res}.
-For example, if the result of the {\damagetest} is 13 and the damaged creature has 3 \statref{res}, they suffer 4 {\damage}.
+To calculate {\damage}, divide the result of the {\damagetest} by the target's \statref{resilience}.
+For example, if the result of the {\damagetest} is 13 and the damaged creature has 3 \statref{resilience}, they suffer 4 {\damage}.
 {\damage} accumulates: a character who has previously suffered 3 {\damage} and suffers an additional 2 is now suffering from 5 {\damage}.
 
 {\damage} has two effects.
-Firstly, a character subtracts their current {\damage} from their \statref{st}.
+Firstly, a character subtracts their current {\damage} from their \statref{shock-threshold}.
 
-Secondly, if a character's \statref{st} ever reaches zero, they die immediately.
+Secondly, if a character's \statref{shock-threshold} ever reaches zero, they die immediately.
 This is unlikely to happen through repeated {\damage}, as an earlier blow would send them into {\shock}, but can occur if a lot of painkillers wear off all at once.
 
 \subsection{Healing \& Recovery}
@@ -366,7 +366,7 @@ The player may choose which attributes to recover when they reduce their {\exhau
 	You attack a creature or object, with a \seclink{weapon}{weapons} or unarmed.
 	You must be adjacent to the target to attack with a melee weapon, or within the listed range of a ranged weapon.
 	Make a Test using a number of dice determined, as normal, by your \skillref{weaponry} skill, and a flat bonus determined by your weapon's accuracy.
-	The Test is made against a {\tn} equal to the target's \statref{dr}: 8, plus their \attref{grace}, plus their \attref{heed}.
+	The Test is made against a {\tn} equal to the target's \statref{dodge-rating}: 8, plus their \attref{grace}, plus their \attref{heed}.
 	
 	If you succeed in your Test, you hit.
 	Make a {\damagetest} against the target, rolling dice as determined by your weapon and adding your \attref{might}.
@@ -386,7 +386,7 @@ The player may choose which attributes to recover when they reduce their {\exhau
 
 \subsection{Combat Modifiers}
 
-Some Tests in combat are made against fixed {\tns}, such as a \skillref{weaponry} Test against the target's \statref{dr}.
+Some Tests in combat are made against fixed {\tns}, such as a \skillref{weaponry} Test against the target's \statref{dodge-rating}.
 Instead of modifying these {\tns}, the GM may make such Tests easier or harder using the same modifiers as would be applied to {\opposedtests}.
 
 For example, attacking a character who has fallen on the ground may grant a \positive{3} bonus.

@@ -45,7 +45,7 @@ Each variety of undead comes with its own associated changes to these statistics
 Many changes, however, are shared between all reanimated creatures, and are listed here.
 
 Most reanimations do nothing to heal {\damage} to the corpse: both {\damage} suffered before and during death, and any further {\damage} done to the corpse since then.
-If this reduces its \statref{st} to 0 or below, the corpse is too mangled to successfully reanimate.
+If this reduces its \statref{shock-threshold} to 0 or below, the corpse is too mangled to successfully reanimate.
 Some reanimations also require an unrotted corpse.
 It usually takes a little over a week before a corpse becomes too rotted for such a reanimation, although temperature and moisture can alter this.
 Corpses can be preserved by {\embalming}.
@@ -77,7 +77,7 @@ It's generally considered good practice to put the creature down before this occ
 	
 	A corpse reanimated as a \undeadref{zombie} loses 2 points from all attributes except \attref{might} and \attref{will}.
 	Its \statref{speed} is halved.
-	Its \statref{st} increases by 2, however.
+	Its \statref{shock-threshold} increases by 2, however.
 	If it could fly, it is now too clumsy to do so.
 	
 	A corpse reanimated as a \undeadref{zombie} is not healed of any {\damage}.
@@ -96,7 +96,7 @@ It's generally considered good practice to put the creature down before this occ
 	
 	A corpse reanimated as a \undeadref{ghoul} is not healed of any {\damage}.
 	However, an animated \undeadref{ghoul} may heal {\damage} by consuming the flesh of its own kind.
-	An entire corpse is sufficient to restore {\damage} equal to its maximum \statref{st}, with smaller portions restoring proportionally smaller amounts.
+	An entire corpse is sufficient to restore {\damage} equal to its maximum \statref{shock-threshold}, with smaller portions restoring proportionally smaller amounts.
 	A ghoul can consume an entire corpse in less than a minute, and there is no end to its hunger: it could consume corpses for hours on end without being sated.
 	
 	Reanimating a corpse as a \undeadref{ghoul} also requires that it is unrotted.
@@ -153,7 +153,7 @@ It's generally considered good practice to put the creature down before this occ
 	The result is a creature far less clumsy than a zombie, but not so resilient.
 	
 	A corpse reanimated as a \undeadref{skeleton} loses 2 points from all attributes except \attref{grace} and \attref{will}.
-	Its \statref{st} is also reduced by 2, in addition to the loss from the reduced \attref{might}.
+	Its \statref{shock-threshold} is also reduced by 2, in addition to the loss from the reduced \attref{might}.
 	The mere bones of wings are not sufficient to allow it to fly, if it previously could.
 	It also sinks in water, but may move along the bottom.
 	
@@ -342,7 +342,7 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	Any parts you reattach must come from the original creature.
 	
 	The repair and reanimation requires a Test, with the {\tn} determined by how badly damaged the corpse is, using your choice of \skillref{necromancy} or \skillref{healing}.
-	A successful Test repairs at least enough {\damage} to restore the creature's \statref{st} to 1, and a high result may repair even more.
+	A successful Test repairs at least enough {\damage} to restore the creature's \statref{shock-threshold} to 1, and a high result may repair even more.
 	You must perform the repairs while the corpse is dead; you cannot repair it while it is animated.
 }
 
