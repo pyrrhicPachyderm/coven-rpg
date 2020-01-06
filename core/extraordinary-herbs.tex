@@ -171,3 +171,54 @@ The GM can also use these as inspiration for an adventure, or perhaps a short sc
 		The \creatureref{moly} can, and will, \featref{projection-start-other-3} and {\possess} the creature that killed its plant body.
 	}
 }
+
+\creature{Stygian Nightshade}{Stygian Nightshades}{stygian-nightshade}{
+	\atttable{2}{5}{0}{2}{3}{5}{0}{3}
+}{
+	\speed{0}
+}{
+	\skillref[1]{deception}, \skillref[3]{intimidation}, \skillref[1]{stealth}, \skillref[3]{weaponry}
+}{
+	Nobody has ever seen a \creatureref{stygian-nightshade}.
+	It dwells only in dark places; deep caves, and gloomy forests.
+	But what's more, it generates its own darkness.
+	A total and utter darkness: inscrutable even to the greatest \practitioner{divination}; unpierceable even by the brightest rays of sunlight.
+	While the plant lives, the bubble of darkness stretches a dozen metres in diameter.
+	Should it be cut, or killed, the darkness shrinks.
+	It still covers every stalk, leaf, and petal, hiding it from view, but only extends a few centimetres from the surface of the plant.
+	
+	In death, the plant feels quite ordinary.
+	The leaves, stalks, flowers, and even berries feel much like those of its lesser cousin, deadly nightshade.
+	In life, however, it feels much different.
+	
+	For the \creatureref{stygian-nightshade} is fiercely territorial.
+	Any creature that enters its darkness immediately comes under assault from all sides.
+	Some say it feels like rending claws, some like writhing tentacles, some like the lash of a scourge.
+	Some feel it shifting, changing as it whips and tears.
+	Some say that the darkness itself must be attacking, for it can assault dozens of people at once; surely impossible for the barely man-sized bush that remains when the plant is killed.
+	
+	Only fire seems to scare the plant.
+	It casts no light within the darkness, but it keeps burning.
+	Someone who carries a torch can still feel its heat when inside.
+	The \creatureref{stygian-nightshade} will try to extinguish the flame; trapping the torch-bearer, and the like.
+	But it won't go near the fire itself.
+	Using this, an experienced botanist can reach the heart of the darkness and take a cutting from the bush.
+	Or perhaps, at great risk, uproot it.
+	
+	A botanist seeking such a cutting is probably up to no good.
+	Ingested, \creatureref{stygian-nightshade} is even more poisonous than deadly nightshade.
+	One leaf could be cut into a hundred pieces, and each one would still be enough to kill a grown man in mere seconds.
+	Fortunately---or perhaps unfortunately---the bubble of blackness that would surround even such a tiny shred of leaf makes it all but impossible to conceal in a drink or meal.
+	\practitioners{necromancy}, however, are said to have found an even more nefarious use{\dots}
+}{
+	\ability{Stygian Darkness}{
+		The \creatureref{stygian-nightshade} dwells within a region of inpenetrable darkness, about a dozen metres in diameter.
+		No light can pierce this darkness, and no \discref{divination} can see within it.
+		The \creatureref{stygian-nightshade} never leaves this region of darkness.
+	}
+	
+	\ability{Writhing \& Rending}{
+		When the \creatureref{stygian-nightshade} takes the \actionref{attack} {\action}, it attacks \emph{every} creature within its darkness.
+		\weaponref{unarmed}, it has \positive{4} accuracy and rolls 5 dice for {\damagetests}, addings its \attref{might} as usual.
+	}
+}
