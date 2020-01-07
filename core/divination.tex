@@ -137,13 +137,13 @@ Walls don't tend to move too much, however---as long as you are looking at the i
 
 Although you can move about during a {\vision}, a novice cannot hold a {\vision} together it they move too far from where they began it.
 The {\vision} breaks down and ends if you move too far from where you began it; you can manage a couple of metres without trouble, or more with a Test.
-\featref{hindsight-foresight-move} lifts this limitation.
+\featref{vision-move} lifts this limitation.
 
 The limitation of only being able to see the area around where you are currently standing is quite a major one, but there are a couple of things you can do to lift it, making use of \featref{scrying}.
 While in a {\vision}, you can see any scrying images that existed in the time and place you are looking at.
 With \featref{foresight} in particular, you might be able to look at yourself scrying in the future.
 This is far harder to arrange with \featref{hindsight}, however, and does not work at all with \featref{scrying-eyes}.
-The more reliable solution is to use the feat \featref{hindsight-foresight-scrying}.
+The more reliable solution is to use the feat \featref{vision-scrying}.
 
 \section{Feats}
 
@@ -424,7 +424,7 @@ The more reliable solution is to use the feat \featref{hindsight-foresight-scryi
 	The {\vision} is unstable and brief, it covers the period of time only 1 minute forward from time you specified, and ends when you reach the end of this time.
 }
 
-\feat{Rapid Rewind}{hindsight-foresight-speed}{15}{
+\feat{Rapid Rewind}{vision-speed}{15}{
 	\skillref[1]{divination},
 	\featref{hindsight} or \featref{foresight}
 }{
@@ -437,24 +437,24 @@ The more reliable solution is to use the feat \featref{hindsight-foresight-scryi
 	
 	This goes in the normal direction for the {\vision}: forward for \featref{foresight} and backwards for \featref{hindsight}.
 	It is more useful for \featref{hindsight}, of course, as it allows you to go further back.
-	If you also have \featref{hindsight-foresight-bidirectional}, you can go up to this speed forwards or backwards, though never outside of the {\visionpossessive} alloted time.
+	If you also have \featref{vision-bidirectional}, you can go up to this speed forwards or backwards, though never outside of the {\visionpossessive} alloted time.
 }
 
-\feat{Lightning Rewind}{hindsight-foresight-speed-2}{15}{
+\feat{Lightning Rewind}{vision-speed-2}{15}{
 	\skillref[2]{divination},
-	\featref{hindsight-foresight-speed}
+	\featref{vision-speed}
 }{
 	You may accelerate your {\visions} to ludicrous speed.
-	This follows the same rules as \featref{hindsight-foresight-speed}, except that you may perceive time at up to a million times the normal speed; more than ten days per second, or a century in less than an hour.
+	This follows the same rules as \featref{vision-speed}, except that you may perceive time at up to a million times the normal speed; more than ten days per second, or a century in less than an hour.
 }
 
-\feat{Roaming Visions}{hindsight-foresight-move}{15}{
+\feat{Roaming Visions}{vision-move}{15}{
 	\featref{hindsight} or \featref{foresight}
 }{
 	Moving around---any distance---no longer disrupts your {\visions}.
 }
 
-\feat{Freeze Frame}{hindsight-foresight-pause}{10}{
+\feat{Freeze Frame}{vision-pause}{10}{
 	\featref{hindsight} or \featref{foresight}
 }{
 	You may pause your {\visions}, freezing everything in place so that you can look around leisurely.
@@ -469,21 +469,21 @@ The more reliable solution is to use the feat \featref{hindsight-foresight-scryi
 	You have a moment's warning when the {\vision} is about to expire, allowing you to pause to examine the very end of the {\vision}, before it fades.
 }
 
-\feat{Fore-Hindsight}{hindsight-foresight-bidirectional}{10}{
+\feat{Fore-Hindsight}{vision-bidirectional}{10}{
 	\skillref[1]{divination},
-	\featref{hindsight-foresight-pause}
+	\featref{vision-pause}
 }{
 	Much as you may pause your {\visions}, you can play them the other way.
 	This makes interpreting speech from \featref{hindsight} much easier, among other things.
 	
 	You may change at will between watching your {\visions} forwards, backwards, or pausing them, going forwards or backwards at any speed up to normal speed.
 	You must always stay within the {\visionpossessive} allotted time, however.
-	The same as with \featref{hindsight-foresight-pause}, you have a moment's warning when the allotted time is about to expire, allowing you to turn and watch back the other way.
+	The same as with \featref{vision-pause}, you have a moment's warning when the allotted time is about to expire, allowing you to turn and watch back the other way.
 }
 
-\feat{Time Scrying}{hindsight-foresight-scrying}{25}{
+\feat{Time Scrying}{vision-scrying}{25}{
 	\skillref[1]{divination},
-	\featref{hindsight-foresight-move},
+	\featref{vision-move},
 	\featref{scrying}
 }{
 	You may use \featref{hindsight} or \featref{foresight}---assuming you have them---on your \featref{scrying} images, making them watch backwards in time, or watch some time in the future.
@@ -548,7 +548,7 @@ The more reliable solution is to use the feat \featref{hindsight-foresight-scryi
 	You have no help in going the other way, however; you can't even detect the scrying sensor at the other end.
 	So it pays to ensure you have some other way back.
 	
-	You cannot use this through any scrying surface that is seeing the past or future, by \featref{hindsight-foresight-scrying}, unless you also have \featref{hindsight-foresight-projection}.
+	You cannot use this through any scrying surface that is seeing the past or future, by \featref{vision-scrying}, unless you also have \featref{vision-projection}.
 }
 
 \feat{Mind-Controlled Scrying}{scrying-projection-move}{10}{
@@ -558,10 +558,10 @@ The more reliable solution is to use the feat \featref{hindsight-foresight-scryi
 }{
 	You can move your own \featref{scrying} sensors from within the {\mentalrealm}, as long as you are near enough to the scrying surface.
 	This affords you all the same control you would have if you were near the scrying surface physically---you can move the sensor at strolling speed, move it faster or refocus it if you have \featref{scrying-speed}, and so on.
-	If you also have \featref{hindsight-foresight-projection} and \featref{hindsight-foresight-scrying}, you can also move the sensor through time from within the {\mentalrealm}, following the usual rules.
+	If you also have \featref{vision-projection} and \featref{vision-scrying}, you can also move the sensor through time from within the {\mentalrealm}, following the usual rules.
 }
 
-\feat{Temporal-Mentality}{hindsight-foresight-projection}{10}{
+\feat{Temporal-Mentality}{vision-projection}{10}{
 	\skillref[1]{divination},
 	\skillref[1]{projection},
 	\featref{hindsight} or \featref{foresight},
@@ -573,22 +573,22 @@ The more reliable solution is to use the feat \featref{hindsight-foresight-scryi
 	Furthermore, you cannot enter or leave the {\mentalrealm} during the vision without disrupting it, causing it to end.
 }
 
-\feat{Temporal-Mental Leap}{hindsight-foresight-projection-start}{5}{
+\feat{Temporal-Mental Leap}{vision-projection-start}{5}{
 	\skillref[1]{divination},
 	\skillref[2]{projection},
-	\featref{hindsight-foresight-projection},
-	\featref{hindsight-foresight-move},
+	\featref{vision-projection},
+	\featref{vision-move},
 	\featref{projection-start-3}
 }{
 	You may enter or leave the {\mentalrealm} while using \featref{hindsight} or \featref{foresight}, without disrupting the vision.
 }
 
-\feat{Temporal-Mental Reading}{hindsight-foresight-projection-interface}{15}{
+\feat{Temporal-Mental Reading}{vision-projection-interface}{15}{
 	\skillref[2]{divination},
 	\skillref[1]{projection},
-	\featref{hindsight-foresight-projection}
+	\featref{vision-projection}
 }{
-	While you are using \featref{hindsight-foresight-projection}, you may form {\subtleinterfaces} with minds in the past or future.
+	While you are using \featref{vision-projection}, you may form {\subtleinterfaces} with minds in the past or future.
 	You can use these {\interfaces} along with feats such as \featref{projection-read-mind} and \featref{projection-read-senses-unwilling}, to gain information.
 	Obviously, you cannot use them with feats such as \featref{projection-speak-unwilling} or \featref{projection-merge}, that would affect; you cannot change the past, or visions of the future---only observe.
 	
