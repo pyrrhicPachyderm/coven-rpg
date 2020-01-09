@@ -119,17 +119,17 @@ Note that you don't have draw attention if you don't want to; a high \attref{pre
 %TODO: Recap how skills affect dice rolled for Tests, and how not every Test has an applicable skill.
 
 A witch's skills can be divided into three categories.
-The first consists of general skills, pertaining to things any witch might find herself doing.
-The second consists of a witch's skills in her particular disciplines of magic.
+The first consists of {\generalskills}, pertaining to things any witch might find herself doing.
+The second consists of {\disciplineskills}; a witch's skills in her particular disciplines of magic.
 These skills are normally of little use to a witch who does not practice such a discipline, although they can often be used to identify, and sometimes to counteract, the effects from it.
-The third consists of speciality skills, pertaining to a particular craft or occupation.
+The third consists of {\specialityskills}, pertaining to a particular craft or occupation.
 
 The following table lists all the skills available to a witch, categorised by type.
 The details of each skill, and examples of their use, are provided in the following sections.
 
 \begin{simpletable}{XXX}
 	\toprule
-	\seclink{General}{general-skills} & \seclink{Discipline}{discipline-skills} & \seclink{Speciality}{speciality-skills}\\
+	{\generalskillbare} & {\disciplineskillbare} & {\specialityskillbare}\\
 	\midrule
 	\skillref{animals} & \skillref{brewing} & \skillref{crafting}\\
 	\skillref{athletics} & \skillref{divination} & \skillref{lore}\\
@@ -157,27 +157,27 @@ A character must have the previous rank in a skill before purchasing the next ra
 	\toprule
 	Type & Rank & XP Cost\\
 	\midrule
-	General & 1 & 15\\
-	General & 2 & 25\\
-	General & 3 & 35\\
-	Discipline & 1 & 40\tnote{*}\\
-	Discipline & 2 & 50\tnote{*}\\
-	Discipline & 3 & 60\tnote{*}\\
-	Speciality & 1 & 10\\
-	Speciality & 2 & 20\\
-	Speciality & 3 & 30\\
+	{\generalskillbare} & 1 & 15\\
+	{\generalskillbare} & 2 & 25\\
+	{\generalskillbare} & 3 & 35\\
+	{\disciplineskillbare} & 1 & 40\tnote{*}\\
+	{\disciplineskillbare} & 2 & 50\tnote{*}\\
+	{\disciplineskillbare} & 3 & 60\tnote{*}\\
+	{\specialityskillbare} & 1 & 10\\
+	{\specialityskillbare} & 2 & 20\\
+	{\specialityskillbare} & 3 & 30\\
 	\bottomrule
 }{
 	\item[*] Reduced by feats from the governing discipline.
 }
 
-The XP cost for increasing a general or speciality skill is fixed, while progression in discipline skills is closely tied to progression in the discipline itself.
+The XP cost for increasing a {\generalskill} or {\specialityskill} is fixed, while progression in {\disciplineskills} is closely tied to progression in the discipline itself.
 While it is possible to learn a lot about a discipline of magic without ever practicing it, it is far easier to learn simply by setting out and using the magic.
-As such, increasing a discipline skill costs less XP if a witch has already purchased feats from its governing discipline.
+As such, increasing a {\disciplineskill} costs less XP if a witch has already purchased feats from its governing discipline.
 
 Many feats from a discipline require a certain rank of the skill that governs the discipline, while some do not require any ranks in the skill at all.
-Increasing a discipline skill costs 5 XP less for each feat that requires exactly the rank below, to a minimum cost of 0 XP.
-This applies only to feats from the governing discipline, even if feats from other disciplines require the same discipline skill.
+Increasing a {\disciplineskill} costs 5 XP less for each feat that requires exactly the rank below, to a minimum cost of 0 XP.
+This applies only to feats from the governing discipline, even if feats from other disciplines require the same {\disciplineskill}.
 
 For example, a witch buying \skillref[3]{brewing} gets a 5 XP discount for every feat she has from the \discref{brewing} discipline that lists exactly \skillref[2]{brewing} as a prerequisite.
 A witch buying \skillref[1]{brewing} gets a 5 XP discount for every feat she has from the \discref{brewing} discipline, because all of the feats she has from that discipline require \skillref[0]{brewing} (i.e.\ don't require the \skillref{brewing} skill at all).
