@@ -315,6 +315,25 @@ A clay golem can only smell if a nose is sculpted upon its face.
 	A horse cannot understand language, and similarly a horse golem can never benefit from \featref{golem-understand-language} or \featref{golem-speak}.
 }
 
+\feat{Matryoshka Golems}{golem-nesting}{15}{
+	\skillref[1]{golemancy},
+	\featref{medium-golem},
+	\featref{golem-reanimate}
+}{
+	You may nest golems inside one another.
+	You can put a typical hand-sized golem inside a \featref{medium-golem}, or a \featref{medium-golem} inside a \featref{large-golem}.
+	You may even nest all three levels.
+	
+	You must actually craft these nested golems, which obviously means the outer golems must be hollow.
+	This is easy to do with clay, harder with wood, and very difficult with wax or gingerbread.
+	The innermost golem does not need to be hollow, however, and does not even need to be the same material as the outer golem---it must be a material you can animate, however.
+	It should be the same shape, however; you can only nest a \featref{golem-horse} inside another \featref{golem-horse}, for instance.
+	
+	Only the outermost golem is animated.
+	However, if it is destroyed, the next layer of golem down is automatically and immediately animated.
+	It inherits the instructions and knowledge of the outer golem, and may immediately continue from where the outer golem left off.
+}
+
 \feat{Remote Access}{change-golem-instructions-projection}{15}{
 	\skillref[1]{golemancy},
 	\featref{projection-golemancy},
