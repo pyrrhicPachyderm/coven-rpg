@@ -427,6 +427,24 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	The reanimation ritual takes five minutes, and must be performed in the dark, \emph{at night}.
 }
 
+\feat{Deanimate}{deanimate}{10}{
+	\featref{animate-zombie}
+}{
+	You can withdraw the animating force from a creature you have reanimated, returning it to death.
+	
+	\materials{An undead under your control, a \materialref{ritual-circle} of the same size required to initially animate the undead, an unlit candle which the ritual lights}
+	
+	The ritual takes five minutes, and must be performed in a brightly lit location.
+	The undead must remain within the \materialref{ritual-circle} for the duration.
+}
+
+\feat{Offensive Deanimation}{deanimate-2}{20}{
+	\featref{deanimate}
+}{
+	You have learned to draw the animation out of an undead whether you put it there or not.
+	You can use the \featref{undead-control} ritual against any undead, be it under your control, under another \practitionerpossessive{necromancy} control, uncontrolled, or even a \undeadref{souled}.
+}
+
 \feat{Maintain Control}{undead-control}{10}{
 	\featref{animate-zombie}
 }{
@@ -464,24 +482,6 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 }{
 	You can use the \featref{undead-control} ritual on an undead controlled by another \practitioner{necromancy}, breaking their hold and bringing it under your control.
 	This is subject to the same limitations as \featref{undead-control-2}; you cannot use it on an undead that cannot be controlled by a \practitioner{necromancy}, and the undead counts against your control limit.
-}
-
-\feat{Deanimate}{deanimate}{10}{
-	\featref{animate-zombie}
-}{
-	You can withdraw the animating force from a creature you have reanimated, returning it to death.
-	
-	\materials{An undead under your control, a \materialref{ritual-circle} of the same size required to initially animate the undead, an unlit candle which the ritual lights}
-	
-	The ritual takes five minutes, and must be performed in a brightly lit location.
-	The undead must remain within the \materialref{ritual-circle} for the duration.
-}
-
-\feat{Offensive Deanimation}{deanimate-2}{20}{
-	\featref{deanimate}
-}{
-	You have learned to draw the animation out of an undead whether you put it there or not.
-	You can use the \featref{undead-control} ritual against any undead, be it under your control, under another \practitionerpossessive{necromancy} control, uncontrolled, or even a \undeadref{souled}.
 }
 
 \feat{Precision Control}{control-deanimate-small}{10}{
