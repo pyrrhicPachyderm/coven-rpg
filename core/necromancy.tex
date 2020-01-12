@@ -468,11 +468,19 @@ However, as long as a witch's soul remains in the {\phylactery} and does not dep
 	You may end the effect of the ritual on each undead individually.
 }
 
-\feat{Assert Control}{undead-control-2}{15}{
+\feat{Assert Control}{undead-control-2}{10}{
 	\skillref[1]{necromancy},
-	\featref{undead-control}
+	\featref{undead-control},
+	\featref{deanimate-2}
 }{
-	You can use use the \featref{undead-control} ritual on an uncontrolled undead in order to bring it under your control.
+	You have discovered a way to reassert control over an undead, if you lose it.
+	Or even to take control of other uncontrolled undead you run into.
+	It requires somehow keeping them in a \materialref{ritual-circle} for a while, but it's less damaging than killing and reanimating them.
+	
+	\materials{An uncontrolled undead, a \materialref{ritual-circle} of the same size required to initially animate the undead, a lit candle which the ritual extinguishes, an unlit candle which the ritual lights}
+	
+	The ritual takes five minutes, and the undead must remain within the \materialref{ritual-circle} for the duration.
+	At the completion of the ritual, it comes under your control.
 	However, you cannot use this against undead that cannot normally be subject to a \practitionerpossessive{necromancy} control, such as \undeadrefplural{souled}.
 	Undead you take control of this way still count against the maximum number of undead you can control, and exceeding this limit will free an earlier undead from your control, just as raising a new one would.
 }
