@@ -13,6 +13,16 @@
 }
 \makeatother
 
+\makeatletter
+\newcommand\lcaselabel[1]{%Changes the nameref name to lower case before defining the label.
+	\edef\labname{\@currentlabelname}%
+	\edef\lcaselabname{\lowercase\expandafter{\labname}}%
+	\expandafter\labelname\expandafter{\lcaselabname}%
+	\label{#1}%
+	\expandafter\labelname\expandafter{\labname}%Reset it back to what it was
+}
+\makeatother
+
 \newcommand{\dropcapnameref}[1]{%Takes a raw label, such as `chap:headology'
 	\dropcap{\getnamereftext{#1}}%
 	%TODO: Sort out hyperref around this.
