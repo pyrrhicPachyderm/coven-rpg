@@ -258,7 +258,7 @@ A clay golem can only smell if a nose is sculpted upon its face.
 }{
 	You can muster enough animating force to create larger golems, about mid-thigh height.
 	Such golems have their \attref{might} increased by 1, and their \attref{grace} decreased by 1.
-	You can maintain only one golem of this size, regardless of how many golems you can animate in total.
+	You can maintain only one golem of this size---or larger---regardless of how many golems you can animate in total.
 	
 	Golems of this size can attack effectively.
 	They use 2 dice for {\unarmed} {\damagetests}.
@@ -268,7 +268,7 @@ A clay golem can only smell if a nose is sculpted upon its face.
 	Acquiring an oven, kiln, or forge large enough can also present an obstacle for some kinds of golem.
 }
 
-\feat{Dwarf Crew}{medium-golem-2}{20}{
+\feat{Dwarf Crew}{more-medium-golems}{20}{
 	\skillref[1]{golemancy},
 	\featref{medium-golem},
 	\featref{more-golems}
@@ -279,25 +279,24 @@ A clay golem can only smell if a nose is sculpted upon its face.
 
 \feat{Life-Size Golem}{large-golem}{25}{
 	\skillref[1]{golemancy},
-	\featref{medium-golem},
-	\featref{more-golems}
+	\featref{medium-golem}
 }{
 	It takes a lot of clay to make a golem the size of a man, but this pales in comparison to the force required to bring such a golem to life.
 	You should know, because you can finally muster that much force.
 	Such golems have their \attref{might} increased by 3, and their \attref{grace} decreased by 1.
 	They can attack and use weapons, the same as a \featref{medium-golem}.
 	
-	Maintaining one of these golems takes the animating force of two normal golems, reducing the total number of golems you can animate as long as you maintain it.
-	Furthermore, you can maintain only one golem of this size at a time, regardless of how many golems you can animate in total.
+	You can only maintain one golem of this size, regardless of how many golems you can maintain in total.
+	Furthermore, a golem of this size also counts as a \featref{medium-golem}, against the limit for golems of that size.
+	So you cannot animate both a \featref{large-golem} and a \featref{medium-golem} without the \featref{more-medium-golems} feat.
 }
 
-\feat{Twin Men}{large-golem-2}{10}{
-	\skillref[3]{golemancy},
+\feat{Twin Men}{more-large-golems}{15}{
+	\skillref[2]{golemancy},
 	\featref{large-golem},
-	\featref{more-golems-3}
+	\featref{more-medium-golems}
 }{
-	It takes a lot of force to animate a \featref{large-golem}, but you've finally mustered enough to animate \emph{two}.
-	They still take twice as much force as a regular golem, so these two use your entire pool of animating force.
+	It takes a lot of animating force to maintain a \featref{large-golem}, but you've finally mustered enough to maintain \emph{two}.
 }
 
 \feat{Batch Baking}{golem-batch-gingerbread}{20}{
