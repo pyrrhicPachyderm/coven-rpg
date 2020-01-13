@@ -44,6 +44,14 @@
 	\hyperref[#1]{\capitaltext}%
 }
 
+\newcommand\capital[1]{%Capitalise the reference given as an argument
+	\begingroup%
+		\let\link\capitallink%
+		\let\nameref\capitalnameref%
+		#1%
+	\endgroup%
+}
+
 \newcommand{\dropcapnameref}[1]{%Takes a raw label, such as `chap:headology'
 	\dropcap{\getnamereftext{#1}}%
 	%TODO: Sort out hyperref around this.
