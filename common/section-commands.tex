@@ -32,6 +32,11 @@
 \newcommand\link[2]{%Arguments: text, label
 	\hyperref[#2]{#1}%
 }
+\newcommand\capitallink[2]{%Arguments: text, label
+	\edef\normtext{#1}%
+	\edef\capitaltext{\makefirstuc{\normtext}}%
+	\hyperref[#2]{\capitaltext}%
+}
 
 \newcommand{\dropcapnameref}[1]{%Takes a raw label, such as `chap:headology'
 	\dropcap{\getnamereftext{#1}}%
