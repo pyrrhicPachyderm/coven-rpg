@@ -4,9 +4,9 @@
 
 \newcommand\materiallabel[3]{%Arguments: title, plural title, label
 	\labelname{#1}%
-	\label{material:#3}%
+	\lcaselabel{material:#3}%
 	\labelname{#2}%
-	\label{materials:#3}%
+	\lcaselabel{materials:#3}%
 }
 \newcommand\materialref[1]{\nameref{material:#1}}
 \newcommand\materialrefplural[1]{\nameref{materials:#1}}
@@ -19,11 +19,11 @@
 
 \newcommand\herblabel[2]{%Arguments: title, label
 	\labelname{#1 Herb}%
-	\label{herb:#2}%
+	\lcaselabel{herb:#2}%
 	\labelname{#1 Herbs}%
-	\label{herbs:#2}%
+	\lcaselabel{herbs:#2}%
 	\labelname{#1}%
-	\label{herbbare:#2}%
+	\lcaselabel{herbbare:#2}%
 }
 
 \newcommand\herbtype[1]{%A particular rarity of herb
@@ -70,11 +70,11 @@
 
 \newcommand\circlelabel[2]{%Arguments: title, label
 	\labelname{#1 Ritual Circle}%
-	\label{circle:#2}%
+	\lcaselabel{circle:#2}%
 	\labelname{#1 Ritual Circles}%
-	\label{circles:#2}%
+	\lcaselabel{circles:#2}%
 	\labelname{#1}
-	\label{circlebare:#2}
+	\lcaselabel{circlebare:#2}
 }
 \newcommand\circleref[1]{\nameref{circle:#1}}
 \newcommand\circlerefplural[1]{\nameref{circles:#1}}
@@ -89,11 +89,11 @@
 \newcommand\weapontype[4]{%Arguments: title, plural title, label, text
 	\subsubsection{#1}%
 	\labelname{#1}%
-	\label{weapon:#3}%
+	\lcaselabel{weapon:#3}%
 	\labelname{#2}%
-	\label{weapons:#3}%
+	\lcaselabel{weapons:#3}%
 	\labelname{#1's}%
-	\label{weaponpossessive:#3}%
+	\lcaselabel{weaponpossessive:#3}%
 	
 	{#4}
 }
@@ -111,13 +111,13 @@
 
 \newcommand\mixcreation[3]{%Arguments: name, label, text
 	\subsubsection{#1}
-	\label{mixcreation:#2}
+	\lcaselabel{mixcreation:#2}
 	
 	{#3}
 }
 \newcommand\mixdelivery[3]{%Arguments: name, label, text
 	\subsubsection{#1}
-	\label{mixdelivery:#2}
+	\lcaselabel{mixdelivery:#2}
 	
 	{#3}
 }

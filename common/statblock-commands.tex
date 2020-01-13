@@ -42,11 +42,11 @@
 \newcommand\statblockrelay[5]{%Arguments: atttable, speed, skills, text, abilities
 	\subsection[{\title}]{\displaytitle}
 	\expandafter\labelname\expandafter{\title}
-	\label{\labelprefix:\labelsuffix}
+	\lcaselabel{\labelprefix:\labelsuffix}
 	\expandafter\labelname\expandafter{\pluraltitle}
-	\label{\labelprefix plural:\labelsuffix}
+	\lcaselabel{\labelprefix plural:\labelsuffix}
 	\expandafter\labelname\expandafter{\title's}
-	\label{\labelprefix possessive:\labelsuffix}
+	\lcaselabel{\labelprefix possessive:\labelsuffix}
 	{#1}
 	
 	\textbf{Speed:} {#2}
