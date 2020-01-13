@@ -51,17 +51,10 @@
 	#1 (\herbtypeplural{#2})%
 }
 \newcommand\Herb[3][\@nil]{%
-	\def\akaname{#1}%
-	\expandafter\MakeUppercase #2 (%
-	\ifx\akaname\@nnil%
-		%
-	\else%
-		a.k.a.\ \akaname,\ %
-	\fi%
-	\herbtype{#3})%
+	\herb[#1]{\makefirstuc{#2}}{#3}%
 }
 \newcommand\Herbs[2]{%
-	\expandafter\MakeUppercase #1 (\herbtypeplural{#2})%
+	\herbs{\makefirstuc{#1}}{#2}%
 }
 \makeatother
 
