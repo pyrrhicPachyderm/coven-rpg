@@ -387,6 +387,23 @@ A clay golem can only smell if a nose is sculpted upon its face.
 	It inherits the instructions and knowledge of the outer golem, and may immediately continue from where the outer golem left off.
 }
 
+\feat{Golem Self-Crafting}{golem-crafting-skill}{10}{
+	\skillref[1]{golemancy},
+	\skillrefspeciality[1]{crafting}{\anyspeciality},
+	\featref{golem-intelligence}
+}{
+	When you animate a golem, you imbue it with your knowledge of the craft used to create it.
+	It gains one \skillref{crafting} speciality appropriate to creating golems of its type.
+	For example, you might give a gingerbread golem \skillrefspeciality{crafting}{Cook}, or a clay golem \skillrefspeciality{crafting}{Potter}.
+	A wood golem might gain \skillrefspeciality{crafting}{Woodcarver} or \skillrefspeciality{crafting}{Carpenter}, depending on how it was constructed.
+	
+	The golem gains all the ranks that \emph{you} have in the relevant skill.
+	You cannot use this feat if you do not have any ranks in a relevant skill, but the golem can gain up to 3 ranks, if you have that many.
+	
+	Some golems can ever repair themselves using this skill, if their instructions allow it and they have appropriate materials.
+	Alternatively, you could set them to creating additional golem bodies, to animate with \featref{golem-reanimate-2}.
+}
+
 \feat{Remote Access}{change-golem-instructions-projection}{15}{
 	\skillref[1]{golemancy},
 	\featref{projection-golemancy},
