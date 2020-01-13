@@ -29,6 +29,10 @@
 %Capitalisation.
 %%%%%%%%%%%%%%%
 
+\newcommand\link[2]{%Arguments: text, label
+	\hyperref[#2]{#1}%
+}
+
 \newcommand{\dropcapnameref}[1]{%Takes a raw label, such as `chap:headology'
 	\dropcap{\getnamereftext{#1}}%
 	%TODO: Sort out hyperref around this.
@@ -47,11 +51,11 @@
 \newcommand\chaplabel[1]{\label{chap:#1}}
 \newcommand\chapref[1]{Chapter~\ref{chap:#1}}
 \newcommand\chapnameref[1]{\nameref{chap:#1}}
-\newcommand\chaplink[2]{\hyperref[chap:#2]{#1}}
+\newcommand\chaplink[2]{\link{#1}{chap:#2}}
 
 \newcommand\seclabel[1]{\label{sec:#1}}
 \newcommand\secref[1]{\nameref{sec:#1}}
-\newcommand\seclink[2]{\hyperref[sec:#2]{#1}}
+\newcommand\seclink[2]{\link{#1}{sec:#2}}
 
 
 
