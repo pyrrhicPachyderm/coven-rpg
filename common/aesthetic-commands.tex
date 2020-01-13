@@ -77,5 +77,5 @@
 	%See the xstring manual, section "Expansion of macros, optional argument"
 	\StrLeft{#2}{1}[\firstletter]%
 	\StrGobbleLeft{#2}{1}[\remainder]%
-	\lettrine[ante=#1]{\firstletter}{\remainder}%
+	\lettrine[ante=#1]{\emakefirstuc{\firstletter}}{\remainder}%
 }
