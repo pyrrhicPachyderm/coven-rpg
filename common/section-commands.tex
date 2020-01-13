@@ -23,11 +23,23 @@
 }
 \makeatother
 
+
+
+%%%%%%%%%%%%%%%
+%Capitalisation.
+%%%%%%%%%%%%%%%
+
 \newcommand{\dropcapnameref}[1]{%Takes a raw label, such as `chap:headology'
 	\dropcap{\getnamereftext{#1}}%
 	%TODO: Sort out hyperref around this.
 	%As it is, hyperref breaks the layout.
 }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Part, chapters, and sections.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand\partlabel[1]{\label{part:#1}}
 \newcommand\partref[1]{Part~\ref{part:#1}}
