@@ -47,6 +47,55 @@ The GM can also use these as inspiration for an adventure, or perhaps a short sc
 	}
 }
 
+\creature{Blazing Ash}{Blazing Ashes}{blazing-ash}{
+	\atttable{\nostat}{3}{1}{2}{4}{2}{1}{4}
+}{
+	\speed{20}
+}{
+	\skillref[1]{athletics}, \skillref[1]{intimidation}, \skillref[2]{willing}
+}{
+	In truth, \creatureref{blazing-ash} is not an \herbtype{5} at all.
+	It is an intangible spirit that lives within fire.
+	It is typically categorised with the \herbtypeplural{5}, as it it haunts an ash tree for most of its life cycle.
+	
+	Most people would never notice a \creatureref{blazing-ash} residing in a fire.
+	But those who look closely can see the faint shape of a face in the fire.
+	And those who listen might hear the the shapes of words, in the crackles and pops of burning wood.
+	
+	The effects of a \creatureref{blazing-ash} are obvious, however, at least for most of its life.
+	While it inhabits an ash tree, the fire in the tree's branches never burns out.
+	The tree is blackened and burned, devoid of lives.
+	But somehow, it still lives; still grows.
+	And fire burns eternally where its leaves once were.
+	
+	A \creatureref{blazing-ash} lives in the canopy fire of its ash tree for many years at a time, slowly growing in power.
+	It waits there for a wildfire---or the opportunity to begin one---and then it buds.
+	A portion of its power, a new \creatureref{blazing-ash}, goes out into the wildfire.
+	It encourages the conflagration, helping it along, and seeks a new ash tree to inhabit.
+	There, it begins its own life.
+	Or, if it finds no ash, it dies along with the wildfire.
+	
+	A brew or spell that requires \creatureref{blazing-ash} doesn't actually need a piece of the intangible spirit that forms the true \creatureref{blazing-ash}.
+	Rather, it requires a twig from the spirit's ash tree---burned through, but still magically living.
+}{
+	\ability{Within the Blaze}{
+		The \creatureref{blazing-ash} has no physical form; it cannot be touched or harmed in any way.
+		However it can only live and move within a fire, and if dies if the fire it is in is extinguished.
+	}
+	
+	\ability{Spreading Flame}{
+		The \creatureref{blazing-ash} can encourage fire around it---an ability it uses to spread within a wildfire, or to defend itself against those who would extinguish it.
+		It has the feat \featref{willing-fire-2} (though not that feat's prerequisites).
+		Additionally, it automatically {\opposes} any attempt---by any means---to extinguish the fire it is within, using \testtype{will}{willing}.
+	}
+	
+	\ability{Ashes Burn}{
+		A fire on an ash tree, while inhabited by a \creatureref{blazing-ash}, will not kill or consume the tree's trunk and branches, though it will char them.
+		Nonetheless, the fire always burns as though it had fuel.
+		The tree can even continue continue to grow, charred and without leaves.
+	}
+}
+
 \creature{Grand Wormwood}{Grand Wormwoods}{grand-wormwood}{
 	\atttable{4}{\nostat}{0}{0}{4}{\negative 2}{2}{6}
 }{
