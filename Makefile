@@ -42,7 +42,7 @@ spellcheck:
 featcount:
 	@(\
 		shopt -s globstar;\
-		grep -c "\feat{" **/*.tex | grep -v :0;\
+		grep -cF "\feat{" **/*.tex | grep -v :0;\
 	)
 dropcap:
 	@for book in $(books); do \
