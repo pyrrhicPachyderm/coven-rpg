@@ -67,6 +67,37 @@ A golem has senses as good as a human, although only if its craftsmanship gives 
 For example, a gingerbread golem with two currants for eyes can see, but if baked without the currants it will be blind.
 A clay golem can only smell if a nose is sculpted upon its face.
 
+\subsection{Golem Statistic Summary}
+
+The following table summarises the statistics of golems made from different materials.
+
+\begin{simpletable}{lrrrrr}
+	\toprule
+	Material & \attref{might} & \attref{grace} & \statref{shock-threshold} & \statref{resilience} & \statref{speed}\\
+	\midrule
+	\capital{\featlink{gingerbread}{gingerbread-golem}} & \negative{2} & 1 & 1 & 1 & 15\\
+	\capital{\featlink{fabric}{fabric-golem}} & \negative{2} & 1 & 10 & 1 & 10\\
+	\capital{\featlink{wood}{wood-golem}} & \negative{1} & 1 & 4 & 14 & 10\\
+	\capital{\featlink{wax}{wax-golem}} & \negative{1} & 1 & 2 & 12 & 10\\
+	\capital{\featlink{clay}{clay-golem}} & 0 & 1 & 14 & 18 & 10\\
+	\bottomrule
+\end{simpletable}
+
+Various feats also allow you to craft golems in different ways, in order to modify their statistics.
+These modifications are summarised here.
+
+\begin{simpletable}{lrrr}
+	\toprule
+	Modification & \attref{might} & \attref{grace} & \statref{speed}\\
+	\midrule
+	\capital{\featlink{dwarf}{medium-golem}} & \positive{1} & \negative{1} & \nostat\\
+	\capital{\featlink{life-size}{large-golem}} & \positive{3} & \negative{1} & \nostat\\
+	\capital{\featlink{horse}{golem-horse}} & \nostat & \nostat & \stattimes{2}\\
+	\capital{\featlink{slender}{golem-bulky}} & \negative{1} & \positive{1} & \nostat\\
+	\capital{\featlink{bulky}{golem-bulky}} & \positive{1} & \negative{1} & \nostat\\
+	\bottomrule
+\end{simpletable}
+
 \section{Feats}
 
 \feat{Gingerbread Golem}{gingerbread-golem}{15}{
