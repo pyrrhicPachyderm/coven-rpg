@@ -15,7 +15,7 @@ After all, an ounce of prevention is worth a pound of cure, and a single arrow c
 
 Despite its seemingly narrow focus, \discref{divination} still covers a fairly wide gamut of abilities.
 The simplest just enhance an existing sense, allowing a witch to see in the dark, for example.
-Some, such as \featref{divination-self}, grant an entirely new sense.
+Some, such as \featref{divination-location}, grant an entirely new sense.
 Perhaps the most interesting, however, are \featref{scrying}, \featref{hindsight}, and \featref{foresight}.
 These allow the witch to see distant locations, the past, and even the future.
 
@@ -201,7 +201,7 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	However, it also works when looking through a \featref{scrying} surface, allowing you to see out in all directions from the sensor.
 }
 
-\feat{Perfect Positioning}{divination-self}{10}{
+\feat{Perfect Positioning}{divination-location}{10}{
 	\noprereq
 }{
 	While much of \discref{divination} deals in sensing the future, the past, or distant locations, there is one very useful trick that simply allows you to sense, precisely, the \emph{here} and \emph{now}.
@@ -226,7 +226,7 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 
 \feat{Taglock Tracing}{divination-taglock-location}{10}{
 	\featref{divination-taglock-identify},
-	\featref{divination-self}
+	\featref{divination-location}
 }{
 	When you touch a \materialref{taglock}, you can find the person or creature it originates from.
 	You know their location.
@@ -240,7 +240,7 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	You can use a \materialref{crystal-ball} to scry.
 	You can scry on any location within 1 kilometre, but must be able to estimate distance and direction the place you are scrying.
 	This is easy enough for any place you've taken a simple route to or from, but it might be hard to scry on the middle of a maze using this.
-	\capital{\featref{divination-self}} allows you to perfectly place any location you have been, and \featref{divination-taglock-location} lets you place a person.
+	\capital{\featref{divination-location}} allows you to perfectly place any location you have been, and \featref{divination-taglock-location} lets you place a person.
 	
 	Scrying essentially forms a sensor, hanging in the air at the target location---although the ``sensor'' is invisible, intangible, and doesn't actually exist in any real sense.
 	While scrying, you can move the sensor at a strolling pace, in all three dimensions and unimpeded by walls.
@@ -308,7 +308,7 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	\featref{scrying}
 }{
 	When you are \featref{scrying}, your range is no longer limited to 1 kilometre---it is now unlimited.
-	Placing a location at long distances becomes increasingly inaccurate, making \featref{divination-self} even more useful.
+	Placing a location at long distances becomes increasingly inaccurate, making \featref{divination-location} even more useful.
 }
 
 \feat{Roaming Scrying}{scrying-speed}{10}{
@@ -679,9 +679,9 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 
 \feat{Golem Positioning System}{divination-golems}{10}{
 	\skillref[1]{divination},
-	\featref{divination-self},
+	\featref{divination-location},
 	\anyfeat{golemancy}
 }{
-	You can use \featref{divination-self} to track your own animating force, as it wanders the world in your golems.
+	You can use \featref{divination-location} to track your own animating force, as it wanders the world in your golems.
 	You always know where all your golems are, in terms of distance and direction from you, and are immediately aware if one is destroyed or deanimated.
 }
