@@ -633,6 +633,23 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	If taken alongside \featref{warm-potion}---or any brew that causes overheating---the drinker's temperature fluctuates wildly, switching between the two effects randomly.
 }
 
+\feat{Flaming Phlegm}{fire-attack-potion}{15}{
+	\featref{warm-potion}
+}{
+	\mix{cauldron}{drink}{\Herb{chilli pepper}{3}}
+	
+	This concoction mixes with the drinker's saliva to form a volatile substance that ignites when spat.
+	The effect lasts for a few minutes after drinking the potion.
+	
+	The drinker---as long as they are a creature with at least 1 die on {\unarmed} {\damagetests}---can spit of gob of flaming phlegm using the \actionref{attack} {\action}.
+	This attack has a \positive{0} accuracy bonus, and a range of 2 metres.
+	On a hit, it causes no {\damagetest}, but {\ignites} the target at \dice{2}.
+	
+	Drinking this potion has no immediate drawbacks, although flammable saliva does carry obvious own risks.
+	The drinker is advised to keep their mouth shut when they are not using it, to minimise the chance of accidental ignition.
+	Drinking multiple doses simply increases the risk of spontaneous oral combustion.
+}
+
 \feat{Vomiting Drops}{vomit-potion}{15}{
 	\noprereq
 }{
