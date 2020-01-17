@@ -54,13 +54,9 @@
 \makeatletter
 \newcommand\skill[3][\@nil]{%Takes three arguments, the first of which is optional and defaults to nothing.
 	\def\govdisc{#1}
+	%The first argument is the governing discipline, and is currently ignored.
 	\subsubsection{#2}%
 	\label{skill:#3}%
-	\ifx\govdisc\@nnil%
-		%
-	\else%
-		Governing discipline: \capital{\discref{\govdisc}}%TODO: This does really nasty things to the paragraphing.
-	\fi%
 }
 \makeatother
 
