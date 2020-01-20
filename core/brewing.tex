@@ -650,6 +650,30 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	Drinking multiple doses simply increases the risk of spontaneous oral combustion.
 }
 
+\feat{Fire Breath}{fire-attack-potion-area}{15}{
+	\skillref[2]{brewing},
+	\featref{fire-attack-potion}
+}{
+	\mix{cauldron}{drink}{\capital{\herbcreature{blazing-ash}{5}}}
+	
+	An advancement on \featref{fire-attack-potion}, this potion allows the drinker to exhale great gouts of flame.
+	For a few minutes after drinking the potion, the drinker's breath ignites just after it leaves their mouth.
+	
+	Giving a big puff, the drinker---as long as they are a creature with at least 1 die on {\unarmed} {\damagetests}---can breath flame using the \actionref{attack} {\action}.
+	This attack has a \positive{0} accuracy bonus, and a range of 2 metres.
+	On a hit, it causes no {\damagetest}, but {\ignites} the target at \dice{2}.
+	
+	The gout of flame spreads into a fireball about a metre wide, and can be used against multiple targets in one \actionref{attack} {\action}.
+	Roll once to hit, comparing the result against the \statref{dodge-rating} of every creature within the flame's area.
+	This might include allies, if they are within a group of targets.
+	
+	For the duration, all the drinker's exhalations ignite, whether they want them to or not.
+	In most situations, ignition happens far enough from the face that it isn't a threat to the drinker.
+	And, unless they give a big puff of breath, the flame only stretches to about arms length.
+	Even the breath they exhale as they speak ignites, although their speech is still understandable.
+	However, they should stand far from anyone they speak to, and avoid thatched cottages.
+}
+
 \feat{Vomiting Drops}{vomit-potion}{15}{
 	\noprereq
 }{
