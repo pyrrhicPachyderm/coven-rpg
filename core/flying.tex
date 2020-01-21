@@ -133,11 +133,28 @@ This is more relevant with \featref{broom-untrained}, \featref{broom-improvise},
 	Your turning radius is reduced to a dozen metres.
 }
 
+\feat{Bristlebrake Turn}{broom-turning}{20}{
+	\skillref[1]{flying},
+	\featref{broom-astride}
+}{
+	By flicking the back of the broom around, you can reduce your turning radius to just 1 metre.
+	Turning more than \SI{90}{\degree} by this method require a difficult Test, and stalls the broom on a failure.
+}
+
 \feat{Angle of Attack}{broom-climb}{10}{
 	\featref{broom-astride}
 }{
 	You can squeeze more thrust out of a broomstick, allowing you to climb at a steeper angle.
 	You can climb one metre for every metre of ground you cover.
+}
+
+\feat{Hover}{broom-hover}{15}{
+	\skillref[2]{flying},
+	\featref{broom-turning}
+}{
+	By tipping the broomstick right back and balancing carefully, you can hover, staying roughly still in mid-air.
+	Staying actually still is quite difficult, and you tend to drift around a fair bit.
+	You can stay in roughly the same place, but staying still enough to, for example, reach out and touch a particular thing requires a Test.
 }
 
 \feat{Chocks Away}{broom-start}{10}{
@@ -175,23 +192,6 @@ This is more relevant with \featref{broom-untrained}, \featref{broom-improvise},
 	Unless they are a skilled \practitioner{flying} in their own right, they need to hold on to you while in flight.
 	
 	If you are not carrying a passenger, you can use the additional lift to carry saddlebags, containing no more than the weight of a person.
-}
-
-\feat{Bristlebrake Turn}{broom-turning}{20}{
-	\skillref[1]{flying},
-	\featref{broom-astride}
-}{
-	By flicking the back of the broom around, you can reduce your turning radius to just 1 metre.
-	Turning more than \SI{90}{\degree} by this method require a difficult Test, and stalls the broom on a failure.
-}
-
-\feat{Hover}{broom-hover}{15}{
-	\skillref[2]{flying},
-	\featref{broom-turning}
-}{
-	By tipping the broomstick right back and balancing carefully, you can hover, staying roughly still in mid-air.
-	Staying actually still is quite difficult, and you tend to drift around a fair bit.
-	You can stay in roughly the same place, but staying still enough to, for example, reach out and touch a particular thing requires a Test.
 }
 
 \feat{No Hands!}{broom-no-hands}{15}{
