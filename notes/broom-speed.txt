@@ -1,8 +1,39 @@
-Per McIlveen (2002), drag force for an upright person at a windspeed V and surface area A is approximately given by 0.36*A*V^2.
+Drag force is given by F = 0.5 * rho * v^2 * C_D * A, where rho is the density of air, v is velocity, C_D is the drag coefficient, and A is the cross-sectional area.
 
+https://en.wikipedia.org/wiki/Speed_skydiving#Terminal_Velocity (accessed 22 Jan 2020), drawing from https://cnx.org/exports/be308439-f9b1-40e7-b0a6-1631cbc7feaa@8.pdf/drag-forces-8.pdf, gives figures for most of these, in two positions; head-down, and belly-to-earth.
+We will take belly-to-earth for a sidesaddle witch, and head-down for a witch sitting astride her broom (and tucked tight against it).
+This gives the drag coefficient as about 1 when sidesaddle, and about 0.7 when astride.
+Cross-sectional area is about 0.7 square metres when sidesaddle, and about 0.18 square metres when astride.
 
+Air density at sea level, at 20 degrees Celsius, is around 1.2 kilograms per cubic metre.
 
+This gives F = 0.42 * v^2 when sidesaddle, and F = 0.0756 * v^2 when astride.
 
+The next step is to determine what force a witch can hang onto a broomstick in the face of.
 
-References:
-McIlveen, J. F. R. (2002). The everyday effects of wind drag on people. Weather, 57(11), 410-413.
+Sitting in a sidesaddle position on a vertical pole is clearly infeasible, so it must be a force of less than 1 g.
+Sitting on a pole at a 45 degree angle is doable, however.
+This pits you against a force along the pole of sqrt(1/2) g.
+Call this 0.7 g, and assume it is the limit.
+
+Hanging from a vertical pole, with arms and legs, is feasible, suggesting a force of at least 1 g.
+Asking a few people suggests they might be able to support around 1.4 times their own body weight in such a way, for a while.
+Allowing that a witch braces her feet against the bristles, assume she can sustain this for a while, and take a limit of 1.4 g.
+
+Take an average weight woman of around 60 kg.
+Taking g to be 9.8 metres per second, this gives force limits of 68.6 newtons for a sidesaddle witch, and 177.2 newtons for a witch astride.
+
+Sidesaddle:
+68.6 = 0.42 * v^2
+v = sqrt(68.6/0.42)
+v = 12.8 m/s
+46 km/h
+
+Astride:
+177.2 = 0.0756 * v^2
+v = sqrt(177.2/0.0756)
+v = 48.4 m/s
+174 km/h
+
+Rounding both of these, we can take figures of 50 and 150 kilometres per hour.
+Using a very rough conversion of 10 km/h to 3 m/s, this gives 15 and 45 m/s, or 150 and 450 metres per round.
