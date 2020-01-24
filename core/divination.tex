@@ -552,36 +552,32 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	If you wish, you can shorten the period of time you are searching; for example, you can look for it only within the next hour.
 }
 
-\feat{Portentous Place}{foresight-aim-location}{20}{
+\feat{Omens of Self}{foresight-aim-self}{10}{
 	\skillref[1]{divination},
 	\featref{vision-scrying},
 	\featref{scrying-speed},
 	\featref{foresight-entrails} or \featref{foresight-chance}
 }{
-	You may use omens not just to search for a time for your \featref{foresight}, but also a place.
+	Rather than using omens to search the future of the place you currently stand, you can use them to search your own future.
 	To do this, you must be using \featref{vision-scrying} to begin \featref{foresight} through a scrying surface, and you must be using a feat such as \featref{foresight-entrails}, \featref{foresight-birds}, or \featref{foresight-chance} to select a time for your {\vision}.
 	
-	If you use this, you select an area within your scrying range to search, as well as a time ahead.
-	For example, you might search within a given castle, or the entire area within your kilometre scrying range.
-	When your \featref{foresight} {\vision} starts, the scrying sensor is automatically refocussed to the location of the event.
+	Instead of searching for an event in the place your scrying sensor is currently positioned, this searches for an event that occurs wherever \emph{you} are in the future.
+	When your {\vision} starts, the scrying sensor is automatically refocussed to the location of the event; that is, your location at the time of the event.
 	This will never focus upon an event that happens outside your scrying range.
 	
-	For example, if you used this with \featref{foresight-entrails}, you might search for the most violent event upcoming within a day, and within a kilometre of you.
-	If you use this with \featref{foresight-chance}, and fail, both the time and place you see are random.
+	For example, if you used this with \featref{foresight-entrails}, it would focus on the most violent even that occurs to you within the time period you search.
+	If you use this with \featref{foresight-chance}, and fail, it still focuses on your position at the random time you see.
 }
 
-\feat{Portentous Person}{foresight-aim-location-taglock}{10}{
-	\skillref[1]{divination},
-	\featref{foresight-aim-location},
+\feat{Omen Tracing}{foresight-aim-taglock}{15}{
+	\skillref[2]{divination},
+	\featref{foresight-aim-self},
 	\featref{divination-taglock-location}
 }{
-	Using a \materialref{taglock}, you may seek {\visions} of what is to befall a person.
-	When you use \featref{foresight-aim-location}, you may select a person or creature, rather than area, by using a \materialref{taglock} from them.
-	This searches for events within their vicinity, even as they move around in the future.
-	For example, using \featref{foresight-entrails}, you may search for the next violent event to befall the person.
-	You may even use a \materialref{taglock} from yourself, to search your own future.
-	
-	This will still never focus on an event that happens outside your scrying range.
+	Using a \materialref{taglock}, you may seek {\visions} of what is to befall another person.
+	When you use \featref{foresight-aim-self}, you may select a person or creature for whom you have a \materialref{taglock}, rather than yourself.
+	This searches for events in their vicinity, wherever they are in the future, and focuses the scrying sensor upon them.
+	It will still never focus on an event that happens outside your scrying range.
 }
 
 \feat{Fast Foresight}{foresight-speed}{10}{
