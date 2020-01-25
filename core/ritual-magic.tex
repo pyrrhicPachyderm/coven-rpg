@@ -306,6 +306,23 @@ Each circle may only have one {\augmentation}; one more leaves too many overlapp
 	If you do this, the ritual excavates to a depth of 20 metres.
 }
 
+\feat{Rite of Refill}{ritual-dig-reverse}{10}{
+	\featref{ritual-dig}
+}{
+	The material destroyed by the \featref{ritual-dig} is not gone forever.
+	The potential to return remains, and you can use another ritual to call it back into existence, and refill the hole.
+	
+	\materials{A \materialref{ritual-circle} filling the bottom of the hole, a trowel, a trowelful of the same material originally excavated}
+	
+	This ritual can only be performed in a hole originally excavated using the \featref{ritual-dig}.
+	It requires only an {\action}, as you throw the trowelful of material into the \materialref{ritual-circle}.
+	Immediately, all the material that was originally excavated returns, filling the hole.
+	Anything inside the hole is buried, so you should perform the ritual from outside the hole.
+	The \materialref{ritual-circle} is also buried, rendering it useless.
+	
+	Refilling a hole created using \featref{ritual-dig-2} requires a shovel, and a shovelful of material.
+}
+
 \feat{Rite of Launching}{ritual-launch}{10}{
 	\noprereq
 }{
