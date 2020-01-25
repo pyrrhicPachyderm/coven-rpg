@@ -111,14 +111,31 @@ Each circle may only have one {\augmentation}; one more leaves too many overlapp
 	You may do so from either side of the barrier.
 }
 
-\feat{Circle Bypass}{circle-barrier-bypass}{15}{
-	\skillref[1]{ritual-magic},
+\feat{Circle Bypass}{circle-barrier-bypass}{10}{
 	\featref{circle-barrier-break}
 }{
-	When you use \featref{circle-barrier-break}, you can hold your circles' barriers open temporarily, instead of breaking them entirely.
-	If you do so barrier disappears for only as long as you hold the knife in it---you may retract it later in the same {\turn}, or hold it open for several minutes.
-	After you remove the knife, the barrier comes back up, as long as it has remaining duration.
-	You must remain holding the knife; the effect ends if you let it go.
+	Instead of breaking your circles' barriers, you can just flicker them down temporarily.
+	When you use \featref{circle-barrier-break}, you may drop the barrier only temporarily.
+	It automatically comes back up after 1 {\round}.
+}
+
+\feat{Bypass Flicker}{circle-barrier-bypass-short}{10}{
+	\skillref[1]{ritual-magic},
+	\featref{circle-barrier-bypass}
+}{
+	When you use \featref{circle-barrier-bypass}, you can flicker the barrier down only very briefly, reducing the chance someone can follow you.
+	If you do so, the barrier automatically comes back up at the end of the {\turn}.
+	Anyone prepared to pass through---having taken the \actionref{ready} {\action}, in {\structuredtime}---can still do so before it comes back up.
+}
+
+\feat{Bypass Holder}{circle-barrier-bypass-long}{10}{
+	\skillref[1]{ritual-magic},
+	\featref{circle-barrier-bypass}
+}{
+	When you use \featref{circle-barrier-bypass}, you can hold the barrier down for longer, allowing more time to pass through.
+	The barrier remains down as long you hold the knife in it---possibly for minutes, or hours.
+	You must remain holding the knife; it doesn't work if you let it go.
+	Unless you use \featref{circle-barrier-bypass-short}, the barrier still always stays down at least one {\round}.
 }
 
 \feat{Back Door}{circle-barrier-bypass-door}{10}{
