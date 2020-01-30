@@ -108,13 +108,11 @@ An undead creature is no longer an animal at all.
 	You may make \emph{every} \featref{animal-companion} a \featref{animal-companion-feral}, if you wish.
 }
 
-\feat{Beast Whisperer}{animal-language}{10}{
+\feat{Beast Whisperer}{animal-language}{15}{
 	\skillref[1]{animals}
 }{
 	Through observations of you own interactions with your familiar, you've learned to establish a similar, albeit lesser, form of communication with other animals.
-	Establishing such a language takes at least a week's training, although you can train a handful of similar animals at once.
-	Such training is only possible with an animal that is trained or domesticated outside of this, or at least in the process of becoming so.
-	An \featref{animal-companion} is automatically considered to have this training.
+	However, this only works with animals that already have some familiarity with humans: {\nonwild} animals.
 	
 	The ``language'' this establishes is rather rudimentary.
 	It's a mixture of gestures, sounds, and body language, and it takes quite some time to convey any complexity.
@@ -131,8 +129,7 @@ An undead creature is no longer an animal at all.
 	\featref{animal-language}
 }{
 	As you learn to think like an animal, you're becoming better at talking like one too.
-	You may communicate with even untrained animals through the same ``language'' provided by \featref{animal-language}.
-	This requires that the animal is receptive and paying attention to you.
+	You may communicate with even {\wild} animals through the same ``language'' provided by \featref{animal-language}.
 }
 
 \feat{Critter-Chatter}{animal-language-speed}{15}{
@@ -141,16 +138,6 @@ An undead creature is no longer an animal at all.
 }{
 	With more expressive body language and better impressions of animal noises, you can speed up your communications.
 	You can use the ``language'' provided by \featref{animal-language} to convey information at about the same speed as speech.
-}
-
-\feat{Bark and Squawk}{animal-language-3}{10}{
-	\skillref[3]{animals},
-	\featref{animal-language-2},
-	\featref{animal-language-speed}
-}{
-	By barking, roaring, and squawking loudly enough, you can convey your meaning to even an oncoming bear.
-	You might not convince him to stop, but you can certainly \emph{try}.
-	You can use the ``language'' provided by \featref{animal-language} to communicate with even unreceptive animals, if you can attract their attention.
 }
 
 \feat{Clever Boy}{animal-intelligence}{20}{
@@ -340,6 +327,6 @@ However, you will sometimes be able to train an unskilled familiar, in order to 
 	Just as you have learned to communicate with animals, you have taught your familiar to.
 	It ought to be easier---it's nearly an animal itself, after all!
 	
-	Your familiar gains the benefit of \featref{animal-language}, although it communicates with the animals \emph{you} have trained---it cannot teach the ``language'' itself.
-	If you also have \featref{animal-language-2}, \featref{animal-language-speed}, or \featref{animal-language-3}, your familiar gains the benefit of those as well.
+	Your familiar gains the benefit of \featref{animal-language}.
+	If you also have \featref{animal-language-2} or \featref{animal-language-speed}, your familiar gains the benefit of those as well.
 }
