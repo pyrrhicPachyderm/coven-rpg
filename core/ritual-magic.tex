@@ -670,10 +670,19 @@ Each circle may only have one {\augmentation}; any more leave too many overlappi
 	This ritual cannot be used on the same object again until it has returned to its original size.
 }
 
-\feat{Drastic Scaling}{ritual-size-more}{20}{
-	\skillref[2]{ritual-magic},
-	\featref{ritual-shrink} or \featref{ritual-grow}
+\feat{Larger Scaling}{ritual-size-larger}{10}{
+	\feat{ritual-shrink} or \feat{ritual-grow}
 }{
-	By substituting a \circleref{large} (no larger) for the \circleref{medium} in the \featref{ritual-shrink} or \featref{ritual-grow}, you may double the ritual's effect.
+	The size of the \materialrefplural{ritual-circle} used in the \feat{ritual-shrink} and \feat{ritual-grow} limit the size of the objects that may be affected.
+	Enlarging both circles, you may affect larger objects.
+	You may substitute the \circleref{small} for a \circleref{medium} (no larger), and the \circleref{medium} for a \circleref{large} (no larger), in the \feat{ritual-shrink} or \feat{ritual-grow}.
+	If you make one substitution, you must make both.
+}
+
+\feat{Drastic Scaling}{ritual-size-more}{15}{
+	\skillref[2]{ritual-magic},
+	\featref{ritual-size-larger}
+}{
+	Building on \featref{ritual-size-larger}, you may use a \circleref{small} (no larger) and a \circleref{large} (no larger) in the \featref{ritual-shrink} or \featref{ritual-grow}, and in doing so, double the ritual's effect.
 	The target's size changes by a factor of 4 in all dimensions, and its weight changes by a factor of 64.
 }
