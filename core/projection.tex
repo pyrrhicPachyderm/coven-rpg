@@ -763,21 +763,6 @@ Note, however, that the attempt to establish an {\overtinterface} can be used to
 	On the other hand, the GM may also help you to hatch a plan---perhaps a quest---for resurrecting your character's body, or finding them a new one.
 }
 
-\feat{Phylactery Lifeline}{projection-lifeline-phylactery}{20}{
-	\skillref[1]{projection},
-	\skillref[1]{necromancy},
-	\featref{projection-lifeline-familiar-2},
-	\featref{phylactery}
-}{
-	Much as you share a {\lifeline} to the shard of soul in your familiar, you may connect one to another shard tucked elsewhere, in a {\phylactery}.
-	You can sense a third {\lifeline}, leading to your {\phylactery}, if you have one.
-	
-	You may sense this {\lifeline} at the same range you can sense your original.
-	If you are outside your body when it dies, this {\lifeline} also serves to keep your mind alive, regardless of distance.
-	As such, your mind may continue to survive as long as any one of your own body, your familiar, or your {\phylactery} is alive or intact.
-	Combined with the ability to {\possess} people, this may even allow you to reanimate your own body from your {\phylactery}.
-}
-
 \feat{Lifeline Hunting}{projection-lifeline-other}{10}{
 	\featref{projection-lifeline}
 }{
@@ -794,12 +779,27 @@ Note, however, that the attempt to establish an {\overtinterface} can be used to
 	\featref{projection-lifeline-other},
 	\featref{projection-lifeline-familiar}
 }{
-	While you have a {\subtleinterface} with another mind, you can sense {\lifelines} other than its primary, at the same range you can sense your own.
+	While you have a {\subtleinterface} with another mind, you can sense any {\lifelines} other than its primary, at the same range you can sense your own.
 	First and foremost, you can sense a {\lifeline} from a witch to her familiar, or from a familiar to its witch.
 	You gain this sense regardless of whether the witch herself can sense her {\lifeline} to her familiar.
 	
-	If you also have \featref{projection-lifeline-phylactery}, you can sense a {\lifeline} from a mind to its {\phylactery}.
-	This works regardless of whether the mind has the \featref{projection-lifeline-phylactery} feat, just as long as it has a {\phylactery}.
+	Some creatures may have other non-primary {\lifelines}, at the GM's discretion.
+	You can also sense these, whether or not the creature itself can.
+}
+
+\feat{Phylactery Projection}{projection-phylactery}{20}{
+	\skillref[1]{projection},
+	\skillref[1]{necromancy},
+	\featref{phylactery-self}
+}{
+	Being trapped in a {\phylactery} is normally rather crippling, much akin to being dead.
+	With discipline, however, you may separate the death of your mind from the death of your body, and remain active in the {\mentalrealm} even while your {\soul} resides in a {\phylactery}.
+	
+	While your {\soul} is in a {\phylactery}, you may enter the {\mentalrealm} from your {\phylactery} as through it were your body.
+	You may also use feats such as \featref{projection-mental-realm-sense}.
+	
+	While in this state, your primary {\lifeline} connects to your {\phylactery}.
+	This is the one you can sense and follow with \featref{projection-lifeline}, and the ones others sense with \featref{projection-lifeline-other}.
 }
 
 \feat{Shards of My Mind}{projection-golemancy}{10}{
