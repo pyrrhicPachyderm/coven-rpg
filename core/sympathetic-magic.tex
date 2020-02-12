@@ -30,18 +30,9 @@ As such, leaving {\symbols} lying around is a slightly dangerous proposition.
 There are several methods for establishing a {\symlink}.
 A witch with any \discref{sympathetic-magic} feat learns to one method, described here, while some feats will grant other methods.
 
-The simplest method for establishing a {\symlink} actually relies upon a trick of \discref{headology}.
-The target must be \emph{expecting} the link, allowing the witch the opportunity to fasten it in place.
-As such, at first, the witch can only establish {\symlinks} with people as the target, using a \materialref{poppet} or \materialref{effigy} as the {\symbol}.
-
-Establishing the link requires an {\action}.
-The target must see the {\symbol}, and the witch must declare to the target that she is binding them together.
-Many witches adopt a standard incantation for this, often some piece of mumbo jumbo that suits the mystique they wish to cultivate.
-The important thing is that the target understands the intent---that they are \emph{convinced} by it is not so important as in ``true'' \discref{headology}.
-
-The target's expectation provides a hook that the witch may fasten the {\symlink} to.
-If the target welcomes the {\symlink}, this is easy---it is established automatically and remains in place indefinitely.
-Otherwise, establishing the link requires a \testtype{wit}{sympathetic-magic} Test {\opposed} by the target's \testtype{will}{sympathetic-magic}.
+The simplest method for establishing a {\symlink} simply requires touching the {\symbol} to the target.
+At first, the witch can only establish {\symlinks} with people and creatures as the target, using a \materialref{poppet} or \materialref{effigy} as the {\symbol}.
+She must touch the {\symbol} to the target, using an {\action}, to establish the {\symlink}.
 
 \subsection{Severing a Sympathetic Link}
 \seclabel{break-sympathetic-link}
@@ -55,7 +46,7 @@ It automatically breaks after a minute, but can be broken sooner if it is {\stre
 This applies even if the creature previously accepted the link, but now wants rid of it.
 
 Some uses of a {\symlink} will cause it considerable {\stress}, giving an unwilling creature another chance to dislodge the link.
-In this case, repeat the Test used to establish a link---your \testtype{wit}{sympathetic-magic} {\opposed} by the target's \testtype{will}{sympathetic-magic}.
+In this case, make a \testtype{wit}{sympathetic-magic} Test {\opposed} by the target's \testtype{will}{sympathetic-magic}.
 If the target wins the Test, the {\symlink} is broken.
 Actions that {\stress} a link will say so in their relevant feats.
 
@@ -70,15 +61,14 @@ Actions that {\stress} a link will say so in their relevant feats.
 	
 	By using an \materialref{effigy} in the likeness of the target as the {\symbol}, the {\symlink} does not expire over time, even when resisted.
 	However, this does not allow it to resist {\stress}.
-	This still requires the usual Test to establish the link in the first place.
 }
 
 \feat{Taglock Binding}{symlink-taglock}{20}{
 	\skillref[1]{sympathetic-magic},
 	\anyfeat{sympathetic-magic}
 }{
-	Normally, the hook to fasten a {\symlink} in place is provided by the target's \emph{expectation} of a link.
-	This is the simplest and strongest way, but not the only one.
+	Normally, contact between the {\symbol} and target is required to establish a {\symlink}.
+	You have learned to use only a \emph{piece} of the target for this purpose, though the resulting link is not as strong.
 	
 	You can establish {\symlinks} to creatures, using a \materialref{taglock}, and a \materialref{poppet} or \materialref{effigy} as the {\symbol}.
 	Establishing the {\symlink} uses an {\action}, while touching the \materialref{taglock} and the {\symbol}.
@@ -345,7 +335,8 @@ Actions that {\stress} a link will say so in their relevant feats.
 
 \feat{Threading the Barrier}{sympathetic-ignore-barrier-2}{10}{
 	\skillref[3]{sympathetic-magic},
-	\featref{sympathetic-ignore-barrier}
+	\featref{sympathetic-ignore-barrier},
+	\featref{symlink-taglock}
 }{
 	If air can pass a magical barrier, why not a {\symlink}.
 	It's just like threading a needle: it takes a bit of dexterity and your eyesight better be good, but it's hardly \emph{impossible}.
