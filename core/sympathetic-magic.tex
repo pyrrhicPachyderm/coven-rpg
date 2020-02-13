@@ -79,6 +79,13 @@ In this case, there is no risk of it breaking.
 	By using an \materialref{effigy} in the likeness of the target as the {\symbol}, the {\symlink} does not expire over time, and will last indefinitely.
 }
 
+\feat{Stability in Contagion}{symlink-stable-duration}{10}{
+	\anyfeat{sympathetic-magic}
+}{
+	By spending longer establishing a {\symlink}, you can make it last for longer too.
+	If you touch the {\symbol} to the target for 5 minutes when using the {\methodofcontagion}, the resulting {\symlink} does not expire over time---it lasts indefinitely.
+}
+
 \feat{Taglock Binding}{symlink-taglock}{20}{
 	\anyfeat{sympathetic-magic}
 }{
@@ -222,13 +229,13 @@ In this case, there is no risk of it breaking.
 	As long as the {\symbol} rests for at least 8 hours each day, the target can get by on only 1 hour of sleep each day without any ill effects.
 	However, the target does not recover from {\damage} and {\exhaustion} as a result of this rest.
 	
-	Note that {\symlinks} only last 10 minutes, so unless you use \featref{symlink-stable-effigy}, you will need to keep refreshing the link throughout the night.
+	Note that {\symlinks} only last 10 minutes, so unless you use \featref{symlink-stable-effigy} or \featref{symlink-stable-duration}, you will need to keep refreshing the link throughout the night.
 }
 
 \feat{Sympathetic Insomnia}{sympathetic-sleep-deprive}{15}{
 	\skillref[1]{sympathetic-magic},
 	\featref{sympathetic-sleep},
-	\featref{symlink-stable-effigy}
+	\featref{symlink-stable-effigy} or \featref{symlink-stable-duration}
 }{
 	By keeping a {\symbol} awake, you can deprive its target of restful sleep.
 	If the {\symbol} is subjected to loud noises, bright lights, stony bedding, or other significant discomforts while the target sleeps, the sleep will be fitful and restless.
@@ -239,7 +246,7 @@ In this case, there is no risk of it breaking.
 \feat{Sympathetic Narcolepsy}{sympathetic-sleep-cause}{15}{
 	\skillref[1]{sympathetic-magic},
 	\featref{sympathetic-sleep},
-	\featref{symlink-stable-effigy}
+	\featref{symlink-stable-effigy} or \featref{symlink-stable-duration}
 }{
 	\capital{\featref{sympathetic-sleep}} lets a {\symbol} sleep instead of the target.
 	You've reversed this, and may instead let the {\symbol} send the target to sleep.
