@@ -36,17 +36,37 @@ It simply requires touching the {\symbol} to the target, using an {\action}.
 At first, the witch can only establish {\symlinks} with people and creatures as the target, using a \materialref{poppet} or \materialref{effigy} as the {\symbol}.
 
 \subsection{Severing a Sympathetic Link}
-\seclabel{break-sympathetic-link}
 
 Once established, a {\symlink} remains in place for about 10 minutes.
 A witch can sever one of her own {\symlinks} earlier, as an {\action}, or as part of establishing any new {\symlink}.
 Additionally, a {\symlink} is severed if the {\symbol}, the target, or the witch who established the link dies, or is destroyed.
 
+\subsection{Stress and Strength}
+\seclabel{stress-sympathetic-link}
 
-Some uses of a {\symlink} will cause it considerable {\stress}, giving an unwilling creature another chance to dislodge the link.
-In this case, make a \testtype{wit}{sympathetic-magic} Test {\opposed} by the target's \testtype{will}{sympathetic-magic}.
+Many uses of \discref{sympathetic-magic} are passive, and can be constantly transmitted along a {\symlink}.
+Others are more sudden, causing an instantaneous effect upon the target.
+Some of the more potent instantaneous effects can overwhelm a {\symlink}, {\stressing} it.
+Uses of a {\symlink} that {\stress} it will say so in their relevant feats.
+
+\capital{\symlinks} established by different methods differ in their strength---their responses to {\stress}.
+A {\symlink} is either {\weaksymlinkbare}, {\standardsymlinkbare}, or {\strongsymlinkbare}.
+\capital{\symlinks} established by the {\methodofcontagion} are {\standardsymlinkbare}.
+
+A {\weaksymlink} cannot handle {\stress}.
+Not only does {\stress} immediately break the {\symlink}---it utterly fails to transmit any effect that would {\stress} it.
+Note that you can always try not to transmit anything that \emph{would} {\stress} the link, in order to avoid breaking it.
+
+A {\strongsymlink} is the opposite; it is immune to any ill effects of {\stress}.
+It transmits any effect that would {\stress} it, with no chance of breaking.
+Having a {\strongsymlink} to a target can put them almost entirely at your mercy.
+
+A {\standardsymlink} lies in between.
+It will always transmit any effect that would {\stress} it, but it risks breaking afterwards.
+Make a \testtype{wit}{sympathetic-magic} {\opposed} by the target's \testtype{will}{sympathetic-magic}.
 If the target wins the Test, the {\symlink} is broken.
-Actions that {\stress} a link will say so in their relevant feats.
+However, if the target is aware of the {\symlink}, and wishes to maintain it, they can help you to hold it in place.
+In this case, there is no risk of it breaking.
 
 \section{Feats}
 
@@ -69,10 +89,7 @@ Actions that {\stress} a link will say so in their relevant feats.
 	
 	You can establish {\symlinks} to creatures, using a \materialref{taglock}, and a \materialref{poppet} or \materialref{effigy} as the {\symbol}.
 	Establishing the {\symlink} uses an {\action}, while touching the \materialref{taglock} and the {\symbol}.
-	
-	{\symlinks} fastened in this way are weaker.
-	Anything that would {\stress} the link---or destroy it, as with \featref{sympathetic-damage}---simply snaps the {\symlink} without taking effect.
-	Remember, however, that you can always choose not to try and transmit anything that would {\stress}, and hence break, the link.
+	However, this creates a {\weaksymlink}.
 }
 
 \feat{Link Reversal}{symlink-reverse}{10}{
