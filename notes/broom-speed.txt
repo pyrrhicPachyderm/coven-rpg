@@ -40,7 +40,7 @@ I dropped a factor of 6 in the force limit calculations, giving final speeds a f
 These speeds give most people a nice modern-day sense, and work quite well from a balance sense, as well as seeming far more reasonable.
 So I will use these speeds.
 A factor of a little over 2 is easily explainable as problems with speed wobble, as these calculations haven't accounted for the effect of air resistance on balance anyway.
-Lastly, I can note that Tests can increase speed up to about double, making the limits calculated here more hard limits.
+Lastly, I can note that tests can increase speed up to about double, making the limits calculated here more hard limits.
 
 Rounding these, we can take figures of 50 and 150 kilometres per hour.
 Using a very rough conversion of 10 km/h to 3 m/s, this gives 15 and 45 m/s, or 150 and 450 metres per round.
