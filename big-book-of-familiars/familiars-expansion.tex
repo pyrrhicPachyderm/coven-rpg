@@ -191,3 +191,30 @@
 		%TODO: Tie this into grappling rules, if they exist?
 	}
 }
+
+\familiar{Squirrel}{Squirrels}{squirrel}{5}{
+	\atttable{\negative 3}{1}{2}{1}{2}{2}{1}{0}
+}{
+	\speed{12}
+}{
+	\skillref[1]{athletics}
+}{
+	\capital{\familiarrefplural{squirrel}} are best known for their nut-hoarding, and often attract witches with similar tendencies.
+	They have an excellent spatial memory, as well as being very fast climbers.
+}{
+	\ability{Climber}{
+		The \familiarref{squirrel} can climb vertical surfaces at its full \statref{speed}.
+		It does not require a {\test} unless the surface is smooth and hard, such as metal.
+	}
+	
+	\ability{Scatter-Hoarder}{
+		The \familiarref{squirrel} rolls 2 extra dice on {\tests} to recall locations.
+	}
+	
+	\familiaroption{Flying Squirrel}{5}{
+		The \familiarref{squirrel} gains \skillref[1]{flying}, and can glide when it leaps from high places.
+		It can travel a horizontal distance equal to twice the height it falls from.
+		It suffers no {\damage} from a fall as long as it is conscious and unrestrained.
+		%Glide ratio of ~2: https://doi.org/10.1644/1545-1542(2001)082<1026:GPOTNF>2.0.CO;2
+	}
+}
