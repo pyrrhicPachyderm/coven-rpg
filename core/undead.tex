@@ -1,0 +1,216 @@
+\chapter{Mortuary}
+\chaplabel{undead}
+
+\section{Effects of Undeath}
+
+The statistics and capabilities of an undead creature are based upon those of the creature whose corpse it is raised from.
+However, each variety of undead comes with its own associated changes to these statistics, listed in the following sections.
+Nonetheless, many changes are shared between all reanimated creatures, and are listed here.
+
+Most reanimations do nothing to heal {\damage} to the corpse: both {\damage} suffered before and during death, and any further {\damage} done to the corpse since then.
+If this reduces its \statref{shock-threshold} to 0 or below, the corpse is too mangled to successfully reanimate.
+Some reanimations also require an unrotted corpse.
+It usually takes a little over a week before a corpse becomes too rotted for such a reanimation, although temperature and moisture can alter this.
+Corpses can be preserved by {\embalming}.
+
+A reanimated creature loses its memory and identity.
+It retains general knowledge such as how to hunt, but forgets such information as the location of its den, and loses any mannerisms that distinguished it in life.
+It retains {\generalskills}, but loses {\specialityskills}, {\disciplineskills}, and feats.
+
+Most reanimated creatures also lack many biological processes that they had in life.
+They do not need to breathe, eat, drink, or sleep.
+They are immune to poisons, diseases, and the like.
+Additionally, they cannot heal themselves or be healed, and are unaffected by potions and such.
+They do not suffer from {\shock}, and are simply deanimated if they suffer a {\damagetest} equalling or exceeding their \statref{shock-threshold}.
+They still suffer from {\exhaustion}, although they don't need sleep to recover from it; just rest.
+Lastly, they cannot produce any venom or other such substances, so any benefit of a venomous bite, sting, or the like is lost.
+
+\section{Types of Undead}
+
+\undead{Zombie}{Zombies}{zombie}{
+	A \undeadref{zombie} is the simplest reanimation possible; the corpse, fully clothed in its own flesh, is simply stood up and walked around as it is.
+	Is it a clumsy creature, with most of the mind rotted away as well, and it only grows worse as the corpse rots further.
+	
+	A corpse reanimated as a \undeadref{zombie} loses 2 points from all attributes except \attref{might} and \attref{will}.
+	Its \statref{speed} is halved.
+	Its \statref{shock-threshold} increases by 2, however.
+	If it could fly, it is now too clumsy to do so.
+	
+	A corpse reanimated as a \undeadref{zombie} is not healed of any {\damage}.
+	The reanimation also requires that the corpse is unrotted.
+	Furthermore, it does nothing to slow the rot.
+	A \undeadref{zombie} that rots too far loses animation.
+}
+
+\undead{Ghoul}{Ghouls}{ghoul}{
+	A \undeadref{ghoul} retains greater mental and physical faculties than a \undeadref{zombie}, but this comes at a dangerous price.
+	A \undeadref{ghoul} is sustained only by consuming the flesh of its own kind.
+	For example, a rabbit \undeadref{ghoul} must consume rabbit flesh, and a human \undeadref{ghoul} must consume human flesh.
+	
+	A corpse reanimated as a \undeadref{ghoul} loses 2 points from its \attref{ken}, \attref{wit}, and \attref{charm} scores.
+	It retains the ability to fly, if it could in life.
+	
+	A corpse reanimated as a \undeadref{ghoul} is not healed of any {\damage}.
+	However, an animated \undeadref{ghoul} may heal {\damage} by consuming the flesh of its own kind.
+	An entire corpse is sufficient to restore {\damage} equal to its maximum \statref{shock-threshold}, with smaller portions restoring proportionally smaller amounts.
+	A ghoul can consume an entire corpse in less than a minute, and there is no end to its hunger: it could consume corpses for hours on end without being sated.
+	\undeadrefplural{ghoul} created from partial corpses, such as with \featref{undead-head}, need only eat their own mass to count it as a full corpse.
+	
+	Reanimating a corpse as a \undeadref{ghoul} also requires that it is unrotted.
+	While animated and fed at least one full corpse each week, however, a \undeadref{ghoul} does not continue to rot.
+	
+	Lastly, a \undeadrefpossessive{ghoul} unnatural hunger makes it harder to control than most undead.
+	It must be fed a full corpse at least once a week, or it always breaks free of the \practitionerpossessive{necromancy} control.
+	Even a \undeadref{ghoul} reanimated as a \undeadref{souled} is not immune to this: it goes insane with hunger after a week, and does not return to sanity until it has fed again.
+}
+
+\undead{Draugr}{Draugar}{draugr}{
+	With all the moisture drawn out of a corpse, it is not only prevented from rotting, but can also be freed from the bloated clumsiness that afflicts \undeadrefplural{zombie}.
+	The result is a \undeadref{draugr} (plural \undeadrefplural{draugr}).
+	The better preservation also grants it a better memory and senses.
+	
+	A corpse reanimated as a \undeadref{draugr} loses 2 points from its \attref{wit}, \attref{charm}, and \attref{presence} scores.
+	It retains the ability to fly, if it could in life.
+	
+	A corpse reanimated as a \undeadref{draugr} is not healed of any {\damage}.
+	The reanimation requires that the corpse is unrotted, and it also must be {\embalmed} by desiccation (drying out).
+	This usually is usually done using salt, but can happen naturally to creatures that die in deserts.
+	
+	To remain animated, the \undeadref{draugr} must be kept dry; water bloats the corpse, starts it rotting again, and immediately ends its animation.
+	It might manage a 30 second sprint through light rain, but heavier rain is too much.
+	Given a heavy leather coat, it might just about be able to travel through rain, but the moisture will still get to it in a couple of hours.
+	The \undeadref{draugr} is aware of this limitation, and will avoid moisture when not under a \practitionerpossessive{necromancy} direct control.
+	
+	\undeadrefplural{draugr} are often used to guard ancient tombs, sealed inside where water cannot intrude.
+}
+
+\undead{Sea-Draugr}{Sea-Draugar}{sea-draugr}{
+	The \undeadrefplural{sea-draugr} are, in many ways, the complete opposite of the regular \undeadrefplural{draugr}.
+	Creatures of seas and lakes, they can only be animated from the corpses of those who died by drowning.
+	They revel in their water-bloated flesh, lurking beneath the surface and dragging their prey to join them in their watery grave.
+	
+	A \undeadref{sea-draugr} is subject to the same rules as a regular \undeadref{draugr}.
+	It also gains a swimming speed equal to its land speed, or half its flying speed, whichever is greater.
+	
+	However, instead of remaining dry, an \undeadref{sea-draugr} must remain soaked.
+	It functions best when immersed in water, and begins to weaken about five minutes after it emerges.
+	After about ten minutes, it dries out too much and completely loses animation.
+	
+	Regular wetting can extend this time; it might get half an hour in rain, or even an indefinite time if the rain is sufficiently torrential.
+	\emph{Continuous} attention using \featref{willing-water-vapour}, or a couple of uses of \featref{willing-water-vapour-2} every 5 minutes, also suffices.
+	However, it must be completely immersed for at least 8 hours each day.
+	Just like a \undeadref{draugr}, a \undeadref{sea-draugr} is aware of this limitation, and will seek out water.
+	
+	As long as the corpse remains animated as a \undeadref{sea-draugr}, and sufficiently wetted, it will not continue to rot.
+}
+
+\undead{Skeleton}{Skeletons}{skeleton}{
+	A \undeadref{skeleton} is the result of reanimating only the bones of a creature, the flesh rotted or carved away.
+	The bones arrange themselves in the air, supported by nothing but the will of the animating witch, and the creature's conviction in its own shape.
+	The result is a creature far less clumsy than a zombie, but not so resilient.
+	
+	A corpse reanimated as a \undeadref{skeleton} loses 2 points from all attributes except \attref{grace} and \attref{will}.
+	Its \statref{shock-threshold} is also reduced by 2, in addition to the loss from the reduced \attref{might}.
+	The mere bones of wings are not sufficient to allow it to fly, if it previously could.
+	It also sinks in water, but may move along the bottom.
+	
+	Requiring only the bones, a \undeadref{skeleton} is not affected by most {\damage} sustained by the corpse.
+	Only a critical success on a {\damagetest}, or an intentional effort after death, will typically have broken any bones.
+	Likewise, it is not affected by {\damage} in the course of its undeath; any blow insufficient to scatter it across the floor is insufficient to scratch its bones.
+	
+	A \undeadref{skeleton} lasts a long time without decomposing; at least a decade, and even longer if kept dry.
+}
+
+\undead{Living Fossil}{Living Fossils}{fossil}{
+	A \undeadref{fossil} is much like a \undeadref{skeleton}, except that the bones have been mineralised, impregnated with stone.
+	The essence of earth permeates the creature, strengthening it.
+	
+	A \undeadref{fossil} uses the same rules as a \undeadref{skeleton}, except that its \attref{might} is not reduced.
+	Additionally, fossilised bones do not decay, lasting millennia and more.
+}
+
+\undead{Blazing Skeleton}{Blazing Skeletons}{fire-skeleton}{
+	A \undeadref{fire-skeleton} can only be made from the charred bones of a creature that died burning.
+	Flames race across its bones as it walks, and its eye sockets blaze like the sun.
+	It spreads destruction wherever it steps, leaving fire and ash in its wake.
+	
+	A \undeadref{fire-skeleton} mostly uses the same rules as a \undeadref{skeleton}, with a handful of differences.
+	Firstly, the bones used to animate must be charred by fire.
+	This should not be enough to totally destroy the bones, but even badly fire-damaged bones have no ill effects on the resulting \undeadref{fire-skeleton}.
+	
+	Secondly, the \undeadref{fire-skeleton} always burns, as long as it is animated.
+	It burns without fuel, and without damaging itself---in fact, it is immune to all harm from fire and heat.
+	The fire goes out if the \undeadref{fire-skeleton} loses animation.
+	Conversely, the \undeadref{fire-skeleton} loses animation if the fire is extinguished, such as by being immersed in water.
+	The fire is somewhat robust, however; it can survive moderate rain, simply causing the droplets to boil away.
+	
+	The \undeadrefpossessive{fire-skeleton} flames produce heat, and can combust things, just like normal flame.
+	They will ignite most combustible materials they touch.
+	A \undeadrefpossessive{fire-skeleton} {\unarmed} attacks also {\ignite} the target, at \dice{2}, or add 1 die of {\fire} to a target who is already burning.
+}
+
+\undead{Shade}{Shades}{shade}{
+	While it is truly an undead, a reanimated corpse, a \undeadrefplural{shade} bears some resemblance to {\ghosts}.
+	It shares some of their insubstantial nature, being a part of this realm, but not truly a creature of it.
+	It always appears to be wreathed in shadow, and every part of it is dark: black or grey.
+	Its facial features are indistinct, or even absent.
+	
+	Although it is formed from a creature's body, a \undeadref{shade} is insubstantial.
+	It often finds its fingers passing straight through objects, like shadows flitting over them.
+	Although this makes it harder to affect the world, it also affords the \undeadref{shade} a degree of protection.
+	Swords can pass right through it, without even disturbing it.
+	
+	Light, however, brings the \undeadref{shade} form, clarity.
+	This makes it vulnerable.
+	Worse still, sunlight can burn it away entirely, destroying it.
+	
+	A \undeadref{shade} loses 2 points from its \attref{ken}, \attref{charm}, and \attref{presence} scores.
+	Furthermore, its insubstantial nature causes it to lose 5 points from its \attref{might} score.
+	However, it suffers no penalties to vision in low-light conditions, or even complete darkness.
+	And, in complete darkness, it is immune to all physical harm.
+	
+	Light, even dim light, makes the \undeadref{shade} vulnerable again.
+	If the light falls only on part of its body, only that part is vulnerable.
+	Sunlight, however, is worse.
+	The \undeadref{shade} suffers a \dice{5} {\damagetest} every {\round} that it is exposed to direct sunlight.
+	Reducing exposure can reduce the number of dice rolled for the {\damagetest}, but even if it wrapped entirely in thick black cloth, leaving just its eyes exposed so that it might see causes it to suffer a \dice{1} {\damagetest} every round.
+	
+	Reanimating a corpse as a \undeadref{shade} requires that it is unrotted, but it does not continue to rot while it is animated.
+	When the \undeadref{shade} is deanimated, it leaves the corpse fully corporeal again, albeit with a slightly dark pallor, and still affected by any {\damage} the \undeadref{shade} suffered.
+	If the \undeadref{shade} is deanimated in sunlight, however, it burns away entirely, leaving no corpse---not even ash.
+}
+
+\undead{Wraith}{Wraiths}{wraith}{
+	A \undeadref{wraith} is the invention of a foul \practitioner{necromancy} from a bygone era.
+	She sacrificed dozens of people to the darkness of a \creatureref{stygian-nightshade}, then recovered their flayed corpses for reanimation.
+	The result was a variety of \undeadref{shade} that carried the \creaturerefpossessive{stygian-nightshade} wicked claws, able to rend flesh despite their intangibility.
+	The process has been refined since, and needs nothing more than a sprig of \creatureref{stygian-nightshade}.
+	However, it still only works on the corpses of creatures that died violent deaths.
+	
+	A \undeadref{wraith} appears just like a \undeadref{shade}, and uses all the same rules, except for two differences.
+	Firstly, the \undeadref{wraith} can affect the physical world with full force; it loses no \attref{might}.
+	
+	Secondly, it sprouts wicked claws of stygian darkness, increasing the number of dice it rolls for {\unarmed} {\damagetests}.
+	A creature with an effective {\unarmed} attack rolls 1 additional die, to a maximum of 5.
+	A human, or other creature with proper hands, always rolls 5 dice.
+	A creature without effective {\unarmed} attacks gains no benefit.
+}
+
+\undead{Haunt}{Haunts}{souled}{
+	%TODO: Souled, Haunts, or something else?
+	A \undeadref{souled} is the result of necromancy that is beginning to lift itself from mere reanimation towards the ideal of resurrection.
+	It is the result of imbuing a {\soul} into a more conventionally reanimated undead such as a \undeadref{zombie} or \undeadref{skeleton}.
+	It is subject to the usual modifications to its statistics, as appropriate to the kind of reanimation.
+	
+	However, a \undeadref{souled} retains its memories, identity, and free will, and is not subject to the usual hunger.
+	It is not controlled by the \practitioner{necromancy} who reanimated it.
+	Furthermore, its \attref{might} and \attref{grace} are the only attributes subject to change; the other six are always unchanged.
+	It retains all its skills and feats.
+	It is still subject to all the benefits and detriments of its loss of biological processes, such as immunity to suffocation, disease, and potions.
+	Lastly, it is still subject to usual rules for {\damage} and rotting, so may require \featref{undead-repair}.
+	
+	A creature can only be reanimated as a single \undeadref{souled} at a time, even when using feats such as \featref{undead-part}.
+	
+	Names for \undeadrefplural{souled} vary considerably, with many \undeadrefplural{souled} themselves finding the term unpleasant.
+	They may refer to themselves as the Souled, or using some other name.
+}
