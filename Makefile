@@ -6,7 +6,7 @@ images_dir := imgs
 
 aspell_personal_dict := ./.aspell.en.personal
 
-volumes := core big-book-of-familiars creatures-of-the-night summons-and-blood-magic
+volumes := core big-book-of-familiars creatures-of-the-night summons-and-blood-magic herbiary
 books := omnibus $(volumes)
 book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
 
@@ -16,6 +16,7 @@ core_deps := #Core has no dependencies
 big_book_of_familiars_deps := core
 creatures_of_the_night_deps := core
 summons_and_blood_magic_deps := core
+herbiary_deps := core
 omnibus_deps := $(volumes)
 
 all: $(book_pdfs)

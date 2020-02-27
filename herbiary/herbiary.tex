@@ -1,0 +1,31 @@
+\documentclass[a4paper,10pt,twocolumn]{memoir}
+
+\usepackage{import}
+\import{../common/}{preamble}
+
+\zexternaldocument*{../core/core}[core.pdf]
+
+\title{The Botanist's Field Notebook}
+\subtitle{A Coven Expansion}
+\author{Christopher Brown}
+
+\begin{document}
+
+\frontmatter
+
+\titlepage
+
+\input{../common/edition-notice}
+
+\settocdepth{section}
+\tableofcontents
+
+\mainmatter
+
+\input{chapter-list}
+
+\backmatter
+
+\printindex
+
+\end{document}
