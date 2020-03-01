@@ -1,2 +1,32 @@
 \chapter{Extraordinary Herbs}
 \chaplabel{extraordinary-herbs-expansion}
+
+\creature{Dryad}{Dryads}{dryad}{
+	\atttable{2}{4}{1}{1}{2}{2}{5}{2}
+}{
+	\speed{10}
+}{
+	\skillref[2]{animals}, \skillref[2]{deception}, \skillref[2]{persuasion}, \skillref[3]{socialising}, \skillref[1]{stealth}
+}{
+	\capital{\creaturerefplural{dryad}} are parasitic plants, drawing their energy from the oak trees they live within.
+	Separate from their host tree, they are humanoid, feminine figures formed from a tangle of woody vines.
+	However, they can step inside an oak tree, physically merging with it, and leaving next to no trace of their presence.
+	
+	\capital{\creaturerefplural{dryad}} are shy, but curious.
+	They like to watch people, but don't like to be seen.
+	Humans pose the biggest threat to the oak trees they call home, but most \creaturerefplural{dryad} find them strangely alluring, regardless.
+	If they are given enough chance to observe a human, and judge them to be kind-hearted, they might approach them.
+	They gain the person's trust over a number of meetings until, one day, the person is never seen again.
+}{
+	\ability{Endophyte}{
+		The \creatureref{dryad} can move inside an oak tree.
+		While it remains in the tree, a few vines curled around the tree's branches and roots are the only outwardly visible sign of its presence.
+		It must remain inside an oak tree for at least 8 hours a day, or suffer {\exhaustion}.
+	}
+	
+	\ability{Oak Stride}{
+		The \creatureref{dryad} can move from one oak to another, without emerging from the tree.
+		Doing so, the \creatureref{dryad} has an effective \statref{speed} of 40.
+		This only works as long as the oak trees are in contact through their root or branches.
+	}
+}
