@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    container: thomasweise/docker-texlive-full
+    container: sergiud/texlive
     name: Fetch & Build
     runs-on: ubuntu-latest
     steps:
