@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    container: thomasweise/texlive
+    container: pyrrhicpachyderm/make-coven
     name: Fetch & Build
     runs-on: ubuntu-latest
     steps:
