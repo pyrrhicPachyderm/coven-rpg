@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    container: sergiud/texlive
+    container: sergiud/texlive:2020
     name: Fetch & Build
     runs-on: ubuntu-latest
     steps:
