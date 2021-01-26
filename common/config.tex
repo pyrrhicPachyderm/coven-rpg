@@ -49,19 +49,6 @@
 \usepackage{threeparttable}
 \usepackage{makecell}
 
-%Patch threeparttable to work with tabu.
-%Per https://tex.stackexchange.com/a/56524/161697
-\usepackage{xpatch}
-\makeatletter
-\chardef\TPT@@@asteriskcatcode=\catcode`*
-\catcode`*=11
-\xpatchcmd{\threeparttable}
-	{\TPT@hookin{tabular}}
-	{\TPT@hookin{tabular}\TPT@hookin{tabu}}
-	{}{}
-\catcode`*=\TPT@@@asteriskcatcode
-\makeatother
-
 \usepackage{imakeidx}
 \makeindex[title=Index of Feats]
 
@@ -79,6 +66,8 @@
 	%https://stackoverflow.com/questions/1483396/how-to-explicitly-end-a-part-in-latex-with-hyperref
 	\oldbackmatter
 }
+
+\usepackage{xpatch}
 
 %This is to fix the following error:
 %pdfTeX error (ext4): \pdfendlink ended up in different nesting level than \pdfstartlink.
