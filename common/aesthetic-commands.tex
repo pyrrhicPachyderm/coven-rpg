@@ -6,33 +6,38 @@
 %Tables.
 %%%%%%%%
 
-\newenvironment{simpletableinner}[1]{
-	\taburowcolors 2{white .. gray!20}
-	\begin{tabu}{#1}
-}{
-	\end{tabu}
+%\begin{tabularx} cannot be used inside \newenvironment (see section 5 of tabularx manual).
+%We would use \tabularx instead.
+%However, environments using \tabularx cannot be nested in further environment definitions.
+%Without being able to nest things, this would likely lead to code duplication.
+%So we will be using commands, not environments, for tables.
+%Note that this means we can use the tabularx environment as normal.
+
+\newcommand\simpletableinner[2]{%Arguments: alignment, table
+	\rowcolors{2}{white}{gray!20}
+	\begin{tabularx}{\linewidth}{#1}
+		#2
+	\end{tabularx}
 }
 
-\newenvironment{simpletable}[1]{
+\newcommand\simpletable[2]{%Arguments: alignment, table
 	\begin{center}
-	\begin{simpletableinner}{#1}
-}{
-	\end{simpletableinner}
+	\simpletableinner{#1}{#2}
 	\end{center}
 }
 
 \newcommand\notedtable[3]{%Arguments: alignment, table, notes
 	\begin{center}
 		\begin{threeparttable}
-			\begin{simpletableinner}{#1}
-				#2
-			\end{simpletableinner}
+			\simpletableinner{#1}{#2}
 			\begin{tablenotes}
 				#3
 			\end{tablenotes}
 		\end{threeparttable}
 	\end{center}
 }
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} %Defines C as an X column, but centred, used in \atttable.
 
 
 
