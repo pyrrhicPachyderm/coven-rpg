@@ -15,9 +15,19 @@
 
 \newcommand\simpletableinner[2]{%Arguments: alignment, table
 	\rowcolors{2}{white}{gray!20}
-	\begin{tabularx}{\linewidth}{#1}
-		#2
-	\end{tabularx}
+	
+	%tabularx is necessary in the case of X-type columns.
+	%But using tabularx without X-type columns causes the hrules to span wider than the table.
+	%So detect whether X-type columns are in use, and use regular tabular if not.
+	\IfSubStr{#1}{X}{
+		\begin{tabularx}{\linewidth}{#1}
+			#2
+		\end{tabularx}
+	}{
+		\begin{tabular}{#1}
+			#2
+		\end{tabular}
+	}
 }
 
 \newcommand\simpletable[2]{%Arguments: alignment, table
