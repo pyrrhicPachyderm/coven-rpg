@@ -39,7 +39,11 @@ Clean: clean
 	)
 spellcheck:
 	@for file in $$(find -name "*.tex" -not -path "./common/*"); do \
-		aspell check --lang=en_GB --mode=tex --tex-check-comments --dont-backup --personal=$(aspell_personal_dict) $$file;\
+		aspell check \
+		--lang=en_GB --personal=$(aspell_personal_dict) \
+		--dont-backup \
+		--mode=tex --tex-check-comments \
+		$$file;\
 	done
 featcount:
 	@(\
