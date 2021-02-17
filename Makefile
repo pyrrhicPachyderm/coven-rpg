@@ -43,6 +43,13 @@ spellcheck:
 		--lang=en_GB --personal=$(aspell_personal_dict) \
 		--dont-backup \
 		--mode=tex --tex-check-comments \
+		--add-tex-command='zexternaldocument po' \
+		--add-tex-command='simpletable pP' \
+		--add-tex-command='notedtable pPP' \
+		--add-tex-command='partlabel p' \
+		--add-tex-command='partref p' \
+		--add-tex-command='feat PpPPP' \
+		--add-tex-command='featref p' \
 		$$file;\
 	done
 featcount:
