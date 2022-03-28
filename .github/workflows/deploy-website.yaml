@@ -17,18 +17,24 @@ jobs:
         run: |
           make website
       
-      - name: Upload Artifact
+      - name: Upload Website Contents Artifact
         uses: actions/upload-artifact@v1
         with:
           name: website-directory
           path: website/
+      
+      - name: Upload Compilation Logs Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: compilation-logs
+          path: "**.log"
   
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download Artifact
+      - name: Download Website Contents Artifact
         uses: actions/download-artifact@v1
         with:
           name: website-directory
