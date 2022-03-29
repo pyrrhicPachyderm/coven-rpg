@@ -4,8 +4,6 @@ RM := rm -f
 
 images_dir := imgs
 
-aspell_personal_dict := ./.aspell.en.personal
-
 volumes := core big-book-of-familiars creatures-of-the-night summons-and-blood-magic herbiary
 books := omnibus $(volumes)
 book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
@@ -39,18 +37,7 @@ Clean: clean
 	)
 spellcheck:
 	@for file in $$(find -name "*.tex" -not -path "./common/*"); do \
-		aspell check \
-		--lang=en_GB --personal=$(aspell_personal_dict) \
-		--dont-backup \
-		--mode=tex --tex-check-comments \
-		--add-tex-command='zexternaldocument opo' \
-		--add-tex-command='simpletable pP' \
-		--add-tex-command='notedtable pPP' \
-		--add-tex-command='partlabel p' \
-		--add-tex-command='partref p' \
-		--add-tex-command='feat oPpPPP' \
-		--add-tex-command='featref p' \
-		$$file;\
+		aspell check --per-conf=./aspell.conf $$file;\
 	done
 featcount:
 	@(\
