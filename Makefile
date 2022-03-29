@@ -6,7 +6,7 @@ images_dir := imgs
 
 volumes := core big-book-of-familiars creatures-of-the-night summons-and-blood-magic herbiary
 books := omnibus $(volumes)
-book_pdfs := $(shell echo $(books) | sed -E "s|[^ ]+|&.pdf|g")
+book_pdfs := $(books:%=%.pdf)
 
 common_files := $(wildcard common/*.tex)
 
@@ -71,7 +71,8 @@ dropcap:
 ###############
 
 website_dir := website
-website_pdfs := $(shell echo $(book_pdfs) | sed -E "s|[^ ]+|$(website_dir)/&|g")
+website_pdfs := $(book_pdfs:%=$(website_dir)/%)
+
 
 $(website_dir)/%.pdf: %.pdf
 	@cp $< $@
