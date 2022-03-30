@@ -94,7 +94,7 @@ prereq_main_tex = $$*/$$*.tex
 #All the other .tex files in the same folder.
 prereq_extra_tex = $$(wildcard $$*/*.tex)
 #All the image files for the book.
-prereq_images = $$(addsuffix .png,$$(basename $$(wildcard $$*/imgs/*)))
+prereq_images = $$(addsuffix .png,$$(basename $$(wildcard $$*/$(images_dir)/*)))
 #The folder names for the books this book depends on, to be used in defining subsequent prerequisites.
 #NB: This one should not be used as a prerequisite itself.
 prereq_dependency = $$($$(shell echo $$* | sed "s|-|_|g")_deps)
