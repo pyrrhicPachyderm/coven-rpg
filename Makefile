@@ -90,6 +90,10 @@ website: $(website_pdfs)
 #Use = instead of := to ensure they are recursively expanded.
 #That is, they are expanded in the context of the make rule where they are used, not now, where they are defined.
 
+#Pattern rules, secondary expansion, and patsubst interact poorly; the % patterns from patsubst are instead interpreted by the pattern rule.
+#By escaping the % sign as a variable, this can be avoided: see https://stackoverflow.com/a/25592360
+pc := %
+
 #The .tex for the main file for the book.
 prereq_main_tex = $$*/$$*.tex
 #All the other .tex files in the same folder.
@@ -100,11 +104,11 @@ prereq_images = $$(addsuffix .png,$$(basename $$(wildcard $$*/$(images_dir)/*)))
 #NB: This one should not be used as a prerequisite itself.
 prereq_dependency = $$($$(subst -,_,$$*)_deps)
 #All the .tex files in the books this book depends on.
-prereq_dependency_tex = $$(wildcard $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&/*.tex|g"))
+prereq_dependency_tex = $$(wildcard $$(patsubst $$(pc),$$(pc)/*.tex,$(prereq_dependency)))
 #The .pdf files of the books this depends on, to make sure those are compiled first.
-prereq_dependency_pdf = $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&.pdf|g")
+prereq_dependency_pdf = $$(patsubst $$(pc),$$(pc).pdf,$(prereq_dependency))
 #All the image files for the books this depends on.
-prereq_dependency_images = $$(addsuffix .png,$$(basename $$(wildcard $$(shell echo $(prereq_dependency) | sed -E "s|[^ ]+|&/$(images_dir)/*|g"))))
+prereq_dependency_images = $$(addsuffix .png,$$(basename $$(wildcard $$(patsubst $$(pc),$$(pc)/$(images_dir)/*,$(prereq_dependency)))))
 
 .SECONDEXPANSION:
 
