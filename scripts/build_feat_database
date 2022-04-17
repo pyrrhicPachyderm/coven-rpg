@@ -42,7 +42,7 @@ def argument_as_string(argument_node):
 	else:
 		node_list = [node]
 	
-	#Take the relevant section from the LatexWalker's string.
+	#Take the relevant sections from the LatexWalker's string.
 	node_texts = [node.parsing_state.s[node.pos : node.pos + node.len] for node in node_list]
 	return ''.join(node_texts)
 
