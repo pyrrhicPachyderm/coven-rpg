@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+
+#Builds a feat database from the LaTeX files and saves it in JSON format.
+#Takes two or more command line arguments.
+#Firstly, the path of the JSON file to output to.
+#Subsequently, the paths of one or more LaTeX files to read feats from.
+
+#If a feat does not provide the optional argument to specify its discipline,
+#the discipline is taken from the file name.
+#TODO: Invent a better method than this.
+
+import sys
+import os
+import json
+from pylatexenc.macrospec import MacroSpec, MacroStandardArgsParser, LatexContextDb
+from pylatexenc.latexwalker import get_default_latex_context_db
+from pylatexenc.latexwalker import LatexWalker, LatexMacroNode, LatexGroupNode
+
+def print_usage(argv):
+	print("Usage: {} output-file input-file [input-file]...".format(argv[0]), file = sys.stderr)
+
+def get_latex_context():
+	#LatexWalker needs a context in which all macros are defined.
+	#Here, we build the context, with the \feat macro defined.
+	context = get_default_latex_context_db()
+	
+	feat_macro_spec = MacroSpec("feat", MacroStandardArgsParser("[{{{{{")) #One optional, five mandatory.
+	
+	context.add_context_category("coven", macros=[feat_macro_spec])
+	
+	return context
+
+def argument_as_string(argument_node):
+	#Takes a LatexNode that represents an argument to a macro, and returns the text therein.
+	#This is the raw text, without parsing any LaTeX within.
+	node_list = []
+	
+	#If the argument is a group, take all the nodes from the group.
+	#Otherwise, just the node itself.
+	if(argument_node.isNodeType(LatexGroupNode)):
+		node_list = argument_node.nodelist
+	else:
+		node_list = [node]
+	
+	#Take the relevant section from the LatexWalker's string.
+	node_texts = [node.parsing_state.s[node.pos : node.pos + node.len] for node in node_list]
+	return ''.join(node_texts)
+
+def get_feat(feat_node, default_discipline):
+	#Takes a LatexMacroNode with macroname "feat" and returns a dictionary that represents the feat.
+	#The feat is returned as a dictionary, instead of as a class, so that it converts to JSON.
+	feat = {}
+	
+	argument_nodes = feat_node.nodeargd.argnlist
+	
+	feat["discipline"] = argument_as_string(argument_nodes[0]) if argument_nodes[0] else default_discipline
+	feat["name"] = argument_as_string(argument_nodes[1])
+	feat["label"] = argument_as_string(argument_nodes[2])
+	feat["cost"] = int(argument_as_string(argument_nodes[3]))
+	feat["prereqs"] = argument_as_string(argument_nodes[4]) #TODO: Process the prerequisites.
+	feat["content"] = argument_as_string(argument_nodes[5]) #TODO: Convert the LaTeX contents to HTML markup.
+	
+	return feat
+
+def get_feats(file_path):
+	#Takes a file path, and returns an array of feats.
+	file = open(file_path, "r")
+	walker = LatexWalker(file.read(), latex_context = get_latex_context())
+	file.close()
+	
+	default_discipline = os.path.basename(file_path).removesuffix(".tex")
+	
+	(nodelist, _, _) = walker.get_latex_nodes()
+	feats = [get_feat(node, default_discipline) for node in nodelist if node.isNodeType(LatexMacroNode) and node.macroname == "feat"]
+	return feats
+
+def main(argv):
+	if(len(argv) < 3):
+		print_usage(argv)
+		sys.exit(1)
+	
+	outfile_path = argv[1]
+	infile_paths = argv[2:]
+	
+	feats = []
+	for infile_path in infile_paths:
+		feats.extend(get_feats(infile_path))
+	
+	outfile = open(outfile_path, "w")
+	print(json.dumps(feats), file = outfile)
+	outfile.close()
+
+main(sys.argv)

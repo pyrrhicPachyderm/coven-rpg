@@ -243,3 +243,6 @@ TSWLatexianTemp*
 
 # Images are .tif raw, converted to .png
 *.png
+
+#Python stuff
+__pycache__
