@@ -30,9 +30,9 @@ def get_latex_context():
 	
 	return context
 
-def argument_as_string(argument_node):
-	#Takes a LatexNode that represents an argument to a macro, and returns the text therein.
-	#This is the raw text, without parsing any LaTeX within.
+def expand_argument(argument_node):
+	#Takes a LatexNode that represents an argument to a macro, and expands it out of a LatexGroupNode if it is one.
+	#Returns a list of LatexNodes.
 	node_list = []
 	
 	#If the argument is a group, take all the nodes from the group.
@@ -41,6 +41,13 @@ def argument_as_string(argument_node):
 		node_list = argument_node.nodelist
 	else:
 		node_list = [node]
+	
+	return node_list
+
+def argument_as_string(argument_node):
+	#Takes a LatexNode that represents an argument to a macro, and returns the text therein.
+	#This is the raw text, without parsing any LaTeX within.
+	node_list = expand_argument(argument_node)
 	
 	#Take the relevant sections from the LatexWalker's string.
 	node_texts = [node.parsing_state.s[node.pos : node.pos + node.len] for node in node_list]
