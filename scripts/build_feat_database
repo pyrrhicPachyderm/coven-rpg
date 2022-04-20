@@ -9,24 +9,43 @@
 #the discipline is taken from the file name.
 #TODO: Invent a better method than this.
 
-#A feat's prereqs are stored as a dictionary with five entries.
-#"feats" is an array of arrays of strings.
-#	Each string is the label of a required feat.
-#	It is required that a character has one feat from each array.
-#	In summary: [[1 or 2 or 3] and [4 or 5] and [6]]
-#"anyfeats" is an array of disciplines.
-#	A character must have at least one feat from each listed discipline.
-#"skills" is a dictionary, with integers as values.
-#	The keys are the names of general or discipline skills.
-#	The values are the required level of those skills.
-#"specialityskills" is a dictionary of dictionaries, with integers as values.
-#	Each outer key is a speciality skill.
-#	Each inner key is a speciality within that skill.
-#	The values are the required levels of the skill.
-#	The special string "anyspeciality" can be used in the inner keys.
-#"familiar" is a single string, the familiar you must have to take the feat.
-#	It is null for feats that don't require a particular familiar.
-#	TODO: This will inevitably need to change as familiar prereqs grow more complicated.
+#A feat's prereqs are stored using a recursive tree structure.
+#Each node of the tree is a dictionary, in python parlance (an object in JSON parlance).
+#Every node has an entry with the key "type", that defines what type of node it is.
+#The various types, and the other entries they will have, are given below.
+#"list":
+#	A list of prerequisite nodes, all of which must be satisfied.
+#	Represented in the book as an ordered, comma-separated list.
+#	Has one entry: "nodes", an array of nodes.
+#"and":
+#	Mechanically identically to a "list", and similarly just has one "noes" entry.
+#	Differs in that it is separated in the book with the word 'and' instead of commas.
+#	This is just used occasionally for emphasis (see \featref{circle-contain-exclude}).
+#"or":
+#	A list of prerequisite nodes, any one of which must be satisfied.
+#	Represented in the book as a list separated with the word 'or'.
+#	Has one entry: "nodes", an array of nodes.
+#"feat":
+#	A feat.
+#	Has one entry: "label", a string with the label of the required feat.
+#"anyfeat":
+#	A signifier that you must have any one feat from a particular discipline.
+#	Has one entry: "discipline", a string with the discipline you must have a feat from.
+#"skill":
+#	A general or discipline skill.
+#	Has two entries: "label" and "level".
+#	"label" is a string containing the label of the required skill.
+#	"level" is an integer; the minimum level at which the skill is required.
+#"specialityskill":
+#	A speciality skill.
+#	Has the same two "label" and "level" entires as above, plus a "speciality" level.
+#	"speciality" is a string containing the speciality you must have.
+#	"speciality" is allowed to take a None value (null in JSON parlance).
+#	A null "speciality" signifies that any speciality of that skill will suffice.
+#"familiar":
+#	A type of familiar you must have.
+#	Has one entry: "label", the label of the familiar you must have.
+#	TODO: This will inevitably need to expand as familiar prereqs grow more complicated.
 
 import sys
 import os
