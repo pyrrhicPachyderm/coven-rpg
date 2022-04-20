@@ -24,9 +24,9 @@ def get_latex_context():
 	#Here, we build the context, with the \feat macro defined.
 	context = get_default_latex_context_db()
 	
-	feat_macro_spec = MacroSpec("feat", MacroStandardArgsParser("[{{{{{")) #One optional, five mandatory.
-	
-	context.add_context_category("coven", macros=[feat_macro_spec])
+	context.add_context_category("coven", macros=[
+		MacroSpec("feat", MacroStandardArgsParser("[{{{{{")),
+	])
 	
 	return context
 
