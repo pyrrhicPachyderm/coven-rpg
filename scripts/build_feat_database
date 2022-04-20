@@ -71,6 +71,21 @@ def get_latex_context():
 	
 	context.add_context_category("coven", macros=[
 		MacroSpec("feat", MacroStandardArgsParser("[{{{{{")),
+		
+		MacroSpec("featref", MacroStandardArgsParser("{")),
+		MacroSpec("skillref", MacroStandardArgsParser("[{")),
+		MacroSpec("skillrefspeciality", MacroStandardArgsParser("[{{")),
+		MacroSpec("skillreffamiliar", MacroStandardArgsParser("[{")),
+		MacroSpec("anyfeat", MacroStandardArgsParser("{")),
+		MacroSpec("Anyfeat", MacroStandardArgsParser("{")),
+		MacroSpec("prereqfamiliar", MacroStandardArgsParser("{")),
+		MacroSpec("noprereq", MacroStandardArgsParser("")),
+		
+		MacroSpec("dice", MacroStandardArgsParser("[{")),
+		MacroSpec("testtype", MacroStandardArgsParser("{{")),
+		MacroSpec("testtypespeciality", MacroStandardArgsParser("{{")),
+		
+		MacroSpec("capital", MacroStandardArgsParser("{")),
 	])
 	
 	return context
