@@ -137,8 +137,8 @@ def get_feats(file_path):
 	
 	default_discipline = os.path.basename(file_path).removesuffix(".tex")
 	
-	(nodelist, _, _) = walker.get_latex_nodes()
-	feats = [get_feat(node, default_discipline) for node in nodelist if node.isNodeType(LatexMacroNode) and node.macroname == "feat"]
+	(node_list, _, _) = walker.get_latex_nodes()
+	feats = [get_feat(node, default_discipline) for node in node_list if node.isNodeType(LatexMacroNode) and node.macroname == "feat"]
 	return feats
 
 def main(argv):
