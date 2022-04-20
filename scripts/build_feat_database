@@ -67,6 +67,9 @@ class ParsingError(Exception):
 def print_usage(argv):
 	print("Usage: {} output-file input-file [input-file]...".format(argv[0]), file = sys.stderr)
 
+def print_error(error_message):
+	print(error_message, file = sys.stderr)
+
 def get_latex_context():
 	#LatexWalker needs a context in which all macros are defined.
 	#Here, we build the context, with the \feat macro defined.
