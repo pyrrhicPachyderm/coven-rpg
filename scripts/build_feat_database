@@ -46,6 +46,8 @@
 #	A type of familiar you must have.
 #	Has one entry: "label", the label of the familiar you must have.
 #	TODO: This will inevitably need to expand as familiar prereqs grow more complicated.
+#"familiarskill" and "specialityskillfamiliar"
+#	As "skill" and "specialityskill", but representing a skill the familiar must have.
 
 import sys
 import os
