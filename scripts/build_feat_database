@@ -31,6 +31,8 @@
 #"anyfeat":
 #	A signifier that you must have any one feat from a particular discipline.
 #	Has one entry: "discipline", a string with the discipline you must have a feat from.
+#"Anyfeat":
+#	As "anyfeat", but indicating that the text should be capitalised.
 #"skill":
 #	A general or discipline skill.
 #	Has two entries: "label" and "level".
