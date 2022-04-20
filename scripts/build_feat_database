@@ -9,6 +9,25 @@
 #the discipline is taken from the file name.
 #TODO: Invent a better method than this.
 
+#A feat's prereqs are stored as a dictionary with five entries.
+#"feats" is an array of arrays of strings.
+#	Each string is the label of a required feat.
+#	It is required that a character has one feat from each array.
+#	In summary: [[1 or 2 or 3] and [4 or 5] and [6]]
+#"anyfeats" is an array of disciplines.
+#	A character must have at least one feat from each listed discipline.
+#"skills" is a dictionary, with integers as values.
+#	The keys are the names of general or discipline skills.
+#	The values are the required level of those skills.
+#"specialityskills" is a dictionary of dictionaries, with integers as values.
+#	Each outer key is a speciality skill.
+#	Each inner key is a speciality within that skill.
+#	The values are the required levels of the skill.
+#	The special string "anyspeciality" can be used in the inner keys.
+#"familiar" is a single string, the familiar you must have to take the feat.
+#	It is null for feats that don't require a particular familiar.
+#	TODO: This will inevitably need to change as familiar prereqs grow more complicated.
+
 import sys
 import os
 import json
