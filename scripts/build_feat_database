@@ -308,6 +308,8 @@ def get_feat(feat_node, default_discipline):
 		sys.exit(2)
 	feat["content"] = argument_as_string(argument_nodes[5]) #TODO: Convert the LaTeX contents to HTML markup.
 	
+	#TODO: Set feat["tier"]; the level of the discipline skill the feat requires.
+	
 	return feat
 
 def get_feats(file_path):
