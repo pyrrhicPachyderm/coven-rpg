@@ -150,9 +150,6 @@ PREREQ_MACRO_DEFINITIONS = {
 	"Anyfeatdiscipline": ("Anyfeatdiscipline", [
 		("discipline", parse_prereq_argument_text),
 	]),
-	"featref": ("feat", [
-		("label", parse_prereq_argument_text),
-	]),
 	"skillref": ("skill", [
 		("level", parse_prereq_argument_integer),
 		("label", parse_prereq_argument_text),
