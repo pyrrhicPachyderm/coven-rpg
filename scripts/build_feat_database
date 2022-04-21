@@ -33,6 +33,13 @@
 #	Has one entry: "discipline", a string with the discipline you must have a feat from.
 #"Anyfeatdiscipline":
 #	As "anyfeatdiscipline", but indicating that the text should be capitalised.
+#"anyfeatmaterial":
+#	A signifier that you must have any one feat that uses a particular material.
+#	Has two entries: "material" and "article"
+#	"material" is a string with the label of the relevant material.
+#	"article" is a string giving the appropriate article for the material, such as "a" or "an".
+#"Anyfeatmaterial":
+#	As "anyfeatmaterial", but indicating that the text should be capitalised.
 #"skill":
 #	A general or discipline skill.
 #	Has two entries: "label" and "level".
@@ -87,6 +94,8 @@ def get_latex_context():
 		MacroSpec("skillreffamiliar", MacroStandardArgsParser("[{")),
 		MacroSpec("anyfeatdiscipline", MacroStandardArgsParser("{")),
 		MacroSpec("Anyfeatdiscipline", MacroStandardArgsParser("{")),
+		MacroSpec("anyfeatmaterial", MacroStandardArgsParser("[{")),
+		MacroSpec("Anyfeatmaterial", MacroStandardArgsParser("[{")),
 		MacroSpec("prereqfamiliar", MacroStandardArgsParser("{")),
 		MacroSpec("noprereq", MacroStandardArgsParser("")),
 		
@@ -149,6 +158,14 @@ PREREQ_MACRO_DEFINITIONS = {
 	]),
 	"Anyfeatdiscipline": ("Anyfeatdiscipline", [
 		("discipline", parse_prereq_argument_text),
+	]),
+	"anyfeatmaterial": ("anyfeatmaterial", [
+		("article", parse_prereq_argument_text),
+		("material", parse_prereq_argument_text),
+	]),
+	"Anyfeatmaterial": ("Anyfeatmaterial", [
+		("article", parse_prereq_argument_text),
+		("material", parse_prereq_argument_text),
 	]),
 	"skillref": ("skill", [
 		("level", parse_prereq_argument_integer),
