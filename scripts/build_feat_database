@@ -59,9 +59,10 @@
 import sys
 import os
 import json
+import re
 from pylatexenc.macrospec import MacroSpec, MacroStandardArgsParser, LatexContextDb
 from pylatexenc.latexwalker import get_default_latex_context_db
-from pylatexenc.latexwalker import LatexWalker, LatexMacroNode, LatexGroupNode
+from pylatexenc.latexwalker import LatexWalker, LatexMacroNode, LatexGroupNode, LatexCharsNode, LatexCommentNode
 
 class ParsingError(Exception):
 	pass
@@ -121,6 +122,174 @@ def argument_as_string(argument_node):
 	node_texts = [node.parsing_state.s[node.pos : node.pos + node.len] for node in node_list]
 	return ''.join(node_texts)
 
+def parse_prereq_argument_text(argument_node):
+	return argument_as_string(argument_node)
+
+def parse_prereq_argument_integer(argument_node):
+	text = argument_as_string(argument_node)
+	try:
+		return int(text)
+	except ValueError:
+		raise ParsingError #Could not convert text to integer.
+
+def parse_prereq_argument_skill_speciality(argument_node):
+	if any([node.isNodeType(LatexMacroNode) and node.macroname == "anyspeciality" for node in expand_argument(argument_node)]):
+		return None
+	else:
+		return argument_as_string(argument_node)
+
+#Dictionary mapping macronames to prereq node types they create.
+#Also shows the arguments of each macro, and the functions to process them.
+PREREQ_MACRO_DEFINITIONS = {
+	"featref": ("feat", [
+		("label", parse_prereq_argument_text),
+	]),
+	"anyfeat": ("anyfeat", [
+		("discipline", parse_prereq_argument_text),
+	]),
+	"Anyfeat": ("anyfeat", [
+		("discipline", parse_prereq_argument_text),
+	]),
+	"featref": ("feat", [
+		("label", parse_prereq_argument_text),
+	]),
+	"skillref": ("skill", [
+		("level", parse_prereq_argument_integer),
+		("label", parse_prereq_argument_text),
+	]),
+	"skillrefspeciality": ("specialityskill", [
+		("level", parse_prereq_argument_integer),
+		("label", parse_prereq_argument_text),
+		("speciality", parse_prereq_argument_skill_speciality),
+	]),
+	"skillreffamiliar": ("familiarskill", [
+		("level", parse_prereq_argument_integer),
+		("label", parse_prereq_argument_text),
+	]),
+	"prereqfamiliar": ("familiar", [
+		("label", parse_prereq_argument_text),
+	]),
+}
+
+#Dictionary mapping separator to the prereq node type it creates.
+PREREQ_SEPARATOR_DEFINITIONS = {
+	",": "list",
+	"and": "and",
+	"or": "or",
+}
+
+#Array of separators from highest to lowest precendence.
+PREREQ_SEPARATOR_PRECEDENCE = [
+	"and",
+	"or",
+	",",
+]
+
+def parse_prereq_macro(macro_node):
+	#Takes a LatexMacroNode that represents a macro within a feat's prerequisites.
+	#Returns a prerequisite dictionary, with the format as specified at the top of the document.
+	#Handles only terminal nodes of the prerequisites tree (e.g. feats, skills).
+	#Lists, "and"s and "or"s are handled by get_prereqs() itself.
+	
+	if macro_node.macroname == "noprereq":
+		return None
+	
+	prereq = {}
+	
+	try:
+		prereq["type"], argument_definitions = PREREQ_MACRO_DEFINITIONS[macro_node.macroname]
+	except KeyError:
+		raise ParsingError #macroname is not valid.
+	
+	argument_nodes = macro_node.nodeargd.argnlist
+	
+	if len(argument_nodes) != len(argument_definitions):
+		raise ParsingError #Arguments do not match definitions.
+	
+	for index, argument_node in enumerate(argument_nodes):
+		argument_name, argument_parser = argument_definitions[index]
+		prereq[argument_name] = argument_parser(argument_node)
+	
+	return prereq
+
+def get_prereqs(argument_node):
+	#Takes a LatexNode that represents the relevant argument to \feat.
+	#Returns a prerequisites dictionary, with the format as specified at the top of the document.
+	
+	#We take all the nodes that form the prereqs argument, remove comments, and remove text that is only whitespace.
+	#This should reduce the list to an alternating list of macros and separators.
+	#Macros are LatexMacroNodes and separators are LatexCharsNodes.
+	#The separators, after removing whitespace, should be ",", "and" or "or".
+	
+	node_list = expand_argument(argument_node) #TODO: Make this recursive, to expand groups within.
+	node_list = [node for node in node_list if not (
+		node.isNodeType(LatexCommentNode) or
+		(node.isNodeType(LatexCharsNode) and re.match(r"^\s*$", node.chars))
+	)] #Discard comments and whitespace-only nodes.
+	
+	#There should now be an odd number of nodes.
+	#Every even-indexed node should be a macro. Every odd-indexed one should be text.
+	#Throw a parsing error if this is not the case.
+	#TODO: Make these errors more informative.
+	
+	if len(node_list)%2 != 1:
+		raise ParsingError
+	
+	macro_node_list = [node for index, node in enumerate(node_list) if index%2 == 0]
+	separator_node_list = [node for index, node in enumerate(node_list) if index%2 == 1]
+	if not all([node.isNodeType(LatexMacroNode) for node in macro_node_list]):
+		raise ParsingError
+	if not all([node.isNodeType(LatexCharsNode) for node in separator_node_list]):
+		raise ParsingError
+	
+	#Parse the macros into their appropriate dictionaries, and the separators into raw text.
+	#Remove any whitespace from the separators.
+	prereq_list = [parse_prereq_macro(node) for node in macro_node_list]
+	separator_list = [re.sub("\s", "", node.chars) for node in separator_node_list]
+	
+	#Check that all the separators are valid.
+	if any([separator not in PREREQ_SEPARATOR_PRECEDENCE for separator in separator_list]):
+		raise ParsingError #Invalid separators.
+	
+	#Iterate over each type of separator, in precendence order.
+	#For each separator, collapse the prereqs into groups based on the separator.
+	for separator in PREREQ_SEPARATOR_PRECEDENCE:
+		group_type = PREREQ_SEPARATOR_DEFINITIONS[separator]
+		i = 0
+		while i < len(separator_list):
+			#Is this the type of separator we're dealing with right now?
+			if separator_list[i] == separator:
+				#Do we already have the correct type of group to collapse this into?
+				#If not, create it.
+				if not prereq_list[i]["type"] == group_type:
+					prereq_list[i] = {
+						"type": group_type,
+						"nodes": [prereq_list[i]],
+					}
+				#Collapse the next prereq into this group.
+				prereq_list[i]["nodes"].append(prereq_list.pop(i+1))
+				#Delete the separator, now that it's parsed.
+				separator_list.pop(i)
+				#Do not increment i. len(separator_list) has decremented.
+			else:
+				i += 1
+	
+	#All the prereqs should have collapsed to just one now; check this has occurred.
+	if len(prereq_list) != 1:
+		raise ParsingError #Prereq list has not fully collapsed.
+	
+	return prereq_list[0]
+	
+	#TODO: This currently fails for the headology-ritual-circle feat.
+	#That uses actual English text, which the parser can't understand.
+	#There's no hope of making the parser understand it, so the LaTeX needs to be rewritten.
+	#There needs to be some sort of "any feat using a particular material" macro.
+	#Perhaps \anyfeatmaterial (and \Anyfeatmaterial). Maybe change the existing one to \anyfeatdiscipline.
+	#Materials will need their appropriate prepositions (a, an, no preposition in the case of blood) defined.
+	#This is likely to be useful when it comes to writing blood magic anyway.
+	#Dealing with this in the character creator will also require identifying which feats require certain components.
+	#As such, I'll need to check and perhaps standardise the use of the \materials macro.
+
 def get_feat(feat_node, default_discipline):
 	#Takes a LatexMacroNode with macroname "feat" and returns a dictionary that represents the feat.
 	#The feat is returned as a dictionary, instead of as a class, so that it converts to JSON.
@@ -132,7 +301,11 @@ def get_feat(feat_node, default_discipline):
 	feat["name"] = argument_as_string(argument_nodes[1])
 	feat["label"] = argument_as_string(argument_nodes[2])
 	feat["cost"] = int(argument_as_string(argument_nodes[3]))
-	feat["prereqs"] = argument_as_string(argument_nodes[4]) #TODO: Process the prerequisites.
+	try:
+		feat["prereqs"] = get_prereqs(argument_nodes[4])
+	except ParsingError:
+		print_error("Failed to parse the prerequisites for {}".format(feat["label"]))
+		sys.exit(2)
 	feat["content"] = argument_as_string(argument_nodes[5]) #TODO: Convert the LaTeX contents to HTML markup.
 	
 	return feat
