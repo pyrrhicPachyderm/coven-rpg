@@ -1,3 +1,19 @@
 html {
 	font-size: 100%;
 }
+
+.cookie-consent-bar {
+	padding: 1rem;
+	background-color: lightblue;
+}
+.cookie-consent-bar button {
+	margin-top: 0.6rem;
+}
+.cookie-consent-bar button.accept {
+	background-color: lightgreen;
+	border-color: green;
+}
+.cookie-consent-bar button.decline {
+	background-color: #FF8484;
+	border-color: red;
+}
