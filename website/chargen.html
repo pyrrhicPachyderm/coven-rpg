@@ -8,11 +8,23 @@
 	</head>
 	
 	<body>
+		<div class="cookie-consent-bar" id="cookie-consent-bar">
+			<div>
+				This page uses web storage (similar to cookies) to store your characters on your computer.
+				If you disable this, your characters will be lost when you close this tab.
+			</div>
+			<div>
+				<button type="button" class="accept">Accept Web Storage</button>
+				<button type="button" class="decline">Decline Web Storage</button>
+			</div>
+		</div>
+		
 		<!--Scripts at the bottom, for best performance.-->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/backbone@1.4.1/backbone.min.js"></script>
 		
 		<script type="text/javascript" src="js/chargen/models/settings.js"></script>
+		<script type="text/javascript" src="js/chargen/views/settings.js"></script>
 	</body>
 </html>
