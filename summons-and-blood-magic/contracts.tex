@@ -100,10 +100,10 @@ If a {\contractpenalty} has a duration, such as the {\liarscurse}, then the {\co
 This might be a set length of time, until a certain condition comes to pass, or even forever.
 As with violations of a {\stipulation}, any condition that ends a {\contractpenalty} must be detected by one of the {\signatories} on the {\contract}.
 
-\capital{\contracts} can also be written without {\stipulations}, to bring some {\contractpenalties} into effect on some {\signatories} immediately as the {\contract} takes effect.
+\capital{\contracts} can also be written without {\stipulations}, to bring some {\penalties} into effect on some {\signatories} immediately as the {\contract} takes effect.
 This may be particularly useful when forcing someone to {\sign} a {\contract} under duress.
-It can also be used with {\contractpenalties} that can have some beneficial effect, such a {\contract} that provides \featref{contracts-penalty-location} between all members of a coven.
-A {\contract} can mix and match between {\contractpenalties} that occur immediately and those that are imposed by breaking {\stipulations}.
+It can also be used with {\penalties} that can have some beneficial effect, such a {\contract} that provides \featref{contracts-penalty-location} between all members of a coven.
+A {\contract} can mix and match between {\penalties} that occur immediately and those that are imposed by breaking {\stipulations}.
 
 \subsubsection{The Liar's Curse}
 \seclabel{liars-curse}
@@ -185,13 +185,20 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	You may also create a {\contract} without {\stipulations} or {\penalties}, with the sole purpose of {\voiding} earlier {\contracts}.
 }
 
+\feat[headology]{Consultation}{contracts-advice}{10}{
+	\skillrefspeciality[1]{lore}{Contracts},
+	\featref{contracts}
+}{
+	%TODO: Can collaborate with others, as scribe or as advisor.
+}
+
 \feat[headology]{Taglock Escrow}{contracts-penalty-taglock}{15}{
 	\featref{contracts}
 }{
 	The \materialref{blood} used to {\sign} a contract can always be used as a \materialref{taglock} by someone who holds the physical document.
 	However, the {\contract} can also offer up use of this \materialref{taglock} as a {\contractpenalty}.
 	You may add an additional {\contractpenalty} to {\contracts} you write.
-	This offers the use of the {\penalised} {\signatorypossessive} \materialref{taglock} to one or more of the other {\signatories} for the {\contractpenaltypossessive} duration.
+	This offers the use of the {\penalised} {\signatorypossessive} \materialref{taglock} to one or more of the other {\signatories} for the {\penaltypossessive} duration.
 	This does not provide them with a physical object, but they may perform magic as though they had a \materialref{taglock} from the {\penalised} {\signatory}.
 	This is simply a generic \materialref{taglock}; it does not count as \materialref{blood} for any magic that requires that specifically.
 	This still works even if the physical document and the \materialref{blood} used to {\sign} it have been destroyed.
@@ -213,6 +220,6 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 }{
 	You may bind some \discref{divination} magic into a {\contract} to ensure that anyone who can breaks it can be tracked down.
 	You may add an additional {\contractpenalty} to {\contracts} you write.
-	This makes the location of {\penalised} {\signatory} known to one or more of the other {\signatories} for the {\contractpenaltypossessive} duration.
+	This makes the location of {\penalised} {\signatory} known to one or more of the other {\signatories} for the {\penaltypossessive} duration.
 	The information is provided as distance and direction to the {\penalised} {\signatory}, as by \featref{divination-taglock-location}.
 }
