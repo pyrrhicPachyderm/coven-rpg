@@ -44,12 +44,12 @@ From this point onwards, the document used to create the {\contract} is no longe
 It can be modified, or destroyed, without affecting the terms of the {\contract} itself.
 
 Not just anyone can write a magically binding {\contract}, although anyone can {\sign} one.
-At least one of the people writing---and {\signing}---the {\contract} must have the feat \featref{contracts}, in order to make it magically binding.
+At least one of the people writing the {\contract} must have the feat \featref{contracts}, in order to make it magically binding.
+However, the person who writes the {\contract} does not need to be one of the {\signatories} on it.
 
 Several feats allow extra clauses to be specified upon a {\contract} that a person helps to write.
-Firstly, note that a person must be a {\signatory} upon the {\contract} in order to use these---unless they have the \featref{contracts-others} feat.
-Secondly, while a witch must learn the feat \featref{contracts} before learning any of these feats, some other creatures may have these feats without being able to write a {\contract} independently. %TODO: Link to demons.
-In this case, they can add these clauses to a {\contract} they help to write, and {\sign}, but they need someone with the \featref{contracts} feat to create the {\contract} in the first place.
+While a witch must learn the feat \featref{contracts} before learning any of these feats, some other creatures may have these feats without being able to write a {\contract} independently. %TODO: Link to demons.
+In this case, they can add these clauses to a {\contract} they help to write, but they need someone with the \featref{contracts} feat to create the {\contract} in the first place.
 
 \subsection{Signatories}
 \seclabel{contract-signatories}
@@ -152,20 +152,13 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 \feat[headology]{Signed in Blood}{contracts}{20}{
 	\noprereq
 }{
-	You may create {\contracts}, as long as you are one of the {\signatories}.
+	You may create {\contracts}.
 	Your {\contracts} are limited to only two {\signatories}, unless you are helped by someone who can create {\contracts} with more.
-}
-
-\feat[headology]{Solicitor}{contracts-others}{15}{
-	\skillrefspeciality[1]{lore}{Contracts},
-	\featref{contracts}
-}{
-	You may create, or help to create, {\contracts} even where you are not one of the {\signatories}.
 }
 
 \feat[headology]{Multisign}{contracts-more-signatories}{10}{
 	\skillrefspeciality[1]{lore}{Contracts},
-	\featref{contracts-others}
+	\featref{contracts}
 }{
 	You may create {\contracts} with more than two {\signatories}---as many as you like.
 	You may also allow a {\contract} by another to have additional {\signatories}, if you help them to create it.
