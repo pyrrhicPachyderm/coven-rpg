@@ -44,12 +44,14 @@ From this point onwards, the document used to create the {\contract} is no longe
 It can be modified, or destroyed, without affecting the terms of the {\contract} itself.
 
 Not just anyone can write a magically binding {\contract}, although anyone can {\sign} one.
-At least one of the people writing the {\contract} must have the feat \featref{contracts}, in order to make it magically binding.
-However, the person who writes the {\contract} does not need to be one of the {\signatories} on it.
+The contract must be penned by a person with the \featref{contracts} feat in order to make it magically binding.
+However, the person who pens the {\contract} does not need to be one of the {\signatories} on it.
 
-Several feats allow extra clauses to be specified upon a {\contract} that a person helps to write.
-While a witch must learn the feat \featref{contracts} before learning any of these feats, some other creatures may have these feats without being able to write a {\contract} independently. %TODO: Link to demons.
-In this case, they can add these clauses to a {\contract} they help to write, but they need someone with the \featref{contracts} feat to create the {\contract} in the first place.
+Several feats allow extra {\penalties} or clauses to be specified upon a {\contract}.
+The person writing the {\contract} must have all the relevant feats for any additional {\penalties} or clauses they use.
+However, several people can collaborate to write a {\contract}, and in doing so can combine their sets of feats to determine the contents of the {\contract}.
+To do so, they must all have the \featref{contracts} feat, and be able to pass the written document around, all taking turns writing upon it before anyone begins to {\sign} it.
+People without the \featref{contracts} feat may be involved in the discussion, providing input or even advice, but cannot help to pen the {\contract} except to {\sign} it.
 
 \subsection{Signatories}
 \seclabel{contract-signatories}
@@ -153,7 +155,7 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	\noprereq
 }{
 	You may create {\contracts}.
-	Your {\contracts} are limited to only two {\signatories}, unless you are helped by someone who can create {\contracts} with more.
+	Your {\contracts} are limited to only two {\signatories}, unless you are collaborating with someone who can create {\contracts} with more.
 }
 
 \feat[headology]{Multisign}{contracts-more-signatories}{10}{
@@ -161,7 +163,6 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	\featref{contracts}
 }{
 	You may create {\contracts} with more than two {\signatories}---as many as you like.
-	You may also allow a {\contract} by another to have additional {\signatories}, if you help them to create it.
 }
 
 \feat[headology]{Null and Void}{contracts-void}{10}{
@@ -170,7 +171,7 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 }{
 	It is very difficult to undo a {\contract} once it has come into effect, but with agreement of all the original {\signatories}, it can be done.
 	A {\contract} can normally contain clauses that {\void} it under certain conditions.
-	Now, when you create, or help to create, a {\contract}, you may add clauses that {\void} previous {\contracts}: either immediately, or under certain conditions.
+	Now, when you create a {\contract}, you may add clauses that {\void} previous {\contracts}: either immediately, or under certain conditions.
 	These conditions must still be detected by a {\signatory}, as usual.
 	
 	For this to work, every {\signatory} upon the {\contract} to be {\voided} must be a {\signatory} on the new {\contract}.
