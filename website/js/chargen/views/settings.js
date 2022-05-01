@@ -1,6 +1,6 @@
 var CookieConsentBar = Backbone.View.extend({
 	el: "#cookie-consent-bar",
-	model: Settings,
+	model: SettingsModel,
 	
 	initialize: function () {
 		this.model.on("change:allowLocalStorage", this.render, this);

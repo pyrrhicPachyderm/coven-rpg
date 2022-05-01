@@ -1,6 +1,6 @@
 //A model for storing settings, for the user to configure the character creator's behaviour.
 
-var Settings = Backbone.Model.extend({
+var SettingsModel = Backbone.Model.extend({
 	defaults: {
 		allowLocalStorage: null, //null until preference is set, then true or false.
 	},
@@ -12,4 +12,4 @@ var Settings = Backbone.Model.extend({
 	},
 });
 
-var settings = new Settings;
+var settings = new SettingsModel;
