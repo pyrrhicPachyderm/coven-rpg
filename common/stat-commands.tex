@@ -30,12 +30,12 @@
 %%%%%%%
 
 \makeatletter
-\newcommand\featinner[6][\@nil]{%Arguments: annotation, title, label, XP cost, prerequisites, text.
-	\def\featinnerannotation{#1}%
-	\ifx\featinnerannotation\@nnil%
+\newcommand\feat[6][\@nil]{%Arguments: discipline, title, label, XP cost, prerequisites, text.
+	\def\featdiscipline{#1}%
+	\ifx\featdiscipline\@nnil%
 		\subsection[#2]{#2 [#4 XP]}%
 	\else%
-		\subsection[#2]{#2 [#4 XP, {\featinnerannotation}]}%
+		\subsection[#2]{#2 [#4 XP, \capital{\discref{\featdiscipline}}]}%
 	\fi%
 	\labelname{#2}
 	\label{feat:#3}
@@ -43,30 +43,8 @@
 	\textbf{Prerequisites:} {#5}
 	
 	{#6}
-}
-
-%The standard \feat command for feats that belong to a discipline.
-\newcommand\feat[6][\@nil]{%Arguments: discipline, title, label, XP cost, prerequisites, text.
-	\def\featdiscipline{#1}%
-	\ifx\featdiscipline\@nnil%
-		\featinner{#2}{#3}{#4}{#5}{#6}%
-	\else%
-		\featinner[\capital{\discref{\featdiscipline}}]{#2}{#3}{#4}{#5}{#6}%
-	\fi%
-}
-
-%A \genericfeat command for feats that do not belong to a discipline.
-\newcommand\genericfeat[6][\@nil]{%Arguments: annotation, title, label, XP cost, prerequisites, text.
-	\def\genericfeatannotation{#1}%
-	\ifx\genericfeatannotation\@nnil%
-		\featinner{#2}{#3}{#4}{#5}{#6}%
-	\else%
-		\featinner[\capital{\genericfeatannotation}]{#2}{#3}{#4}{#5}{#6}%
-	\fi%
-}
+} %TODO: Tags for feats such as 'first circle', instead of just talking about what level of the governing skill it requires?
 \makeatother
-
-%TODO: Tags for feats such as 'first circle', instead of just talking about what level of the governing skill it requires?
 
 \newcommand\featref[1]{\nameref{feat:#1}}
 \newcommand\featlink[2]{\link{#1}{feat:#2}}
@@ -82,8 +60,6 @@
 \newcommand\Anyfeatmaterial[2][]{Any feat using #1 \materialref{#2}} %I can't make \emakefirstuc work here.
 
 \newcommand\prereqfamiliar[1]{\familiarref{#1} familiar}
-
-\newcommand\featannotationfamiliar{familiar}
 
 %%%%%%%%
 %Skills.
