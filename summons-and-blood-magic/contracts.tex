@@ -151,21 +151,21 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 
 \section{Feats}
 
-\feat[headology]{Signed in Blood}{contracts}{20}{
+\feat{Signed in Blood}{contracts}[headology]{20}{
 	\noprereq
 }{
 	You may create {\contracts}.
 	Your {\contracts} are limited to only two {\signatories}, unless you are collaborating with someone who can create {\contracts} with more.
 }
 
-\feat[headology]{Multisign}{contracts-more-signatories}{10}{
+\feat{Multisign}{contracts-more-signatories}[headology]{10}{
 	\skillrefspeciality[1]{lore}{Contracts},
 	\featref{contracts}
 }{
 	You may create {\contracts} with more than two {\signatories}---as many as you like.
 }
 
-\feat[headology]{Null and Void}{contracts-void}{10}{
+\feat{Null and Void}{contracts-void}[headology]{10}{
 	\skillrefspeciality[1]{lore}{Contracts},
 	\featref{contracts}
 }{
@@ -179,7 +179,7 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	You may also create a {\contract} without {\stipulations} or {\penalties}, with the sole purpose of {\voiding} earlier {\contracts}.
 }
 
-\feat[headology]{Dictate Terms}{contracts-collaborate}{5}{
+\feat{Dictate Terms}{contracts-collaborate}[headology]{5}{
 	\skillrefspeciality[1]{lore}{Contracts},
 	\featref{contracts}
 }{
@@ -192,7 +192,7 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	In this case, note that whoever is actually penning the {\contract} must have the \featref{contracts} feat.
 }
 
-\feat[headology]{Taglock Escrow}{contracts-penalty-taglock}{15}{
+\feat{Taglock Escrow}{contracts-penalty-taglock}[headology]{15}{
 	\featref{contracts}
 }{
 	The \materialref{blood} used to {\sign} a contract can always be used as a \materialref{taglock} by someone who holds the physical document.
@@ -204,7 +204,7 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	This still works even if the physical document and the \materialref{blood} used to {\sign} it have been destroyed.
 }
 
-\feat[headology]{Blood Escrow}{contracts-penalty-taglock-blood}{5}{
+\feat{Blood Escrow}{contracts-penalty-taglock-blood}[headology]{5}{
 	\skillrefspeciality[2]{lore}{Contracts},
 	\featref{contracts-penalty-taglock}
 }{
@@ -214,7 +214,7 @@ Every {\signatory} on the {\contract} becomes aware when an active {\contract} i
 	This still does not provide any particular amount of \materialref{blood} for any magic that requires such (e.g.\ \featref{symlink-blood-2}).
 }
 
-\feat[headology]{Liar's Location}{contracts-penalty-location}{5}{
+\feat{Liar's Location}{contracts-penalty-location}[headology]{5}{
 	\featref{contracts-penalty-taglock},
 	\featref{divination-taglock-location}
 }{

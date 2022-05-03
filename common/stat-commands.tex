@@ -29,22 +29,21 @@
 %Feats.
 %%%%%%%
 
-\makeatletter
-\newcommand\feat[6][\@nil]{%Arguments: discipline, title, label, XP cost, prerequisites, text.
-	\def\featdiscipline{#1}%
-	\ifx\featdiscipline\@nnil%
-		\subsection[#2]{#2 [#4 XP]}%
-	\else%
-		\subsection[#2]{#2 [#4 XP, \capital{\discref{\featdiscipline}}]}%
-	\fi%
-	\labelname{#2}
-	\label{feat:#3}
-	\index{#2}
-	\textbf{Prerequisites:} {#5}
+\newcommand\printfeattags[1]{%Argument: a list of tags, separated with commas and spaces after the commas.
+	\capitalisewords{#1}%
+}
+\newcommandx\feat[7][3,5]{%Arguments: title, label, discipline, XP cost, tags, prerequisites, text.
+	\subsection[#1]{#1 [#4 XP%
+		\ifstrempty{#3}{}{, \capital{\discref{#3}}}%
+		\ifstrempty{#5}{}{, \printfeattags{#5}}%
+	]}%
+	\labelname{#1}
+	\label{feat:#2}
+	\index{#1}
+	\textbf{Prerequisites:} {#6}
 	
-	{#6}
+	{#7}
 } %TODO: Tags for feats such as 'first circle', instead of just talking about what level of the governing skill it requires?
-\makeatother
 
 \newcommand\featref[1]{\nameref{feat:#1}}
 \newcommand\featlink[2]{\link{#1}{feat:#2}}
