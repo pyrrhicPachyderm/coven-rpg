@@ -400,3 +400,103 @@ As such, it can be worth taking a quick look at other feats you may be intereste
 %Vole/Shrew/Gopher
 %Vulture
 %Woodpecker
+
+\section{Familiar Feats}
+
+Just as \emph{you} can learn and improve, so can your familiar.
+These feats represent that ability, and are also how you can increase your familiar's attributes and skills.
+
+You still purchase these feats from your normal XP, so helping your familiar to develop comes at some cost to your own improvement.
+The price is often well worth it, however; your familiar is a constant and loyal companion, and can contribute greatly in many situations.
+Besides, you might learn a thing or two yourself while teaching your familiar.
+
+Some of these feats require a particular kind of familiar, while others require your familiar to have particular skills.
+This might affect your choice of familiar, so it can be worth reading these feats before selecting a familiar.
+However, you will sometimes be able to train an unskilled familiar, in order to acquire a particular feat, so this needn't entirely dictate your choice.
+
+\feat{Familiar Attribute}{familiar-attribute}{15}{
+	\noprereq
+}{
+	Through regular training with your familiar, you've managed to improve its natural abilities.
+	Increase one of your familiar's attributes by 1.
+	You may take this feat multiple times, but you can only increase each attribute once.
+}
+
+\feat{Familiar Skill}{familiar-general-skill}{15}{
+	\noprereq
+}{
+	You've taught your familiar a new skill, or helped it to improve an existing one.
+	It gains 1 rank in a {\generalskill}.
+	You may take this feat multiple times, but you can only increase each skill once.
+}
+
+\feat{Familiar Speciality}{familiar-speciality-skill}{15}{
+	\noprereq
+}{
+	Some animals have a natural ability with a particular craft or vocation; an ability that is often carried to a familiar of that type.
+	You've nurtured and developed that talent in your familiar.
+	It gains 1 rank in a {\specialityskill}, in which it already had at least 1 rank.
+	You may take this feat multiple times, but you can only increase each skill once.
+}
+
+\feat{Familiar Discipline}{familiar-discipline-skill}{25}{
+	\noprereq
+}{
+	Not many animals carry a natural talent for magic, but your familiar does.
+	You've honed this talent, bringing it to heights that some witches never even reach.
+	Your familiar gains 1 rank in a {\disciplineskill} in which it already had at least 1 rank.
+	You may take this feat multiple times, but you can only increase each skill once.
+}
+
+\feat{Familiar Familiarity}{familiar-language}{5}{
+	\noprereq
+}{
+	Each ``language'' that a witch shares with her familiar is unique, relying on the bond between their souls.
+	However, all these ``languages'' share something in common, and, with a bit of work, your familiar has picked up some of this.
+	
+	Your familiar can now communicate with any other witch's familiar, just as quickly and easily as it can communicate with you.
+	This works in both directions, with your familiar both ``speaking'' and ``listening''.
+}
+
+\feat{Familiar Witchspeak}{familiar-language-2}{5}{
+	\featref{familiar-language}
+}{
+	A few more language lessons between you and your familiar have taught your familiar to communicate with other witches; and you to communicate with other familiars.
+	This works just as quickly and easily as communication between you and your own familiar, and in both directions.
+	
+	Your familiar can only communicate with other witches who have---or once had---a familiar of their own.
+	However, it can communicate with anyone who has somehow had a familiar, even if they are not a witch.
+}
+
+\feat{Familiar Layspeak}{familiar-language-3}{15}{
+	\skillreffamiliar[1]{socialising},
+	\featref{familiar-language-2}
+}{
+	Communicating with layfolk is \emph{far} harder than communicating with witches; most people aren't even expecting an animal to talk to them!
+	But, your familiar has finally learned to talk.
+	It can form human speech, although some of its animal nature is audible in its voice---it will require a {\test} to sound properly human.
+}
+
+\feat{Familiar Beastspeak}{familiar-language-animals}{10}{
+	\skillref[1]{animals},
+	\skillreffamiliar[1]{animals},
+	\featref{familiar-language},
+	\featref{animal-language}
+}{
+	Just as you have learned to communicate with animals, you have taught your familiar to.
+	It ought to be easier---it's nearly an animal itself, after all!
+	
+	Your familiar gains the benefit of \featref{animal-language}.
+	If you also have \featref{animal-language-2} or \featref{animal-language-speed}, your familiar gains the benefit of those as well.
+}
+
+\feat{Familiar Scribing}{familiar-ritual-circle}{15}{
+	\noprereq
+}{
+	You have taught your familiar the basics of \discref{ritual-magic}, enough to scribe \materialrefplural{ritual-circle}.
+	It has the knowledge required to scribe any \materialrefplural{ritual-circle} you can scribe, from any discipline.
+	Its physical form may still limit its ability to do so---a \familiarref{dog} can scratch in the dirt more easily than a \familiarref{spider}.
+	It may be slower at scribing than a human, but can still help you complete a circle faster if it assists you.
+	
+	Your familiar still cannot perform the rituals that use the circles, although circles such as the \featref{circle-safe-fall} do not require this.
+}
