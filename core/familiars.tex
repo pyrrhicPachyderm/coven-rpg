@@ -105,6 +105,40 @@ If this is not given, they have no effective attacks.
 It simply means that any fight between one of these familiars and one \emph{with} effective attacks is a foregone conclusion.
 If two creatures without effective attacks end up in a fight, it may be prudent to reduce several minutes of fighting to one opposed {\test}, or a handful of them.
 
+\section{Familiar Advancement}
+
+Just as \emph{you} can learn and improve, so can your familiar.
+Familiar may advance their attributes and skills, and even acquire feats.
+The cost to do so comes from the witch's normal XP, so helping your familiar to develop comes at some cost to your own improvement.
+The price is often well worth it, however; your familiar is a constant and loyal companion, and can contribute greatly in many situations.
+Besides, you might learn a thing or two yourself while teaching your familiar.
+
+The XP cost of increasing your familiar's attributes and skills are presented in the following table.
+These are independent of your familiar's current score in the attribute or skill.
+However, animals are less flexible in their learning than humans, and their development is limited by their initial form.
+As such, a familiar may only increase each attribute or each skill once.
+Furthermore, {\disciplineskills} and {\specialityskills} are particularly difficult to learn: a familiar may only increase one of these skills if they already have at least one rank in it.
+
+\notedtable{lr}{
+	\toprule
+	Statistic & XP Cost\\
+	\midrule
+	\capital{\seclink{attribute}{attributes}} & 15\\
+	\capital{\generalskillbare} & 15\\
+	\capital{\disciplineskillbare} & 25\tnote{*}\\
+	\capital{\specialityskillbare} & 15\tnote{*}\\
+	\bottomrule
+}{
+	\item[*] Must have at least 1 rank already.
+}
+
+You can also buy feats for your familiar.
+The available feats are given in the section \secref{familiar-feats}.
+These are not part of any discipline, so don't benefit from any discounts.
+Some of these feats require a particular kind of familiar, while others require your familiar to have particular skills.
+This might affect your choice of familiar, so it can be worth reading these feats before selecting a familiar.
+However, you will sometimes be able to train an unskilled familiar in order to acquire a particular feat, so this needn't entirely dictate your choice.
+
 \section{Familiar Animals}
 
 A list of the types of animal available as familiars is presented below, along with the attributes, skills, and abilities of the familiar.
@@ -120,10 +154,6 @@ This is deducted from the witch's starting XP.
 Some types of familiar also come with options which may be purchased for an additional XP cost.
 These represent inherent differences in the animal used and must be purchased at the same time your familiar is created.
 You may only select one option; they are mutually exclusive.
-
-Lastly, bear in mind that some feats that can be purchased later depend upon particular types of familiar, and your familiar's later development is limited by its form.
-As such, it can be worth taking a quick look at other feats you may be interested in taking when selecting your familiar.
-%TODO: If those are all in a discipline chapter on familiars, direct people there.
 
 \familiar{Bat}{Bats}{bat}{15}{
 	\atttable{\negative 2}{2}{1}{2}{2}{2}{0}{0}
@@ -402,51 +432,7 @@ As such, it can be worth taking a quick look at other feats you may be intereste
 %Woodpecker
 
 \section{Familiar Feats}
-
-Just as \emph{you} can learn and improve, so can your familiar.
-These feats represent that ability, and are also how you can increase your familiar's attributes and skills.
-
-You still purchase these feats from your normal XP, so helping your familiar to develop comes at some cost to your own improvement.
-The price is often well worth it, however; your familiar is a constant and loyal companion, and can contribute greatly in many situations.
-Besides, you might learn a thing or two yourself while teaching your familiar.
-
-Some of these feats require a particular kind of familiar, while others require your familiar to have particular skills.
-This might affect your choice of familiar, so it can be worth reading these feats before selecting a familiar.
-However, you will sometimes be able to train an unskilled familiar in order to acquire a particular feat, so this needn't entirely dictate your choice.
-
-\feat{Familiar Attribute}{familiar-attribute}{15}{
-	\noprereq
-}{
-	Through regular training with your familiar, you've managed to improve its natural abilities.
-	Increase one of your familiar's attributes by 1.
-	You may take this feat multiple times, but you can only increase each attribute once.
-}
-
-\feat{Familiar Skill}{familiar-general-skill}{15}{
-	\noprereq
-}{
-	You've taught your familiar a new skill, or helped it to improve an existing one.
-	It gains 1 rank in a {\generalskill}.
-	You may take this feat multiple times, but you can only increase each skill once.
-}
-
-\feat{Familiar Speciality}{familiar-speciality-skill}{15}{
-	\noprereq
-}{
-	Some animals have a natural ability with a particular craft or vocation; an ability that is often carried to a familiar of that type.
-	You've nurtured and developed that talent in your familiar.
-	It gains 1 rank in a {\specialityskill}, in which it already had at least 1 rank.
-	You may take this feat multiple times, but you can only increase each skill once.
-}
-
-\feat{Familiar Discipline}{familiar-discipline-skill}{25}{
-	\noprereq
-}{
-	Not many animals carry a natural talent for magic, but your familiar does.
-	You've honed this talent, bringing it to heights that some witches never even reach.
-	Your familiar gains 1 rank in a {\disciplineskill} in which it already had at least 1 rank.
-	You may take this feat multiple times, but you can only increase each skill once.
-}
+\seclabel{familiar-feats}
 
 \feat{Familiar Familiarity}{familiar-language}{5}{
 	\noprereq
