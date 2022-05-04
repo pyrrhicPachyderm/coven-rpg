@@ -53,7 +53,7 @@
 \definefeatdefault{tags}
 
 \newcommand\printfeattags[1]{%Argument: a list of tags, separated with commas and spaces after the commas.
-	\capitalisewords{#1}%
+	\expandafter\capitalisewords\expandafter{#1}%
 }
 \newcommandx\feat[7][3,5]{%Arguments: title, label, discipline, XP cost, tags, prerequisites, text.
 	\edef\featdiscipline{\evaluatefeatdefault{discipline}{#3}}%
