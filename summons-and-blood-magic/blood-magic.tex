@@ -2,23 +2,25 @@
 \chaplabel{blood-magic}
 
 \section{Feats}
+\unsetfeatdefault{discipline}
+\unsetfeatdefault{tags}
 
-\feat[sympathetic-magic]{Blood Binding}{symlink-blood}{15}{
+\feat{Blood Binding}{symlink-blood}[sympathetic-magic]{15}{
 	\skillref[1]{sympathetic-magic},
 	\featref{symlink-taglock}
 }{
 	\capital{\materialref{blood}} is the most powerful \materialref{taglock}.
 	With enough of it, you can forge an even stronger {\symlink}.
 	
-	If you use a drop of \materialref{blood} as the \materialref{taglock} for \featref{symlink-taglock}, it establishes a {\standardsymlink}, instead of a {\weaksymlink}.
+	If you use \materialref{blood} as the \materialref{taglock} for \featref{symlink-taglock}, it establishes a {\standardsymlink}, instead of a {\weaksymlink}.
 }
 
-\feat[sympathetic-magic]{Total Bloodbind}{symlink-blood-2}{10}{
+\feat{Total Bloodbind}{symlink-blood-2}[sympathetic-magic]{10}{
 	\skillref[1]{sympathetic-magic},
 	\featref{symlink-blood}
 }{
 	A drop of \materialref{blood} is potent.
 	\emph{Soaking} the {\symbol} in \materialref{blood} is simply overwhelming.
 	If you soak the whole {\symbol} in the target's \materialref{blood} while using \featref{symlink-blood}, it establishes a {\strongsymlink}.
-	Soaking a typical hand-sized \materialref{poppet} or \materialref{effigy} requires 1 dose of blood, but larger {\symbols} might require more.
+	Soaking a typical hand-sized \materialref{poppet} or \materialref{effigy} requires 1 dose of \materialref{blood}, but larger {\symbols} might require more.
 }

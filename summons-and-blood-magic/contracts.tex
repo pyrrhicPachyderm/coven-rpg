@@ -36,20 +36,22 @@ There are two steps to creating a {\contract}.
 The first is writing the document, specifying the {\stipulations}, the {\penalties}, and who the {\signatories} are to be.
 The second is getting each {\signatory} to {\sign} the document.
 The document must not be modified during the second step.
-If it is altered at any point after the first {\signatory} {\signs}, but before the last {\signatory} {\signs} it becomes {\void}.
+If it is altered at any point after the first {\signatory} {\signs}, but before the last {\signatory} {\signs}, then it becomes {\void}.
 
 Once the last {\signatory} signs it, the {\contract} takes effect.
 Every {\signatory} is immediately, magically aware of this, regardless of whether they are currently present.
 From this point onwards, the document used to create the {\contract} is no longer relevant.
 It can be modified, or destroyed, without affecting the terms of the {\contract} itself.
 
-Not just anyone can write a magically-binding {\contract}, although anyone can {\sign} one.
-At least one of the people writing---and {\signing}---the {\contract} must have the feat \featref{contracts}, in order to make it magically binding.
+Not just anyone can write a magically binding {\contract}, although anyone can {\sign} one.
+The contract must be penned by a person with the \featref{contracts} feat in order to make it magically binding.
+However, the person who pens the {\contract} does not need to be one of the {\signatories} on it.
 
-Several feats allow extra clauses to be specified upon a {\contract} that a person helps to write.
-Firstly, note that a person must be a {\signatory} upon the {\contract} in order to use these---unless they have the \featref{contracts-others} feat.
-Secondly, while a witch must learn the feat \featref{contracts} before learning any of these feats, some other creatures may have these feats without being able to write a {\contract} independently. %TODO: Link to demons.
-In this case, they can add these clauses to a {\contract} they help to write, and {\sign}, but they need someone with the \featref{contracts} to create the {\contract} in the first place.
+Several feats allow extra {\penalties} or clauses to be specified upon a {\contract}.
+The person writing the {\contract} must have all the relevant feats for any additional {\penalties} or clauses they use.
+However, several people can collaborate to write a {\contract}, and in doing so can combine their sets of feats to determine the contents of the {\contract}.
+To do so, they must all have the \featref{contracts} feat, and be able to pass the written document around, all taking turns writing upon it before anyone begins to {\sign} it.
+People without the \featref{contracts} feat may be involved in the discussion, providing input or even advice, but cannot help to pen the {\contract} except to {\sign} it.
 
 \subsection{Signatories}
 \seclabel{contract-signatories}
@@ -92,23 +94,42 @@ Accompanying each {\stipulation} in a {\contract}, there should be a {\contractp
 One {\contractpenalty} may cover multiple {\stipulations}, and violation of one {\stipulation} may trigger multiple {\penalties}.
 However, {\penalties} can only affect the {\signatories} who violated the associated {\stipulations}.
 
-Several varieties of {\contractpenalty} are possible in a {\contract}, but only one is possible for a novice {\contract}-writer.
+Several varieties of {\contractpenalty} are possible in a {\contract}, but only one is possible for a novice {\contract}-writer: the {\liarscurse}.
 Others must be learned through feats.
 Every {\signatory} upon a {\contract} becomes aware when a {\stipulation} is violated and a {\contractpenalty} takes effect.
 
-The standard {\contractpenalty} is forced action for the {\signatory} who violated the {\stipulation}.
-The {\contract} should specify exactly what they have to do, and, if they violate their {\stipulation}, the magic of the {\contract} compels them to carry out the {\contractpenalty} to the best of their ability.
-The most common case is to simply force them to carry out the {\stipulation} they violated, but others are possible.
+If a {\contractpenalty} has a duration, such as the {\liarscurse}, then the {\contract} must specify how long it lasts.
+This might be a set length of time, until a certain condition comes to pass, or even forever.
+As with violations of a {\stipulation}, any condition that ends a {\contractpenalty} must be detected by one of the {\signatories} on the {\contract}, and all {\signatories} are made aware when a {\contractpenalty} ends.
 
-In this case of a forced action {\contractpenalty}, the {\penalised} {\signatory} is magically compelled to carry it out above all else.
-In most cases they will retain a sense of self-preservation, but only so far as it is helps them to carry out the {\contractpenalty}.
-A {\contractpenalty} requiring a suicidal action overrides even this, however.
-As such, being under a {\contractpenalty} can be very dangerous.
-The magical compulsion continues until the {\contractpenalty} is completed---which may never happen, depending on how it is phrased.
+\capital{\contracts} can also be written without {\stipulations}, to bring some {\penalties} into effect on some {\signatories} immediately as the {\contract} takes effect.
+This may be particularly useful when forcing someone to {\sign} a {\contract} under duress.
+It can also be used with {\penalties} that can have some beneficial effect, such a {\contract} that provides \featref{contracts-penalty-location} between all members of a coven.
+A {\contract} can mix and match between {\penalties} that occur immediately and those that are imposed by breaking {\stipulations}.
 
-If a player character winds up under a {\contractpenalty}, it should normally be possible to leave the player in control, as long as they co-operate.
-They character is in control of \emph{how} they attempt to fulfil the {\penaltypossessive} obligations, as long as they give it their best effort.
-However, the GM retains the right to take some control if the player is not following their character's magical compulsion.
+\subsubsection{The Liar's Curse}
+\seclabel{liars-curse}
+
+The {\liarscurse} is the standard {\contractpenalty}, available to anyone who can write a {\contract}.
+Anyone who breaks a {\contract} and has the {\liarscurse} imposed upon them is magically marked as untrustworthy, a liar and an oath breaker.
+This acts as a magical influence on all who interact with the cursed person.
+The cursed person's words ring false, and people have a difficult time believing what they say.
+This makes social interaction in general quite difficult, and in particular makes it almost impossible to perform \discref{headology} or convince people to {\sign} further {\contracts} with the cursed person.
+Interacting with people while under the {\liarscurse} can also be harmful to one's reputation, as people come to recognise you as a liar.
+
+The curse does not make people disbelieve every statement the cursed person makes.
+Self evident statements, such as ``the sky is blue'' are unaffected.
+But many things can be affected.
+For example, threats might come across as crass jokes, rather than being genuinely intimidating.
+Even compliments can ring hollow, sounding snide or sarcastic.
+Obvious attempts to convince people of something they may or may not believe are most severely affected.
+The GM is encouraged to impose large penalties on any {\tests} that might be affected by the curse.
+Being under the effect of more than one {\liarscurse} at a time has no additional effect, though {\contracts} can always be written to add the durations of multiple instances together.
+
+The effect of the {\liarscurse} is not obviously supernatural to anyone interacting with the cursed person.
+Even people familiar with the existence of the {\liarscurse} can struggle to recognise its effects.
+Furthermore, recognising that someone is under the {\liarscurse} does not provide immunity to it---they still sound dishonest, and overcoming it requires deciding to trust them anyway.
+Doing so can be dangerous, for someone who says they're under the {\liarscurse} might be lying, after all.
 
 \subsection{Voiding a Contract}
 \seclabel{contract-void}
@@ -125,43 +146,82 @@ An entirely new document must be created in order to bring a {\contract} into ef
 
 If a {\contract} becomes {\void} some time \emph{after} it takes effect, then all its effects immediately end.
 No new {\penalties} can take effect from that {\contract}.
-Furthermore, any ongoing {\penalties} immediately end, removing any magical compulsions.
+Furthermore, any ongoing {\penalties} immediately end.
 Every {\signatory} on the {\contract} becomes aware when an active {\contract} is {\voided}.
 
 \section{Feats}
+\setfeatdefault{discipline}{headology}{true}
+\unsetfeatdefault{tags}
 
-\feat[headology]{Signed in Blood}{contracts}{25}{
+\feat{Signed in Blood}{contracts}{20}{
 	\noprereq
 }{
-	You may create {\contracts}, as long as you are one of the {\signatories}.
-	Your {\contracts} are limited to only two {\signatories}, unless you are helped by someone who can create {\contracts} with more.
+	You may create {\contracts}.
+	Your {\contracts} are limited to only two {\signatories}, unless you are collaborating with someone who can create {\contracts} with more.
 }
 
-\feat[headology]{Solicitor}{contracts-others}{15}{
+\feat{Multisign}{contracts-more-signatories}{10}{
 	\skillrefspeciality[1]{lore}{Contracts},
 	\featref{contracts}
 }{
-	You may create, or help to create, {\contracts} even where you are not one of the {\signatories}.
-}
-
-\feat[headology]{Multisign}{contracts-more-signatories}{10}{
-	\skillrefspeciality[1]{lore}{Contracts},
-	\featref{contracts-others}
-}{
 	You may create {\contracts} with more than two {\signatories}---as many as you like.
-	You may also allow a {\contract} by another to have additional {\signatories}, if you help them to create it.
 }
 
-\feat[headology]{Null and Void}{contracts-void}{10}{
+\feat{Null and Void}{contracts-void}{10}{
 	\skillrefspeciality[1]{lore}{Contracts},
 	\featref{contracts}
 }{
 	It is very difficult to undo a {\contract} once it has come into effect, but with agreement of all the original {\signatories}, it can be done.
 	A {\contract} can normally contain clauses that {\void} it under certain conditions.
-	Now, when you create, or help to create, a {\contract}, you may add clauses that {\void} previous {\contracts}: either immediately, or under certain conditions.
+	Now, when you create a {\contract}, you may add clauses that {\void} previous {\contracts}: either immediately, or under certain conditions.
 	These conditions must still be detected by a {\signatory}, as usual.
 	
 	For this to work, every {\signatory} upon the {\contract} to be {\voided} must be a {\signatory} on the new {\contract}.
 	Exactly which previous {\contracts} are to be {\voided} must be specified.
 	You may also create a {\contract} without {\stipulations} or {\penalties}, with the sole purpose of {\voiding} earlier {\contracts}.
+}
+
+\feat{Dictate Terms}{contracts-collaborate}{5}{
+	\skillrefspeciality[1]{lore}{Contracts},
+	\featref{contracts}
+}{
+	Collaboratively writing a {\contract} usually requires passing the document around, and all physically writing upon it.
+	This can be inconvenient if, for instance, one of the participants is inside a \featref{circle-contain}.
+	As such, you heave learned to collaborate verbally.
+	By dictating parts of the text of a {\contract} word-for-word, you may allow a {\contract}-writer with whom you are collaborating to use any feats you have to incorporate additional {\penalties} or clauses in the {\contract}.
+	
+	While all witches must learn to write a {\contract} independently before learning this ability, some creatures may have this ability without being able to write a {\contract} themselves. %TODO: Link to demons.
+	In this case, note that whoever is actually penning the {\contract} must have the \featref{contracts} feat.
+}
+
+\feat{Taglock Escrow}{contracts-penalty-taglock}{15}{
+	\featref{contracts}
+}{
+	The \materialref{blood} used to {\sign} a contract can always be used as a \materialref{taglock} by someone who holds the physical document.
+	However, the {\contract} can also offer up use of this \materialref{taglock} as a {\contractpenalty}.
+	You may add an additional {\contractpenalty} to {\contracts} you write.
+	This offers the use of the {\penalised} {\signatorypossessive} \materialref{taglock} to one or more of the other {\signatories} for the {\penaltypossessive} duration.
+	This does not provide them with a physical object, but they may perform magic as though they had a \materialref{taglock} from the {\penalised} {\signatory}.
+	This is simply a generic \materialref{taglock}; it does not count as \materialref{blood} for any magic that requires that specifically.
+	This still works even if the physical document and the \materialref{blood} used to {\sign} it have been destroyed.
+}
+
+\feat{Blood Escrow}{contracts-penalty-taglock-blood}{5}{
+	\skillrefspeciality[2]{lore}{Contracts},
+	\featref{contracts-penalty-taglock}
+}{
+	It was \materialref{blood} that was used to {\sign} a {\contract}, and with careful wording, you can ensure this is preserved as it is held in escrow.
+	You may add an additional {\contractpenalty} to {\contracts} you write.
+	This functions exactly as \featref{contracts-penalty-taglock}, except that the \materialref{taglock} offered may be used as though it were specifically \materialref{blood} for any magic that requires such (e.g.\ \featref{symlink-blood}).
+	This still does not provide any particular amount of \materialref{blood} for any magic that requires such (e.g.\ \featref{symlink-blood-2}).
+}
+
+\feat{Liar's Location}{contracts-penalty-location}{5}{
+	\featref{contracts-penalty-taglock},
+	\featref{divination-taglock-location}
+}{
+	You may bind some \discref{divination} magic into a {\contract} to ensure that anyone who can breaks it can be tracked down.
+	You may add an additional {\contractpenalty} to {\contracts} you write.
+	This makes the location of {\penalised} {\signatory} known to one or more of the other {\signatories} for the {\penaltypossessive} duration.
+	The information is provided as distance and direction to the {\penalised} {\signatory}, as by \featref{divination-taglock-location}.
 }

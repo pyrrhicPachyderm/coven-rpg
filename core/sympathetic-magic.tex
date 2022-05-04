@@ -63,13 +63,15 @@ Having a {\strongsymlink} to a target can put them almost entirely at your mercy
 
 A {\standardsymlink} lies in between.
 It will always transmit any effect that would {\stress} it, but it risks breaking afterwards.
-Make a \testtype{wit}{sympathetic-magic} {\opposed} by the target's \testtype{will}{sympathetic-magic}.
+Make a \testtype{wit}{sympathetic-magic} {\test} {\opposed} by the target's \testtype{will}{sympathetic-magic}.
 If the target wins the {\test}, the {\symlink} is broken.
 However, if the target is aware of the {\symlink}, and wishes to maintain it, they can help you to hold it in place.
 In this case, there is no risk of it breaking.
 Furthermore, note that an object cannot make {\tests}, so a {\standardsymlink} to an object will never be broken by {\stress}.
 
 \section{Feats}
+\setfeatdefault{discipline}{sympathetic-magic}{false}
+\unsetfeatdefault{tags}
 
 \feat{Object Linking}{symlink-object}{10}{
 	\Anyfeatdiscipline{sympathetic-magic}
