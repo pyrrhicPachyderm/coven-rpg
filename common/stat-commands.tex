@@ -29,13 +29,38 @@
 %Feats.
 %%%%%%%
 
+%Macros to set and get default discipline and tags for feats.
+%The first argument to each of these either "discipline" or "tags"; the argument being dealt with.
+\newcommand\definefeatdefault[1]{%Argument: argument to define.
+	\providebool{isfeatdefaultvisible#1}%
+}
+\newcommand\setfeatdefault[3]{%Arguments: argument to set, value to set to, visibility (true or false).
+	\csdef{featdefault#1}{#2}%
+	\setbool{isfeatdefaultvisible#1}{#3}%
+}
+\newcommand\unsetfeatdefault[1]{%Argument: argument to set.
+	\csdef{featdefault#1}{}%
+}
+\newcommand\evaluatefeatdefault[2]{%Arguments: argument to evaluate, value given to feat (possibly empty).
+	\ifstrempty{#2}{%
+		\ifcsempty{featdefault#1}{}{%
+			\ifbool{isfeatdefaultvisible#1}{\csuse{featdefault#1}}{}%
+		}%
+	}{#2}%
+}
+
+\definefeatdefault{discipline}
+\definefeatdefault{tags}
+
 \newcommand\printfeattags[1]{%Argument: a list of tags, separated with commas and spaces after the commas.
 	\capitalisewords{#1}%
 }
 \newcommandx\feat[7][3,5]{%Arguments: title, label, discipline, XP cost, tags, prerequisites, text.
+	\edef\featdiscipline{\evaluatefeatdefault{discipline}{#3}}%
+	\edef\feattags{\evaluatefeatdefault{tags}{#5}}%
 	\subsection[#1]{#1 [#4 XP%
-		\ifstrempty{#3}{}{, \capital{\discref{#3}}}%
-		\ifstrempty{#5}{}{, \printfeattags{#5}}%
+		\expandafter\ifstrempty\expandafter{\featdiscipline}{}{, \capital{\discref{\featdiscipline}}}%
+		\expandafter\ifstrempty\expandafter{\feattags}{}{, \printfeattags{\feattags}}%
 	]}%
 	\labelname{#1}
 	\label{feat:#2}
