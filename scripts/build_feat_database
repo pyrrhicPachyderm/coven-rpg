@@ -293,16 +293,6 @@ def get_prereqs(argument_node):
 		raise ParsingError #Prereq list has not fully collapsed.
 	
 	return prereq_list[0]
-	
-	#TODO: This currently fails for the headology-ritual-circle feat.
-	#That uses actual English text, which the parser can't understand.
-	#There's no hope of making the parser understand it, so the LaTeX needs to be rewritten.
-	#There needs to be some sort of "any feat using a particular material" macro.
-	#Perhaps \anyfeatmaterial (and \Anyfeatmaterial). Maybe change the existing one to \anyfeatdiscipline.
-	#Materials will need their appropriate prepositions (a, an, no preposition in the case of blood) defined.
-	#This is likely to be useful when it comes to writing blood magic anyway.
-	#Dealing with this in the character creator will also require identifying which feats require certain components.
-	#As such, I'll need to check and perhaps standardise the use of the \materials macro.
 
 def get_feat(feat_node, default_discipline):
 	#Takes a LatexMacroNode with macroname "feat" and returns a dictionary that represents the feat.
