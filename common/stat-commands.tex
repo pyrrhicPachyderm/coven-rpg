@@ -30,6 +30,7 @@
 %%%%%%%
 
 %Macros to set and get default discipline and tags for feats.
+%For the sake of the database building script, the defaults should always be set in the same file as the feats they affect.
 %The first argument to each of these either "discipline" or "tags"; the argument being dealt with.
 \newcommand\definefeatdefault[1]{%Argument: argument to define.
 	\providebool{isfeatdefaultvisible#1}%
