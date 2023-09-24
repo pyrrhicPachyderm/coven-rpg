@@ -878,18 +878,6 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	Additionally, consecutive doses continue to cause more {\exhaustion}, which may cause the drinker to pass out, as usual.
 }
 
-\feat{Regrowth Potion}{brewing-healing-regrow}{10}{
-	\skillref[2]{brewing},
-	\featref{brewing-healing-2}
-}{
-	Salamanders have the incredible ability to regrow lost limbs.
-	By adding a salamander's leg to the recipe for your \featref{brewing-healing-2} or \featref{brewing-healing-3}, you can grant the same ability to the drinker.
-	
-	The drinker can regrow missing body parts.
-	Fingers and ears will grow back with a single dose, while a limb or eye takes several doses.
-	A dose of \featref{brewing-healing-2} must be accompanied by a {\dayofrest}, as usual, and multiple doses must be spread across multiple days.
-}
-
 \feat{Hair of the Dog}{brewing-healing-taglock}{20}{
 	\skillref[2]{brewing},
 	\featref{brewing-healing}
@@ -903,6 +891,19 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	This allows you to heal all the {\damage} dealt by the creature whose \materialref{taglock} is used in creating the poultice.
 	However, it can only heal {\damage} dealt by {\unarmed} attacks---punches, bites, claws, and the like---not any {\damage} dealt with a weapon.
 	Furthermore, it will only close wounds and heal {\damage}; it cannot regrow missing parts.
+}
+
+\feat{Regrowth Potion}{brewing-healing-regrow}{10}{
+	\skillref[2]{brewing},
+	\featref{brewing-healing-2} or \featref{brewing-healing-taglock}
+}{
+	Salamanders have the incredible ability to regrow lost limbs.
+	By adding a salamander's leg to the recipe for your \featref{brewing-healing-2}, \featref{brewing-healing-3}, or \featref{brewing-healing-taglock}, you can grant the same ability to the drinker.
+	
+	The drinker can regrow missing body parts.
+	Fingers and ears will grow back with a single dose, while a limb or eye takes several doses.
+	A dose of \featref{brewing-healing-2} must be accompanied by a {\dayofrest}, as usual, and multiple doses must be spread across multiple days.
+	\capital{\featref{brewing-healing-taglock}} will only regrow parts that were removed by the {\unarmed} attacks of the creature whose \materialref{taglock} is used in creature.
 }
 
 \feat{Exposure}{poison-resistance}{10}{
