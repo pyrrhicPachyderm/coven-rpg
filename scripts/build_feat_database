@@ -18,7 +18,7 @@
 #	Represented in the book as an ordered, comma-separated list.
 #	Has one entry: "nodes", an array of nodes.
 #"and":
-#	Mechanically identically to a "list", and similarly just has one "noes" entry.
+#	Mechanically identically to a "list", and similarly just has one "nodes" entry.
 #	Differs in that it is separated in the book with the word 'and' instead of commas.
 #	This is just used occasionally for emphasis (see \featref{circle-contain-exclude}).
 #"or":
