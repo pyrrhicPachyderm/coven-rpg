@@ -5,10 +5,6 @@
 #Firstly, the path of the JSON file to output to.
 #Subsequently, the paths of one or more LaTeX files to read feats from.
 
-#If a feat does not provide the optional argument to specify its discipline,
-#the discipline is taken from the file name.
-#TODO: Invent a better method than this.
-
 #A feat's prereqs are stored using a recursive tree structure.
 #Each node of the tree is a dictionary, in python parlance (an object in JSON parlance).
 #Every node has an entry with the key "type", that defines what type of node it is.
