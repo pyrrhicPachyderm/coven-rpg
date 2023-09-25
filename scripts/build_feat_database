@@ -54,10 +54,8 @@
 #"familiarskill" and "specialityskillfamiliar"
 #	As "skill" and "specialityskill", but representing a skill the familiar must have.
 
-#TODO: There needs to be some marker that a feat can be taken more than once.
-#This will be needed for the feats that improve familiars' attributes/skills.
-#Further, those feats (and the druidcraft animal training feats) will have to have their effect encoded.
-#This will allow the character creator to display the familiar's modified stats, and use them as prereqs.
+#TODO: The druidcraft animal training feats will need to have their effects encoded.
+#This will allow the character creator to display the animal companions's modified stats.
 
 import sys
 import os
