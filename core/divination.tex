@@ -147,6 +147,29 @@ With \featref{foresight} in particular, you might be able to look at yourself sc
 This is far harder to arrange with \featref{hindsight}, however, and does not work at all with \featref{scrying-eyes}.
 The more reliable solution is to use the feat \featref{vision-scrying}.
 
+\section{Portents}
+\seclabel{portents}
+
+A witch who first learns to {\foretell} the future, with \featref{foresight}, must explicitly choose the time she wants to see in her {\visions}.
+For example, she might choose to have a {\vision} of what will happen in 8 hours' time.
+Having a {\vision} of a specific or useful event in this way may be quite difficult: if she doesn't know when the event is scheduled to occur, she'll need to estimate it by some sort of dead reckoning.
+To make {\foretelling} easier and more useful, many \practitioners{divination} learn to interpret and use {\portents}: signs and techniques that they can use to aim their {\foretelling} {\visions}.
+\capital{\portents} can be learned through the relevant feats, each of which teaches how to use a different type of {\portent}, such as spilled entrails or \materialrefplural{tarot}.
+
+Using a {\portent} requires you to study the {\portent} while beginning your {\vision}.
+The {\portent} must be present for you to study for the whole time it takes to begin a {\vision}.
+Each type of {\portent} searches the time \featref{foresight} would normally allow you to view for a particular event, and shows you a {\vision} of that event.
+The event it shows must be one that occurs in the location of the {\vision}: in your immediate surroundings by default, or at the current location of the scrying sensor when used in combination with \featref{vision-scrying}.
+
+Normally, a {\portent} searches for the event within the entire time period that you could see a {\vision} of with \featref{foresight}.
+However, you may also choose to search a shorter or more specific time if you wish.
+For example, you could search only within the next hour, or search within the afternoon while ignoring any occurrences in the morning.
+
+Some {\portents} search for the event that most fulfils some criterion, and thus will always show a valid {\vision}.
+For example, \featref{foresight-entrails} shows the most violent event, and will still show a {\vision} of someone stubbing their toe if that's the most applicable event available.
+Other {\portents}, such as \featref{foresight-chance} search for a specific event.
+If that event does not occur in the location and time period being searched, \featref{foresight} will simply fail, and the \practitioner{divination} will see no {\vision}.
+
 \section{Feats}
 \setfeatdefault{discipline}{divination}{false}
 \unsetfeatdefault{tags}
@@ -494,28 +517,21 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 \feat{Haruspex}{foresight-entrails}{10}{
 	\featref{foresight}
 }{
-	By spilling the entrails of a creature at least the size of a cat, you can foretell great violence.
-	You must spill these entrails, fresh from the creature's body, as part of beginning \featref{foresight}.
-	If you do so, then instead of specifying a time for the resulting {\vision}, you see a moment of violence.
+	You may inspect spilled entrails as a {\portent} to foretell great violence.
+	The entrails must come from a creature at least the size of a cat, and you must spill them fresh from the creature's body as part of beginning \featref{foresight}.
+	If you use this {\portent}, then instead of specifying a time for the resulting {\vision}, you see a moment of violence.
 	
-	This searches for the most violent moment within the time \featref{foresight} would normally allow you to view, as determined by the GM.
+	This shows the most violent moment within the time and location searched, as determined by the GM.
 	The {\vision} begins around the start of the violence, but is always positioned such that it encompasses the most violent part.
-	You may search a shorter time than you are able to, if you wish.
-	For example, you may choose to look only for the most violent moment within the next hour.
-	
-	This only searches for violence in your immediate surroundings---such that you would be able to sense it in the {\vision} from where you stand now.
-	In combination with \featref{vision-scrying}, it searches around the current location of the scrying sensor.
 }
 
 \feat{One for Sorrow}{foresight-birds}{15}{
 	\skillref[1]{divination},
 	\featref{foresight-entrails}
 }{
-	By watching the behaviour of a bird as you begin \featref{foresight}, you foretell sorrow.
+	You may watch the behaviour of a bird as a {\portent} to foretell sorrow.
 	The bird must be {\wild}, and behaving naturally, not a familiar or captured bird.
-	If you do so, then instead of specifying a time, you see a {\vision} of the event which would most upset you---typically the event you most want to avert.
-	
-	Just like \featref{foresight-entrails}, this searches your current location---or the current location of the scrying sensor---within the time \featref{foresight} would normally allow you to view, and you may shorten the time it searches if you wish.
+	If you use this {\portent}, then you see a {\vision} of the event which would most upset you---typically the event you most want to avert.
 }
 
 \feat{Seven for a Secret}{foresight-birds-2}{15}{
@@ -525,7 +541,7 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	\emph{One for sorrow, two for joy, three for a girl, four for a boy. Five for silver, six for gold, seven for a secret never to be told.}
 	While one bird foretells sorrow for you, you may use many birds to bring sorrow upon another.
 	
-	This requires you to watch the behaviour of many birds---at least seven---while you begin \featref{foresight}.
+	This requires you to watch the behaviour of many birds---at least seven---as a {\portent}.
 	Just like \featref{foresight-birds}, these must be {\wild} birds.
 	Additionally, you must watch the behaviour of a person or other creature: the target.
 	
@@ -540,11 +556,9 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	\featref{foresight}
 }{
 	Simply guessing at the time you want to foresee is rather inaccurate, and likely to leave you with a {\vision} of a whole lot of nothing.
-	By laying out \materialrefplural{tarot} while you begin \featref{foresight}, you may try to aim your {\vision} at a specific event.
-	
+	By laying out \materialrefplural{tarot} as a {\portent}, you may try to aim your {\vision} at a specific event.
 	You must specify the event you are looking for, in as much detail as you can.
 	For example, you might look for ``when our coven comes back out of this cave'', ``the next time someone enters this pub'', or ``the next time I snap my fingers''.
-	The event you specify must be something you would be able to sense in the {\vision}, either from where you stand now, or---in combination with \featref{vision-scrying}---from the current location of the scrying sensor.
 	
 	\capital{\materialrefplural{tarot}} are an instrument of chance, and using this feat \emph{always} requires a {\test}.
 	The GM sets the {\tn}, based on the specificity of the event you are looking for.
@@ -552,12 +566,8 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	For example, ``the next time I snap my fingers'' specifies very little about most of the scene, while ``when our coven comes back out of this cave'' specifies several people, and what they are doing.
 	The {\testpossessive} difficulty, as usual, is raised further by rushing your magic, or using substandard materials.
 	
-	If you succeed on the {\test}, and the event you specified occurs within the time \featref{foresight} would normally allow you to view, then you receive a {\vision} of the event, of the usual length.
-	If you succeed, but the event specified will not occur within that time, then you are aware of this and see no {\vision} at all.
-	If you wish, you can shorten the period of time you are searching; for example, you can look for it only within the next hour.
-	
 	If you fail the {\test}, then you receive a false result.
-	The GM may show you an entirely false {\vision} of the event occurring, or may falsely inform you that the event won't happen and show you no {\vision} at all.
+	The GM may show you an entirely false {\vision} of the specified event occurring, or may falsely inform you that the event won't happen and show you no {\vision} at all.
 	The GM should not inform you of whether you succeeded or failed the {\test}.
 }
 
@@ -568,10 +578,10 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 	\featref{scrying-speed},
 	\featref{foresight-entrails} or \featref{foresight-chance}
 }{
-	Rather than using omens to search the future of the place you currently stand, you can use them to search your own future.
-	To do this, you must be using \featref{vision-scrying} to begin \featref{foresight} through a scrying surface, and you must be using a feat such as \featref{foresight-entrails}, \featref{foresight-birds}, or \featref{foresight-chance} to select a time for your {\vision}.
+	Rather than using {\portents} to search the future of the place you currently stand, you can use them to search your own future.
+	To do this, you must be using \featref{vision-scrying} to begin \featref{foresight} through a scrying surface, and you must be using a {\portent} to select a time for your {\vision}.
 	
-	Instead of searching for an event in the place your scrying sensor is currently positioned, this searches for an event that occurs wherever \emph{you} are in the future.
+	Instead of searching for an event in the place your scrying sensor is currently positioned, the {\portent} searches for an event that occurs wherever \emph{you} are in the future.
 	For example, if you used this with \featref{foresight-entrails}, it would focus on the most violent event that occurs to you within the time period you search.
 	When your {\vision} starts, the scrying sensor is automatically refocused to the location of the event; that is, your location at the time of the event.
 	This will never focus upon an event that happens outside your scrying range.
@@ -584,7 +594,7 @@ The more reliable solution is to use the feat \featref{vision-scrying}.
 }{
 	Using a \materialref{taglock}, you may seek {\visions} of what is to befall another person.
 	When you use \featref{foresight-aim-self}, you may select a person or creature for whom you have a \materialref{taglock}, rather than yourself.
-	This searches for events in their vicinity, wherever they are in the future, and focuses the scrying sensor upon them.
+	The {\portent} searches for events in their vicinity, wherever they are in the future, and focuses the scrying sensor upon them.
 	It will still never focus on an event that happens outside your scrying range.
 }
 
