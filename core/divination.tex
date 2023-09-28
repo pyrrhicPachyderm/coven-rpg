@@ -166,8 +166,8 @@ However, you may also choose to search a shorter or more specific time if you wi
 For example, you could search only within the next hour, or search within the afternoon while ignoring any occurrences in the morning.
 
 Some {\portents} search for the event that most fulfils some criterion, and thus will always show a valid {\vision}.
-For example, \featref{foresight-entrails} shows the most violent event, and will still show a {\vision} of someone stubbing their toe if that's the most applicable event available.
-Other {\portents}, such as \featref{foresight-chance} search for a specific event.
+For example, \featref{portent-entrails} shows the most violent event, and will still show a {\vision} of someone stubbing their toe if that's the most applicable event available.
+Other {\portents}, such as \featref{portent-chance} search for a specific event.
 If that event does not occur in the location and time period being searched, \featref{foresight} will simply fail, and the \practitioner{divination} will see no {\vision}.
 
 \section{Feats}
@@ -514,7 +514,7 @@ If that event does not occur in the location and time period being searched, \fe
 	\capital{\featref{foresight}} will still expire at the usual time.
 }
 
-\feat{Haruspex}{foresight-entrails}{10}{
+\feat{Haruspex}{portent-entrails}{10}{
 	\featref{foresight}
 }{
 	You may inspect spilled entrails as a {\portent} to foretell great violence.
@@ -525,33 +525,33 @@ If that event does not occur in the location and time period being searched, \fe
 	The {\vision} begins around the start of the violence, but is always positioned such that it encompasses the most violent part.
 }
 
-\feat{One for Sorrow}{foresight-birds}{15}{
+\feat{One for Sorrow}{portent-birds}{15}{
 	\skillref[1]{divination},
-	\featref{foresight-entrails}
+	\featref{portent-entrails}
 }{
 	You may watch the behaviour of a bird as a {\portent} to foretell sorrow.
 	The bird must be {\wild}, and behaving naturally, not a familiar or captured bird.
 	If you use this {\portent}, then you see a {\vision} of the event which would most upset you---typically the event you most want to avert.
 }
 
-\feat{Seven for a Secret}{foresight-birds-2}{15}{
+\feat{Seven for a Secret}{portent-birds-2}{15}{
 	\skillref[1]{divination},
-	\featref{foresight-birds}
+	\featref{portent-birds}
 }{
 	\emph{One for sorrow, two for joy, three for a girl, four for a boy. Five for silver, six for gold, seven for a secret never to be told.}
 	While one bird foretells sorrow for you, you may use many birds to bring sorrow upon another.
 	
 	This requires you to watch the behaviour of many birds---at least seven---as a {\portent}.
-	Just like \featref{foresight-birds}, these must be {\wild} birds.
+	Just like \featref{portent-birds}, these must be {\wild} birds.
 	Additionally, you must watch the behaviour of a person or other creature: the target.
 	
-	This works just like \featref{foresight-birds}, except that instead of seeing an event that would upset you, you see the event that the target would least like you to see---an event they would want to hide from you.
+	This works just like \featref{portent-birds}, except that instead of seeing an event that would upset you, you see the event that the target would least like you to see---an event they would want to hide from you.
 	This gives the target no awareness of the event to come, or even that you have used this on them at all.
 	
-	You can still use \featref{foresight-birds} instead of this, even if multiple birds are present; it is simple to focus on just one of them.
+	You can still use \featref{portent-birds} instead of this, even if multiple birds are present; it is simple to focus on just one of them.
 }
 
-\feat{Tarot}{foresight-chance}{25}{
+\feat{Tarot}{portent-chance}{25}{
 	\skillref[2]{divination},
 	\featref{foresight}
 }{
@@ -571,29 +571,29 @@ If that event does not occur in the location and time period being searched, \fe
 	The GM should not inform you of whether you succeeded or failed the {\test}.
 }
 
-\feat{Portents of Self}{foresight-aim-self}{10}{
+\feat{Portents of Self}{portent-aim-self}{10}{
 	\skillref[1]{divination},
 	\featref{vision-scrying},
 	\featref{divination-location},
 	\featref{scrying-speed},
-	\featref{foresight-entrails} or \featref{foresight-chance}
+	\featref{portent-entrails} or \featref{portent-chance}
 }{
 	Rather than using {\portents} to search the future of the place you currently stand, you can use them to search your own future.
 	To do this, you must be using \featref{vision-scrying} to begin \featref{foresight} through a scrying surface, and you must be using a {\portent} to select a time for your {\vision}.
 	
 	Instead of searching for an event in the place your scrying sensor is currently positioned, the {\portent} searches for an event that occurs wherever \emph{you} are in the future.
-	For example, if you used this with \featref{foresight-entrails}, it would focus on the most violent event that occurs to you within the time period you search.
+	For example, if you used this with \featref{portent-entrails}, it would focus on the most violent event that occurs to you within the time period you search.
 	When your {\vision} starts, the scrying sensor is automatically refocused to the location of the event; that is, your location at the time of the event.
 	This will never focus upon an event that happens outside your scrying range.
 }
 
-\feat{Portent Tracing}{foresight-aim-taglock}{15}{
+\feat{Portent Tracing}{portent-aim-taglock}{15}{
 	\skillref[2]{divination},
-	\featref{foresight-aim-self},
+	\featref{portent-aim-self},
 	\featref{divination-taglock-location}
 }{
 	Using a \materialref{taglock}, you may seek {\visions} of what is to befall another person.
-	When you use \featref{foresight-aim-self}, you may select a person or creature for whom you have a \materialref{taglock}, rather than yourself.
+	When you use \featref{portent-aim-self}, you may select a person or creature for whom you have a \materialref{taglock}, rather than yourself.
 	The {\portent} searches for events in their vicinity, wherever they are in the future, and focuses the scrying sensor upon them.
 	It will still never focus on an event that happens outside your scrying range.
 }
@@ -613,7 +613,7 @@ If that event does not occur in the location and time period being searched, \fe
 	Splitting the timestream is second nature to you now, as easy as blinking.
 	You can begin \featref{foresight} at any time, without even an {\action}.
 	
-	If you are using some materials to aim \featref{foresight}, such as with \featref{foresight-entrails} or \featref{foresight-chance}, you must take the time required to use these---normally at least an {\action}.
+	If you are using some materials to aim \featref{foresight}, such as with \featref{portent-entrails} or \featref{portent-chance}, you must take the time required to use these---normally at least an {\action}.
 	You might be able to do this as part of another {\action}, however; for example, you can spill someone's entrails in the same {\action} you use to kill them.
 }
 
