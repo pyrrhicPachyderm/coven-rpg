@@ -24,3 +24,29 @@
 	If you soak the whole {\symbol} in the target's \materialref{blood} while using \featref{symlink-blood}, it establishes a {\strongsymlink}.
 	Soaking a typical hand-sized \materialref{poppet} or \materialref{effigy} requires 1 dose of \materialref{blood}, but larger {\symbols} might require more.
 }
+
+\feat{Blood Thicker Than Water}{blood-combine}[brewing]{10}{
+	\noprereq
+}{
+	\capital{\materialref{blood}} runs in the family.
+	You may create a person's \materialref{blood} by combining the \materialref{blood} of their ancestors in appropriate proportions.
+	In the simplest form, you simply mix together the \materialref{blood} of both their parents.
+	However, you may do this recursively: for example, you may form the target's \materialref{blood} from the \materialref{blood} of their mother and both their paternal grandparents in the correct ratio.
+	
+	The resulting \materialref{blood} is treated as having come from the person for all purposes.
+	It is now a \materialref{taglock} connected to them, and no longer to any of the ancestors.
+	Volume is conserved, and thus this produces a total amount of \materialref{blood} equal to the total amount combined, which may be less than a dose.
+	The \materialref{blood} may be mixed in any vessel, and doesn't require heating.
+}
+
+\feat{Bones of the Ancestors}{blood-combine-2}[brewing]{10}{
+	\skillref[1]{brewing},
+	\featref{blood-combine}
+}{
+	Using \materialref{blood} from a person's ancestors is all well and good while they're alive, but much trickier once they're dead.
+	You've learned a useful workaround, as long as you can dig up up their bones or ashes.
+	You may use \materialrefplural{taglock} other than \materialref{blood} when you use \featref{blood-combine}, ignoring ratios, as long as you still use \materialref{blood} from at least one ancestor.
+	
+	Doing things this way is more complicated, and thus requires a heated \mixcreationref{cauldron}.
+	The amount of \materialref{blood} produced is equal to the amount of \materialref{blood} used, ignoring all other \materialrefplural{taglock}.
+}
