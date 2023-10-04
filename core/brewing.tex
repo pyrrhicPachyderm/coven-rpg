@@ -722,6 +722,23 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	If drunk, the drinker's urine glows until the potion fades out.
 }
 
+\feat{Toxic Infusion}{poison-potion}{10}{
+	\noprereq
+}{
+	\mix{cauldron}{spike}{\Herb{hemlock}{2}}
+	
+	This infusion is a potent and fast-acting poison.
+	It takes effect after 1 {\round}, whereupon the drinker suffers a \dice{3} {\damagetest}.
+}
+
+\feat{Acute Toxicity}{poison-potion-fast}{10}{
+	\noprereq
+}{
+	By adding \herb[deadly nightshade]{belladonna}{2} to your \featref{poison-potion}, you can make it act more quickly.
+	A \featref{poison-potion} brewed this way causes its {\damagetest} immediately upon ingestion, rather than after one {\round}.
+	Thus, a victim has no opportunity to vomit to ameliorate its effects.
+}
+
 \feat{Vomiting Drops}{vomit-potion}{15}{
 	\noprereq
 }{
@@ -730,6 +747,59 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	These drops cause immediate vomiting.
 	They take effect immediately, and act quickly enough to be effective against ingested mixtures that take effect in just 1 {\round}.
 	The drinker loses at least one {\action}, and usually several, while they heave and retch.
+}
+
+\feat{Haematemetic}{vomit-potion-blood}{10}{
+	\featref{poison-potion-fast},
+	\featref{vomit-potion}
+}{
+	\mix{cauldron}{spike}{\Herb{mistletoe}{2}, \herb{bloodwort}{2}}
+	
+	This vicious poison damages the stomach lining even as causes the victim to vomiting, causing them to throw up \materialref{blood}.
+	It works as \featref{vomit-potion}, except that the drinker also suffers a \dice{3} {\damagetest} when they ingest the potion.
+	Furthermore, their vomit contains \materialref{blood}.
+	A human typically throws up 1 dose of \materialref{blood} in their vomit, though it may be hard to gather it all up if you intend to use it.
+}
+
+\feat{Potent Toxicity}{poison-potion-2}{10}{
+	\skillref[1]{brewing},
+	\featref{poison-potion-2}
+}{
+	You have learned how to concentrate your \featref{poison-potion}, making it more potent.
+	When you brew a \featref{poison-potion} or \featref{vomit-potion-blood}, you may brew it such that it causes a \dice{5} {\damagetest}.
+}
+
+\feat{Extreme Toxicity}{poison-potion-3}{10}{
+	\skillref[2]{brewing},
+	\featref{poison-potion-2}
+}{
+	You can concentrate your \featref{poison-potion} to an extreme degree, making it very deadly.
+	When you brew a \featref{poison-potion} or \featref{vomit-potion-blood}, you may brew it such that it causes a \dice[4]{5} {\damagetest}.
+}
+
+\feat{Chronic Toxicity}{poison-potion-ongoing}{10}{
+	\featref{poison-potion}
+}{
+	While a \featref{poison-potion} is a fast-acting, someone who survives the acute effects is in little long-term danger.
+	By adding \herb[monkshood]{wolfsbane}{3}, you can make it more dangerous.
+	
+	When you brew a \featref{poison-potion} with \herb[monkshood]{wolfsbane}{3}, it does not change the {\damagetest} it causes.
+	However, the drinker will suffer heart failure over the course of the next few hours, leading to death.
+	Vomiting after the initial {\damagetest} but before the poison's other effects may help, giving some chance of survival.
+	As such, this modification doesn't work for a \featref{vomit-potion-blood}, which would cause vomiting before the poison's long-term effects kick in.
+}
+
+\feat{Subtle Toxin}{poison-potion-subtle}{10}{
+	\skillref[1]{brewing},
+	\featref{poison-potion-ongoing}
+}{
+	While \featref{poison-potion-ongoing} lets you brew a potion that will kill someone, it's not subtle in its action.
+	Sometimes, you'd like to have time to make a getaway before they realise they're dying.
+	
+	\mix{cauldron}{spike}{\Herb[monkshood]{wolfsbane}{3}}
+	
+	This potion takes effect over the course of a few hours, leading to the death of the drinker by heart failure.
+	It is subtle when first ingested, and should give no sign of anything wrong for at least half an hour.
 }
 
 \feat{Sleeping Solution}{sleep-potion}{10}{
