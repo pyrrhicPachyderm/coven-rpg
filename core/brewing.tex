@@ -986,6 +986,70 @@ This means that you cannot have an {\antidote} to an {\antidote}.
 	You roll an extra die on {\tests} to resist poisons or the like.
 }
 
+\feat{Suspended Potion}{potion-delay}{10}{
+	\noprereq
+}{
+	When you brew a \mixdeliveryref{drink}, you can suspend the active ingredients, such that they take longer to digest and take effect when drunk.
+	This requires you to add some animal fat while brewing the mixture, and always requires the use of a \mixcreationref{cauldron} or \mixcreationref{still}, even if the original mixture was easier to create.
+	
+	You may choose any period up to 24 hours by which to delay the effect, though you cannot make the potion take effect more quickly than it normally would.
+	Timing the delay is also far from precise.
+	By default, the actual delay may be up to \SI{50}{\percent} shorter or longer than the intended delay.
+	For example, a mixture designed to take effect after two hours may take effect anywhere from one to three hours after being drunk.
+	This accuracy can be improved with a {\test}, but doing so requires knowing who will drink the mixture---in particular knowing how much they weigh.
+	
+	As the mixture takes longer to kick in, the drinker will usually have longer to vomit to expel it.
+	Vomiting normally remains effective from when the mixture is drunk until the mixture takes effect.
+	However, if the mixture's effect is delayed for longer than a few hours, vomiting will only be effective within the first few hours.
+	After that period, the mixture has passed their stomach, and vomiting will have no effect on it.
+}
+
+\feat{Extended Suspension}{potion-delay-2}{15}{
+	\skillref[2]{brewing},
+	\featref{potion-delay}
+}{
+	A \featref{potion-delay} will normally be eliminated from the body within 24 hours.
+	But you have learned a trick to make it persist far longer than that.
+	When you use \featref{potion-delay}, you may brew the mixture to have its effect delayed by up to a month.
+	As usual, longer delays lead to less accurate release times.
+}
+
+\feat{Suspended Spike}{potion-delay-spike}{15}{
+	\skillref[1]{brewing},
+	\featref{potion-delay}
+}{
+	Sometimes, when poisoning someone, it's good to give yourself time for a getaway before the poison takes effect.
+	You may use \featref{potion-delay} when brewing a \mixdeliveryref{spike}.
+}
+
+\feat{Suspension Release}{potion-delay-release}{15}{
+	\skillref[1]{brewing},
+	\featref{potion-delay}
+}{
+	\mix{cauldron}{spike}{Egg yolk, \herb{mustard seeds}{3}}
+	%Egg yolk is an emulsifer, to mix oil and water.
+	%Mustard seeds have an immediate kick, and also contain emulsifiers.
+	
+	This mixture takes effect immediately, and counters the effects of \featref{potion-delay}, releasing the effects of all suspended mixtures in the drinker's body.
+	All released mixtures then take effect after their normal time period, unless they were already goign to take effect sooner.
+	
+	This mixture cannot itself be suspended with \featref{potion-delay}.
+}
+
+\feat{Suspension Suppression}{potion-delay-cancel}{15}{
+	\skillref[1]{brewing},
+	\featref{potion-delay}
+}{
+	\mix{cauldron}{spike}{Egg yolk, powdered charcoal}
+	%Activated charcoal is used to absorb poisons.
+	
+	This mixture takes effect immediately, and nullified the effects of every mixture in the drinker's body that has been suspended with \featref{potion-delay}.
+	Only those that have not begun to take effect yet are cancelled.
+	However, effects that are cancelled are cancelled completely, without any deleterious effects.
+	
+	This mixture cannot itself be suspended with \featref{potion-delay}.
+}
+
 \feat{Bottled Sobriety}{antidote-alcohol}{10}{
 	\skillref[1]{brewing}
 }{
